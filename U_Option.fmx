@@ -2,10 +2,46 @@ object Option: TOption
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 480
-  ClientWidth = 640
+  ClientHeight = 517
+  ClientWidth = 793
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 0
+  object GroupBox1: TGroupBox
+    Align = Client
+    Margins.Top = 5.000000000000000000
+    Size.Width = 624.000000000000000000
+    Size.Height = 512.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'GroupBox1'
+    TabOrder = 3
+  end
+  object Panel1: TPanel
+    Align = Left
+    Position.X = 8.000000000000000000
+    Size.Width = 169.000000000000000000
+    Size.Height = 517.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object TreeView1: TTreeView
+      Align = Top
+      Size.Width = 169.000000000000000000
+      Size.Height = 265.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 165.000000000000000000
+      Viewport.Height = 261.000000000000000000
+    end
+    object TreeView2: TTreeView
+      Align = Bottom
+      Position.Y = 280.000000000000000000
+      Size.Width = 169.000000000000000000
+      Size.Height = 237.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Viewport.Width = 165.000000000000000000
+      Viewport.Height = 233.000000000000000000
+    end
+  end
 end

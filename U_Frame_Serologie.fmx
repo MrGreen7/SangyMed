@@ -2,6 +2,7 @@ object Frame5: TFrame5
   Size.Width = 1056.000000000000000000
   Size.Height = 246.000000000000000000
   Size.PlatformDefault = False
+  OnResize = FrameResize
   object TabControl1: TTabControl
     Align = Client
     Margins.Top = 5.000000000000000000
@@ -79,6 +80,7 @@ object Frame5: TFrame5
           Text = 'Anit-VHA'
           TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 14.000000000000000000
+          OnChange = CB_HA_Anit_VHAChange
         end
       end
       object GroupBox7: TGroupBox
@@ -212,8 +214,8 @@ object Frame5: TFrame5
             Anchors = []
             StyledSettings = [Style, FontColor]
             Hint = 'anti-Epstein-Barr virus '
-            Position.X = 178.797348022460900000
-            Position.Y = 21.587938308715820000
+            Position.X = 178.797363281250000000
+            Position.Y = 21.587936401367190000
             Size.Width = 80.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -227,8 +229,8 @@ object Frame5: TFrame5
           object CB_MI_VCA: TCheckBox
             Anchors = []
             StyledSettings = [Style, FontColor]
-            Position.X = 47.137874603271480000
-            Position.Y = 117.266334533691400000
+            Position.X = 47.137878417968750000
+            Position.Y = 117.266326904296900000
             Size.Width = 77.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -240,8 +242,8 @@ object Frame5: TFrame5
           object CB_MI_EBNA: TCheckBox
             Anchors = []
             StyledSettings = [Style, FontColor]
-            Position.X = 39.217609405517580000
-            Position.Y = 21.587938308715820000
+            Position.X = 39.217605590820310000
+            Position.Y = 21.587936401367190000
             Size.Width = 77.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -254,7 +256,7 @@ object Frame5: TFrame5
             Anchors = []
             StyledSettings = [Style, FontColor]
             Position.X = 178.877075195312500000
-            Position.Y = 117.266334533691400000
+            Position.Y = 117.266326904296900000
             Size.Width = 64.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -307,7 +309,7 @@ object Frame5: TFrame5
             Anchors = []
             StyledSettings = [Style, FontColor]
             Position.X = 60.000000000000000000
-            Position.Y = 120.683410644531200000
+            Position.Y = 120.683410644531300000
             Size.Width = 125.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -334,7 +336,7 @@ object Frame5: TFrame5
             Anchors = []
             StyledSettings = [Style, FontColor]
             Position.X = 70.000000000000000000
-            Position.Y = 40.381900787353520000
+            Position.Y = 40.381896972656250000
             Size.Width = 69.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False

@@ -1,0 +1,170 @@
+object Base_Print: TBase_Print
+  Left = 0
+  Top = 0
+  Caption = 'Base_Print'
+  ClientHeight = 700
+  ClientWidth = 794
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object Base_PrintDialog: TPrintDialog
+    Left = 320
+    Top = 8
+  end
+  object Base_ScrollBox: TScrollBox
+    Position.Y = -263.000000000000000000
+    Size.Width = 794.000000000000000000
+    Size.Height = 1123.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    OnMouseWheel = Base_ScrollBoxMouseWheel
+    OnCalcContentBounds = Base_ScrollBoxCalcContentBounds
+    Viewport.Width = 778.000000000000000000
+    Viewport.Height = 1107.000000000000000000
+    object ScaledLayout1: TScaledLayout
+      OriginalWidth = 794.000000000000000000
+      OriginalHeight = 1123.000000000000000000
+      Position.X = -16.000000000000000000
+      Position.Y = 320.000000000000000000
+      Size.Width = 794.000000000000000000
+      Size.Height = 1123.000000000000000000
+      Size.PlatformDefault = False
+      OnPaint = ScaledLayout1Paint
+      object Text1: TText
+        Position.X = 80.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 593.000000000000000000
+        Size.Height = 97.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'TEXT HERE'
+      end
+      object Text2: TText
+        Position.X = 176.000000000000000000
+        Position.Y = 1000.000000000000000000
+        Size.Width = 393.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'TEXT HERE'
+      end
+      object Text3: TText
+        Position.X = 24.000000000000000000
+        Position.Y = 200.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'TEXT HERE'
+      end
+      object Text4: TText
+        Position.X = 24.000000000000000000
+        Position.Y = 480.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'TEXT HERE'
+      end
+      object Text6: TText
+        Position.X = 32.000000000000000000
+        Position.Y = 400.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'TEXT HERE'
+      end
+      object Text5: TText
+        Position.X = 24.000000000000000000
+        Position.Y = 288.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'TEXT HERE'
+      end
+      object Text10: TText
+        Position.X = 272.000000000000000000
+        Position.Y = 682.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'TEXT HERE'
+      end
+      object Text11: TText
+        Position.X = 40.000000000000000000
+        Position.Y = 928.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'TEXT HERE'
+      end
+      object Text12: TText
+        Position.X = 528.000000000000000000
+        Position.Y = 754.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'TEXT HERE'
+      end
+      object Text7: TText
+        Position.X = 328.000000000000000000
+        Position.Y = 464.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'TEXT HERE'
+      end
+      object Text8: TText
+        Position.X = 320.000000000000000000
+        Position.Y = 352.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'TEXT HERE'
+      end
+      object Text9: TText
+        Position.X = 320.000000000000000000
+        Position.Y = 264.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'TEXT HERE'
+      end
+    end
+  end
+  object Base_ToolBar: TToolBar
+    Size.Width = 794.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Base_Cancel_Button: TButton
+      Position.X = 580.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 105.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Annuler'
+    end
+    object Base_Print_Button: TButton
+      Position.X = 108.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 105.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Print'
+      OnClick = Base_Print_ButtonClick
+    end
+  end
+end

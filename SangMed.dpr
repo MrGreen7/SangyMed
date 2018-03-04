@@ -17,7 +17,8 @@ uses
   U_Fenetre in 'U_Fenetre.pas' {Fenetre},
   U_Option in 'U_Option.pas' {Option},
   U_Log in 'U_Log.pas' {Log},
-  U_Ins in 'U_Ins.pas' {Ins};
+  U_Ins in 'U_Ins.pas' {Ins},
+  U_Base_Print in 'U_Base_Print.pas' {Base_Print};
 
 {$R *.res}
 
@@ -31,5 +32,6 @@ begin
   Application.CreateForm(TOption, Option);
   Application.CreateForm(TLog, Log);
   Application.CreateForm(TIns, Ins);
+  Application.CreateForm(TBase_Print, Base_Print);
   Application.Run;
 end.

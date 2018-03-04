@@ -2,6 +2,7 @@ object Frame1: TFrame1
   Size.Width = 1080.000000000000000000
   Size.Height = 191.000000000000000000
   Size.PlatformDefault = False
+  OnResize = FrameResize
   object GroupBox_Info: TGroupBox
     Align = Client
     StyledSettings = [Style, FontColor, Other]
@@ -54,6 +55,7 @@ object Frame1: TFrame1
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 6
+          OnChange = IP_ComboBox2Change
         end
       end
       object Layout_Left_1: TLayout
@@ -88,6 +90,7 @@ object Frame1: TFrame1
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 5
+          OnChange = IP_ComboBox1Change
         end
       end
     end
@@ -130,8 +133,9 @@ object Frame1: TFrame1
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 6
+          OnChange = IP_ComboBox3Change
           object InnerGlowEffect3Combo3: TInnerGlowEffect
-            Softness = 0.400000005960464400
+            Softness = 0.400000005960464500
             GlowColor = xFFD7263D
             Opacity = 0.899999976158142100
             Enabled = False
@@ -213,7 +217,7 @@ object Frame1: TFrame1
           Size.PlatformDefault = False
           StyledSettings = [Style, FontColor]
           object InnerGlowEffectEdit3: TInnerGlowEffect
-            Softness = 0.400000005960464400
+            Softness = 0.400000005960464500
             GlowColor = xFFD7263D
             Opacity = 0.899999976158142100
             Enabled = False
@@ -251,7 +255,7 @@ object Frame1: TFrame1
           Size.PlatformDefault = False
           StyledSettings = [Style, FontColor]
           object InnerGlowEffectEdit2: TInnerGlowEffect
-            Softness = 0.400000005960464400
+            Softness = 0.400000005960464500
             GlowColor = xFFD7263D
             Opacity = 0.899999976158142100
             Enabled = False

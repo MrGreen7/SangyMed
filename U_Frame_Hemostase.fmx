@@ -2,6 +2,7 @@ object Frame4: TFrame4
   Size.Width = 1064.000000000000000000
   Size.Height = 240.000000000000000000
   Size.PlatformDefault = False
+  OnResize = FrameResize
   object Layout_Frame: TLayout
     Align = Client
     Size.Width = 1064.000000000000000000

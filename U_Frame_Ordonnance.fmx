@@ -2,6 +2,7 @@ object Frame7: TFrame7
   Size.Width = 1061.000000000000000000
   Size.Height = 240.000000000000000000
   Size.PlatformDefault = False
+  OnResize = FrameResize
   object L_Top_Ordonnance: TLayout
     Align = Top
     Size.Width = 1061.000000000000000000
@@ -2145,6 +2146,7 @@ object Frame7: TFrame7
       Text = 'Ajouter'
       TextSettings.Font.Family = 'Candara'
       TextSettings.Font.Size = 14.000000000000000000
+      OnClick = Button2Click
     end
   end
   object StringGridBindSourceDB1: TStringGrid

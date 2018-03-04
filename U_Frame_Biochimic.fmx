@@ -2,6 +2,7 @@ object Frame6: TFrame6
   Size.Width = 1061.000000000000000000
   Size.Height = 218.000000000000000000
   Size.PlatformDefault = False
+  OnResize = FrameResize
   object Layout0: TLayout
     Align = Client
     Size.Width = 1061.000000000000000000
@@ -22,7 +23,7 @@ object Frame6: TFrame6
         MaxLength = 8
         TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
-        Position.Y = 9.367272377014161000
+        Position.Y = 9.367272377014160000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
@@ -46,7 +47,7 @@ object Frame6: TFrame6
         StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle - F : Female M : Male'
         Position.X = 202.000000000000000000
-        Position.Y = 9.367272377014161000
+        Position.Y = 9.367272377014160000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
@@ -233,7 +234,7 @@ object Frame6: TFrame6
         StyledSettings = [Style, FontColor]
         Hint = 'Glutamyl-Pyruvate-Transaminase'
         Position.X = 6.000000000000000000
-        Position.Y = 9.367272377014161000
+        Position.Y = 9.367272377014160000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
@@ -317,7 +318,7 @@ object Frame6: TFrame6
         MaxLength = 8
         TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
-        Position.Y = 9.367272377014161000
+        Position.Y = 9.367272377014160000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
@@ -341,7 +342,7 @@ object Frame6: TFrame6
         StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle'
         Position.X = 202.000000000000000000
-        Position.Y = 9.367272377014161000
+        Position.Y = 9.367272377014160000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
@@ -484,7 +485,7 @@ object Frame6: TFrame6
         Anchors = [akLeft]
         StyledSettings = [Style, FontColor]
         Position.X = 6.000000000000000000
-        Position.Y = 9.367272377014161000
+        Position.Y = 9.367272377014160000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
@@ -546,7 +547,7 @@ object Frame6: TFrame6
         MaxLength = 8
         TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
-        Position.Y = 9.367272377014161000
+        Position.Y = 9.367272377014160000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
@@ -570,7 +571,7 @@ object Frame6: TFrame6
         StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle'
         Position.X = 202.000000000000000000
-        Position.Y = 9.367272377014161000
+        Position.Y = 9.367272377014160000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
@@ -758,7 +759,7 @@ object Frame6: TFrame6
         Anchors = [akLeft]
         StyledSettings = [Style, FontColor]
         Position.X = 6.000000000000000000
-        Position.Y = 9.367272377014161000
+        Position.Y = 9.367272377014160000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
@@ -834,7 +835,7 @@ object Frame6: TFrame6
         MaxLength = 8
         TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
-        Position.Y = 9.367272377014161000
+        Position.Y = 9.367272377014160000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
@@ -858,7 +859,7 @@ object Frame6: TFrame6
         StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle'
         Position.X = 202.000000000000000000
-        Position.Y = 9.367272377014161000
+        Position.Y = 9.367272377014160000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
@@ -1047,7 +1048,7 @@ object Frame6: TFrame6
         StyledSettings = [Style, FontColor]
         Hint = 'Bon cholest'#233'rol (HDL)'
         Position.X = 6.000000000000000000
-        Position.Y = 9.367272377014161000
+        Position.Y = 9.367272377014160000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
