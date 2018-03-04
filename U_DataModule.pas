@@ -116,10 +116,9 @@ begin
     + '`Patient_ID`	varchar(7),PRIMARY KEY(`Ordo_ID`),FOREIGN KEY(`Patient_ID`) REFERENCES `Patient`(`Patient_ID`) ON DELETE CASCADE);');
   // Database Anitialse and Location
   DirPath := GetEnvironmentVariable('AppData');
-  CreateDir(DirPath + '\RGP_Data');
-  Path := (DirPath + '\RGP_Data\Data.db');
+  Path := (DirPath + '\SangyMed\Data.db');
   Db_Entrprise := ExpandFileName(GetCurrentDir() + '\Data\Entreprise.db');
-  PathInf := ExpandFileName(GetCurrentDir() + '\Data\Alg_info.db');
+  PathInf := ExpandFileName(DirPath + '\SangyMed\Alg_info.db');
   FDConnection1.Params.Add('Database=' + Path);
   FDConnection2.Params.Add('Database=' + PathInf);
   FDConnection1.Connected := True;

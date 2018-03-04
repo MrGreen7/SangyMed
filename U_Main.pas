@@ -372,6 +372,24 @@ Uses
   U_Option, U_Log, U_Entreprise, Winapi.Windows, U_DataModule,
   FireDAC.Comp.Client;
 {$R *.fmx}
+{$R Alg_Res.RES}
+
+procedure Resources();
+Var
+  ResStream: TResourceStream;
+  AppData: String;
+Begin
+  AppData := GetEnvironmentVariable('AppData');
+  CreateDir(AppData + '\SangyMed');
+  AppData := AppData + '\SangyMed\Alg_info.db';
+  ResStream := TResourceStream.Create(HInstance, 'Alg_Res', 'db');
+  try
+    ResStream.Position := 0;
+    ResStream.SaveToFile(AppData);
+  finally
+    ResStream.Free;
+  end;
+End;
 
 procedure TMain.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 var
@@ -385,7 +403,15 @@ begin
 end;
 
 procedure TMain.FormCreate(Sender: TObject);
+Var
+  AppData: String;
 begin
+  AppData := GetEnvironmentVariable('AppData');
+  AppData := AppData + '\SangyMed\Alg_info.db';
+  if (FileExists(AppData) = False) then
+  Begin
+    Resources();
+  End;
   inherited;
   WidthX := 1280;
   HeightX := 688;
