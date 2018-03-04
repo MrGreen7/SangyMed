@@ -1,0 +1,402 @@
+object Frame1: TFrame1
+  Size.Width = 1080.000000000000000000
+  Size.Height = 191.000000000000000000
+  Size.PlatformDefault = False
+  object GroupBox_Info: TGroupBox
+    Align = Client
+    StyledSettings = [Style, FontColor, Other]
+    Padding.Left = 5.000000000000000000
+    Padding.Top = 20.000000000000000000
+    Padding.Right = 5.000000000000000000
+    Size.Width = 629.000000000000000000
+    Size.Height = 191.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Information principale'
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 14.000000000000000000
+    TabOrder = 1
+    object Layout_Top_1: TLayout
+      Align = Top
+      Position.X = 5.000000000000000000
+      Position.Y = 140.000000000000000000
+      Size.Width = 619.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object Layout_Right1: TLayout
+        Align = Right
+        Position.X = 316.000000000000000000
+        Size.Width = 303.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 7
+        object IP_Label8: TLabel
+          Anchors = [akLeft]
+          StyledSettings = [Style, FontColor]
+          Position.X = 10.000000000000000000
+          Position.Y = 3.710144996643066000
+          Size.Width = 45.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Text = 'Sexe'
+          TabOrder = 0
+        end
+        object IP_ComboBox2: TComboBox
+          Anchors = [akLeft, akRight]
+          Items.Strings = (
+            'Homme'
+            'Femme')
+          Position.X = 90.000000000000000000
+          Position.Y = 3.710144996643066000
+          Size.Width = 207.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+        end
+      end
+      object Layout_Left_1: TLayout
+        Align = Left
+        Size.Width = 303.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        object IP_Label4: TLabel
+          Anchors = [akLeft]
+          StyledSettings = [Style, FontColor]
+          Position.X = 10.000000000000000000
+          Position.Y = 4.289855003356934000
+          Size.Width = 55.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Text = #201'tat civil'
+          TabOrder = 3
+        end
+        object IP_ComboBox1: TComboBox
+          Anchors = [akLeft, akRight]
+          Items.Strings = (
+            'C'#233'libataire'
+            'Mari'#233'(e)'
+            'Divorc'#233'(e)'
+            'Veuf(ve)')
+          Position.X = 90.000000000000000000
+          Position.Y = 4.289855003356934000
+          Size.Width = 207.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+        end
+      end
+    end
+    object Layout_Top_3: TLayout
+      Align = Top
+      Position.X = 5.000000000000000000
+      Position.Y = 100.000000000000000000
+      Size.Width = 619.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object Layout_Right3: TLayout
+        Align = Right
+        Position.X = 316.000000000000000000
+        Size.Width = 303.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        object IP_Label7: TLabel
+          Anchors = [akLeft]
+          StyledSettings = [Style, FontColor]
+          Position.X = 10.000000000000000000
+          Position.Y = 4.000000000000000000
+          Size.Width = 71.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Text = 'Type'
+          TabOrder = 2
+        end
+        object IP_ComboBox3: TComboBox
+          Anchors = [akLeft, akRight]
+          Items.Strings = (
+            'Interne'
+            'Externe')
+          Position.X = 90.000000000000000000
+          Position.Y = 4.000000000000000000
+          Size.Width = 207.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+          object InnerGlowEffect3Combo3: TInnerGlowEffect
+            Softness = 0.400000005960464400
+            GlowColor = xFFD7263D
+            Opacity = 0.899999976158142100
+            Enabled = False
+          end
+        end
+      end
+      object Layout_Left_3: TLayout
+        Align = Left
+        Size.Width = 303.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        object IP_Label3: TLabel
+          Anchors = [akLeft]
+          StyledSettings = [Style, FontColor]
+          Position.X = 10.000000000000000000
+          Position.Y = 3.710144996643066000
+          Size.Width = 40.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Text = 'N'#233' le'
+          TabOrder = 8
+        end
+        object IP_DateEdit1: TDateEdit
+          Date = 43152.000000000000000000
+          Anchors = [akLeft, akRight]
+          Position.X = 90.000000000000000000
+          Position.Y = 3.710144758224487000
+          Size.Width = 207.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+          TabOrder = 3
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+        end
+      end
+    end
+    object Layout_Top_4: TLayout
+      Align = Top
+      Position.X = 5.000000000000000000
+      Position.Y = 60.000000000000000000
+      Size.Width = 619.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Layout_Right4: TLayout
+        Align = Right
+        Position.X = 316.000000000000000000
+        Size.Width = 303.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        object IP_Label6: TLabel
+          Anchors = [akLeft]
+          StyledSettings = [Style, FontColor]
+          Position.X = 10.000000000000000000
+          Position.Y = 3.574468135833740000
+          Size.Width = 55.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Text = 'Pr'#233'nom'
+          TabOrder = 3
+        end
+        object IP_Edit3: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akRight]
+          TabOrder = 2
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Position.X = 90.000000000000000000
+          Position.Y = 4.425531864166260000
+          Size.Width = 207.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+          object InnerGlowEffectEdit3: TInnerGlowEffect
+            Softness = 0.400000005960464400
+            GlowColor = xFFD7263D
+            Opacity = 0.899999976158142100
+            Enabled = False
+          end
+        end
+      end
+      object Layout_Left_4: TLayout
+        Align = Left
+        Size.Width = 303.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object IP_Label2: TLabel
+          StyledSettings = [Style, FontColor]
+          Position.X = 10.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 33.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Text = 'Nom'
+          TabOrder = 12
+        end
+        object IP_Edit2: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akRight]
+          TabOrder = 1
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Position.X = 90.000000000000000000
+          Position.Y = 3.574468135833740000
+          Size.Width = 207.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+          object InnerGlowEffectEdit2: TInnerGlowEffect
+            Softness = 0.400000005960464400
+            GlowColor = xFFD7263D
+            Opacity = 0.899999976158142100
+            Enabled = False
+          end
+        end
+      end
+    end
+    object Layout_Top_2: TLayout
+      Align = Top
+      Position.X = 5.000000000000000000
+      Position.Y = 20.000000000000000000
+      Size.Width = 619.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Layout_Right2: TLayout
+        Align = Right
+        Position.X = 316.000000000000000000
+        Size.Width = 303.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object IP_Label5: TLabel
+          Anchors = [akLeft]
+          StyledSettings = [Style, FontColor]
+          Position.X = 10.000000000000000000
+          Position.Y = 3.710144996643066000
+          Size.Width = 61.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Text = 'Admit le'
+          TabOrder = 3
+        end
+        object IP_DateEdit2: TDateEdit
+          Date = 43126.000000000000000000
+          Anchors = [akLeft, akRight]
+          Position.X = 90.000000000000000000
+          Position.Y = 3.710144996643066000
+          Size.Width = 207.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+          TabOrder = 0
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+        end
+      end
+      object Layout_Left_2: TLayout
+        Align = Left
+        Size.Width = 303.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object IP_Label1: TLabel
+          Anchors = [akLeft]
+          StyledSettings = [Style, FontColor]
+          Position.X = 10.000000000000000000
+          Position.Y = 4.289855003356934000
+          Size.Width = 49.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Text = 'Code'
+          TabOrder = 12
+        end
+        object IP_Edit1: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akRight]
+          TabOrder = 0
+          ReadOnly = True
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Position.X = 90.000000000000000000
+          Position.Y = 4.289855003356934000
+          HitTest = False
+          Size.Width = 207.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+        end
+      end
+    end
+  end
+  object GroupBox_Liens: TGroupBox
+    Align = Right
+    StyledSettings = [Style, FontColor, Other]
+    Position.X = 789.000000000000000000
+    Size.Width = 291.000000000000000000
+    Size.Height = 191.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Liens'
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 14.000000000000000000
+    TabOrder = 3
+    object Button1: TButton
+      StyledSettings = [Style, FontColor]
+      Position.X = 73.000000000000000000
+      Position.Y = 27.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'OK'
+      TextSettings.Font.Family = 'Candara'
+      TextSettings.Font.Size = 14.000000000000000000
+    end
+    object Button2: TButton
+      StyledSettings = [Style, FontColor]
+      Position.X = 73.000000000000000000
+      Position.Y = 131.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Vid'#233
+      TextSettings.Font.Family = 'Candara'
+      TextSettings.Font.Size = 14.000000000000000000
+    end
+    object Button3: TButton
+      StyledSettings = [Style, FontColor]
+      Position.X = 73.000000000000000000
+      Position.Y = 79.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Annuler'
+      TextSettings.Font.Family = 'Candara'
+      TextSettings.Font.Size = 14.000000000000000000
+    end
+  end
+  object ImageControl1: TImageControl
+    Align = Left
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Margins.Bottom = 30.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 10.000000000000000000
+    Size.Width = 140.000000000000000000
+    Size.Height = 151.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+  end
+end

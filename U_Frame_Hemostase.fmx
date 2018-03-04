@@ -1,0 +1,234 @@
+object Frame4: TFrame4
+  Size.Width = 1064.000000000000000000
+  Size.Height = 240.000000000000000000
+  Size.PlatformDefault = False
+  object Layout_Frame: TLayout
+    Align = Client
+    Size.Width = 1064.000000000000000000
+    Size.Height = 240.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object GroupBox3: TGroupBox
+      Align = Left
+      StyledSettings = [Style, FontColor, Other]
+      Size.Width = 530.000000000000000000
+      Size.Height = 240.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'L'#39'exploration de l'#39'h'#233'mostatse'
+      TextSettings.Font.Family = 'Candara'
+      TextSettings.Font.Size = 14.000000000000000000
+      TabOrder = 0
+      object Hemos_Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 0
+        MaxLength = 9
+        FilterChar = '0123456789'
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 14.000000000000000000
+        Position.X = 90.000000000000000000
+        Position.Y = 26.763635635375980000
+        Size.Width = 400.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Temps de saignement'
+        StyledSettings = [Style, FontColor]
+        object Label23: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 344.000000000000000000
+          Size.Width = 56.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Text = 'VU/5min'
+          TabOrder = 0
+        end
+      end
+      object Hemos_Edit2: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 1
+        MaxLength = 9
+        FilterChar = '0123456789'
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 14.000000000000000000
+        Position.X = 90.000000000000000000
+        Position.Y = 105.309089660644500000
+        Size.Width = 400.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Temps dec'#233'paline kaolin'
+        StyledSettings = [Style, FontColor]
+        object Label24: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 352.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Text = '%/30sec'
+          TabOrder = 0
+        end
+      end
+      object Hemos_Edit3: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 2
+        MaxLength = 9
+        FilterChar = '0123456789'
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 14.000000000000000000
+        Position.X = 90.000000000000000000
+        Position.Y = 183.854537963867200000
+        Size.Width = 400.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Temps de prothrombine'
+        StyledSettings = [Style, FontColor]
+        object Label25: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 352.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Text = '%/30sec'
+          TabOrder = 0
+        end
+      end
+      object Hemos_Label3: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Position.X = 40.000000000000000000
+        Position.Y = 183.854537963867200000
+        Size.Width = 29.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 14.000000000000000000
+        Text = 'TP'
+        TabOrder = 8
+      end
+      object Hemos_Label2: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Position.X = 40.000000000000000000
+        Position.Y = 105.309089660644500000
+        Size.Width = 29.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 14.000000000000000000
+        Text = 'TCK'
+        TabOrder = 9
+      end
+      object Hemos_Label1: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Position.X = 40.000000000000000000
+        Position.Y = 24.145454406738280000
+        Size.Width = 29.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 14.000000000000000000
+        Text = 'TS'
+        TabOrder = 10
+      end
+    end
+    object GroupBox4: TGroupBox
+      Align = Right
+      StyledSettings = [Style, FontColor, Other]
+      Position.X = 534.000000000000000000
+      Size.Width = 530.000000000000000000
+      Size.Height = 240.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Vitesse de s'#233'dimentation'
+      TextSettings.Font.Family = 'Candara'
+      TextSettings.Font.Size = 14.000000000000000000
+      TabOrder = 1
+      object L_topVs: TLayout
+        Align = Top
+        Size.Width = 530.000000000000000000
+        Size.Height = 105.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label17: TLabel
+          Anchors = [akLeft, akTop, akRight]
+          StyledSettings = [Style, FontColor]
+          Position.X = 9.000000000000000000
+          Position.Y = 37.000000000000000000
+          Size.Width = 140.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Text = 'VS'
+          TabOrder = 14
+        end
+        object Hemos_Edit4: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akTop, akRight]
+          TabOrder = 0
+          MaxLength = 9
+          FilterChar = '0123456789'
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Position.X = 48.000000000000000000
+          Position.Y = 37.000000000000000000
+          Size.Width = 456.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+          object Label16: TLabel
+            Align = Right
+            StyledSettings = [Style, FontColor]
+            Position.X = 399.000000000000000000
+            Size.Width = 57.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Family = 'Candara'
+            TextSettings.Font.Size = 14.000000000000000000
+            Text = '100mm/h'
+            TabOrder = 0
+          end
+        end
+      end
+      object GroupBox5: TGroupBox
+        Align = Client
+        StyledSettings = [Style, FontColor, Other]
+        Size.Width = 530.000000000000000000
+        Size.Height = 135.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Note'
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 14.000000000000000000
+        TabOrder = 1
+        object Memo1: TMemo
+          Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+          DataDetectorTypes = []
+          StyledSettings = [Style, FontColor]
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Align = Client
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 25.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Size.Width = 510.000000000000000000
+          Size.Height = 100.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Viewport.Width = 506.000000000000000000
+          Viewport.Height = 96.000000000000000000
+        end
+      end
+    end
+  end
+end

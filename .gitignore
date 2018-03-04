@@ -1,0 +1,11 @@
+/Assets
+/__history
+/__recovery
+*.exe
+*.rsm
+*.ttf
+resources.txt
+resources.rc
+Temp Typer.txt
+/Win32
+/Win64

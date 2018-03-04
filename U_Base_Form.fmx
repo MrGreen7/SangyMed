@@ -1,0 +1,26 @@
+object Base_Form: TBase_Form
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  Fill.Kind = Gradient
+  Fill.Gradient.Points = <
+    item
+      Color = xFFEF4B4B
+      Offset = 0.000000000000000000
+    end
+    item
+      Color = xFF65C9EF
+      Offset = 1.000000000000000000
+    end>
+  Fill.Gradient.StartPosition.X = 1.000000000000000000
+  Fill.Gradient.StartPosition.Y = 0.850103735923767000
+  Fill.Gradient.StopPosition.Y = 0.149896234273910500
+  Position = DesktopCenter
+  StyleBook = DataModule1.Windows10
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+end

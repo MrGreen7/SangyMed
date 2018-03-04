@@ -1,0 +1,321 @@
+object Frame2: TFrame2
+  Size.Width = 1061.000000000000000000
+  Size.Height = 272.000000000000000000
+  Size.PlatformDefault = False
+  object GroupBox1: TGroupBox
+    Align = Client
+    StyledSettings = [Style, FontColor, Other]
+    Padding.Top = 10.000000000000000000
+    Size.Width = 682.000000000000000000
+    Size.Height = 272.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Adresse et contact'
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 14.000000000000000000
+    TabOrder = 0
+    object L_Top_1: TLayout
+      Align = Top
+      Position.Y = 10.000000000000000000
+      Size.Width = 682.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object AC_Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 0
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 14.000000000000000000
+        Position.X = 90.000000000000000000
+        Position.Y = 17.799999237060550000
+        Size.Width = 560.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Style, FontColor]
+      end
+      object AC_Label1: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Position.X = 15.000000000000000000
+        Position.Y = 16.649999618530270000
+        Size.Width = 69.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 14.000000000000000000
+        Text = 'Adresse'
+        TabOrder = 1
+      end
+    end
+    object L_Top_2: TLayout
+      Align = Top
+      Position.Y = 75.000000000000000000
+      Size.Width = 682.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object L_Right_2: TLayout
+        Align = Right
+        Position.X = 343.000000000000000000
+        Size.Width = 339.000000000000000000
+        Size.Height = 65.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object AC_Label5: TLabel
+          Anchors = [akLeft]
+          StyledSettings = [Style, FontColor]
+          Position.X = 15.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 85.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Text = 'Commune'
+          TabOrder = 15
+        end
+        object AC_ComboBox2: TComboBox
+          Anchors = [akLeft, akRight]
+          ItemHeight = 27.000000000000000000
+          Position.X = 90.000000000000000000
+          Position.Y = 17.000000000000000000
+          Size.Width = 217.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 12
+        end
+      end
+      object L_Left_2: TLayout
+        Align = Left
+        Size.Width = 339.000000000000000000
+        Size.Height = 65.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object AC_Label2: TLabel
+          Anchors = [akLeft]
+          StyledSettings = [Style, FontColor]
+          Position.X = 15.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 49.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Text = 'Wilaya'
+          TabOrder = 2
+        end
+        object AC_ComboBox1: TComboBox
+          Anchors = [akLeft, akRight]
+          ItemHeight = 27.000000000000000000
+          Position.X = 90.000000000000000000
+          Position.Y = 17.000000000000000000
+          Size.Width = 217.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+        end
+      end
+    end
+    object L_Top_3: TLayout
+      Align = Top
+      Position.Y = 140.000000000000000000
+      Size.Width = 682.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object L_Left_3: TLayout
+        Align = Left
+        Size.Width = 339.000000000000000000
+        Size.Height = 65.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        object AC_Edit2: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akRight]
+          TabOrder = 0
+          FilterChar = '+0123456789'
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Position.X = 90.000000000000000000
+          Position.Y = 17.000000000000000000
+          Size.Width = 217.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+        end
+        object AC_Label3: TLabel
+          Anchors = [akLeft]
+          StyledSettings = [Style, FontColor]
+          Position.X = 15.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 77.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Text = 'T'#233'lephone'
+          TabOrder = 2
+        end
+      end
+      object L_Right_3: TLayout
+        Align = Right
+        Position.X = 343.000000000000000000
+        Size.Width = 339.000000000000000000
+        Size.Height = 65.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        object AC_Label6: TLabel
+          Anchors = [akLeft]
+          StyledSettings = [Style, FontColor]
+          Position.X = 15.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 53.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Text = 'Mobile'
+          TabOrder = 18
+        end
+        object AC_Edit4: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akRight]
+          TabOrder = 16
+          FilterChar = '+0123456789'
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Position.X = 90.000000000000000000
+          Position.Y = 17.000000000000000000
+          Size.Width = 217.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+        end
+      end
+    end
+    object L_Top_4: TLayout
+      Align = Top
+      Position.Y = 205.000000000000000000
+      Size.Width = 682.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object L_Left_4: TLayout
+        Align = Left
+        Size.Width = 339.000000000000000000
+        Size.Height = 65.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        object AC_Edit3: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akRight]
+          TabOrder = 0
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Position.X = 90.000000000000000000
+          Position.Y = 17.000000000000000000
+          Size.Width = 217.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+        end
+        object AC_Label4: TLabel
+          Anchors = [akLeft]
+          StyledSettings = [Style, FontColor]
+          Position.X = 15.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 49.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Text = 'Email'
+          TabOrder = 1
+        end
+      end
+      object L_Right_4: TLayout
+        Align = Right
+        Position.X = 343.000000000000000000
+        Size.Width = 339.000000000000000000
+        Size.Height = 65.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 6
+        object AC_Label7: TLabel
+          Anchors = [akLeft]
+          StyledSettings = [Style, FontColor]
+          Position.X = 15.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 49.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Text = 'Fax'
+          TabOrder = 15
+        end
+        object AC_Edit5: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akRight]
+          TabOrder = 14
+          FilterChar = '+0123456789'
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
+          Position.X = 90.000000000000000000
+          Position.Y = 17.000000000000000000
+          Size.Width = 217.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+        end
+      end
+    end
+  end
+  object GroupBox2: TGroupBox
+    Align = Right
+    StyledSettings = [Style, FontColor, Other]
+    Position.X = 682.000000000000000000
+    Size.Width = 379.000000000000000000
+    Size.Height = 272.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Autres'
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 14.000000000000000000
+    TabOrder = 1
+    object AC_ComboBox3: TComboBox
+      Items.Strings = (
+        'A+'
+        'A-'
+        'B+'
+        'B-'
+        'AB+'
+        'AB-'
+        'O+'
+        'O-')
+      Position.X = 128.000000000000000000
+      Position.Y = 36.000000000000000000
+      Size.Width = 233.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 17
+    end
+    object Label0: TLabel
+      StyledSettings = [Style, FontColor]
+      Position.X = 16.000000000000000000
+      Position.Y = 37.000000000000000000
+      Size.Width = 109.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Candara'
+      TextSettings.Font.Size = 14.000000000000000000
+      Text = 'Group sanguin'
+      TabOrder = 14
+    end
+    object Wilaya_Code: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 19
+      Position.X = 72.000000000000000000
+      Position.Y = 120.000000000000000000
+      Visible = False
+    end
+  end
+end

@@ -1,0 +1,1124 @@
+object Frame6: TFrame6
+  Size.Width = 1061.000000000000000000
+  Size.Height = 218.000000000000000000
+  Size.PlatformDefault = False
+  object Layout0: TLayout
+    Align = Client
+    Size.Width = 1061.000000000000000000
+    Size.Height = 218.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Layout1: TLayout
+      Align = Right
+      Position.X = 533.000000000000000000
+      Size.Width = 264.000000000000000000
+      Size.Height = 218.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Bio_Edit11: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 0
+        MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
+        Position.X = 76.000000000000000000
+        Position.Y = 9.367272377014161000
+        Size.Width = 125.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        object Label1: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 95.000000000000000000
+          Size.Width = 30.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'U/L'
+          TabOrder = 0
+        end
+      end
+      object Label2: TLabel
+        Anchors = [akRight]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Value Usuelle - F : Female M : Male'
+        Position.X = 202.000000000000000000
+        Position.Y = 9.367272377014161000
+        Size.Width = 60.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = 'F: until 31   M: until 38'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 14
+      end
+      object Bio_Edit12: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 2
+        MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
+        Position.X = 76.000000000000000000
+        Position.Y = 52.174545288085940000
+        Size.Width = 125.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        object Label3: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 95.000000000000000000
+          Size.Width = 30.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'U/L'
+          TabOrder = 0
+        end
+      end
+      object Label4: TLabel
+        Anchors = [akRight]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Value Usuelle - C : Children A : Adult'
+        Position.X = 202.000000000000000000
+        Position.Y = 52.174545288085940000
+        Size.Width = 60.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = 'C: until 650   A: 70-300'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 12
+      end
+      object Bio_Edit13: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 4
+        MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
+        Position.X = 76.000000000000000000
+        Position.Y = 94.981819152832030000
+        Size.Width = 125.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        object Label5: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 95.000000000000000000
+          Size.Width = 30.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = '%'
+          TabOrder = 0
+        end
+      end
+      object Label6: TLabel
+        Anchors = [akRight]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Value Usuelle'
+        Position.X = 202.000000000000000000
+        Position.Y = 94.981819152832030000
+        Size.Width = 60.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = '73-100'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 10
+      end
+      object Bio_Edit14: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 5
+        MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
+        Position.X = 76.000000000000000000
+        Position.Y = 137.789093017578100000
+        Size.Width = 125.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        object Label7: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 95.000000000000000000
+          Size.Width = 30.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = '-'
+          TabOrder = 0
+        end
+      end
+      object Label8: TLabel
+        Anchors = [akRight]
+        StyledSettings = [Family, Style, FontColor]
+        Hint = 'Value Usuelle'
+        Position.X = 202.000000000000000000
+        Position.Y = 137.789093017578100000
+        Size.Width = 60.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.HorzAlign = Center
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 8
+      end
+      object Bio_Edit15: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 7
+        MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
+        Position.X = 76.000000000000000000
+        Position.Y = 180.596359252929700000
+        Size.Width = 125.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        object Label9: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 95.000000000000000000
+          Size.Width = 30.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'mg/L'
+          TabOrder = 0
+        end
+      end
+      object Label10: TLabel
+        Anchors = [akRight]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Value Usuelle'
+        Position.X = 202.000000000000000000
+        Position.Y = 180.596359252929700000
+        Size.Width = 60.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = '2-10'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 3
+      end
+      object Label51: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Glutamyl-Pyruvate-Transaminase'
+        Position.X = 6.000000000000000000
+        Position.Y = 9.367272377014161000
+        Size.Width = 65.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        Text = 'TGP'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 13
+      end
+      object Label52: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Les Phosphatases Alcalines'
+        Position.X = 6.000000000000000000
+        Position.Y = 52.174545288085940000
+        Size.Width = 65.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        Text = 'PAL'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 11
+      end
+      object Label53: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Position.X = 6.000000000000000000
+        Position.Y = 94.981819152832030000
+        Size.Width = 65.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        Text = 'TP'
+        TabOrder = 9
+      end
+      object Label54: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Hint = 'International Normalized Ratio'
+        Position.X = 6.000000000000000000
+        Position.Y = 137.789093017578100000
+        Size.Width = 65.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        Text = 'INR'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 6
+      end
+      object Label55: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Position.X = 6.000000000000000000
+        Position.Y = 180.596359252929700000
+        Size.Width = 65.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        Text = 'Bilirubine   T'
+        TabOrder = 1
+      end
+    end
+    object Layout2: TLayout
+      Align = Right
+      Position.X = 797.000000000000000000
+      Size.Width = 264.000000000000000000
+      Size.Height = 218.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Bio_Edit16: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 0
+        MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
+        Position.X = 76.000000000000000000
+        Position.Y = 9.367272377014161000
+        Size.Width = 125.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        object Label11: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 95.000000000000000000
+          Size.Width = 30.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'mg/L'
+          TabOrder = 0
+        end
+      end
+      object Label12: TLabel
+        Anchors = [akRight]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Value Usuelle'
+        Position.X = 202.000000000000000000
+        Position.Y = 9.367272377014161000
+        Size.Width = 60.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = '0-02'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 11
+      end
+      object Bio_Edit17: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 2
+        MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
+        Position.X = 76.000000000000000000
+        Position.Y = 52.174545288085940000
+        Size.Width = 125.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        object Label13: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 95.000000000000000000
+          Size.Width = 30.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = '-'
+          TabOrder = 0
+        end
+      end
+      object Label14: TLabel
+        Anchors = [akRight]
+        StyledSettings = [Family, Style, FontColor]
+        Hint = 'Value Usuelle'
+        Position.X = 202.000000000000000000
+        Position.Y = 52.174545288085940000
+        Size.Width = 60.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.HorzAlign = Center
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 9
+      end
+      object Bio_Edit18: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 4
+        MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
+        Position.X = 76.000000000000000000
+        Position.Y = 94.981819152832030000
+        Size.Width = 125.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        object Label15: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 95.000000000000000000
+          Size.Width = 30.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'mg/L'
+          TabOrder = 0
+        end
+      end
+      object Label16: TLabel
+        Anchors = [akRight]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Value Usuelle'
+        Position.X = 202.000000000000000000
+        Position.Y = 94.981819152832030000
+        Size.Width = 60.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = '80-106'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 7
+      end
+      object Bio_Edit19: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 5
+        MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
+        Position.X = 76.000000000000000000
+        Position.Y = 137.789093017578100000
+        Size.Width = 125.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        object Label17: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 95.000000000000000000
+          Size.Width = 30.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'mg/L'
+          TabOrder = 0
+        end
+      end
+      object Label18: TLabel
+        Anchors = [akRight]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Value Usuelle'
+        Position.X = 202.000000000000000000
+        Position.Y = 137.789093017578100000
+        Size.Width = 60.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = '35-50'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 3
+      end
+      object Label56: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Position.X = 6.000000000000000000
+        Position.Y = 9.367272377014161000
+        Size.Width = 65.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        Text = 'Bilirubine   D'
+        TabOrder = 10
+      end
+      object Label57: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Position.X = 6.000000000000000000
+        Position.Y = 52.174545288085940000
+        Size.Width = 65.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        Text = 'ASLO'
+        TabOrder = 8
+      end
+      object Label58: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Position.X = 6.000000000000000000
+        Position.Y = 94.981819152832030000
+        Size.Width = 65.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        Text = 'Calc'#233'mie'
+        TabOrder = 6
+      end
+      object Label59: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Position.X = 6.000000000000000000
+        Position.Y = 137.789093017578100000
+        Size.Width = 75.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        Text = 'Albumin'#233'mie'
+        TabOrder = 1
+      end
+    end
+    object Layout3: TLayout
+      Align = Left
+      Size.Width = 264.000000000000000000
+      Size.Height = 218.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object Bio_Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 0
+        MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
+        Position.X = 76.000000000000000000
+        Position.Y = 9.367272377014161000
+        Size.Width = 125.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        object Label21: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 95.000000000000000000
+          Size.Width = 30.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'g/L'
+          TabOrder = 0
+        end
+      end
+      object Label22: TLabel
+        Anchors = [akRight]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Value Usuelle'
+        Position.X = 202.000000000000000000
+        Position.Y = 9.367272377014161000
+        Size.Width = 60.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = '0.70-1.20'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 14
+      end
+      object Bio_Edit2: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 2
+        MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
+        Position.X = 76.000000000000000000
+        Position.Y = 52.174545288085940000
+        Size.Width = 125.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        object Label23: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 95.000000000000000000
+          Size.Width = 30.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'g/L'
+          TabOrder = 0
+        end
+      end
+      object Label24: TLabel
+        Anchors = [akRight]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Value Usuelle'
+        Position.X = 202.000000000000000000
+        Position.Y = 52.174545288085940000
+        Size.Width = 60.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = '0.15-.40'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 12
+      end
+      object Bio_Edit3: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 4
+        MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
+        Position.X = 76.000000000000000000
+        Position.Y = 94.981819152832030000
+        Size.Width = 125.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        object Label25: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 95.000000000000000000
+          Size.Width = 30.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'mg/L'
+          TabOrder = 0
+        end
+      end
+      object Label26: TLabel
+        Anchors = [akRight]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Value Usuelle'
+        Position.X = 202.000000000000000000
+        Position.Y = 94.981819152832030000
+        Size.Width = 60.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = '07-14'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 10
+      end
+      object Bio_Edit4: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 6
+        MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
+        Position.X = 76.000000000000000000
+        Position.Y = 137.789093017578100000
+        Size.Width = 125.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        object Label27: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 95.000000000000000000
+          Size.Width = 30.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'g/L'
+          TabOrder = 0
+        end
+      end
+      object Label28: TLabel
+        Anchors = [akRight]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Value Usuelle'
+        Position.X = 202.000000000000000000
+        Position.Y = 137.789093017578100000
+        Size.Width = 60.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = '1.40-2.20'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 8
+      end
+      object Bio_Edit5: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 7
+        MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
+        Position.X = 76.000000000000000000
+        Position.Y = 180.596359252929700000
+        Size.Width = 125.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        object Label29: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 95.000000000000000000
+          Size.Width = 30.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'g/L'
+          TabOrder = 0
+        end
+      end
+      object Label30: TLabel
+        Anchors = [akRight]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Value Usuelle'
+        Position.X = 202.000000000000000000
+        Position.Y = 180.596359252929700000
+        Size.Width = 60.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = '1.10-1.50'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 3
+      end
+      object Label41: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Position.X = 6.000000000000000000
+        Position.Y = 9.367272377014161000
+        Size.Width = 65.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        Text = 'Glyc'#233'mie'
+        TabOrder = 13
+      end
+      object Label42: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Position.X = 6.000000000000000000
+        Position.Y = 52.174545288085940000
+        Size.Width = 65.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        Text = 'Ur'#233'e sanguine'
+        TabOrder = 11
+      end
+      object Label43: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Position.X = 6.000000000000000000
+        Position.Y = 94.981819152832030000
+        Size.Width = 65.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        Text = 'Cr'#233'atinine'
+        TabOrder = 9
+      end
+      object Label44: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Position.X = 6.000000000000000000
+        Position.Y = 137.789093017578100000
+        Size.Width = 65.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        Text = 'Cholest'#233'rol'
+        TabOrder = 5
+      end
+      object Label45: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Position.X = 6.000000000000000000
+        Position.Y = 180.596359252929700000
+        Size.Width = 75.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        Text = 'Triglyc'#233'rides'
+        TabOrder = 1
+      end
+    end
+    object Layout4: TLayout
+      Align = Left
+      Position.X = 264.000000000000000000
+      Size.Width = 264.000000000000000000
+      Size.Height = 218.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object Bio_Edit6: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 0
+        MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
+        Position.X = 76.000000000000000000
+        Position.Y = 9.367272377014161000
+        Size.Width = 125.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        object Label31: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 95.000000000000000000
+          Size.Width = 30.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'g/L'
+          TabOrder = 0
+        end
+      end
+      object Label32: TLabel
+        Anchors = [akRight]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Value Usuelle'
+        Position.X = 202.000000000000000000
+        Position.Y = 9.367272377014161000
+        Size.Width = 60.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = 'INF a 0.35'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 14
+      end
+      object Bio_Edit7: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 2
+        MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
+        Position.X = 76.000000000000000000
+        Position.Y = 52.174545288085940000
+        Size.Width = 125.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        object Label33: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 95.000000000000000000
+          Size.Width = 30.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'g/L'
+          TabOrder = 0
+        end
+      end
+      object Label34: TLabel
+        Anchors = [akRight]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Value Usuelle'
+        Position.X = 202.000000000000000000
+        Position.Y = 52.174545288085940000
+        Size.Width = 60.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = 'INF a 0.30'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 12
+      end
+      object Bio_Edit8: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 4
+        MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
+        Position.X = 76.000000000000000000
+        Position.Y = 94.981819152832030000
+        Size.Width = 125.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        object Label35: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 95.000000000000000000
+          Size.Width = 30.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'mg/L'
+          TabOrder = 0
+        end
+      end
+      object Label36: TLabel
+        Anchors = [akRight]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Value Usuelle  - F : Female M : Male'
+        Position.X = 202.000000000000000000
+        Position.Y = 94.981819152832030000
+        Size.Width = 60.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = 'F : 25-60     M: 37-70'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 10
+      end
+      object Bio_Edit9: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 6
+        MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
+        Position.X = 76.000000000000000000
+        Position.Y = 137.789093017578100000
+        Size.Width = 125.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        object Label37: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 95.000000000000000000
+          Size.Width = 30.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'mg/L'
+          TabOrder = 0
+        end
+      end
+      object Label38: TLabel
+        Anchors = [akRight]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Value Usuelle'
+        Position.X = 202.000000000000000000
+        Position.Y = 137.789093017578100000
+        Size.Width = 60.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = '< 6'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 8
+      end
+      object Bio_Edit10: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 7
+        MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
+        Position.X = 76.000000000000000000
+        Position.Y = 180.596359252929700000
+        Size.Width = 125.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        object Label39: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 95.000000000000000000
+          Size.Width = 30.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'U/L'
+          TabOrder = 0
+        end
+      end
+      object Label40: TLabel
+        Anchors = [akRight]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Value Usuelle - F : Female M : Male'
+        Position.X = 202.000000000000000000
+        Position.Y = 180.596359252929700000
+        Size.Width = 60.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = 'F: until 31   M: until 38'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 3
+      end
+      object Label46: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Bon cholest'#233'rol (HDL)'
+        Position.X = 6.000000000000000000
+        Position.Y = 9.367272377014161000
+        Size.Width = 65.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        Text = 'HDL'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 13
+      end
+      object Label47: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Mauvais cholest'#233'rol (HDL)'
+        Position.X = 6.000000000000000000
+        Position.Y = 52.174545288085940000
+        Size.Width = 65.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        Text = 'LDL'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 11
+      end
+      object Label48: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Position.X = 6.000000000000000000
+        Position.Y = 94.981819152832030000
+        Size.Width = 65.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        Text = 'Acide urique'
+        TabOrder = 9
+      end
+      object Label49: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Prot'#233'ine C r'#233'active (CRP)'
+        Position.X = 6.000000000000000000
+        Position.Y = 137.789093017578100000
+        Size.Width = 65.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        Text = 'CRP'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 5
+      end
+      object Label50: TLabel
+        Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
+        Hint = 'Glutamyl-Oxaloac'#233'tate-Transf'#233'rase'
+        Position.X = 6.000000000000000000
+        Position.Y = 180.596359252929700000
+        Size.Width = 65.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 11.000000000000000000
+        Text = 'TGO'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 1
+      end
+    end
+  end
+end

@@ -1,0 +1,140 @@
+object Log: TLog
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 312
+  ClientWidth = 607
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Button1: TButton
+    StyleName = 'StyleBook1'
+    Cursor = crHandPoint
+    StyledSettings = [Style, FontColor]
+    Position.X = 51.000000000000000000
+    Position.Y = 212.000000000000000000
+    Size.Width = 153.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Valid'#233
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 16.000000000000000000
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    StyledSettings = [Style, FontColor]
+    ModalResult = 2
+    Position.X = 403.000000000000000000
+    Position.Y = 212.000000000000000000
+    Size.Width = 153.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    Text = 'Annuler'
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 16.000000000000000000
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 0
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 16.000000000000000000
+    Position.X = 51.000000000000000000
+    Position.Y = 60.000000000000000000
+    Size.Width = 505.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'Pseudo'
+    StyledSettings = [Style, FontColor]
+    OnChange = Edit1Change
+    object InnerGlowEffect1: TInnerGlowEffect
+      Softness = 0.400000005960464500
+      GlowColor = xFFD7263D
+      Opacity = 0.899999976158142100
+      Enabled = False
+    end
+  end
+  object Edit2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Password = True
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 16.000000000000000000
+    Position.X = 51.000000000000000000
+    Position.Y = 140.000000000000000000
+    Size.Width = 505.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'Mot de pass'
+    StyledSettings = [Style, FontColor]
+    OnChange = Edit2Change
+    object SpeedButton1: TSpeedButton
+      Align = Right
+      Cursor = crHandPoint
+      Position.X = 477.000000000000000000
+      Size.Width = 28.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'passwordeditbutton'
+      Text = 'SpeedButton1'
+      OnMouseDown = SpeedButton1MouseDown
+      OnMouseUp = SpeedButton1MouseUp
+    end
+    object InnerGlowEffect2: TInnerGlowEffect
+      Softness = 0.400000005960464500
+      GlowColor = xFFD7263D
+      Opacity = 0.899999976158142100
+      Enabled = False
+    end
+  end
+  object Label2: TLabel
+    AutoTranslate = False
+    Cursor = crHandPoint
+    StyledSettings = [Style]
+    HitTest = True
+    Position.X = 83.000000000000000000
+    Position.Y = 183.000000000000000000
+    Size.Width = 233.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listboxheaderlabel'
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 18.000000000000000000
+    TextSettings.FontColor = xFF44BCCA
+    Text = 'Cr'#233'e un nouvelle compte'
+    TabOrder = 4
+    object ShadowEffect3: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 0.400000005960464500
+      ShadowColor = claBlack
+    end
+  end
+  object Label1: TLabel
+    Cursor = crHandPoint
+    StyledSettings = [Style]
+    HitTest = True
+    Position.X = 51.000000000000000000
+    Position.Y = 180.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'buttonstylelabel'
+    TextSettings.Font.Family = 'FontAwesome'
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.FontColor = xFF44BCCA
+    Text = #62004
+    TabOrder = 6
+    OnClick = Label1Click
+    object ShadowEffect1: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 0.400000005960464500
+      ShadowColor = claBlack
+    end
+  end
+end
