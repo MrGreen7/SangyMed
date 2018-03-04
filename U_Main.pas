@@ -355,6 +355,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormPaint(Sender: TObject; Canvas: TCanvas; const ARect: TRectF);
     procedure Label12Click(Sender: TObject);
+    procedure Label4Click(Sender: TObject);
   private
     { Private declarations }
     WidthX, HeightX: Integer;
@@ -370,7 +371,7 @@ implementation
 
 Uses
   U_Option, U_Log, U_Entreprise, Winapi.Windows, U_DataModule,
-  FireDAC.Comp.Client;
+  FireDAC.Comp.Client, U_Fenetre;
 {$R *.fmx}
 {$R Alg_Res.RES}
 
@@ -447,6 +448,16 @@ begin
   EntrepriseDlg := TEntreprise.Create(self);
   if (EntrepriseDlg.ShowModal = mrClose) then
     EntrepriseDlg.Free;
+end;
+
+procedure TMain.Label4Click(Sender: TObject);
+Var
+  FenetreDlg: TFenetre;
+begin
+  inherited;
+  FenetreDlg := TFenetre.Create(self);
+  if (FenetreDlg.ShowModal = mrClose) then
+    FenetreDlg.Free;
 end;
 
 end.

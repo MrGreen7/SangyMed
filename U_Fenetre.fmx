@@ -7,6 +7,8 @@ object Fenetre: TFenetre
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnCloseQuery = FormCloseQuery
+  OnShow = FormShow
   DesignerMasterStyle = 0
   object TLabel
     Align = Top
@@ -55,6 +57,7 @@ object Fenetre: TFenetre
       AnimationType = Out
       Delay = 0.100000001490116100
       Duration = 0.500000000000000000
+      OnFinish = Fla_AccueilFinish
       PropertyName = 'Scale.Y'
       StartValue = 1.000000000000000000
       StopValue = 0.000000000000000000
@@ -68,6 +71,7 @@ object Fenetre: TFenetre
       StyleLookup = 'stoptoolbuttonbordered'
       TabOrder = 2
       Text = 'Btn_Accueil'
+      OnClick = Btn_AccueilClick
     end
   end
   object F_NouveauP: TPanel
@@ -109,6 +113,7 @@ object Fenetre: TFenetre
       AnimationType = Out
       Delay = 0.100000001490116100
       Duration = 0.500000000000000000
+      OnFinish = Fla_NouveauPFinish
       PropertyName = 'Scale.Y'
       StartValue = 1.000000000000000000
       StopValue = 0.000000000000000000
@@ -122,6 +127,7 @@ object Fenetre: TFenetre
       StyleLookup = 'stoptoolbuttonbordered'
       TabOrder = 2
       Text = 'Button1'
+      OnClick = Btn_NouveauPClick
     end
   end
   object F_Ordonnance: TPanel
@@ -163,6 +169,7 @@ object Fenetre: TFenetre
       AnimationType = Out
       Delay = 0.100000001490116100
       Duration = 0.500000000000000000
+      OnFinish = Fla_OrdonnaceFinish
       PropertyName = 'Scale.Y'
       StartValue = 1.000000000000000000
       StopValue = 0.000000000000000000
@@ -176,6 +183,7 @@ object Fenetre: TFenetre
       StyleLookup = 'stoptoolbuttonbordered'
       TabOrder = 2
       Text = 'Button1'
+      OnClick = Btn_OrdonnaceClick
     end
   end
   object F_Patient: TPanel
@@ -217,6 +225,7 @@ object Fenetre: TFenetre
       AnimationType = Out
       Delay = 0.100000001490116100
       Duration = 0.500000000000000000
+      OnFinish = Fla_PatientFinish
       PropertyName = 'Scale.Y'
       StartValue = 1.000000000000000000
       StopValue = 0.000000000000000000
@@ -230,6 +239,7 @@ object Fenetre: TFenetre
       StyleLookup = 'stoptoolbuttonbordered'
       TabOrder = 2
       Text = 'Button1'
+      OnClick = Btn_PatientClick
     end
   end
   object F_RDV: TPanel
@@ -271,6 +281,7 @@ object Fenetre: TFenetre
       AnimationType = Out
       Delay = 0.100000001490116100
       Duration = 0.500000000000000000
+      OnFinish = Fla_RDVFinish
       PropertyName = 'Scale.Y'
       StartValue = 1.000000000000000000
       StopValue = 0.000000000000000000
@@ -284,6 +295,7 @@ object Fenetre: TFenetre
       StyleLookup = 'stoptoolbuttonbordered'
       TabOrder = 2
       Text = 'Button1'
+      OnClick = Btn_RDVClick
     end
   end
   object F_RechercheP: TPanel
@@ -325,6 +337,7 @@ object Fenetre: TFenetre
       AnimationType = Out
       Delay = 0.100000001490116100
       Duration = 0.500000000000000000
+      OnFinish = Fla_RecherchePFinish
       PropertyName = 'Scale.Y'
       StartValue = 1.000000000000000000
       StopValue = 0.000000000000000000
@@ -338,6 +351,7 @@ object Fenetre: TFenetre
       StyleLookup = 'stoptoolbuttonbordered'
       TabOrder = 2
       Text = 'Button1'
+      OnClick = Btn_RecherchePClick
     end
   end
   object Label1: TLabel
@@ -368,6 +382,7 @@ object Fenetre: TFenetre
     TextSettings.HorzAlign = Center
     Text = #61641
     TabOrder = 8
+    OnClick = Label14Click
     object ColorAnimation1: TColorAnimation
       AnimationType = Out
       Delay = 0.200000002980232200

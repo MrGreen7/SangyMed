@@ -296,6 +296,7 @@ object Main: TMain
             TextSettings.VertAlign = Leading
             Text = #62162
             TabOrder = 1
+            OnClick = Label4Click
             object ShadowEffect9: TShadowEffect
               Distance = 3.000000000000000000
               Direction = 45.000000000000000000
