@@ -53,8 +53,8 @@ object Main: TMain
           Size.Height = 501.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
-          Viewport.Width = 197.000000000000000000
-          Viewport.Height = 497.000000000000000000
+          Viewport.Width = 201.000000000000000000
+          Viewport.Height = 501.000000000000000000
           object T_Accueil: TTreeViewItem
             Cursor = crHandPoint
             StyledSettings = [Style]
@@ -524,6 +524,7 @@ object Main: TMain
             TextSettings.VertAlign = Leading
             Text = #61688
             TabOrder = 1
+            OnClick = Label12Click
             object ShadowEffect12: TShadowEffect
               Distance = 3.000000000000000000
               Direction = 45.000000000000000000
@@ -996,6 +997,7 @@ object Main: TMain
       StyleLookup = ''
       TabOrder = 0
       Text = #61918' G'#233'n'#233'ral'
+      Visible = False
       ExplicitSize.cx = 94.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
       object Panel10: TPanel
@@ -1537,6 +1539,7 @@ object Main: TMain
       StyleLookup = ''
       TabOrder = 0
       Text = #61918' G'#233'n'#233'ral'
+      Visible = False
       ExplicitSize.cx = 94.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
       object Panel11: TPanel
@@ -1850,6 +1853,7 @@ object Main: TMain
       StyleLookup = ''
       TabOrder = 0
       Text = #61918' G'#233'n'#233'ral'
+      Visible = False
       ExplicitSize.cx = 94.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
       object Panel9: TPanel
@@ -2127,6 +2131,7 @@ object Main: TMain
       StyleLookup = ''
       TabOrder = 0
       Text = #61918' G'#233'n'#233'ral'
+      Visible = False
       ExplicitSize.cx = 94.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
       object Panel12: TPanel
@@ -2442,6 +2447,7 @@ object Main: TMain
       StyleLookup = ''
       TabOrder = 0
       Text = #61918' G'#233'n'#233'ral'
+      Visible = False
       ExplicitSize.cx = 94.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
       object Panel13: TPanel
@@ -3300,7 +3306,7 @@ object Main: TMain
         Size.Width = 1059.000000000000000000
         Size.Height = 299.000000000000000000
         Size.PlatformDefault = False
-        TabIndex = 5
+        TabIndex = 0
         TabOrder = 1
         TabPosition = PlatformDefault
         Sizes = (
@@ -3326,7 +3332,7 @@ object Main: TMain
           TextSettings.Font.Size = 14.000000000000000000
           TextSettings.FontColor = xFF0B5351
           StyledSettings = [Style]
-          IsSelected = False
+          IsSelected = True
           Size.Width = 112.000000000000000000
           Size.Height = 29.000000000000000000
           Size.PlatformDefault = False
@@ -3959,7 +3965,7 @@ object Main: TMain
           TextSettings.Font.Size = 14.000000000000000000
           TextSettings.FontColor = xFF5E0D60
           StyledSettings = [Style]
-          IsSelected = True
+          IsSelected = False
           Size.Width = 112.000000000000000000
           Size.Height = 29.000000000000000000
           Size.PlatformDefault = False
@@ -4209,7 +4215,7 @@ object Main: TMain
         Size.Width = 1059.000000000000000000
         Size.Height = 299.000000000000000000
         Size.PlatformDefault = False
-        TabIndex = 5
+        TabIndex = 0
         TabOrder = 1
         TabPosition = PlatformDefault
         Sizes = (
@@ -4235,7 +4241,7 @@ object Main: TMain
           TextSettings.Font.Size = 14.000000000000000000
           TextSettings.FontColor = xFF0B5351
           StyledSettings = [Style]
-          IsSelected = False
+          IsSelected = True
           Size.Width = 112.000000000000000000
           Size.Height = 29.000000000000000000
           Size.PlatformDefault = False
@@ -4792,7 +4798,7 @@ object Main: TMain
           TextSettings.Font.Size = 14.000000000000000000
           TextSettings.FontColor = xFF5E0D60
           StyledSettings = [Style]
-          IsSelected = True
+          IsSelected = False
           Size.Width = 112.000000000000000000
           Size.Height = 29.000000000000000000
           Size.PlatformDefault = False

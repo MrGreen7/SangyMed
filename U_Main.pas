@@ -354,6 +354,7 @@ type
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormPaint(Sender: TObject; Canvas: TCanvas; const ARect: TRectF);
+    procedure Label12Click(Sender: TObject);
   private
     { Private declarations }
     WidthX, HeightX: Integer;
@@ -396,7 +397,7 @@ begin
   inherited;
   WidthX := Main.Width;
   HeightX := Main.Height;
-  //StringGrid5ColResize;
+  // StringGrid5ColResize;
 end;
 
 procedure TMain.FormShow(Sender: TObject);
@@ -410,6 +411,16 @@ begin
     Application.Terminate;
   LogDlg.Free;
   // StatusBar;
+end;
+
+procedure TMain.Label12Click(Sender: TObject);
+var
+  EntrepriseDlg: TEntreprise;
+begin
+  inherited;
+  EntrepriseDlg := TEntreprise.Create(self);
+  if (EntrepriseDlg.ShowModal = mrClose) then
+    EntrepriseDlg.Free;
 end;
 
 end.

@@ -7,6 +7,8 @@ object Entreprise: TEntreprise
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnShow = FormShow
   DesignerMasterStyle = 0
   object GroupBox1: TGroupBox
     Position.X = -4.000000000000000000
@@ -167,6 +169,7 @@ object Entreprise: TEntreprise
           Size.Height = 22.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 3
+          OnChange = ComboBox2Change
         end
         object ComboBox3: TComboBox
           ItemHeight = 30.000000000000000000
@@ -176,6 +179,7 @@ object Entreprise: TEntreprise
           Size.Height = 22.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 4
+          OnChange = ComboBox3Change
         end
         object Edit3: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
@@ -226,6 +230,7 @@ object Entreprise: TEntreprise
           Position.Y = 76.000000000000000000
           HitTest = False
           StyledSettings = [Style, FontColor]
+          OnChange = Edit_Code_WilayaChange
         end
         object Edit_Code_Postal: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
@@ -385,6 +390,7 @@ object Entreprise: TEntreprise
         Size.PlatformDefault = False
         TabOrder = 2
         Text = 'Ok'
+        OnClick = Button1Click
       end
       object Button2: TButton
         Position.X = 600.000000000000000000
@@ -394,6 +400,7 @@ object Entreprise: TEntreprise
         Size.PlatformDefault = False
         TabOrder = 3
         Text = 'Annuler'
+        OnClick = Button2Click
       end
       object Button3: TButton
         Position.X = 428.000000000000000000
@@ -403,6 +410,7 @@ object Entreprise: TEntreprise
         Size.PlatformDefault = False
         TabOrder = 4
         Text = 'Edit'
+        OnClick = Button3Click
       end
     end
   end
