@@ -7,7 +7,7 @@ uses
   System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, U_Base_Form,
   FMX.Effects, FMX.StdCtrls, FMX.Edit, FMX.Controls.Presentation,
-  IdHashMessageDigest;
+  IdHashMessageDigest, FMX.Objects;
 
 type
   TLog = class(TBase_Form)
@@ -21,7 +21,7 @@ type
     Label1: TLabel;
     ShadowEffect1: TShadowEffect;
     Label2: TLabel;
-    ShadowEffect3: TShadowEffect;
+    ShadowEffect2: TShadowEffect;
     procedure Button1Click(Sender: TObject);
     procedure Edit1Change(Sender: TObject);
     procedure Edit2Change(Sender: TObject);

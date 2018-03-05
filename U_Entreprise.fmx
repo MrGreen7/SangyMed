@@ -1,13 +1,14 @@
 object Entreprise: TEntreprise
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = Single
   Caption = 'Form1'
   ClientHeight = 550
   ClientWidth = 742
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
-  OnCreate = FormCreate
   OnShow = FormShow
   DesignerMasterStyle = 0
   object GroupBox1: TGroupBox
@@ -170,6 +171,7 @@ object Entreprise: TEntreprise
           Size.PlatformDefault = False
           TabOrder = 3
           OnChange = ComboBox2Change
+          OnMouseEnter = ComboBox2MouseEnter
         end
         object ComboBox3: TComboBox
           ItemHeight = 30.000000000000000000
@@ -388,7 +390,7 @@ object Entreprise: TEntreprise
         Size.Width = 96.000000000000000000
         Size.Height = 27.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 2
+        TabOrder = 11
         Text = 'Ok'
         OnClick = Button1Click
       end
@@ -398,7 +400,7 @@ object Entreprise: TEntreprise
         Size.Width = 96.000000000000000000
         Size.Height = 27.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 3
+        TabOrder = 13
         Text = 'Annuler'
         OnClick = Button2Click
       end
@@ -408,7 +410,7 @@ object Entreprise: TEntreprise
         Size.Width = 96.000000000000000000
         Size.Height = 27.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 4
+        TabOrder = 12
         Text = 'Edit'
         OnClick = Button3Click
       end

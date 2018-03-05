@@ -1,6 +1,8 @@
 object Option: TOption
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = Single
   Caption = 'Form1'
   ClientHeight = 517
   ClientWidth = 793
@@ -19,7 +21,6 @@ object Option: TOption
   end
   object Panel1: TPanel
     Align = Left
-    Position.X = 8.000000000000000000
     Size.Width = 169.000000000000000000
     Size.Height = 517.000000000000000000
     Size.PlatformDefault = False

@@ -11,7 +11,8 @@ uses
   FMX.Bind.DBEngExt, System.Rtti, System.Bindings.Outputs, Data.Bind.Components,
   Data.Bind.DBScope, Data.Bind.Grid, U_Frame_Principale, U_Frame_Serologie,
   U_Frame_Biochimic, U_Frame_Hemostase, U_Frame_Hemogramme, U_Frame_Information,
-  FMX.Edit;
+  FMX.Edit, U_Frame_Ordonnance, FMX.Menus, FMX.Grid.Style, FMX.ScrollBox,
+  FMX.Grid, FMX.Bind.Grid, FMX.Bind.Editors;
 
 type
   TMain = class(TBase_Form)
@@ -279,16 +280,16 @@ type
     ColorAnimation10: TColorAnimation;
     FloatAnimation1: TFloatAnimation;
     GrouBox3_Table: TGroupBox;
-    Label24: TLabel;
+    Label_Refresh3: TLabel;
     ColorAnimation12: TColorAnimation;
     FloatAnimation3: TFloatAnimation;
     L_Right_P_Accueil: TLayout;
     GrouBox2_Table: TGroupBox;
-    Label23: TLabel;
+    Label_Refresh2: TLabel;
     ColorAnimation11: TColorAnimation;
     FloatAnimation2: TFloatAnimation;
     GrouBox4_Table: TGroupBox;
-    Label25: TLabel;
+    Label_Refresh4: TLabel;
     ColorAnimation13: TColorAnimation;
     FloatAnimation4: TFloatAnimation;
     Patient: TTabItem;
@@ -350,12 +351,98 @@ type
     Frame_EP_Serologie: TFrame5;
     TabItem13: TTabItem;
     TabItem14: TTabItem;
+    Frame_EP_Ordonnance: TFrame7;
+    PopupMenu1: TPopupMenu;
+    Frame_Ordonnance: TFrame7;
+    StringGrid1: TStringGrid;
+    StringGrid2: TStringGrid;
+    StringGrid3: TStringGrid;
+    StringGrid4: TStringGrid;
+    StringGrid5: TStringGrid;
+    StringGrid6: TStringGrid;
+    BindSourceDB1: TBindSourceDB;
+    BindingsList1: TBindingsList;
+    LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
+    BindSourceDB2: TBindSourceDB;
+    LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource;
+    BindSourceDB3: TBindSourceDB;
+    LinkGridToDataSourceBindSourceDB3: TLinkGridToDataSource;
+    PoP_Hemogramme: TMenuItem;
+    PoP_Biochimic: TMenuItem;
+    PoP_Serologie: TMenuItem;
+    PoP_Hemostase: TMenuItem;
     procedure FormShow(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormPaint(Sender: TObject; Canvas: TCanvas; const ARect: TRectF);
     procedure Label12Click(Sender: TObject);
     procedure Label4Click(Sender: TObject);
+    procedure Label1Click(Sender: TObject);
+    procedure Label6Click(Sender: TObject);
+    procedure T_AccueilClick(Sender: TObject);
+    procedure T_PatientClick(Sender: TObject);
+    procedure Patient_RechercheClick(Sender: TObject);
+    procedure New_PatientClick(Sender: TObject);
+    procedure T_RDVClick(Sender: TObject);
+    procedure TreeViewItem6Click(Sender: TObject);
+    procedure P_AccueilClick(Sender: TObject);
+    procedure PatientClick(Sender: TObject);
+    procedure Recherche_PatientClick(Sender: TObject);
+    procedure Nouveau_PatientClick(Sender: TObject);
+    procedure RDVClick(Sender: TObject);
+    procedure OrdonnanceClick(Sender: TObject);
+    procedure Label52Click(Sender: TObject);
+    procedure Label65Click(Sender: TObject);
+    procedure Label61Click(Sender: TObject);
+    procedure Label30Click(Sender: TObject);
+    procedure Label15Click(Sender: TObject);
+    procedure Label32Click(Sender: TObject);
+    procedure Label22Click(Sender: TObject);
+    procedure Label48Click(Sender: TObject);
+    procedure Label18Click(Sender: TObject);
+    procedure Label55Click(Sender: TObject);
+    procedure Frame_PrincipaleButton1Click(Sender: TObject);
+    procedure Label54Click(Sender: TObject);
+    procedure Label20Click(Sender: TObject);
+    procedure Frame_EP_PrincipaleButton1Click(Sender: TObject);
+    procedure Frame_EP_PrincipaleButton3Click(Sender: TObject);
+    procedure Frame_EP_PrincipaleButton2Click(Sender: TObject);
+    procedure Frame_PrincipaleButton2Click(Sender: TObject);
+    procedure StringGrid5ColResize;
+    procedure FloatAnimation2Finish(Sender: TObject);
+    procedure FloatAnimation4Finish(Sender: TObject);
+    procedure FloatAnimation5Finish(Sender: TObject);
+    procedure StatusBar;
+    procedure StringGrid5CellClick(const Column: TColumn; const Row: Integer);
+    procedure StringGrid5CellDblClick(const Column: TColumn;
+      const Row: Integer);
+    procedure StringGrid6CellClick(const Column: TColumn; const Row: Integer);
+    procedure StringGrid6CellDblClick(const Column: TColumn;
+      const Row: Integer);
+    procedure FormResize(Sender: TObject);
+    procedure Nouveau_PatientResize(Sender: TObject);
+    procedure Edit_PatientResize(Sender: TObject);
+    procedure P_AccueilResize(Sender: TObject);
+    procedure Label_Refresh2MouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure Label_Refresh2MouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure Label_Refresh4MouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure Label_Refresh4MouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure Label_Refresh1MouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure Label_Refresh1MouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure Label_Refresh3MouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure Label_Refresh3MouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure Refresh_Patient_TableKeyDown(Sender: TObject; var Key: Word;
+      var KeyChar: Char; Shift: TShiftState);
+    procedure Refresh_Patient_TableMouseUp(Sender: TObject;
+      Button: TMouseButton; Shift: TShiftState; X, Y: Single);
   private
     { Private declarations }
     WidthX, HeightX: Integer;
@@ -375,6 +462,89 @@ Uses
 {$R *.fmx}
 {$R Alg_Res.RES}
 
+procedure TMain.StatusBar;
+Begin
+  With DataModule1.FDQ_Status_Patient do
+  Begin
+    Active := False;
+    SQl.Clear;
+    SQl.Text := 'Select count(*) From Patient';
+    Active := True;
+    Open;
+    Status_Edit1.Text := IntToStr(Fields[0].AsInteger);
+    Active := False;
+    SQl.Clear;
+    SQl.Text := 'Select Count(*) From Patient Where Type="Externe"';
+    Active := True;
+    Open;
+    Status_Edit2.Text := IntToStr(Fields[0].AsInteger);
+    Active := False;
+    SQl.Clear;
+    SQl.Text := 'Select Count(*) From Patient Where type="Interne"';
+    Active := True;
+    Open;
+    Status_Edit3.Text := IntToStr(Fields[0].AsInteger);
+    Active := False;
+    SQl.Clear;
+  End;
+End;
+
+procedure TMain.StringGrid5CellClick(const Column: TColumn; const Row: Integer);
+Var
+  tRow: Integer;
+begin
+  inherited;
+  Patient_ID := '';
+  tRow := StringGrid5.Row;
+  Patient_ID := StringGrid5.cells[0, tRow];
+end;
+
+procedure TMain.StringGrid5CellDblClick(const Column: TColumn;
+  const Row: Integer);
+begin
+  inherited;
+  inherited;
+  Label65Click(self);
+end;
+
+procedure TMain.StringGrid5ColResize;
+Var
+  i: Integer;
+Begin
+  for i := 0 to 15 do
+  Begin
+    StringGrid5.Columns[i].Width := 120;
+    if (i = 0) then
+      StringGrid5.Columns[i].Width := 80;
+    if (i = 5) then
+      StringGrid5.Columns[i].Width := 70;
+    if (i = 6) then
+      StringGrid5.Columns[i].Width := 70;
+  End;
+  for i := 0 to 2 do
+  Begin
+    StringGrid2.Columns[i].Width := 140;
+    StringGrid4.Columns[i].Width := 140;
+  End;
+End;
+
+procedure TMain.StringGrid6CellClick(const Column: TColumn; const Row: Integer);
+Var
+  tRow: Integer;
+begin
+  inherited;
+  Patient_ID := '';
+  tRow := StringGrid6.Row;
+  Patient_ID := StringGrid6.cells[0, tRow];
+end;
+
+procedure TMain.StringGrid6CellDblClick(const Column: TColumn;
+  const Row: Integer);
+begin
+  inherited;
+  Label48Click(self);
+end;
+
 procedure Resources();
 Var
   ResStream: TResourceStream;
@@ -391,6 +561,43 @@ Begin
     ResStream.Free;
   end;
 End;
+
+procedure TMain.Edit_PatientResize(Sender: TObject);
+begin
+  inherited;
+  Frame_EP_Principale.OnResize(Frame_EP_Principale);
+  Frame_EP_Information.OnResize(Frame_EP_Information);
+  Frame_EP_Hemogramme.OnResize(Frame_EP_Hemogramme);
+  Frame_EP_Hemostase.OnResize(Frame_EP_Hemostase);
+  Frame_EP_Biochimic.OnResize(Frame_EP_Biochimic);
+  Frame_EP_Serologie.OnResize(Frame_EP_Serologie);
+  // Frame_EP_Ordonnance.OnResize(Frame_EP_Ordonnance);
+end;
+
+procedure TMain.FloatAnimation2Finish(Sender: TObject);
+begin
+  inherited;
+  DataModule1.FDQ_Groupage.Active := False;
+  DataModule1.FDQ_Groupage.Active := True;
+  StringGrid5ColResize;
+end;
+
+procedure TMain.FloatAnimation4Finish(Sender: TObject);
+begin
+  inherited;
+  DataModule1.FDQ_Patient.Active := False;
+  DataModule1.FDQ_Patient.Active := True;
+  StringGrid5ColResize;
+end;
+
+procedure TMain.FloatAnimation5Finish(Sender: TObject);
+begin
+  inherited;
+  DataModule1.FDQ_Patient_Table.Active := False;
+  DataModule1.FDQ_Patient_Table.Active := True;
+  StringGrid5ColResize;
+  StatusBar;
+end;
 
 procedure TMain.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 var
@@ -424,7 +631,35 @@ begin
   inherited;
   WidthX := Main.Width;
   HeightX := Main.Height;
-  // StringGrid5ColResize;
+  StringGrid5ColResize;
+  HeaderT.Height := ((Main.Height / 4) - (Main.Height / 30));
+  ListT.Width := ((Main.Width / 5) -(Main.Width / 30) );
+end;
+
+procedure TMain.FormResize(Sender: TObject);
+begin
+  inherited;
+  // Frame resize
+  Nouveau_Patient.OnResize(Nouveau_Patient);
+  Edit_Patient.OnResize(Edit_Patient);
+  //
+  P_Accueil.OnResize(P_Accueil);
+  // Minmum Size for MainForm -- U_Main.pas --
+
+  if ((Main.Width <= Screen.Width) or (Main.Height <= Screen.Height)) then
+  begin
+    // Setting Main form Sizes
+    if (Main.Width <= ((Screen.Width div 2) + (Screen.Width div 4))) then
+    begin
+      Main.Width := ((Screen.Width div 2) + (Screen.Width div 4));
+      Mouse_Event(MOUSEEVENTF_ABSOLUTE or MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+    end;
+    if (Main.Height <= (Screen.Height div 2) + (Screen.Height div 4)) then
+    begin
+      Main.Height := ((Screen.Height div 2) + (Screen.Height div 4));
+      Mouse_Event(MOUSEEVENTF_ABSOLUTE or MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+    end;
+  end;
 end;
 
 procedure TMain.FormShow(Sender: TObject);
@@ -440,6 +675,101 @@ begin
   // StatusBar;
 end;
 
+procedure TMain.Frame_EP_PrincipaleButton1Click(Sender: TObject);
+Var
+  ID: String;
+begin
+  inherited;
+  With DataModule1.FDQuery1 do
+  Begin
+    Active := False;
+    SQl.Clear;
+    SQl.Text := 'Select * From Patient Where Patient_ID="' + Patient_ID + '";';
+    Active := True;
+    Edit;
+    // Frame_EP_Principale.Edit;
+    ID := Frame_EP_Principale.Edit;
+    Frame_EP_Information.Edit;
+    Post;
+    Active := False;
+    SQl.Clear;
+    if (Frame_EP_Hemogramme.IsSet = True) then
+      Frame_EP_Hemogramme.Edit(ID);
+    if (Frame_EP_Hemostase.IsSet = True) then
+      Frame_EP_Hemostase.Edit(ID);
+    if (Frame_EP_Serologie.IsSet = True) then
+      Frame_EP_Serologie.Edit(ID);
+    if (Frame_EP_Biochimic.IsSet) then
+      Frame_EP_Biochimic.Edit(ID);
+    // Frame_EP_Ordonnance.Edit();
+    // Frame_EP_Ordonnance.LoadGrid(ID);
+  End;
+end;
+
+procedure TMain.Frame_EP_PrincipaleButton2Click(Sender: TObject);
+begin
+  inherited;
+  Frame_Principale.Clear();
+  if (TabItem8.IsSelected = True) then
+    Frame_EP_Information.Clear;
+  if (TabItem9.IsSelected = True) then
+    Frame_EP_Hemogramme.Clear;
+  if (TabItem10.IsSelected = True) then
+    Frame_EP_Hemostase.Clear;
+  if (TabItem11.IsSelected = True) then
+    Frame_EP_Biochimic.Clear;
+  if (TabItem12.IsSelected = True) then
+    Frame_EP_Serologie.Clear;
+end;
+
+procedure TMain.Frame_EP_PrincipaleButton3Click(Sender: TObject);
+begin
+  inherited;
+  Edit_Patient.Visible := False;
+  Patient.IsSelected := True;
+  H_Gen_Patient.IsSelected := True;
+end;
+
+procedure TMain.Frame_PrincipaleButton1Click(Sender: TObject);
+Var
+  ID: String;
+begin
+  inherited;
+  if (Frame_Principale.SetEdit = True) then
+  Begin
+    with DataModule1.FDQuery1 do
+    Begin
+      Active := False;
+      SQl.Clear;
+      SQl.Text := ('Select * From Patient');
+      Active := True;
+      Insert;
+      ID := Frame_Principale.Insert;
+      Frame_Information.Insert;
+      Post;
+      SQl.Clear;
+      Active := False;
+    End;
+    Frame_Hemogramme.Insert(ID);
+    Frame_Hemostase.Insert(ID);
+    Frame_Serologie.Insert(ID);
+    Frame_Biochimic.Insert(ID);
+    // Frame_Ordonnance.ID(ID);
+    // Frame_Ordonnance.LoadGrid(ID);
+  end;
+end;
+
+procedure TMain.Frame_PrincipaleButton2Click(Sender: TObject);
+begin
+  inherited;
+  Frame_Information.Clear;
+  Frame_Principale.Clear;
+  Frame_Hemogramme.Clear;
+  Frame_Hemostase.Clear;
+  Frame_Biochimic.Clear;
+  Frame_Serologie.Clear;
+end;
+
 procedure TMain.Label12Click(Sender: TObject);
 var
   EntrepriseDlg: TEntreprise;
@@ -450,6 +780,141 @@ begin
     EntrepriseDlg.Free;
 end;
 
+procedure TMain.Label15Click(Sender: TObject);
+begin
+  inherited;
+  Patient.Visible := False;
+  H_Gen_Patient.Visible := False;
+  H_Accueil.IsSelected := True;
+end;
+
+procedure TMain.Label18Click(Sender: TObject);
+begin
+  inherited;
+  Recherche_Patient.Visible := False;
+  H_Gen_RechercheP.Visible := False;
+  H_Accueil.IsSelected := True;
+end;
+
+procedure TMain.Label1Click(Sender: TObject);
+begin
+  inherited;
+  H_Accueil.Visible := True;
+  H_Accueil.IsSelected := True;
+  P_Accueil.Visible := True;
+  P_Accueil.IsSelected := True;
+  Patient.Visible := False;
+  Nouveau_Patient.Visible := False;
+  Recherche_Patient.Visible := False;
+  RDV.Visible := False;
+  Ordonnance.Visible := False;
+  H_Gen_Patient.Visible := False;
+  H_Gen_RDV.Visible := False;
+  H_Gen_Ordo.Visible := False;
+  H_Gen_NouveauP.Visible := False;
+  H_Gen_RechercheP.Visible := False;
+end;
+
+procedure TMain.Label20Click(Sender: TObject);
+begin
+  inherited;
+  Nouveau_Patient.Visible := False;
+  H_Gen_NouveauP.Visible := False;
+  H_Accueil.IsSelected := True;
+end;
+
+procedure TMain.Label22Click(Sender: TObject);
+begin
+  inherited;
+  RDV.Visible := False;
+  H_Gen_RDV.Visible := False;
+  H_Accueil.IsSelected := True;
+end;
+
+procedure TMain.Label_Refresh1MouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
+begin
+  inherited;
+  FloatAnimation1.enabled := False;
+end;
+
+procedure TMain.Label_Refresh1MouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
+begin
+  inherited;
+  FloatAnimation1.enabled := True;
+end;
+
+procedure TMain.Label_Refresh2MouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
+begin
+  inherited;
+  FloatAnimation2.enabled := False;
+end;
+
+procedure TMain.Label_Refresh2MouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
+begin
+  inherited;
+  FloatAnimation2.enabled := True;
+end;
+
+procedure TMain.Label_Refresh3MouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
+begin
+  inherited;
+  FloatAnimation3.enabled := False;
+end;
+
+procedure TMain.Label_Refresh3MouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
+begin
+  inherited;
+  FloatAnimation3.enabled := True;
+end;
+
+procedure TMain.Label_Refresh4MouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
+begin
+  inherited;
+  FloatAnimation4.enabled := False;
+end;
+
+procedure TMain.Label_Refresh4MouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
+begin
+  inherited;
+  FloatAnimation4.enabled := True;
+end;
+
+procedure TMain.Label30Click(Sender: TObject);
+begin
+  inherited;
+  Patient_RechercheClick(self);
+end;
+
+procedure TMain.Label32Click(Sender: TObject);
+Var
+  P: TPointF;
+begin
+  inherited;
+  P.X := -5;
+  P.Y := Label32.Height;
+  P := Label32.LocalToAbsolute(P);
+  P := ClientToScreen(P);
+  PopupMenu1.Popup(P.X, P.Y);
+end;
+
+procedure TMain.Label48Click(Sender: TObject);
+begin
+  inherited;
+  Edit_Patient.Visible := True;
+  Edit_Patient.IsSelected := True;
+  H_Accueil.IsSelected := True;
+  Frame_EP_Principale.OnDataLoad;
+  Frame_EP_Information.OnDataLoad;
+end;
+
 procedure TMain.Label4Click(Sender: TObject);
 Var
   FenetreDlg: TFenetre;
@@ -458,6 +923,237 @@ begin
   FenetreDlg := TFenetre.Create(self);
   if (FenetreDlg.ShowModal = mrClose) then
     FenetreDlg.Free;
+end;
+
+procedure TMain.Label52Click(Sender: TObject);
+begin
+  inherited;
+  New_PatientClick(self);
+end;
+
+procedure TMain.Label54Click(Sender: TObject);
+begin
+  inherited;
+  Frame_PrincipaleButton2Click(self);
+end;
+
+procedure TMain.Label55Click(Sender: TObject);
+begin
+  inherited;
+  Frame_PrincipaleButton1Click(self);
+end;
+
+procedure TMain.Label61Click(Sender: TObject);
+begin
+  inherited;
+  if (Patient_ID <> '') then
+  Begin
+    With DataModule1.FDCmnd_Drop_Patient do
+    Begin
+      Active := False;
+      CommandText.Clear;
+      CommandText.Text := ('DELETE FROM Patient WHERE Patient_ID="' +
+        Patient_ID + '";');
+      Active := True;
+      Execute;
+      Active := False;
+      CommandText.Clear;
+      FloatAnimation5.OnFinish(FloatAnimation5);
+      Patient_ID := '';
+    End;
+  End
+  else
+  Begin
+    ShowMessage
+      ('Sil vous plait choisir une patient ou double clicker sur un patient');
+  End;
+end;
+
+procedure TMain.Label65Click(Sender: TObject);
+begin
+  inherited;
+  if (Patient_ID <> '') then
+  Begin
+    Edit_Patient.Visible := True;
+    Edit_Patient.IsSelected := True;
+    H_Accueil.IsSelected := True;
+    Frame_EP_Principale.OnDataLoad;
+    Frame_EP_Information.OnDataLoad;
+    Frame_EP_Hemogramme.OnDataLoad;
+    Frame_EP_Hemostase.OnDataLoad;
+    Frame_EP_Serologie.OnDataLoad;
+    Frame_EP_Biochimic.OnDataLoad;
+    Frame_EP_Ordonnance.OnDataLoad;
+  End
+  else
+  Begin
+    ShowMessage
+      ('Sil vous plait choisir une patient ou double clicker sur un patient');
+  End;
+end;
+
+procedure TMain.Label6Click(Sender: TObject);
+var
+  OptionDlg: TOption;
+begin
+  inherited;
+  OptionDlg := TOption.Create(self);
+  OptionDlg.ShowModal;
+end;
+
+procedure TMain.New_PatientClick(Sender: TObject);
+begin
+  inherited;
+  Nouveau_Patient.Visible := True;
+  Nouveau_Patient.OnClick(Patient);
+  Nouveau_Patient.IsSelected := True;
+end;
+
+procedure TMain.Nouveau_PatientClick(Sender: TObject);
+begin
+  inherited;
+  H_Gen_Patient.Visible := False;
+  H_Gen_Ordo.Visible := False;
+  H_Gen_RDV.Visible := False;
+  H_Accueil.IsSelected := False;
+  H_Gen_NouveauP.Visible := True;
+  H_Gen_RechercheP.Visible := False;
+  H_Gen_NouveauP.IsSelected := True;
+end;
+
+procedure TMain.Nouveau_PatientResize(Sender: TObject);
+begin
+  inherited;
+  Frame_Principale.OnResize(Frame_Principale);
+  Frame_Information.OnResize(Frame_Information);
+  Frame_Hemogramme.OnResize(Frame_Hemogramme);
+  Frame_Hemostase.OnResize(Frame_Hemostase);
+  Frame_Biochimic.OnResize(Frame_Biochimic);
+  Frame_Serologie.OnResize(Frame_Serologie);
+  // Frame_Ordonnance.OnResize(Frame_Ordonnance);
+end;
+
+procedure TMain.OrdonnanceClick(Sender: TObject);
+begin
+  inherited;
+  H_Gen_Patient.Visible := False;
+  H_Gen_Ordo.Visible := True;
+  H_Gen_Ordo.IsSelected := True;
+  H_Gen_RDV.Visible := False;
+  H_Gen_RechercheP.Visible := False;
+  H_Gen_NouveauP.Visible := False;
+end;
+
+procedure TMain.PatientClick(Sender: TObject);
+begin
+  inherited;
+  H_Gen_Patient.Visible := True;
+  H_Gen_Patient.IsSelected := True;
+  H_Gen_Ordo.Visible := False;
+  H_Gen_RDV.Visible := False;
+  H_Gen_RechercheP.Visible := False;
+  H_Gen_NouveauP.Visible := False;
+end;
+
+procedure TMain.Patient_RechercheClick(Sender: TObject);
+begin
+  inherited;
+  Recherche_Patient.Visible := True;
+  Recherche_Patient.OnClick(Patient);
+  Recherche_Patient.IsSelected := True;
+end;
+
+procedure TMain.P_AccueilClick(Sender: TObject);
+begin
+  inherited;
+  H_Gen_Patient.Visible := False;
+  H_Gen_Ordo.Visible := False;
+  H_Gen_RDV.Visible := False;
+  H_Accueil.IsSelected := True;
+  H_Gen_RechercheP.Visible := False;
+  H_Gen_NouveauP.Visible := False;
+end;
+
+procedure TMain.P_AccueilResize(Sender: TObject);
+begin
+  inherited;
+  // Width
+  L_Left_P_Accueil.Width := MainT.Width / 2;
+  L_Right_P_Accueil.Width := MainT.Width / 2;
+  // Height
+  GrouBox1_Table.Height := L_Left_P_Accueil.Height / 2;
+  GrouBox2_Table.Height := L_Right_P_Accueil.Height / 2;
+  GrouBox3_Table.Height := L_Left_P_Accueil.Height / 2;
+  GrouBox4_Table.Height := L_Right_P_Accueil.Height / 2;
+end;
+
+procedure TMain.RDVClick(Sender: TObject);
+begin
+  inherited;
+  H_Gen_Patient.Visible := False;
+  H_Gen_Ordo.Visible := False;
+  H_Gen_RDV.Visible := True;
+  H_Gen_RDV.IsSelected := True;
+  H_Gen_RechercheP.Visible := False;
+  H_Gen_NouveauP.Visible := False;
+end;
+
+procedure TMain.Recherche_PatientClick(Sender: TObject);
+begin
+  inherited;
+  H_Gen_Patient.Visible := False;
+  H_Gen_Ordo.Visible := False;
+  H_Gen_RDV.Visible := False;
+  H_Accueil.IsSelected := False;
+  H_Gen_NouveauP.Visible := False;
+  H_Gen_RechercheP.Visible := True;
+  H_Gen_RechercheP.IsSelected := True;
+end;
+
+procedure TMain.Refresh_Patient_TableKeyDown(Sender: TObject; var Key: Word;
+  var KeyChar: Char; Shift: TShiftState);
+begin
+  inherited;
+  FloatAnimation5.enabled := False;
+end;
+
+procedure TMain.Refresh_Patient_TableMouseUp(Sender: TObject;
+  Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+begin
+  inherited;
+  FloatAnimation5.enabled := True;
+end;
+
+procedure TMain.TreeViewItem6Click(Sender: TObject);
+begin
+  inherited;
+  Ordonnance.Visible := True;
+  Ordonnance.OnClick(Ordonnance);
+  Ordonnance.IsSelected := True;
+end;
+
+procedure TMain.T_AccueilClick(Sender: TObject);
+begin
+  inherited;
+  P_Accueil.Visible := True;
+  P_Accueil.OnClick(P_Accueil);
+  P_Accueil.IsSelected := True;
+end;
+
+procedure TMain.T_PatientClick(Sender: TObject);
+begin
+  inherited;
+  Patient.Visible := True;
+  Patient.OnClick(Patient);
+  Patient.IsSelected := True;
+end;
+
+procedure TMain.T_RDVClick(Sender: TObject);
+begin
+  inherited;
+  RDV.Visible := True;
+  RDV.OnClick(RDV);
+  RDV.IsSelected := True;
 end;
 
 end.

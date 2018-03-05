@@ -8,7 +8,9 @@ uses
   FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
   System.Rtti, FMX.Grid.Style, FMX.ScrollBox, FMX.Grid, FMX.Edit,
   FMX.Controls.Presentation, FMX.ListBox, FMX.Layouts,
-  System.Generics.Collections;
+  System.Generics.Collections, Data.Bind.EngExt, FMX.Bind.DBEngExt,
+  FMX.Bind.Grid, System.Bindings.Outputs, FMX.Bind.Editors,
+  Data.Bind.Components, Data.Bind.Grid, Data.Bind.DBScope;
 
 type
   TFrame7 = class(TFrame)
@@ -27,21 +29,28 @@ type
     Edit3: TEdit;
     Layout7: TLayout;
     Button1: TButton;
-    Button2: TButton;
     StringGridBindSourceDB1: TStringGrid;
+    BindSourceDB1: TBindSourceDB;
+    BindingsList1: TBindingsList;
+    LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
+    Button3: TButton;
+    Button2: TButton;
     procedure OnDataLoad;
     procedure Insert;
     procedure Edit;
     procedure ID(const RandD: String);
     procedure StringGridResize;
     procedure LoadGrid(const RandD: string);
-    procedure Button2Click(Sender: TObject);
     procedure FrameResize(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure StringGridBindSourceDB1CellClick(const Column: TColumn;
+      const Row: Integer);
   private
     { Private declarations }
   public
     { Public declarations }
     Tub: TList<String>;
+    MedSelect: String;
   end;
 
 implementation
@@ -65,6 +74,14 @@ begin
       StringGridResize;
     End;
   End;
+end;
+
+procedure TFrame7.StringGridBindSourceDB1CellClick(const Column: TColumn;
+  const Row: Integer);
+Var
+  TRow: Integer;
+begin
+  MedSelect := StringGridBindSourceDB1.Cells[TRow, 1];
 end;
 
 procedure TFrame7.StringGridResize;
@@ -105,6 +122,7 @@ begin
       end;
     end;
   end;
+  Tub.Clear;
 end;
 
 procedure TFrame7.LoadGrid(const RandD: string);
@@ -113,7 +131,7 @@ begin
   Begin
     SQL.Clear;
     SQL.Text :=
-      ('Select Medicament, Dose, Prise, Jour, Pendent From Ordonnance Where Patient_ID="'
+      ('Select Medicament, Dose, Prise, Jour, Pendent, Ordo_ID From Ordonnance Where Patient_ID="'
       + RandD + '";');
     Active := True;
     StringGridResize;
@@ -160,10 +178,16 @@ begin
   End;
 end;
 
-procedure TFrame7.Button2Click(Sender: TObject);
+procedure TFrame7.Button1Click(Sender: TObject);
 begin
-  Insert;
+  if (ComboBox1.ItemIndex <> -1) then
+    Insert;
 end;
+
+procedure DropMed();
+Begin
+
+End;
 
 procedure TFrame7.Edit;
 Var
@@ -215,6 +239,9 @@ begin
   Layout4.Width := Layout2.Width / 4;
   Layout5.Width := Layout2.Width / 4;
   Layout6.Width := Layout2.Width / 4;
+  Button1.Width := Layout7.Width / 3;
+  Button2.Width := Layout7.Width / 3;
+  Button3.Width := Layout7.Width / 3;
 end;
 
 end.

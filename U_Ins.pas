@@ -7,7 +7,7 @@ uses
   System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, U_Base_Form,
   FMX.StdCtrls, FMX.Effects, FMX.Edit, FMX.Controls.Presentation,
-  IdHashMessageDigest;
+  IdHashMessageDigest, FMX.Objects;
 
 type
   TIns = class(TBase_Form)

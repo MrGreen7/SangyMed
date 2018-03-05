@@ -51,8 +51,8 @@ type
     procedure ComboBox2Change(Sender: TObject);
     procedure ComboBox3Change(Sender: TObject);
     procedure Edit_Code_WilayaChange(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure ComboBox2MouseEnter(Sender: TObject);
   private
     { Private declarations }
   public
@@ -198,6 +198,13 @@ begin
   end;
 end;
 
+procedure TEntreprise.ComboBox2MouseEnter(Sender: TObject);
+begin
+  inherited;
+  if (ComboBox2.Items.Capacity = 0) then
+    WiliyaLoad(ComboBox2);
+end;
+
 procedure TEntreprise.ComboBox3Change(Sender: TObject);
 begin
   inherited;
@@ -219,12 +226,6 @@ var
 begin
   inherited;
   CommuneLoad(Edit_Code_Wilaya, ComboBox3);
-end;
-
-procedure TEntreprise.FormCreate(Sender: TObject);
-begin
-  inherited;
-  WiliyaLoad(ComboBox2);
 end;
 
 procedure TEntreprise.FormShow(Sender: TObject);

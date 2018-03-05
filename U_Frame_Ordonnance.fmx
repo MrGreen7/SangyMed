@@ -2122,31 +2122,39 @@ object Frame7: TFrame7
     Size.PlatformDefault = False
     TabOrder = 1
     object Button1: TButton
-      Anchors = [akLeft, akRight]
+      Align = Left
       StyledSettings = [Style, FontColor]
-      Position.X = 896.000000000000000000
-      Position.Y = 8.000000000000000000
-      Size.Width = 123.000000000000000000
-      Size.Height = 25.000000000000000000
+      Size.Width = 350.000000000000000000
+      Size.Height = 39.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Ajouter'
+      TextSettings.Font.Family = 'Candara'
+      TextSettings.Font.Size = 14.000000000000000000
+      OnClick = Button1Click
+    end
+    object Button3: TButton
+      Align = Right
+      StyledSettings = [Style, FontColor]
+      Position.X = 711.000000000000000000
+      Size.Width = 350.000000000000000000
+      Size.Height = 39.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
-      Text = 'Anuller'
+      Text = 'Supprim'#233
       TextSettings.Font.Family = 'Candara'
       TextSettings.Font.Size = 14.000000000000000000
     end
     object Button2: TButton
-      Anchors = [akLeft, akRight]
+      Align = Client
       StyledSettings = [Style, FontColor]
-      Position.X = 96.000000000000000000
-      Position.Y = 8.000000000000000000
-      Size.Width = 123.000000000000000000
-      Size.Height = 25.000000000000000000
+      Size.Width = 361.000000000000000000
+      Size.Height = 39.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
-      Text = 'Ajouter'
+      Text = 'Refreche'
       TextSettings.Font.Family = 'Candara'
       TextSettings.Font.Size = 14.000000000000000000
-      OnClick = Button2Click
     end
   end
   object StringGridBindSourceDB1: TStringGrid
@@ -2157,7 +2165,27 @@ object Frame7: TFrame7
     Size.Height = 151.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 3
+    Options = [Editing, ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
+    OnCellClick = StringGridBindSourceDB1CellClick
     Viewport.Width = 1057.000000000000000000
     Viewport.Height = 126.000000000000000000
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModule1.FDQ_Ordonnance
+    ScopeMappings = <>
+    Left = 648
+    Top = 56
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 348
+    Top = 53
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = StringGridBindSourceDB1
+      Columns = <>
+    end
   end
 end
