@@ -3,7 +3,7 @@ object Ins: TIns
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = Single
-  Caption = 'Form3'
+  Caption = 'Inscription'
   ClientHeight = 314
   ClientWidth = 625
   Fill.Bitmap.Bitmap.PNG = {

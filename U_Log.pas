@@ -42,7 +42,7 @@ var
 implementation
 
 Uses
-  U_Main, U_Ins, U_DataModule, Winapi.Messages;
+  U_Main, U_Ins, U_DataModule, Winapi.Messages, U_Option;
 {$R *.fmx}
 
 function Decrypt(Str: string): string;
@@ -94,6 +94,8 @@ begin
       Active := False;
       SQL.Text := ('SELECT * FROM User');
       Active := True;
+      Open;
+      Option.Label1.Text := FieldByName('ID').AsString;
       if not(Locate('Pseudo;Mot_de_pass', VarArrayOf([Edit1.Text, HexPass]), []))
       then
       begin

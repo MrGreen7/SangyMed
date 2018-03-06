@@ -996,10 +996,6 @@ Visible=False
 Coordinates=3482,694,155,33
 Visible=False
 
-[Label77]
-Coordinates=1430,1235,52,33
-Visible=False
-
 [Frame_Biochimic.Label49]
 Coordinates=0,666,141,33
 Visible=False
@@ -3212,7 +3208,8 @@ Coordinates=2289,1387,166,33
 Visible=False
 
 []
-Coordinates=3223,2440,91,36
+Coordinates=1430,1235,52,33
+Visible=False
 
 [BindSourceDB1]
 Coordinates=311,1,143,69

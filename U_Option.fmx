@@ -3,46 +3,222 @@ object Option: TOption
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = Single
-  Caption = 'Form1'
-  ClientHeight = 517
-  ClientWidth = 793
+  Caption = 'Param'#232'tre'
+  ClientHeight = 569
+  ClientWidth = 866
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 0
-  object GroupBox1: TGroupBox
-    Align = Client
-    Margins.Top = 5.000000000000000000
-    Size.Width = 624.000000000000000000
-    Size.Height = 512.000000000000000000
-    Size.PlatformDefault = False
-    Text = 'GroupBox1'
-    TabOrder = 3
-  end
   object Panel1: TPanel
     Align = Left
-    Size.Width = 169.000000000000000000
-    Size.Height = 517.000000000000000000
+    Size.Width = 193.000000000000000000
+    Size.Height = 569.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     object TreeView1: TTreeView
       Align = Top
-      Size.Width = 169.000000000000000000
+      Size.Width = 193.000000000000000000
       Size.Height = 265.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
-      Viewport.Width = 165.000000000000000000
+      Viewport.Width = 189.000000000000000000
       Viewport.Height = 261.000000000000000000
+      object Compte: TTreeViewItem
+        StyledSettings = [Style]
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 16.000000000000000000
+        IsChecked = False
+        IsExpanded = False
+        IsSelected = False
+        TabOrder = 0
+        Text = #61632' Compte'
+        OnClick = CompteClick
+      end
+      object Generale: TTreeViewItem
+        StyledSettings = [Style, FontColor]
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 16.000000000000000000
+        IsChecked = False
+        IsExpanded = False
+        IsSelected = False
+        TabOrder = 1
+        Text = #61918' G'#233'n'#233'rale'
+        OnClick = GeneraleClick
+      end
     end
     object TreeView2: TTreeView
       Align = Bottom
-      Position.Y = 280.000000000000000000
-      Size.Width = 169.000000000000000000
+      Position.Y = 332.000000000000000000
+      Size.Width = 193.000000000000000000
       Size.Height = 237.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
-      Viewport.Width = 165.000000000000000000
+      Viewport.Width = 189.000000000000000000
       Viewport.Height = 233.000000000000000000
+      object Tree_Sub_CompteMod: TTreeViewItem
+        StyledSettings = [Style, FontColor]
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 16.000000000000000000
+        IsChecked = False
+        IsExpanded = False
+        IsSelected = False
+        TabOrder = 0
+        Text = #61447' Modifier le compte'
+        OnClick = Tree_Sub_CompteModClick
+      end
+      object Tree_Sub_CompteRem: TTreeViewItem
+        StyledSettings = [Style, FontColor]
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 16.000000000000000000
+        IsChecked = False
+        IsExpanded = False
+        IsSelected = False
+        TabOrder = 1
+        Text = #62005' Supprim'#233' le compte'
+        OnClick = Tree_Sub_CompteRemClick
+      end
+      object Tree_Sub_GenerAccueil: TTreeViewItem
+        StyledSettings = [Style, FontColor]
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 16.000000000000000000
+        IsChecked = False
+        IsExpanded = False
+        IsSelected = False
+        TabOrder = 2
+        Text = #61461' Accueil'
+        OnClick = Tree_Sub_GenerAccueilClick
+      end
+    end
+  end
+  object TabControl1: TTabControl
+    Align = Client
+    Size.Width = 673.000000000000000000
+    Size.Height = 569.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 3
+    TabPosition = PlatformDefault
+    Sizes = (
+      673s
+      539s
+      673s
+      539s
+      673s
+      539s)
+    object Tab_Compte: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'Candara'
+      TextSettings.Font.Size = 16.000000000000000000
+      StyledSettings = [Style, FontColor]
+      IsSelected = True
+      Size.Width = 286.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Modifier l'#39'information de votre compte'
+      ExplicitSize.cx = 227.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object Mod_Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 1
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 16.000000000000000000
+        Position.X = 88.000000000000000000
+        Position.Y = 74.000000000000000000
+        Size.Width = 481.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Nom'
+        StyledSettings = [Style, FontColor]
+        OnChange = Mod_Edit1Change
+        object InnerGlowEffect1: TInnerGlowEffect
+          Softness = 0.400000005960464400
+          GlowColor = claCrimson
+          Opacity = 0.899999976158142100
+          Enabled = False
+        end
+      end
+      object Mod_Edit2: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 0
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 16.000000000000000000
+        Position.X = 88.000000000000000000
+        Position.Y = 194.000000000000000000
+        Size.Width = 481.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Pseudo'
+        StyledSettings = [Style, FontColor]
+        OnChange = Mod_Edit2Change
+        object InnerGlowEffect2: TInnerGlowEffect
+          Softness = 0.400000005960464400
+          GlowColor = claCrimson
+          Opacity = 0.899999976158142100
+          Enabled = False
+        end
+      end
+      object Mod_Button1: TButton
+        StyledSettings = [Style, FontColor]
+        Position.X = 304.000000000000000000
+        Position.Y = 482.000000000000000000
+        Size.Width = 137.000000000000000000
+        Size.Height = 31.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'OK'
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        OnClick = Mod_Button1Click
+      end
+      object Mod_Button2: TButton
+        StyledSettings = [Style, FontColor]
+        Position.X = 512.000000000000000000
+        Position.Y = 482.000000000000000000
+        Size.Width = 137.000000000000000000
+        Size.Height = 31.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Vid'#233
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        OnClick = Mod_Button2Click
+      end
+    end
+    object Tab_Compte_Rem: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'Candara'
+      TextSettings.Font.Size = 16.000000000000000000
+      StyledSettings = [Style, FontColor]
+      IsSelected = False
+      Size.Width = 158.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Supprim'#233' le compte'
+      ExplicitSize.cx = 128.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+    end
+    object Tab_Accueil: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 58.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Accueil'
     end
   end
 end

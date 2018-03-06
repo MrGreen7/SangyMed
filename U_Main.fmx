@@ -196,7 +196,7 @@ object Main: TMain
     Size.Height = 161.000000000000000000
     Size.PlatformDefault = False
     StyleLookup = 'tabcontrolstyle'
-    TabIndex = 2
+    TabIndex = 0
     TabOrder = 0
     TabPosition = PlatformDefault
     Sizes = (
@@ -223,7 +223,7 @@ object Main: TMain
       TextSettings.Font.Size = 16.000000000000000000
       StyledSettings = [Style, FontColor]
       HelpType = htKeyword
-      IsSelected = False
+      IsSelected = True
       Size.Width = 82.000000000000000000
       Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
@@ -651,23 +651,16 @@ object Main: TMain
             end
           end
         end
-      end
-      object Label77: TLabel
-        Anchors = [akRight, akBottom]
-        Cursor = crHandPoint
-        StyledSettings = [Style]
-        HitTest = True
-        Position.X = 1241.000000000000000000
-        Position.Y = 112.000000000000000000
-        RotationAngle = 180.000000000000000000
-        Size.Width = 17.000000000000000000
-        Size.Height = 17.000000000000000000
-        Size.PlatformDefault = False
-        TextSettings.Font.Family = 'FontAwesome'
-        TextSettings.Font.Size = 30.000000000000000000
-        TextSettings.FontColor = xFF0A2472
-        Text = #61655
-        TabOrder = 2
+        object Label23: TLabel
+          Position.X = 712.000000000000000000
+          Position.Y = 40.000000000000000000
+          Size.Width = 81.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Label23'
+          TabOrder = 5
+          OnClick = Label23Click
+        end
       end
     end
     object H_Editeur: TTabItem
@@ -1000,7 +993,7 @@ object Main: TMain
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 16.000000000000000000
       StyledSettings = [Style, FontColor]
-      IsSelected = True
+      IsSelected = False
       Size.Width = 94.000000000000000000
       Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
@@ -2766,6 +2759,7 @@ object Main: TMain
             Size.Height = 198.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
+            RowCount = 10
             Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
             Viewport.Width = 504.000000000000000000
             Viewport.Height = 173.000000000000000000
@@ -2830,6 +2824,7 @@ object Main: TMain
             Size.Height = 198.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
+            RowCount = 10
             Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
             Viewport.Width = 504.000000000000000000
             Viewport.Height = 173.000000000000000000
@@ -2901,6 +2896,7 @@ object Main: TMain
             Size.Height = 198.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
+            RowCount = 10
             Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
             Viewport.Width = 504.000000000000000000
             Viewport.Height = 173.000000000000000000
@@ -2966,6 +2962,7 @@ object Main: TMain
             Size.Height = 198.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
+            RowCount = 10
             Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
             Viewport.Width = 504.000000000000000000
             Viewport.Height = 173.000000000000000000

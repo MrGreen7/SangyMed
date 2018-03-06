@@ -73,7 +73,6 @@ type
     Label6: TLabel;
     ShadowEffect4: TShadowEffect;
     ColorAnimation3: TColorAnimation;
-    Label77: TLabel;
     H_Editeur: TTabItem;
     Panel6: TPanel;
     Layout26: TLayout;
@@ -371,6 +370,7 @@ type
     PoP_Biochimic: TMenuItem;
     PoP_Serologie: TMenuItem;
     PoP_Hemostase: TMenuItem;
+    Label23: TLabel;
     procedure FormShow(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormCreate(Sender: TObject);
@@ -443,12 +443,14 @@ type
       var KeyChar: Char; Shift: TShiftState);
     procedure Refresh_Patient_TableMouseUp(Sender: TObject;
       Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+    procedure Label23Click(Sender: TObject);
   private
     { Private declarations }
     WidthX, HeightX: Integer;
   public
     { Public declarations }
     Patient_ID, IDs: String;
+    Compte_ID: Integer;
   end;
 
 var
@@ -632,8 +634,6 @@ begin
   WidthX := Main.Width;
   HeightX := Main.Height;
   StringGrid5ColResize;
-  HeaderT.Height := ((Main.Height / 4) - (Main.Height / 30));
-  ListT.Width := ((Main.Width / 5) -(Main.Width / 30) );
 end;
 
 procedure TMain.FormResize(Sender: TObject);
@@ -829,6 +829,12 @@ begin
   RDV.Visible := False;
   H_Gen_RDV.Visible := False;
   H_Accueil.IsSelected := True;
+end;
+
+procedure TMain.Label23Click(Sender: TObject);
+begin
+  inherited;
+  Label23.Text := IntToStr(Compte_ID);
 end;
 
 procedure TMain.Label_Refresh1MouseDown(Sender: TObject; Button: TMouseButton;

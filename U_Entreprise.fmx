@@ -3,7 +3,7 @@ object Entreprise: TEntreprise
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = Single
-  Caption = 'Form1'
+  Caption = #201'tablissement'
   ClientHeight = 550
   ClientWidth = 742
   FormFactor.Width = 320
