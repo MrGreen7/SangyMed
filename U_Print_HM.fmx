@@ -1,0 +1,560 @@
+object Print_HM: TPrint_HM
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = Single
+  ClientHeight = 700
+  ClientWidth = 831
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object ScrollBox: TScrollBox
+    Align = Client
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Size.Width = 811.000000000000000000
+    Size.Height = 623.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    ShowSizeGrip = True
+    Viewport.Width = 811.000000000000000000
+    Viewport.Height = 623.000000000000000000
+    object Rectangle1: TRectangle
+      Fill.Color = claWhite
+      Size.Width = 794.000000000000000000
+      Size.Height = 1124.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claNull
+      object Text9: TText
+        Position.X = 84.000000000000000000
+        Position.Y = 1048.000000000000000000
+        Size.Width = 625.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = #1603#1579#1610#1585' '#1605#1606' '#1575#1604#1571#1605#1585#1575#1590' '#1575#1604#1605#1593#1583#1610#1577' '#1578#1606#1578#1602#1604' '#1605#1606' '#1588#1582#1589' '#1604#1571#1582#1585' '#1593#1606' '#1591#1585#1610#1602' '#1575#1604#1571#1610#1583#1610' '#1575#1604#1602#1584#1585#1577' '
+      end
+      object Text1: TText
+        Position.X = 140.000000000000000000
+        Position.Y = 24.000000000000000000
+        Size.Width = 514.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        TextSettings.Trimming = Word
+      end
+      object Text2: TText
+        Position.X = 288.000000000000000000
+        Position.Y = 80.000000000000000000
+        Size.Width = 217.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        TextSettings.Trimming = Word
+      end
+      object Text3: TText
+        Position.X = 32.000000000000000000
+        Position.Y = 144.000000000000000000
+        Size.Width = 65.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'Mobile : '
+        TextSettings.Trimming = Word
+      end
+      object Text4: TText
+        Position.X = 96.000000000000000000
+        Position.Y = 144.000000000000000000
+        Size.Width = 105.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        TextSettings.Font.Size = 15.000000000000000000
+      end
+      object Text5: TText
+        Position.X = 85.000000000000000000
+        Position.Y = 1088.000000000000000000
+        Size.Width = 625.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'Beaucoup de maladies se transmettent par les mains sales'
+      end
+      object Text6: TText
+        Position.X = 552.000000000000000000
+        Position.Y = 144.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'Le : '
+        TextSettings.Font.Size = 15.000000000000000000
+      end
+      object Text7: TText
+        Position.X = 584.000000000000000000
+        Position.Y = 144.000000000000000000
+        Size.Width = 113.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        TextSettings.Font.Size = 15.000000000000000000
+      end
+      object Text8: TText
+        Position.X = 174.000000000000000000
+        Position.Y = 216.000000000000000000
+        Size.Width = 446.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'Analyse Hemogramme'
+        TextSettings.Trimming = Word
+      end
+      object Layout1: TLayout
+        Position.X = 16.000000000000000000
+        Position.Y = 336.000000000000000000
+        Size.Width = 761.000000000000000000
+        Size.Height = 609.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 9
+        object Line1: TLine
+          LineType = Bottom
+          Position.X = 32.000000000000000000
+          Position.Y = 583.000000000000000000
+          Size.Width = 697.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object Line2: TLine
+          LineType = Bottom
+          Position.X = 32.000000000000000000
+          Position.Y = 24.000000000000000000
+          Size.Width = 713.000000000000000000
+          Size.Height = 10.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Thickness = 2.000000000000000000
+          Stroke.Dash = Dash
+          Stroke.Join = Round
+        end
+        object Line3: TLine
+          LineType = Bottom
+          Position.X = 32.000000000000000000
+          Position.Y = 63.000000000000000000
+          Size.Width = 713.000000000000000000
+          Size.Height = 10.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Thickness = 2.000000000000000000
+          Stroke.Dash = Dash
+          Stroke.Join = Round
+        end
+        object Line4: TLine
+          LineType = Bottom
+          Position.X = 32.000000000000000000
+          Position.Y = 599.000000000000000000
+          Size.Width = 713.000000000000000000
+          Size.Height = 10.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Thickness = 2.000000000000000000
+          Stroke.Dash = Dash
+          Stroke.Join = Round
+        end
+        object Line5: TLine
+          LineType = Left
+          Position.X = 208.000000000000000000
+          Position.Y = 31.000000000000000000
+          Size.Width = 17.000000000000000000
+          Size.Height = 578.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Thickness = 2.000000000000000000
+          Stroke.Dash = Dash
+          Stroke.Join = Round
+        end
+        object Line6: TLine
+          LineType = Left
+          Position.X = 32.000000000000000000
+          Position.Y = 31.000000000000000000
+          Size.Width = 17.000000000000000000
+          Size.Height = 578.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Thickness = 2.000000000000000000
+          Stroke.Dash = Dash
+          Stroke.Join = Round
+        end
+        object Line7: TLine
+          LineType = Left
+          Position.X = 581.000000000000000000
+          Position.Y = 31.000000000000000000
+          Size.Width = 17.000000000000000000
+          Size.Height = 578.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Thickness = 2.000000000000000000
+          Stroke.Dash = Dash
+          Stroke.Join = Round
+        end
+        object Line8: TLine
+          LineType = Left
+          Position.X = 744.000000000000000000
+          Position.Y = 31.000000000000000000
+          Size.Width = 17.000000000000000000
+          Size.Height = 578.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Thickness = 2.000000000000000000
+          Stroke.Dash = Dash
+          Stroke.Join = Round
+        end
+        object Text10: TText
+          Position.X = 70.000000000000000000
+          Position.Y = 38.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          Stretch = True
+          Text = 'Analyses'
+          TextSettings.Trimming = Word
+        end
+        object Text11: TText
+          Position.X = 355.000000000000000000
+          Position.Y = 38.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          Stretch = True
+          Text = 'Resultat'
+          TextSettings.Trimming = Word
+        end
+        object Text12: TText
+          Position.X = 643.000000000000000000
+          Position.Y = 38.000000000000000000
+          Size.Width = 62.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          Stretch = True
+          Text = 'Unit'#233
+          TextSettings.Trimming = Word
+        end
+      end
+      object Text13: TText
+        Position.X = 144.000000000000000000
+        Position.Y = 288.000000000000000000
+        Size.Width = 177.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        TextSettings.Trimming = Word
+      end
+      object Text14: TText
+        Position.X = 56.000000000000000000
+        Position.Y = 288.000000000000000000
+        Size.Width = 89.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'Patient : '
+        TextSettings.Trimming = Word
+      end
+      object Text15: TText
+        Position.X = 568.000000000000000000
+        Position.Y = 288.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        TextSettings.Trimming = Word
+      end
+      object Text16: TText
+        Position.X = 504.000000000000000000
+        Position.Y = 288.000000000000000000
+        Size.Width = 65.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'Code : '
+        TextSettings.Trimming = Word
+      end
+      object Text19: TText
+        Position.X = 85.000000000000000000
+        Position.Y = 562.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'H'#233'matocrite'
+        TextSettings.Trimming = Word
+      end
+      object Text20: TText
+        Position.X = 85.000000000000000000
+        Position.Y = 628.000000000000000000
+        Size.Width = 44.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'VGM'
+        TextSettings.Trimming = Word
+      end
+      object Text21: TText
+        Position.X = 85.000000000000000000
+        Position.Y = 694.000000000000000000
+        Size.Width = 60.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'TCMH'
+        TextSettings.Trimming = Word
+      end
+      object Text22: TText
+        Position.X = 85.000000000000000000
+        Position.Y = 760.000000000000000000
+        Size.Width = 60.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'CCMH'
+        TextSettings.Trimming = Word
+      end
+      object Text23: TText
+        Position.X = 85.000000000000000000
+        Position.Y = 826.000000000000000000
+        Size.Width = 108.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'Leucocytes'
+        TextSettings.Trimming = Word
+      end
+      object Text24: TText
+        Position.X = 85.000000000000000000
+        Position.Y = 893.000000000000000000
+        Size.Width = 116.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'R'#233'ticuiocytes'
+        TextSettings.Trimming = Word
+      end
+      object Text17: TText
+        Position.X = 85.000000000000000000
+        Position.Y = 430.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'H'#233'maties'
+        TextSettings.Trimming = Word
+      end
+      object Text18: TText
+        Position.X = 85.000000000000000000
+        Position.Y = 496.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'Hemoglobin'
+        TextSettings.Trimming = Word
+      end
+      object Text33: TText
+        Position.X = 400.000000000000000000
+        Position.Y = 430.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        TextSettings.Trimming = Word
+      end
+      object Text34: TText
+        Position.X = 400.000000000000000000
+        Position.Y = 496.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        TextSettings.Trimming = Word
+      end
+      object Text35: TText
+        Position.X = 400.000000000000000000
+        Position.Y = 562.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        TextSettings.Trimming = Word
+      end
+      object Text36: TText
+        Position.X = 400.000000000000000000
+        Position.Y = 628.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        TextSettings.Trimming = Word
+      end
+      object Text37: TText
+        Position.X = 400.000000000000000000
+        Position.Y = 694.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        TextSettings.Trimming = Word
+      end
+      object Text38: TText
+        Position.X = 400.000000000000000000
+        Position.Y = 760.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        TextSettings.Trimming = Word
+      end
+      object Text39: TText
+        Position.X = 400.000000000000000000
+        Position.Y = 826.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        TextSettings.Trimming = Word
+      end
+      object Text40: TText
+        Position.X = 400.000000000000000000
+        Position.Y = 893.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        TextSettings.Trimming = Word
+      end
+      object Text25: TText
+        Position.X = 1141.000000000000000000
+        Position.Y = 280.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'Analyses'
+        TextSettings.Trimming = Word
+      end
+      object Text26: TText
+        Position.X = 621.000000000000000000
+        Position.Y = 430.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'millions/mm3'
+        TextSettings.Trimming = Word
+      end
+      object Text27: TText
+        Position.X = 621.000000000000000000
+        Position.Y = 496.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'g/100ml'
+        TextSettings.Trimming = Word
+      end
+      object Text28: TText
+        Position.X = 621.000000000000000000
+        Position.Y = 562.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = '%'
+        TextSettings.Trimming = Word
+      end
+      object Text29: TText
+        Position.X = 621.000000000000000000
+        Position.Y = 628.000000000000000000
+        Size.Width = 30.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = #181#179
+        TextSettings.Trimming = Word
+      end
+      object Text30: TText
+        Position.X = 621.000000000000000000
+        Position.Y = 694.000000000000000000
+        Size.Width = 30.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = #961'g'
+        TextSettings.Trimming = Word
+      end
+      object Text31: TText
+        Position.X = 621.000000000000000000
+        Position.Y = 760.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = '%'
+        TextSettings.Trimming = Word
+      end
+      object Text32: TText
+        Position.X = 621.000000000000000000
+        Position.Y = 826.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = 'mm3 * 10'#179
+        TextSettings.Trimming = Word
+      end
+      object Text41: TText
+        Position.X = 621.000000000000000000
+        Position.Y = 893.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Stretch = True
+        Text = '%'
+        TextSettings.Trimming = Word
+      end
+      object Line9: TLine
+        LineType = Bottom
+        Position.X = 68.000000000000000000
+        Position.Y = 1032.000000000000000000
+        Size.Width = 657.000000000000000000
+        Size.Height = 10.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Thickness = 2.000000000000000000
+      end
+    end
+  end
+  object ToolBar: TToolBar
+    Size.Width = 831.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Cancel_Button: TButton
+      ModalResult = 2
+      Position.X = 580.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 105.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Annuler'
+    end
+    object Print_Button: TButton
+      Position.X = 108.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 105.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Print'
+      OnClick = Print_ButtonClick
+    end
+  end
+  object PrintDialog: TPrintDialog
+    Left = 240
+    Top = 8
+  end
+end

@@ -738,10 +738,6 @@ Visible=False
 [ShadowEffect3]
 Coordinates=4722,606,88,33
 
-[TreeViewItem1]
-Coordinates=4722,661,86,33
-Visible=False
-
 [Frame_EP_Hemogramme.Hemog_Label5]
 Coordinates=4430,155,215,33
 Visible=False
@@ -3233,5 +3229,9 @@ Visible=False
 
 [Label_Refresh4]
 Coordinates=723,1928,52,33
+Visible=False
+
+[T_Analyses]
+Coordinates=4722,661,86,33
 Visible=False
 

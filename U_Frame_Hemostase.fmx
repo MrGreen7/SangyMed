@@ -23,8 +23,8 @@ object Frame4: TFrame4
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 0
-        MaxLength = 9
-        FilterChar = '0123456789'
+        MaxLength = 5
+        FilterChar = '0123456789.,'
         TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 14.000000000000000000
         Position.X = 90.000000000000000000
@@ -51,8 +51,8 @@ object Frame4: TFrame4
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 1
-        MaxLength = 9
-        FilterChar = '0123456789'
+        MaxLength = 5
+        FilterChar = '0123456789.,'
         TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 14.000000000000000000
         Position.X = 90.000000000000000000
@@ -79,8 +79,8 @@ object Frame4: TFrame4
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 2
-        MaxLength = 9
-        FilterChar = '0123456789'
+        MaxLength = 5
+        FilterChar = '0123456789.,'
         TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 14.000000000000000000
         Position.X = 90.000000000000000000
@@ -177,8 +177,8 @@ object Frame4: TFrame4
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 0
-          MaxLength = 9
-          FilterChar = '0123456789'
+          MaxLength = 5
+          FilterChar = '0123456789.,'
           TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 14.000000000000000000
           Position.X = 48.000000000000000000

@@ -24,6 +24,8 @@ type
     Edit4: TEdit;
     InnerGlowEffect4: TInnerGlowEffect;
     SpeedButton2: TSpeedButton;
+    Edit5: TEdit;
+    InnerGlowEffect5: TInnerGlowEffect;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -66,9 +68,11 @@ end;
 
 procedure TIns.Button1Click(Sender: TObject);
 var
-  HexPass: string;
+  Rand, HexPass: string;
+  bol: Boolean;
 begin
   inherited;
+  bol := False;
   if ((Edit1.Text = '') or (Edit2.Text = '') or (Edit3.Text = '')) then
   begin
     if ((Edit1.Text = '') and (Edit2.Text = '') and (Edit3.Text = '')) then
@@ -160,20 +164,37 @@ begin
     end
     else
     begin
-      with DataModule1.FDQuery1 do
+      with DataModule1 do
       begin
-        Active := False;
-        SQl.Text := ('SELECT * FROM User;');
-        Active := True;
-        Insert;
-        FieldByName('Nom').AsString := Edit1.Text;
-        FieldByName('Pseudo').AsString := Edit2.Text;
+        FDQuery1.Active := False;
+        FDQuery1.SQl.Text := ('SELECT * FROM Medecin;');
+        FDQuery1.Active := True;
+        FDQuery1.Insert;
+        repeat
+        Begin
+          try
+            Rand := DataModule1.GenerateID;
+            Rand := 'U' + Rand;
+            FDQuery1.FieldByName('ID').AsString := Rand;
+          except
+            On E: Exception do
+            Begin
+              bol := True;
+            End;
+          end;
+          bol := False;
+        End;
+        until bol = False;
+        FDQuery1.FieldByName('Nom').AsString := Edit1.Text;
+        FDQuery1.FieldByName('Pseudo').AsString := Edit2.Text;
+        FDQuery1.FieldByName('Telephone').AsString := Edit5.Text;
         begin
           HexPass := Encrypt(Edit3.Text);
-          FieldByName('Mot_de_pass').AsString := HexPass;
+          FDQuery1.FieldByName('Mot_de_pass').AsString := HexPass;
         end;
-        Post;
-        Active := False;
+        FDQuery1.Post;
+        FDQuery1.Active := False;
+        FDQuery1.SQl.Clear;
         Button2.OnClick(Button2);
         MessageDlg('Votre compte a été engregistré', TMsgDlgType.mtConfirmation,
           [TMsgDlgBtn.mbOK], 0);

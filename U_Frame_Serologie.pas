@@ -308,6 +308,7 @@ begin
     End;
     bol := False;
     until bol = False;
+    FieldByName('Patient_ID').AsString := RandD;
     FieldByName('HA_Anti-VHA').AsBoolean := CB_HA_Anit_VHA.IsChecked;
     FieldByName('HA_IgG').AsBoolean := RB_HA_IgG.IsChecked;
     FieldByName('HA_IgM').AsBoolean := RB_HA_IgM.IsChecked;

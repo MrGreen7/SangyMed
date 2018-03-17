@@ -163,6 +163,7 @@ begin
     End;
     bol := False;
     until bol = False;
+    FieldByName('Patient_ID').AsString := RandD;
     FieldByName('TS').AsString := Hemos_Edit1.Text;
     FieldByName('TCK').AsString := Hemos_Edit2.Text;
     FieldByName('TP').AsString := Hemos_Edit3.Text;

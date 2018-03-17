@@ -18,7 +18,11 @@ uses
   U_Option in 'U_Option.pas' {Option},
   U_Log in 'U_Log.pas' {Log},
   U_Ins in 'U_Ins.pas' {Ins},
-  U_Base_Print in 'U_Base_Print.pas' {Base_Print};
+  U_Print_HM in 'U_Print_HM.pas' {Print_HM},
+  U_Print_Bio in 'U_Print_Bio.pas' {Print_Bio},
+  U_Print_HS in 'U_Print_HS.pas' {Print_HS},
+  U_Print_Ordo in 'U_Print_Ordo.pas' {Print_Ordo},
+  U_Print_SR in 'U_Print_SR.pas' {Print_SR};
 
 {$R *.res}
 
@@ -27,11 +31,5 @@ begin
   Application.CreateForm(TMain, Main);
   Application.CreateForm(TBase_Form, Base_Form);
   Application.CreateForm(TDataModule1, DataModule1);
-  Application.CreateForm(TEntreprise, Entreprise);
-  Application.CreateForm(TFenetre, Fenetre);
-  Application.CreateForm(TOption, Option);
-  Application.CreateForm(TLog, Log);
-  Application.CreateForm(TIns, Ins);
-  Application.CreateForm(TBase_Print, Base_Print);
   Application.Run;
 end.

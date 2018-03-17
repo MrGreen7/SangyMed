@@ -4,7 +4,7 @@ object Ins: TIns
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = Single
   Caption = 'Inscription'
-  ClientHeight = 314
+  ClientHeight = 344
   ClientWidth = 625
   Fill.Bitmap.Bitmap.PNG = {
     89504E470D0A1A0A0000000D49484452000006400000032008060000007BC0AE
@@ -34835,11 +34835,11 @@ object Ins: TIns
   object Button1: TButton
     StyledSettings = [Style, FontColor]
     Position.X = 40.000000000000000000
-    Position.Y = 237.000000000000000000
+    Position.Y = 285.000000000000000000
     Size.Width = 113.000000000000000000
     Size.Height = 33.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 8
+    TabOrder = 5
     Text = 'Valid'#233
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 16.000000000000000000
@@ -34848,11 +34848,11 @@ object Ins: TIns
   object Button2: TButton
     StyledSettings = [Style, FontColor]
     Position.X = 256.000000000000000000
-    Position.Y = 239.000000000000000000
+    Position.Y = 287.000000000000000000
     Size.Width = 113.000000000000000000
     Size.Height = 33.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 9
+    TabOrder = 6
     Text = 'Vid'#233
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 16.000000000000000000
@@ -34861,11 +34861,11 @@ object Ins: TIns
   object Button3: TButton
     StyledSettings = [Style, FontColor]
     Position.X = 472.000000000000000000
-    Position.Y = 241.000000000000000000
+    Position.Y = 289.000000000000000000
     Size.Width = 113.000000000000000000
     Size.Height = 33.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 10
+    TabOrder = 7
     Text = 'Annuler'
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 16.000000000000000000
@@ -34897,7 +34897,7 @@ object Ins: TIns
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 16.000000000000000000
     Position.X = 40.000000000000000000
-    Position.Y = 86.000000000000000000
+    Position.Y = 85.000000000000000000
     Size.Width = 545.000000000000000000
     Size.Height = 32.000000000000000000
     Size.PlatformDefault = False
@@ -34913,13 +34913,13 @@ object Ins: TIns
   end
   object Edit3: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
-    TabOrder = 2
+    TabOrder = 3
     Password = True
     MaxLength = 12
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 16.000000000000000000
     Position.X = 40.000000000000000000
-    Position.Y = 132.000000000000000000
+    Position.Y = 175.000000000000000000
     Size.Width = 545.000000000000000000
     Size.Height = 32.000000000000000000
     Size.PlatformDefault = False
@@ -34947,13 +34947,13 @@ object Ins: TIns
   end
   object Edit4: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
-    TabOrder = 3
+    TabOrder = 4
     Password = True
     MaxLength = 12
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 16.000000000000000000
     Position.X = 40.000000000000000000
-    Position.Y = 180.000000000000000000
+    Position.Y = 220.000000000000000000
     Size.Width = 545.000000000000000000
     Size.Height = 32.000000000000000000
     Size.PlatformDefault = False
@@ -34977,6 +34977,26 @@ object Ins: TIns
       Text = 'SpeedButton1'
       OnMouseDown = SpeedButton2MouseDown
       OnMouseUp = SpeedButton2MouseUp
+    end
+  end
+  object Edit5: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 2
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 16.000000000000000000
+    Position.X = 40.000000000000000000
+    Position.Y = 130.000000000000000000
+    Size.Width = 545.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'T'#233'lephone (Optionelle)'
+    StyledSettings = [Style, FontColor]
+    OnChange = Edit2Change
+    object InnerGlowEffect5: TInnerGlowEffect
+      Softness = 0.400000005960464400
+      GlowColor = xFFD7263D
+      Opacity = 0.899999976158142100
+      Enabled = False
     end
   end
 end

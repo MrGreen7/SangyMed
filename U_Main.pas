@@ -25,7 +25,7 @@ type
     Patient_Recherche: TTreeViewItem;
     New_Patient: TTreeViewItem;
     T_RDV: TTreeViewItem;
-    TreeViewItem1: TTreeViewItem;
+    T_Analyses: TTreeViewItem;
     TreeViewItem6: TTreeViewItem;
     TreeViewItem2: TTreeViewItem;
     TreeViewItem3: TTreeViewItem;
@@ -370,7 +370,17 @@ type
     PoP_Biochimic: TMenuItem;
     PoP_Serologie: TMenuItem;
     PoP_Hemostase: TMenuItem;
+    Line28: TLine;
+    Line29: TLine;
+    Line30: TLine;
+    Line31: TLine;
     Label23: TLabel;
+    PopupMenu2: TPopupMenu;
+    PoP2_Biochimic: TMenuItem;
+    PoP2_Hemogramme: TMenuItem;
+    PoP2_Hemostase: TMenuItem;
+    PoP2_Serologie: TMenuItem;
+    PoP2_Ordonnance: TMenuItem;
     procedure FormShow(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormCreate(Sender: TObject);
@@ -439,18 +449,21 @@ type
       Shift: TShiftState; X, Y: Single);
     procedure Label_Refresh3MouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Single);
-    procedure Refresh_Patient_TableKeyDown(Sender: TObject; var Key: Word;
-      var KeyChar: Char; Shift: TShiftState);
     procedure Refresh_Patient_TableMouseUp(Sender: TObject;
       Button: TMouseButton; Shift: TShiftState; X, Y: Single);
-    procedure Label23Click(Sender: TObject);
+    procedure Label27Click(Sender: TObject);
+    procedure PoP2_HemogrammeClick(Sender: TObject);
+    procedure Refresh_Patient_TableMouseDown(Sender: TObject;
+      Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+    procedure PoP2_BiochimicClick(Sender: TObject);
+    procedure PoP2_HemostaseClick(Sender: TObject);
+    procedure PoP2_SerologieClick(Sender: TObject);
   private
     { Private declarations }
     WidthX, HeightX: Integer;
   public
     { Public declarations }
-    Patient_ID, IDs: String;
-    Compte_ID: Integer;
+    Patient_ID, ID_Medecin: String;
   end;
 
 var
@@ -460,7 +473,8 @@ implementation
 
 Uses
   U_Option, U_Log, U_Entreprise, Winapi.Windows, U_DataModule,
-  FireDAC.Comp.Client, U_Fenetre;
+  FireDAC.Comp.Client, U_Fenetre, U_Print_HM, U_Print_Bio, U_Print_HS,
+  U_Print_SR;
 {$R *.fmx}
 {$R Alg_Res.RES}
 
@@ -687,8 +701,8 @@ begin
     SQl.Text := 'Select * From Patient Where Patient_ID="' + Patient_ID + '";';
     Active := True;
     Edit;
-    // Frame_EP_Principale.Edit;
     ID := Frame_EP_Principale.Edit;
+    Frame_EP_Principale.Edit;
     Frame_EP_Information.Edit;
     Post;
     Active := False;
@@ -703,6 +717,8 @@ begin
       Frame_EP_Biochimic.Edit(ID);
     // Frame_EP_Ordonnance.Edit();
     // Frame_EP_Ordonnance.LoadGrid(ID);
+    ShowMessage('Ordo Down');
+    Frame_EP_PrincipaleButton3Click(self);
   End;
 end;
 
@@ -744,7 +760,9 @@ begin
       SQl.Text := ('Select * From Patient');
       Active := True;
       Insert;
+      FieldByName('ID').AsString := ID_Medecin;
       ID := Frame_Principale.Insert;
+      Frame_Principale.Insert;
       Frame_Information.Insert;
       Post;
       SQl.Clear;
@@ -756,6 +774,8 @@ begin
     Frame_Biochimic.Insert(ID);
     // Frame_Ordonnance.ID(ID);
     // Frame_Ordonnance.LoadGrid(ID);
+    ShowMessage('Ordo Down');
+    Frame_PrincipaleButton2Click(self);
   end;
 end;
 
@@ -831,10 +851,16 @@ begin
   H_Accueil.IsSelected := True;
 end;
 
-procedure TMain.Label23Click(Sender: TObject);
+procedure TMain.Label27Click(Sender: TObject);
+Var
+  P: TPointF;
 begin
   inherited;
-  Label23.Text := IntToStr(Compte_ID);
+  P.X := (((Label27.Width) / 2) * (-1));
+  P.Y := Label27.Height;
+  P := Label27.LocalToAbsolute(P);
+  P := ClientToScreen(P);
+  PopupMenu2.Popup(P.X, P.Y);
 end;
 
 procedure TMain.Label_Refresh1MouseDown(Sender: TObject; Button: TMouseButton;
@@ -904,7 +930,7 @@ Var
   P: TPointF;
 begin
   inherited;
-  P.X := -5;
+  P.X := (((Label32.Width) / 2) * (-1));
   P.Y := Label32.Height;
   P := Label32.LocalToAbsolute(P);
   P := ClientToScreen(P);
@@ -1069,6 +1095,46 @@ begin
   Recherche_Patient.IsSelected := True;
 end;
 
+procedure TMain.PoP2_BiochimicClick(Sender: TObject);
+Var
+  PrintBioDLg: TPrint_Bio;
+begin
+  inherited;
+  PrintBioDLg := TPrint_Bio.Create(self);
+  if (PrintBioDLg.ShowModal = mrCancel) then
+    PrintBioDLg.Free;
+end;
+
+procedure TMain.PoP2_HemogrammeClick(Sender: TObject);
+Var
+  Print_HMDlg: TPrint_HM;
+begin
+  inherited;
+  Print_HMDlg := TPrint_HM.Create(self);
+  if (Print_HMDlg.ShowModal = mrCancel) then
+    Print_HMDlg.Free;
+end;
+
+procedure TMain.PoP2_HemostaseClick(Sender: TObject);
+Var
+  PrintHSDlg: TPrint_HS;
+begin
+  inherited;
+  PrintHSDlg := TPrint_HS.Create(self);
+  if (PrintHSDlg.ShowModal = mrCancel) then
+    PrintHSDlg.Free;
+end;
+
+procedure TMain.PoP2_SerologieClick(Sender: TObject);
+Var
+  PrintSRDlg: TPrint_SR;
+begin
+  inherited;
+  PrintSRDlg := TPrint_SR.Create(self);
+  if (PrintSRDlg.ShowModal = mrCancel) then
+    PrintSRDlg.Free;
+end;
+
 procedure TMain.P_AccueilClick(Sender: TObject);
 begin
   inherited;
@@ -1116,8 +1182,8 @@ begin
   H_Gen_RechercheP.IsSelected := True;
 end;
 
-procedure TMain.Refresh_Patient_TableKeyDown(Sender: TObject; var Key: Word;
-  var KeyChar: Char; Shift: TShiftState);
+procedure TMain.Refresh_Patient_TableMouseDown(Sender: TObject;
+  Button: TMouseButton; Shift: TShiftState; X, Y: Single);
 begin
   inherited;
   FloatAnimation5.enabled := False;

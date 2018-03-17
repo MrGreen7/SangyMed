@@ -38,11 +38,11 @@ type
     procedure Mod_Edit2Change(Sender: TObject);
     procedure GeneraleClick(Sender: TObject);
     procedure Tree_Sub_GenerAccueilClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
-    ID_Compte: Integer;
   end;
 
 var
@@ -50,8 +50,14 @@ var
 
 implementation
 
-Uses U_DataModule, U_Log;
+Uses U_DataModule, U_Log, U_Main;
 {$R *.fmx}
+
+procedure TOption.FormCreate(Sender: TObject);
+begin
+  inherited;
+  Mod_Edit1.Text := Main.ID_Medecin;
+end;
 
 procedure TOption.GeneraleClick(Sender: TObject);
 begin
@@ -80,12 +86,27 @@ begin
   if ((Mod_Edit1.Text <> '') and (Mod_Edit2.Text <> '')) then
   Begin
     LogDlg := TLog.Create(self);
-    if (LogDlg.ShowModal = mrClose) then
+    if (LogDlg.ShowModal = mrCancel) then
       LogDlg.Free
     else if (LogDlg.ShowModal = mrOk) then
     Begin
       ShowMessage('Hello');
-      LogDlg.Hide;
+      With DataModule1.FDQuery1 do
+      Begin
+        Active := False;
+        SQl.Clear;
+        SQl.Text := ('Select Nom, Pseudo, Telephone From Medecin Where ID="' +
+          Main.ID_Medecin + '"');
+        Active := true;
+        Edit;
+        FieldByName('Nom').AsString := Mod_Edit1.Text;
+        FieldByName('Pseudo').AsString := Mod_Edit2.Text;
+        Post;
+        Active := False;
+        SQl.Clear;
+        ShowMessage('Don!');
+      End;
+      LogDlg.Free;
     End;
   End
   else

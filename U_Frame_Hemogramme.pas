@@ -183,6 +183,7 @@ begin
     End;
     bol := False;
     until bol = False;
+    FieldByName('Patient_ID').AsString := RandD;
     FieldByName('Hematies').AsString := Hemog_Edit1.Text;
     FieldByName('Hemoglobine').AsString := Hemog_Edit2.Text;
     FieldByName('Hematocrite').AsString := Hemog_Edit3.Text;

@@ -1,0 +1,63 @@
+object Print_Ordo: TPrint_Ordo
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = Single
+  Caption = 'Form1'
+  ClientHeight = 700
+  ClientWidth = 830
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object PrintDialog: TPrintDialog
+    Left = 448
+    Top = 16
+  end
+  object ScrollBox: TScrollBox
+    Align = Client
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Size.Width = 810.000000000000000000
+    Size.Height = 623.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    ShowSizeGrip = True
+    Viewport.Width = 794.000000000000000000
+    Viewport.Height = 623.000000000000000000
+    object Rectangle1: TRectangle
+      Fill.Color = claWhite
+      Size.Width = 794.000000000000000000
+      Size.Height = 1124.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claNull
+    end
+  end
+  object ToolBar: TToolBar
+    Size.Width = 830.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Cancel_Button: TButton
+      ModalResult = 2
+      Position.X = 580.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 105.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Annuler'
+    end
+    object Print_Button: TButton
+      Position.X = 108.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 105.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Print'
+    end
+  end
+end

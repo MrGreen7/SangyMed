@@ -31,6 +31,7 @@ type
     FDQ_Wilaya: TFDQuery;
     FDQuery1: TFDQuery;
     FDQuery2: TFDQuery;
+    FDSQLiteSecurity1: TFDSQLiteSecurity;
     function GenerateID: String;
     procedure DataModuleCreate(Sender: TObject);
   private
@@ -87,25 +88,25 @@ var
 begin
   // Asigne Tables to Varibales
   Entreprise :=
-    ('CREATE TABLE `Entreprise` (`ID_EntreP` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,`Form_Juridique`	varchar ( 10 ),'
+    ('CREATE TABLE `Etablissement` (`Etab_ID` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,`Form_Juridique`	varchar ( 10 ),'
     + '`Libelle`	varchar ( 40 ),`Libelle_Sec`	varchar ( 40 ),`Wilaya`	varchar ( 20 ),`Code_de_Wilaya`	Integer ( 3 ),`Commune`	varchar ( 20 ),'
-    + '`Code_Postal`	Integer ( 7 ),`Adresse`	varchar ( 100 ),`Telephone`	Integer ( 13 ),`Mobile`	Integer ( 13 ),`Fax`	Integer ( 13 ),`Email`	varchar ( 30 ),`Web`	varchar ( 40 ));');
+    + '`Code_Postal`	Integer ( 7 ),`Adresse`	varchar ( 100 ),`Telephone`	Integer ( 9 ),`Mobile`	Integer ( 10 ),`Fax`	Integer ( 9 ),`Email`	varchar ( 30 ),`Web`	varchar ( 40 ));');
   Contact :=
-    ('CREATE TABLE `User` (`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,`Nom`	varchar ( 20 ),`Pseudo`	varchar ( 10 ),`Mot_de_pass`	varchar ( 12 ));');
+    ('CREATE TABLE `Medecin` (`ID`	varchar( 7 ) NOT NULL UNIQUE,`Nom`	varchar ( 20 ),`Pseudo`	varchar ( 10 ),`Mot_de_pass`	varchar ( 12 ),Telephone Integer( 10 ),PRIMARY KEY(`ID`));');
   Patient :=
-    ('CREATE TABLE `Patient` (`Patient_ID` varchar ( 7 ) NOT NULL UNIQUE,`Nom`	Varchar ( 15 ),`Prenom`	varchar ( 20 ),`Date_de_Nai`	varchar ( 10 ),`Date_de_Entre`	varchar ( 10 ),`Type`	varchar ( 100 ),`Sexe`	varchar ( 5 ),`Etat_Civil`	varchar ( 13 ),'
-    + '`Wilaya`	varchar ( 20 ),`Commune`	varchar ( 20 ),`Adresse`	varchar ( 50 ),`Mobile`	INTEGER,`Email`	varchar ( 35 ),`Groupage`	varchar ( 5 ),`Telephone`	Integer ( 9 ),`Fax`	Integer ( 13 ),`Type_Index`	INTEGER,`Sexe_Index`	INTEGER,`Etat_Civil_Index`	INTEGER,'
-    + '`Groupage_Index`	INTEGER,`Wilaya_Index`	Integer,`Commune_Index`	Integer, PRIMARY KEY(`Patient_ID`));');
+    ('CREATE TABLE `Patient` (`Patient_ID`	varchar ( 7 ) NOT NULL UNIQUE,`Nom`	Varchar ( 15 ),`Prenom`	varchar ( 20 ),`Date_de_Nai`	varchar ( 10 ),`Date_de_Entre`	varchar ( 10 ),`Type`	varchar ( 7 ),`Sexe`	varchar ( 5 ),`Etat_Civil`	varchar ( 13 ),'
+    + '`Wilaya`	varchar ( 20 ),`Commune`	varchar ( 20 ),`Adresse`	varchar ( 100 ),`Mobile`	INTEGER,`Email`	varchar ( 35 ),`Groupage`	varchar ( 5 ),`Telephone`	Integer ( 9 ),`Fax`	Integer (13),`Type_Index`	INTEGER,`Sexe_Index`	INTEGER,`Etat_Civil_Index`	INTEGER,'
+    + '`Groupage_Index`	INTEGER,`Wilaya_Index`	Integer,`Commune_Index`	Integer,`ID`	varchar(7) NOT NULL, PRIMARY KEY(`Patient_ID`),FOREIGN KEY(`ID`) REFERENCES `Medecin`(`ID`));');
   Biochimie :=
-    ('CREATE TABLE `Biochimie` (`Biochimi_ID`	varchar ( 7 ) NOT NULL UNIQUE,`Glycemie`	INTEGER,`Uree_Sang`	INTEGER,`Createnine`	INTEGER,`Cholesterole`	INTEGER,`Triglycerides`	INTEGER,`HDL`	INTEGER,'
-    + '`LDL`	INTEGER,`Acide_Urique`	INTEGER,`CRP`	INTEGER,`TGO`	INTEGER,`TGP`	INTEGER,`PAL`	INTEGER,`TP`	INTEGER,`INR`	INTEGER,`BilirubineT`	INTEGER,`BilirubineD`	INTEGER,`ASLO`	INTEGER,'
-    + '	`Calcemie`	INTEGER,`Albuminemie`	INTEGER,`Patient_ID`	varchar ( 7 ),PRIMARY KEY(`Biochimi_ID`),FOREIGN KEY(`Patient_ID`) REFERENCES `Patient`(`Patient_ID`) ON DELETE CASCADE);');
+    ('CREATE TABLE `Biochimie` (`Biochimi_ID`	varchar ( 7 ) NOT NULL UNIQUE,`Glycemie`	REAL,`Uree_Sang`	REAL,`Createnine`	REAL,`Cholesterole`	REAL,`Triglycerides`	REAL,`HDL`	REAL,'
+    + '`LDL`	REAL,`Acide_Urique`	REAL,`CRP`	REAL,`TGO`	REAL,`TGP`	REAL,`PAL`	REAL,`TP`	REAL,`INR`	REAL,`BilirubineT`	REAL,`BilirubineD`	REAL,`ASLO`	REAL,'
+    + '	`Calcemie`	REAL,`Albuminemie`	REAL,`Patient_ID`	varchar ( 7 ),PRIMARY KEY(`Biochimi_ID`),FOREIGN KEY(`Patient_ID`) REFERENCES `Patient`(`Patient_ID`) ON DELETE CASCADE);');
   Hemogramme :=
-    ('CREATE TABLE `Hemogramme` (`HemoG_ID`	varchar ( 7 ) NOT NULL UNIQUE,`Hematies`	INTEGER,`Hemoglobine`	INTEGER,`Hematocrite`	INTEGER,`VGM`	INTEGER,`TCMH`	INTEGER,`CCMH`	INTEGER,'
-    + '`Leucocytes`	INTEGER,`Reticulocytes`	INTEGER,`Patient_ID`	varchar ( 7 ),PRIMARY KEY(`HemoG_ID`),FOREIGN KEY(`Patient_ID`) REFERENCES `Patient`(`Patient_ID`) ON DELETE CASCADE);');
+    ('CREATE TABLE `Hemogramme` (`HemoG_ID`	varchar ( 7 ) NOT NULL UNIQUE,`Hematies`	REAL,`Hemoglobine`	REAL,`Hematocrite`	REAL,`VGM`	REAL,`TCMH`	REAL,`CCMH`	REAL,'
+    + '`Leucocytes`	REAL,`Reticulocytes`	REAL,`Patient_ID`	varchar ( 7 ),PRIMARY KEY(`HemoG_ID`),FOREIGN KEY(`Patient_ID`) REFERENCES `Patient`(`Patient_ID`) ON DELETE CASCADE);');
   Hemostase_VS :=
-    ('CREATE TABLE `Hemostase_VS` (`HemoS_VS_ID` varchar ( 7 ) NOT NULL UNIQUE,`TS`	INTEGER,`TCK`	INTEGER,`TP`	INTEGER,'
-    + '`VS`	INTEGER,`Note`	BLOB,`Patient_ID`	varchar ( 7 ),FOREIGN KEY(`Patient_ID`) REFERENCES `Patient`(`Patient_ID`) ON DELETE CASCADE,PRIMARY KEY(`HemoS_VS_ID`));');
+    ('CREATE TABLE `Hemostase_VS` (`HemoS_VS_ID` varchar ( 7 ) NOT NULL UNIQUE,`TS`	REAL,`TCK`	REAL,`TP`	REAL,'
+    + '`VS`	REAL,`Note`	BLOB,`Patient_ID`	varchar ( 7 ),FOREIGN KEY(`Patient_ID`) REFERENCES `Patient`(`Patient_ID`) ON DELETE CASCADE,PRIMARY KEY(`HemoS_VS_ID`));');
   Serologie :=
     ('CREATE TABLE `Serologie` (`Serologie_ID`	varchar ( 7 ) NOT NULL UNIQUE,`HA_Anti-VHA`	boolean,`HA_IgG`	boolean,`HA_IgM`	boolean,'
     + '`HB_Anti-VHB`	Boolean,`HB_Antigene_HBs`	boolean,`HC_Anit-VHC`	boolean,`VIH_Anti-VIH`	boolean,`RUB_Anti_M`	boolean,`RUB_Anti_A`	boolean,'
@@ -129,7 +130,7 @@ begin
   bol := False;
   try
     FDQuery1.Close;
-    FDQuery1.SQL.Text := ('Select * From User');
+    FDQuery1.SQL.Text := ('Select * From Medecin');
     FDQuery1.Active := True;
   except
     on E: Exception do
@@ -145,7 +146,7 @@ begin
         begin
           // Anitialise the Admin account
           HexPass := Encryt('admin'); // Encrypt Admin password
-          SQL.Text := ('Select * From User');
+          SQL.Text := ('Select * From Medecin');
           Active := True;
           Insert;
           repeat

@@ -9,6 +9,7 @@ object Option: TOption
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
   DesignerMasterStyle = 0
   object Panel1: TPanel
     Align = Left
@@ -219,6 +220,8 @@ object Option: TOption
       StyleLookup = ''
       TabOrder = 0
       Text = 'Accueil'
+      ExplicitSize.cx = 58.000000000000000000
+      ExplicitSize.cy = 30.000000000000000000
     end
   end
 end

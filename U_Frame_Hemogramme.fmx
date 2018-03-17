@@ -35,7 +35,8 @@ object Frame3: TFrame3
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 6
-        MaxLength = 9
+        MaxLength = 5
+        FilterChar = '0123456789.,'
         TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 16.000000000000000000
         Position.X = 95.000000000000000000
@@ -91,7 +92,8 @@ object Frame3: TFrame3
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 4
-        MaxLength = 9
+        MaxLength = 5
+        FilterChar = '0123456789.,'
         TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 16.000000000000000000
         Position.X = 95.000000000000000000
@@ -117,11 +119,12 @@ object Frame3: TFrame3
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 2
-        MaxLength = 9
+        MaxLength = 5
+        FilterChar = '0123456789.,'
         TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 16.000000000000000000
         Position.X = 95.000000000000000000
-        Position.Y = 62.694213867187500000
+        Position.Y = 62.694213867187490000
         Size.Width = 417.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
@@ -143,7 +146,7 @@ object Frame3: TFrame3
         Anchors = [akLeft]
         StyledSettings = [Style, FontColor]
         Position.X = 15.000000000000000000
-        Position.Y = 62.694213867187500000
+        Position.Y = 62.694213867187490000
         Size.Width = 79.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
@@ -169,7 +172,8 @@ object Frame3: TFrame3
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 0
-        MaxLength = 9
+        MaxLength = 5
+        FilterChar = '0123456789.,'
         TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 16.000000000000000000
         Position.X = 95.000000000000000000
@@ -203,7 +207,8 @@ object Frame3: TFrame3
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 1
-        MaxLength = 9
+        MaxLength = 5
+        FilterChar = '0123456789.,'
         TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 16.000000000000000000
         Position.X = 95.000000000000000000
@@ -230,7 +235,7 @@ object Frame3: TFrame3
         Anchors = [akLeft]
         StyledSettings = [Style, FontColor]
         Position.X = 15.000000000000000000
-        Position.Y = 62.694213867187500000
+        Position.Y = 62.694213867187490000
         Size.Width = 66.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
@@ -243,11 +248,12 @@ object Frame3: TFrame3
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 0
-        MaxLength = 9
+        MaxLength = 5
+        FilterChar = '0123456789.,'
         TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 16.000000000000000000
         Position.X = 95.000000000000000000
-        Position.Y = 62.694213867187500000
+        Position.Y = 62.694213867187490000
         Size.Width = 417.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
@@ -296,7 +302,8 @@ object Frame3: TFrame3
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 2
-        MaxLength = 9
+        MaxLength = 5
+        FilterChar = '0123456789.,'
         TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 16.000000000000000000
         Position.X = 95.000000000000000000
@@ -322,7 +329,8 @@ object Frame3: TFrame3
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 3
-        MaxLength = 9
+        MaxLength = 5
+        FilterChar = '0123456789.,'
         TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 16.000000000000000000
         Position.X = 95.000000000000000000

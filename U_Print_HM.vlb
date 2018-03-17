@@ -1,0 +1,9 @@
+﻿[DataModule1.FDQ_Groupage]
+Visible=False
+
+[DataModule1.FDQ_Patient]
+Visible=False
+
+[DataModule1.FDQ_Patient_Table]
+Visible=False
+

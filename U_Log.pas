@@ -92,10 +92,9 @@ begin
     with DataModule1.FDQuery1 do
     begin
       Active := False;
-      SQL.Text := ('SELECT * FROM User');
+      SQL.Text := ('SELECT * FROM Medecin');
       Active := True;
       Open;
-      Option.Label1.Text := FieldByName('ID').AsString;
       if not(Locate('Pseudo;Mot_de_pass', VarArrayOf([Edit1.Text, HexPass]), []))
       then
       begin
@@ -117,6 +116,7 @@ begin
       else
       begin
         ShowMessage('Bienvenu Mr.' + Edit1.Text);
+        Main.ID_Medecin := FieldByName('ID').AsString;
         ModalResult := mrOk;
       end;
     end;

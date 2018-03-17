@@ -7,7 +7,7 @@ uses
   System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, U_Base_Form,
   FMX.StdCtrls, FMX.TabControl, FMX.Edit, FMX.ListBox,
-  FMX.Controls.Presentation;
+  FMX.Controls.Presentation, FMX.Effects;
 
 type
   TEntreprise = class(TBase_Form)
@@ -45,6 +45,9 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    InnerGlowEffect1: TInnerGlowEffect;
+    InnerGlowEffect2: TInnerGlowEffect;
+    InnerGlowEffect3: TInnerGlowEffect;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -53,6 +56,7 @@ type
     procedure Edit_Code_WilayaChange(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure ComboBox2MouseEnter(Sender: TObject);
+    procedure ComboBox1Change(Sender: TObject);
   private
     { Private declarations }
   public
@@ -111,6 +115,8 @@ begin
 end;
 
 procedure TEntreprise.Button1Click(Sender: TObject);
+Var
+  MDlg: Integer;
 begin
   inherited;
   if ((ComboBox1.Items.Text <> '') and (ComboBox2.Items.Text <> '') and
@@ -120,7 +126,7 @@ begin
     with DataModule1.FDQ_Entreprise do
     begin
       SQL.Clear;
-      SQL.Text := (' Select * From Entreprise ');
+      SQL.Text := (' Select * From Etablissement ');
       Active := True;
       Edit;
       FieldByName('Form_Juridique').AsString := ComboBox1.Selected.Text;
@@ -140,9 +146,33 @@ begin
       SQL.Clear;
       Active := False;
     end;
-  end;
-  Showmessage('Les iformation a été Enregistrer');
-  ModalResult := mrClose;
+
+    Showmessage('Les iformation a été Enregistrer');
+    ModalResult := mrClose;
+  end
+  else
+  Begin
+    if (ComboBox1.ItemIndex = -1) then
+    Begin
+      InnerGlowEffect1.Enabled := True;
+    End;
+
+    if (ComboBox2.ItemIndex = -1) then
+    Begin
+      InnerGlowEffect2.Enabled := True;
+    End;
+
+    if (ComboBox3.ItemIndex = -1) then
+    Begin
+      InnerGlowEffect3.Enabled := True;
+    End;
+    MDlg := MessageDlg('š''il vous plaît rempli les champs necessaire',
+      TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
+    if (MDlg = mrRetry) then
+    Begin
+      ComboBox1.SetFocus;
+    End;
+  End;
 end;
 
 procedure TEntreprise.Button2Click(Sender: TObject);
@@ -168,8 +198,10 @@ begin
   ComboBox2.Clear;
   ComboBox3.Clear;
   ComboBox1.Items.Add('EPH');
-  ComboBox1.Items.Add('EPHP');
+  ComboBox1.Items.Add('EPSP');
   WiliyaLoad(ComboBox2);
+  Edit_Code_Wilaya.Text := '';
+  Edit_Code_Postal.Text := '';
   CommuneLoad(Edit_Code_Wilaya, ComboBox3);
   Edit1.HitTest := True;
   Edit2.HitTest := True;
@@ -182,9 +214,18 @@ begin
   ComboBox1.SetFocus;
 end;
 
+procedure TEntreprise.ComboBox1Change(Sender: TObject);
+begin
+  inherited;
+  if (ComboBox1.ItemIndex <> -1) then
+    InnerGlowEffect1.Enabled := False;
+end;
+
 procedure TEntreprise.ComboBox2Change(Sender: TObject);
 begin
   inherited;
+  if (ComboBox2.ItemIndex <> -1) then
+    InnerGlowEffect2.Enabled := False;
   with DataModule1.FDQ_Wilaya do
   begin
     Active := False;
@@ -208,6 +249,8 @@ end;
 procedure TEntreprise.ComboBox3Change(Sender: TObject);
 begin
   inherited;
+  if (ComboBox3.ItemIndex <> -1) then
+    InnerGlowEffect3.Enabled := False;
   with DataModule1.FDQ_Commune do
   begin
     Active := False;
@@ -235,9 +278,9 @@ begin
   inherited;
   with DataModule1.FDQ_Entreprise do
   begin
-    SQL.Text := ('Select * From Entreprise');
+    SQL.Text := ('Select * From Etablissement');
     Active := True;
-    if (FieldByName('ID_EntreP').AsString <> '') then
+    if (FieldByName('Etab_ID').AsString <> '') then
       Existed := True
     else
       Existed := False;

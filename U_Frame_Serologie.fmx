@@ -15,16 +15,15 @@ object Frame5: TFrame5
     TabPosition = Bottom
     Sizes = (
       1056s
-      210s
+      231s
       1056s
-      210s)
+      231s)
     object TabItem8: TTabItem
       CustomIcon = <
         item
         end>
       IsSelected = True
-      Size.Width = 109.000000000000000000
-      Size.Height = 26.000000000000000000
+      Size.Height = 5.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
@@ -35,7 +34,7 @@ object Frame5: TFrame5
         Align = Left
         StyledSettings = [Style, FontColor, Other]
         Size.Width = 297.000000000000000000
-        Size.Height = 210.000000000000000000
+        Size.Height = 231.000000000000000000
         Size.PlatformDefault = False
         Text = 'La s'#233'rologie de l'#39'h'#233'patite A'
         TextSettings.Font.Family = 'Candara'
@@ -46,7 +45,7 @@ object Frame5: TFrame5
           Enabled = False
           StyledSettings = [Style, FontColor]
           Position.X = 50.000000000000000000
-          Position.Y = 128.585769653320300000
+          Position.Y = 142.644348144531200000
           Size.Width = 61.000000000000000000
           Size.Height = 24.000000000000000000
           Size.PlatformDefault = False
@@ -60,7 +59,7 @@ object Frame5: TFrame5
           Enabled = False
           StyledSettings = [Style, FontColor]
           Position.X = 186.000000000000000000
-          Position.Y = 128.585769653320300000
+          Position.Y = 142.644348144531200000
           Size.Width = 61.000000000000000000
           Size.Height = 24.000000000000000000
           Size.PlatformDefault = False
@@ -88,7 +87,7 @@ object Frame5: TFrame5
         StyledSettings = [Style, FontColor, Other]
         Position.X = 297.000000000000000000
         Size.Width = 224.000000000000000000
-        Size.Height = 210.000000000000000000
+        Size.Height = 231.000000000000000000
         Size.PlatformDefault = False
         Text = 'La s'#233'rologie de l'#39'h'#233'patite B'
         TextSettings.Font.Family = 'Candara'
@@ -98,7 +97,7 @@ object Frame5: TFrame5
           Anchors = []
           StyledSettings = [Style, FontColor]
           Position.X = 61.000000000000000000
-          Position.Y = 54.202926635742190000
+          Position.Y = 60.573219299316400000
           Size.Width = 85.000000000000000000
           Size.Height = 19.000000000000000000
           Size.PlatformDefault = False
@@ -111,7 +110,7 @@ object Frame5: TFrame5
           Anchors = []
           StyledSettings = [Style, FontColor]
           Position.X = 61.000000000000000000
-          Position.Y = 131.221755981445300000
+          Position.Y = 145.543930053710900000
           Size.Width = 101.000000000000000000
           Size.Height = 24.000000000000000000
           Size.PlatformDefault = False
@@ -126,7 +125,7 @@ object Frame5: TFrame5
         StyledSettings = [Style, FontColor, Other]
         Position.X = 521.000000000000000000
         Size.Width = 224.000000000000000000
-        Size.Height = 210.000000000000000000
+        Size.Height = 231.000000000000000000
         Size.PlatformDefault = False
         Text = 'La s'#233'rologie de l'#39'h'#233'patite C'
         TextSettings.Font.Family = 'Candara'
@@ -136,7 +135,7 @@ object Frame5: TFrame5
           Anchors = []
           StyledSettings = [Style, FontColor]
           Position.X = 73.000000000000000000
-          Position.Y = 95.500000000000000000
+          Position.Y = 106.000000000000000000
           Size.Width = 77.000000000000000000
           Size.Height = 19.000000000000000000
           Size.PlatformDefault = False
@@ -151,7 +150,7 @@ object Frame5: TFrame5
         StyledSettings = [Style, FontColor, Other]
         Position.X = 745.000000000000000000
         Size.Width = 312.000000000000000000
-        Size.Height = 210.000000000000000000
+        Size.Height = 231.000000000000000000
         Size.PlatformDefault = False
         Text = 'La s'#233'rologie du VIH / Sida'
         TextSettings.Font.Family = 'Candara'
@@ -161,7 +160,7 @@ object Frame5: TFrame5
           Anchors = []
           StyledSettings = [Style, FontColor]
           Position.X = 119.500000000000000000
-          Position.Y = 95.500000000000000000
+          Position.Y = 106.000000000000000000
           Size.Width = 73.000000000000000000
           Size.Height = 19.000000000000000000
           Size.PlatformDefault = False
@@ -177,8 +176,7 @@ object Frame5: TFrame5
         item
         end>
       IsSelected = False
-      Size.Width = 214.000000000000000000
-      Size.Height = 26.000000000000000000
+      Size.Height = 5.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
@@ -193,7 +191,7 @@ object Frame5: TFrame5
         Padding.Right = 10.000000000000000000
         Padding.Bottom = 10.000000000000000000
         Size.Width = 781.000000000000000000
-        Size.Height = 210.000000000000000000
+        Size.Height = 231.000000000000000000
         Size.PlatformDefault = False
         Text = 'La s'#233'rologie bact'#233'rienne'
         TextSettings.Font.Family = 'Candara'
@@ -204,7 +202,7 @@ object Frame5: TFrame5
           StyledSettings = [Style, FontColor, Other]
           Margins.Top = 20.000000000000000000
           Size.Width = 298.000000000000000000
-          Size.Height = 170.000000000000000000
+          Size.Height = 191.000000000000000000
           Size.PlatformDefault = False
           Text = 'La mononucl'#233'ose infectieuse'
           TextSettings.Font.Family = 'Candara'
@@ -215,7 +213,7 @@ object Frame5: TFrame5
             StyledSettings = [Style, FontColor]
             Hint = 'anti-Epstein-Barr virus '
             Position.X = 178.797363281250000000
-            Position.Y = 21.587936401367190000
+            Position.Y = 26.231151580810550000
             Size.Width = 80.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -230,7 +228,7 @@ object Frame5: TFrame5
             Anchors = []
             StyledSettings = [Style, FontColor]
             Position.X = 47.137878417968750000
-            Position.Y = 117.266326904296900000
+            Position.Y = 133.728637695312500000
             Size.Width = 77.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -243,7 +241,7 @@ object Frame5: TFrame5
             Anchors = []
             StyledSettings = [Style, FontColor]
             Position.X = 39.217605590820310000
-            Position.Y = 21.587936401367190000
+            Position.Y = 26.231151580810550000
             Size.Width = 77.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -256,7 +254,7 @@ object Frame5: TFrame5
             Anchors = []
             StyledSettings = [Style, FontColor]
             Position.X = 178.877075195312500000
-            Position.Y = 117.266326904296900000
+            Position.Y = 133.728637695312500000
             Size.Width = 64.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -273,7 +271,7 @@ object Frame5: TFrame5
           Position.X = 10.000000000000000000
           Position.Y = 30.000000000000000000
           Size.Width = 254.000000000000000000
-          Size.Height = 170.000000000000000000
+          Size.Height = 191.000000000000000000
           Size.PlatformDefault = False
           Text = 'La s'#233'rologie de la rub'#233'ole'
           TextSettings.Font.Family = 'Candara'
@@ -283,7 +281,7 @@ object Frame5: TFrame5
             Anchors = []
             StyledSettings = [Style, FontColor]
             Position.X = 60.000000000000000000
-            Position.Y = 18.170852661132810000
+            Position.Y = 22.391958236694340000
             Size.Width = 133.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -296,7 +294,7 @@ object Frame5: TFrame5
             Anchors = []
             StyledSettings = [Style, FontColor]
             Position.X = 60.000000000000000000
-            Position.Y = 69.427131652832030000
+            Position.Y = 79.979896545410150000
             Size.Width = 125.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -309,7 +307,7 @@ object Frame5: TFrame5
             Anchors = []
             StyledSettings = [Style, FontColor]
             Position.X = 60.000000000000000000
-            Position.Y = 120.683410644531300000
+            Position.Y = 137.567825317382800000
             Size.Width = 125.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -326,7 +324,7 @@ object Frame5: TFrame5
           Position.X = 264.000000000000000000
           Position.Y = 30.000000000000000000
           Size.Width = 209.000000000000000000
-          Size.Height = 170.000000000000000000
+          Size.Height = 191.000000000000000000
           Size.PlatformDefault = False
           Text = 'salmonelloses (fi'#232'vre typho'#239'de)'
           TextSettings.Font.Family = 'Candara'
@@ -336,7 +334,7 @@ object Frame5: TFrame5
             Anchors = []
             StyledSettings = [Style, FontColor]
             Position.X = 70.000000000000000000
-            Position.Y = 40.381896972656250000
+            Position.Y = 47.346717834472660000
             Size.Width = 69.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -349,7 +347,7 @@ object Frame5: TFrame5
             Anchors = []
             StyledSettings = [Style, FontColor]
             Position.X = 70.000000000000000000
-            Position.Y = 97.618087768554690000
+            Position.Y = 111.653266906738300000
             Size.Width = 61.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -369,7 +367,7 @@ object Frame5: TFrame5
         Padding.Bottom = 10.000000000000000000
         Position.X = 781.000000000000000000
         Size.Width = 275.000000000000000000
-        Size.Height = 210.000000000000000000
+        Size.Height = 231.000000000000000000
         Size.PlatformDefault = False
         Text = 'La s'#233'rologie parasitaire'
         TextSettings.Font.Family = 'Candara'
@@ -379,7 +377,7 @@ object Frame5: TFrame5
           Align = Client
           StyledSettings = [Style, FontColor, Other]
           Size.Width = 255.000000000000000000
-          Size.Height = 170.000000000000000000
+          Size.Height = 191.000000000000000000
           Size.PlatformDefault = False
           Text = 'La s'#233'rologie de la toxoplasmose'
           TextSettings.Font.Family = 'Candara'
@@ -389,7 +387,7 @@ object Frame5: TFrame5
             Anchors = []
             StyledSettings = [Style, FontColor]
             Position.X = 89.000000000000000000
-            Position.Y = 69.427131652832030000
+            Position.Y = 79.979896545410150000
             Size.Width = 76.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
