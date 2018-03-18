@@ -22,13 +22,20 @@ object Etablissement: TEtablissement
     object ComboBox1: TComboBox
       Items.Strings = (
         'EPH'
-        'EPHP')
+        'EPSP')
       Position.X = 200.000000000000000000
       Position.Y = 32.000000000000000000
       Size.Width = 385.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
+      OnChange = ComboBox1Change
+      object InnerGlowEffect1: TInnerGlowEffect
+        Softness = 0.400000005960464400
+        GlowColor = claGold
+        Opacity = 0.899999976158142100
+        Enabled = False
+      end
     end
     object Label1: TLabel
       StyledSettings = [FontColor]
@@ -172,6 +179,12 @@ object Etablissement: TEtablissement
           TabOrder = 3
           OnChange = ComboBox2Change
           OnMouseEnter = ComboBox2MouseEnter
+          object InnerGlowEffect2: TInnerGlowEffect
+            Softness = 0.400000005960464400
+            GlowColor = claGold
+            Opacity = 0.899999976158142100
+            Enabled = False
+          end
         end
         object ComboBox3: TComboBox
           ItemHeight = 30.000000000000000000
@@ -182,6 +195,12 @@ object Etablissement: TEtablissement
           Size.PlatformDefault = False
           TabOrder = 4
           OnChange = ComboBox3Change
+          object InnerGlowEffect3: TInnerGlowEffect
+            Softness = 0.400000005960464400
+            GlowColor = claGold
+            Opacity = 0.899999976158142100
+            Enabled = False
+          end
         end
         object Edit3: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]

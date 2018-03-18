@@ -1,4 +1,4 @@
-unit U_Ins;
+unit U_Inscription;
 
 interface
 
@@ -173,7 +173,7 @@ begin
         repeat
         Begin
           try
-            Rand := DataModule1.GenerateID;
+            Rand := GenerateID;
             Rand := 'U' + Rand;
             FDQuery1.FieldByName('ID').AsString := Rand;
           except

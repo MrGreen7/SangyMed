@@ -226,8 +226,8 @@ object Frame4: TFrame4
           Size.Height = 100.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
-          Viewport.Width = 506.000000000000000000
-          Viewport.Height = 96.000000000000000000
+          Viewport.Width = 510.000000000000000000
+          Viewport.Height = 100.000000000000000000
         end
       end
     end

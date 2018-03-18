@@ -122,7 +122,7 @@ begin
   Begin
     Active := False;
     SQL.Clear;
-    SQL.Text := 'Select * From Hemogramme';
+    SQL.Text := 'Select * From Hemogramme Where Patient_ID="'+Main.Patient_ID+'"';
     Active := True;
     Insert;
     repeat
@@ -140,7 +140,7 @@ begin
     End;
     bol := False;
     until bol = False;
-    FieldByName('Patient_ID').AsString := RandD;
+    FieldByName('Patient_ID').AsWideString := RandD;
     FieldByName('Hematies').AsString := Hemog_Edit1.Text;
     FieldByName('Hemoglobine').AsString := Hemog_Edit2.Text;
     FieldByName('Hematocrite').AsString := Hemog_Edit3.Text;

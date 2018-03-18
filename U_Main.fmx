@@ -2740,7 +2740,7 @@ object Main: TMain
     Size.Height = 531.000000000000000000
     Size.PlatformDefault = False
     StyleLookup = 'tabcontrolstyle'
-    TabIndex = 0
+    TabIndex = 3
     TabOrder = 2
     TabPosition = PlatformDefault
     Sizes = (
@@ -2769,7 +2769,7 @@ object Main: TMain
       TextSettings.Font.Size = 16.000000000000000000
       TextSettings.FontColor = xFFD7263D
       StyledSettings = [Style]
-      IsSelected = True
+      IsSelected = False
       Size.Width = 141.000000000000000000
       Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
@@ -3201,6 +3201,7 @@ object Main: TMain
         Size.Height = 454.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 2
+        RowCount = 100000
         Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
         OnCellClick = StringGrid5CellClick
         OnCellDblClick = StringGrid5CellDblClick
@@ -3455,7 +3456,7 @@ object Main: TMain
       TextSettings.Font.Size = 16.000000000000000000
       TextSettings.FontColor = xFFF46063
       StyledSettings = [Style]
-      IsSelected = False
+      IsSelected = True
       Size.Width = 155.000000000000000000
       Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
@@ -4266,7 +4267,7 @@ object Main: TMain
             inherited Layout_Right2: TLayout
               Position.X = 295.000000000000000000
               inherited IP_DateEdit2: TDateEdit
-                Position.Y = 3.710144042968750000
+                Position.Y = 4.000000000000000000
               end
             end
             inherited Layout_Left_2: TLayout
@@ -4548,11 +4549,11 @@ object Main: TMain
                 end
                 inherited Hemog_Label4: TLabel
                   Position.Y = 195.537185668945300000
-                  TabOrder = 19
+                  TabOrder = 16
                 end
                 inherited Hemog_Label3: TLabel
                   Position.Y = 134.818176269531300000
-                  TabOrder = 20
+                  TabOrder = 17
                 end
                 inherited Hemog_Edit3: TEdit
                   TabOrder = 2

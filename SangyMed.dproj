@@ -360,23 +360,23 @@
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="U_Entreprise.pas">
-            <Form>Entreprise</Form>
+            <Form>Etablissement</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="U_Fenetre.pas">
             <Form>Fenetre</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="U_Option.pas">
-            <Form>Option</Form>
+        <DCCReference Include="U_Parametre.pas">
+            <Form>Parametre</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="U_Log.pas">
-            <Form>Log</Form>
+        <DCCReference Include="U_Connecter.pas">
+            <Form>Connecter</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="U_Ins.pas">
-            <Form>Ins</Form>
+        <DCCReference Include="U_Inscription.pas">
+            <Form>Inscription</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="U_Print_HM.pas">
@@ -397,7 +397,6 @@
         </DCCReference>
         <DCCReference Include="U_Print_SR.pas">
             <Form>Print_SR</Form>
-            <FormType>fmx</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

@@ -1,4 +1,4 @@
-unit U_Option;
+unit U_Parametre;
 
 interface
 
@@ -50,7 +50,7 @@ var
 
 implementation
 
-Uses U_DataModule, U_Log, U_Main;
+Uses U_DataModule, U_Connecter, U_Main;
 {$R *.fmx}
 
 procedure TOption.FormCreate(Sender: TObject);

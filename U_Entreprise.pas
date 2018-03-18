@@ -10,7 +10,7 @@ uses
   FMX.Controls.Presentation, FMX.Effects;
 
 type
-  TEntreprise = class(TBase_Form)
+  TEtablissement = class(TBase_Form)
     GroupBox1: TGroupBox;
     ComboBox1: TComboBox;
     Label1: TLabel;
@@ -64,7 +64,7 @@ type
   end;
 
 var
-  Entreprise: TEntreprise;
+  Etablissement: TEtablissement;
 
 implementation
 
@@ -114,7 +114,7 @@ begin
   end;
 end;
 
-procedure TEntreprise.Button1Click(Sender: TObject);
+procedure TEtablissement.Button1Click(Sender: TObject);
 Var
   MDlg: Integer;
 begin
@@ -175,7 +175,7 @@ begin
   End;
 end;
 
-procedure TEntreprise.Button2Click(Sender: TObject);
+procedure TEtablissement.Button2Click(Sender: TObject);
 begin
   inherited;
   try
@@ -183,12 +183,12 @@ begin
   except
     on E: Exception do
     begin
-      Entreprise.Close;
+      Etablissement.Close;
     end;
   end;
 end;
 
-procedure TEntreprise.Button3Click(Sender: TObject);
+procedure TEtablissement.Button3Click(Sender: TObject);
 begin
   inherited;
   ComboBox1.HitTest := True;
@@ -214,14 +214,14 @@ begin
   ComboBox1.SetFocus;
 end;
 
-procedure TEntreprise.ComboBox1Change(Sender: TObject);
+procedure TEtablissement.ComboBox1Change(Sender: TObject);
 begin
   inherited;
   if (ComboBox1.ItemIndex <> -1) then
     InnerGlowEffect1.Enabled := False;
 end;
 
-procedure TEntreprise.ComboBox2Change(Sender: TObject);
+procedure TEtablissement.ComboBox2Change(Sender: TObject);
 begin
   inherited;
   if (ComboBox2.ItemIndex <> -1) then
@@ -239,14 +239,14 @@ begin
   end;
 end;
 
-procedure TEntreprise.ComboBox2MouseEnter(Sender: TObject);
+procedure TEtablissement.ComboBox2MouseEnter(Sender: TObject);
 begin
   inherited;
   if (ComboBox2.Items.Capacity = 0) then
     WiliyaLoad(ComboBox2);
 end;
 
-procedure TEntreprise.ComboBox3Change(Sender: TObject);
+procedure TEtablissement.ComboBox3Change(Sender: TObject);
 begin
   inherited;
   if (ComboBox3.ItemIndex <> -1) then
@@ -263,7 +263,7 @@ begin
   end;
 end;
 
-procedure TEntreprise.Edit_Code_WilayaChange(Sender: TObject);
+procedure TEtablissement.Edit_Code_WilayaChange(Sender: TObject);
 var
   Code_P: string;
 begin
@@ -271,7 +271,7 @@ begin
   CommuneLoad(Edit_Code_Wilaya, ComboBox3);
 end;
 
-procedure TEntreprise.FormShow(Sender: TObject);
+procedure TEtablissement.FormShow(Sender: TObject);
 var
   Existed: boolean;
 begin

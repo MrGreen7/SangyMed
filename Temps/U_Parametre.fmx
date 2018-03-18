@@ -138,7 +138,7 @@ object Option: TOption
         StyledSettings = [Style, FontColor]
         OnChange = Mod_Edit1Change
         object InnerGlowEffect1: TInnerGlowEffect
-          Softness = 0.400000005960464400
+          Softness = 0.400000005960464500
           GlowColor = claCrimson
           Opacity = 0.899999976158142100
           Enabled = False
@@ -159,7 +159,7 @@ object Option: TOption
         StyledSettings = [Style, FontColor]
         OnChange = Mod_Edit2Change
         object InnerGlowEffect2: TInnerGlowEffect
-          Softness = 0.400000005960464400
+          Softness = 0.400000005960464500
           GlowColor = claCrimson
           Opacity = 0.899999976158142100
           Enabled = False

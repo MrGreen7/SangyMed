@@ -1,4 +1,4 @@
-unit U_Log;
+unit U_Connecter;
 
 interface
 
@@ -42,7 +42,7 @@ var
 implementation
 
 Uses
-  U_Main, U_Ins, U_DataModule, Winapi.Messages, U_Option;
+  U_Main, U_Inscription, U_DataModule, Winapi.Messages, U_Parametre;
 {$R *.fmx}
 
 function Decrypt(Str: string): string;

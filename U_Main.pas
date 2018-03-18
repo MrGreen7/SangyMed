@@ -472,7 +472,7 @@ var
 implementation
 
 Uses
-  U_Option, U_Log, U_Entreprise, Winapi.Windows, U_DataModule,
+  U_Parametre, U_Connecter, U_Entreprise, Winapi.Windows, U_DataModule,
   FireDAC.Comp.Client, U_Fenetre, U_Print_HM, U_Print_Bio, U_Print_HS,
   U_Print_SR;
 {$R *.fmx}
@@ -678,11 +678,11 @@ end;
 
 procedure TMain.FormShow(Sender: TObject);
 var
-  LogDlg: TLog;
+  LogDlg: TConnecter;
 begin
   inherited;
   P_Accueil.IsSelected := True;
-  LogDlg := TLog.Create(self);
+  LogDlg := TConnecter.Create(self);
   if (LogDlg.ShowModal = mrCancel) then
     Application.Terminate;
   LogDlg.Free;
@@ -762,16 +762,19 @@ begin
       Insert;
       FieldByName('ID').AsString := ID_Medecin;
       ID := Frame_Principale.Insert;
-      Frame_Principale.Insert;
       Frame_Information.Insert;
       Post;
       SQl.Clear;
       Active := False;
     End;
-    Frame_Hemogramme.Insert(ID);
-    Frame_Hemostase.Insert(ID);
-    Frame_Serologie.Insert(ID);
-    Frame_Biochimic.Insert(ID);
+    if (Frame_Hemogramme.IsSet = True) then
+      Frame_Hemogramme.Insert(ID);
+    if (Frame_Hemostase.IsSet = True) then
+      Frame_Hemostase.Insert(ID);
+    if (Frame_Serologie.IsSet = True) then
+      Frame_Serologie.Insert(ID);
+    if (Frame_Biochimic.IsSet = True) then
+      Frame_Biochimic.Insert(ID);
     // Frame_Ordonnance.ID(ID);
     // Frame_Ordonnance.LoadGrid(ID);
     ShowMessage('Ordo Down');
@@ -792,12 +795,12 @@ end;
 
 procedure TMain.Label12Click(Sender: TObject);
 var
-  EntrepriseDlg: TEntreprise;
+  EtablissementDlg: TEtablissement;
 begin
   inherited;
-  EntrepriseDlg := TEntreprise.Create(self);
-  if (EntrepriseDlg.ShowModal = mrClose) then
-    EntrepriseDlg.Free;
+  EtablissementDlg := TEtablissement.Create(self);
+  if (EtablissementDlg.ShowModal = mrClose) then
+    EtablissementDlg.Free;
 end;
 
 procedure TMain.Label15Click(Sender: TObject);
@@ -997,7 +1000,7 @@ begin
   else
   Begin
     ShowMessage
-      ('Sil vous plait choisir une patient ou double clicker sur un patient');
+      ('Sil vous plait choisir une patient pour effectué cette action');
   End;
 end;
 
@@ -1026,10 +1029,10 @@ end;
 
 procedure TMain.Label6Click(Sender: TObject);
 var
-  OptionDlg: TOption;
+  OptionDlg: TParametre;
 begin
   inherited;
-  OptionDlg := TOption.Create(self);
+  OptionDlg := TParametre.Create(self);
   OptionDlg.ShowModal;
 end;
 
