@@ -12,7 +12,9 @@ uses
   Data.Bind.DBScope, Data.Bind.Grid, U_Frame_Principale, U_Frame_Serologie,
   U_Frame_Biochimic, U_Frame_Hemostase, U_Frame_Hemogramme, U_Frame_Information,
   FMX.Edit, U_Frame_Ordonnance, FMX.Menus, FMX.Grid.Style, FMX.ScrollBox,
-  FMX.Grid, FMX.Bind.Grid, FMX.Bind.Editors;
+  FMX.Grid, FMX.Bind.Grid, FMX.Bind.Editors, FireDAC.Stan.Def,
+  FireDAC.FMXUI.Wait, FireDAC.Phys.SQLiteWrapper, FireDAC.Stan.Intf,
+  FireDAC.Phys, FireDAC.Phys.SQLite;
 
 type
   TMain = class(TBase_Form)
@@ -458,6 +460,7 @@ type
     procedure PoP2_BiochimicClick(Sender: TObject);
     procedure PoP2_HemostaseClick(Sender: TObject);
     procedure PoP2_SerologieClick(Sender: TObject);
+    procedure Label71Click(Sender: TObject);
   private
     { Private declarations }
     WidthX, HeightX: Integer;
@@ -1034,6 +1037,33 @@ begin
   inherited;
   OptionDlg := TParametre.Create(self);
   OptionDlg.ShowModal;
+end;
+
+procedure TMain.Label71Click(Sender: TObject);
+Var
+  output, Path, DirPath: String;
+  SaveDialog1: TSaveDialog;
+begin
+  inherited;
+  SaveDialog1 := TSaveDialog.Create(self);
+  SaveDialog1.Filter := ('db file|*.db|All|*.*');
+  SaveDialog1.FileName := 'patient_backup';
+  if (SaveDialog1.Execute) then
+  Begin
+    output := 'C:\Users\Kacemo\Desktop\Pateint_backup.db';
+    FileCreate(output);
+    With DataModule1 do
+    Begin
+      DirPath := GetEnvironmentVariable('AppData');
+      Path := (DirPath + '\SangyMed\Data.db');
+      FDConnection1.Open();
+      FDSQLiteBackup1.DriverLink := FDPhysSQLiteDriverLink1;
+      FDSQLiteBackup1.Database := output;
+      FDSQLiteBackup1.DestDatabase := Path;
+      FDSQLiteBackup1.Backup;
+    End;
+  End;
+  SaveDialog1.Free;
 end;
 
 procedure TMain.New_PatientClick(Sender: TObject);

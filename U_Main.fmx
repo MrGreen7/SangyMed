@@ -201,7 +201,7 @@ object Main: TMain
     Size.Height = 161.000000000000000000
     Size.PlatformDefault = False
     StyleLookup = 'tabcontrolstyle'
-    TabIndex = 2
+    TabIndex = 1
     TabOrder = 0
     TabPosition = PlatformDefault
     Sizes = (
@@ -239,7 +239,7 @@ object Main: TMain
       ExplicitSize.cy = 30.000000000000000000
       object Panel4: TPanel
         Align = Client
-        Opacity = 0.699999988079071000
+        Opacity = 0.699999988079071100
         Size.Width = 1260.000000000000000000
         Size.Height = 129.000000000000000000
         Size.PlatformDefault = False
@@ -481,7 +481,7 @@ object Main: TMain
         end
         object Line6: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 128.000000000000000000
           Position.Y = -6.000000000000000000
           Size.Width = 9.000000000000000000
@@ -490,7 +490,7 @@ object Main: TMain
         end
         object Line7: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 256.000000000000000000
           Position.Y = 2.000000000000000000
           Size.Width = 9.000000000000000000
@@ -499,7 +499,7 @@ object Main: TMain
         end
         object Line8: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 570.000000000000000000
           Position.Y = 2.000000000000000000
           Size.Width = 9.000000000000000000
@@ -508,7 +508,7 @@ object Main: TMain
         end
         object Line9: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 699.000000000000000000
           Position.Y = -6.000000000000000000
           Size.Width = 9.000000000000000000
@@ -665,7 +665,7 @@ object Main: TMain
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 16.000000000000000000
       StyledSettings = [Style, FontColor]
-      IsSelected = False
+      IsSelected = True
       Size.Width = 89.000000000000000000
       Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
@@ -676,7 +676,7 @@ object Main: TMain
       ExplicitSize.cy = 30.000000000000000000
       object Panel6: TPanel
         Align = Client
-        Opacity = 0.699999988079071000
+        Opacity = 0.699999988079071100
         Size.Width = 1260.000000000000000000
         Size.Height = 129.000000000000000000
         Size.PlatformDefault = False
@@ -805,6 +805,7 @@ object Main: TMain
             TextSettings.VertAlign = Leading
             Text = #61888
             TabOrder = 0
+            OnClick = Label71Click
             object ColorAnimation34: TColorAnimation
               AnimationType = InOut
               Delay = 0.200000002980232200
@@ -888,7 +889,7 @@ object Main: TMain
         end
         object Line17: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 257.000000000000000000
           Size.Width = 9.000000000000000000
           Size.Height = 131.000000000000000000
@@ -896,7 +897,7 @@ object Main: TMain
         end
         object Line18: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 386.000000000000000000
           Size.Width = 9.000000000000000000
           Size.Height = 131.000000000000000000
@@ -904,7 +905,7 @@ object Main: TMain
         end
         object Line19: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 514.000000000000000000
           Size.Width = 10.000000000000000000
           Size.Height = 131.000000000000000000
@@ -973,7 +974,7 @@ object Main: TMain
         end
         object Line16: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 128.000000000000000000
           Size.Width = 9.000000000000000000
           Size.Height = 131.000000000000000000
@@ -988,7 +989,7 @@ object Main: TMain
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 16.000000000000000000
       StyledSettings = [Style, FontColor]
-      IsSelected = True
+      IsSelected = False
       Size.Width = 94.000000000000000000
       Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
@@ -999,7 +1000,7 @@ object Main: TMain
       ExplicitSize.cy = 30.000000000000000000
       object Panel10: TPanel
         Align = Client
-        Opacity = 0.699999988079071000
+        Opacity = 0.699999988079071100
         Size.Width = 1260.000000000000000000
         Size.Height = 129.000000000000000000
         Size.PlatformDefault = False
@@ -1291,7 +1292,7 @@ object Main: TMain
         end
         object Line2: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 345.000000000000000000
           Size.Width = 9.000000000000000000
           Size.Height = 137.000000000000000000
@@ -1299,7 +1300,7 @@ object Main: TMain
         end
         object Line3: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 474.000000000000000000
           Position.Y = -6.000000000000000000
           Size.Width = 9.000000000000000000
@@ -1308,7 +1309,7 @@ object Main: TMain
         end
         object Line4: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 602.000000000000000000
           Position.Y = -6.000000000000000000
           Size.Width = 9.000000000000000000
@@ -1317,7 +1318,7 @@ object Main: TMain
         end
         object Line5: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 731.000000000000000000
           Position.Y = -6.000000000000000000
           Size.Width = 9.000000000000000000
@@ -1408,7 +1409,7 @@ object Main: TMain
           end
           object Line14: TLine
             LineType = Left
-            Opacity = 0.800000011920929000
+            Opacity = 0.800000011920928900
             Position.X = 104.000000000000000000
             Position.Y = 10.000000000000000000
             Size.Width = 9.000000000000000000
@@ -1417,7 +1418,7 @@ object Main: TMain
           end
           object Line15: TLine
             LineType = Left
-            Opacity = 0.800000011920929000
+            Opacity = 0.800000011920928900
             Position.X = 216.000000000000000000
             Position.Y = 10.000000000000000000
             Size.Width = 9.000000000000000000
@@ -1533,7 +1534,7 @@ object Main: TMain
         end
         object Line10: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 860.000000000000000000
           Position.Y = -6.000000000000000000
           Size.Width = 9.000000000000000000
@@ -1561,7 +1562,7 @@ object Main: TMain
       ExplicitSize.cy = 30.000000000000000000
       object Panel11: TPanel
         Align = Client
-        Opacity = 0.699999988079071000
+        Opacity = 0.699999988079071100
         Size.Width = 1260.000000000000000000
         Size.Height = 129.000000000000000000
         Size.PlatformDefault = False
@@ -1821,7 +1822,7 @@ object Main: TMain
         end
         object Line24: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 128.000000000000000000
           Position.Y = -6.000000000000000000
           Size.Width = 9.000000000000000000
@@ -1830,7 +1831,7 @@ object Main: TMain
         end
         object Line25: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 257.000000000000000000
           Position.Y = -6.000000000000000000
           Size.Width = 9.000000000000000000
@@ -1839,7 +1840,7 @@ object Main: TMain
         end
         object Line26: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 387.000000000000000000
           Position.Y = -6.000000000000000000
           Size.Width = 9.000000000000000000
@@ -1848,7 +1849,7 @@ object Main: TMain
         end
         object Line27: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 515.000000000000000000
           Position.Y = -6.000000000000000000
           Size.Width = 9.000000000000000000
@@ -1876,7 +1877,7 @@ object Main: TMain
       ExplicitSize.cy = 30.000000000000000000
       object Panel9: TPanel
         Align = Client
-        Opacity = 0.699999988079071000
+        Opacity = 0.699999988079071100
         Size.Width = 1260.000000000000000000
         Size.Height = 129.000000000000000000
         Size.PlatformDefault = False
@@ -2135,7 +2136,7 @@ object Main: TMain
         end
         object Line28: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 128.000000000000000000
           Position.Y = -8.000000000000000000
           Size.Width = 9.000000000000000000
@@ -2144,7 +2145,7 @@ object Main: TMain
         end
         object Line29: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 258.000000000000000000
           Position.Y = -8.000000000000000000
           Size.Width = 9.000000000000000000
@@ -2153,7 +2154,7 @@ object Main: TMain
         end
         object Line30: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 387.000000000000000000
           Position.Y = -8.000000000000000000
           Size.Width = 9.000000000000000000
@@ -2162,7 +2163,7 @@ object Main: TMain
         end
         object Line31: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 515.000000000000000000
           Position.Y = -8.000000000000000000
           Size.Width = 9.000000000000000000
@@ -2190,7 +2191,7 @@ object Main: TMain
       ExplicitSize.cy = 30.000000000000000000
       object Panel12: TPanel
         Align = Client
-        Opacity = 0.699999988079071000
+        Opacity = 0.699999988079071100
         Size.Width = 1260.000000000000000000
         Size.Height = 129.000000000000000000
         Size.PlatformDefault = False
@@ -2453,7 +2454,7 @@ object Main: TMain
         end
         object Line20: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 128.000000000000000000
           Position.Y = -6.000000000000000000
           Size.Width = 9.000000000000000000
@@ -2462,7 +2463,7 @@ object Main: TMain
         end
         object Line21: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 257.000000000000000000
           Position.Y = -6.000000000000000000
           Size.Width = 9.000000000000000000
@@ -2471,7 +2472,7 @@ object Main: TMain
         end
         object Line22: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 387.000000000000000000
           Position.Y = -6.000000000000000000
           Size.Width = 9.000000000000000000
@@ -2480,7 +2481,7 @@ object Main: TMain
         end
         object Line23: TLine
           LineType = Left
-          Opacity = 0.800000011920929000
+          Opacity = 0.800000011920928900
           Position.X = 515.000000000000000000
           Position.Y = -6.000000000000000000
           Size.Width = 9.000000000000000000
@@ -2508,7 +2509,7 @@ object Main: TMain
       ExplicitSize.cy = 30.000000000000000000
       object Panel13: TPanel
         Align = Client
-        Opacity = 0.699999988079071000
+        Opacity = 0.699999988079071100
         Size.Width = 1260.000000000000000000
         Size.Height = 129.000000000000000000
         Size.PlatformDefault = False
@@ -2740,7 +2741,7 @@ object Main: TMain
     Size.Height = 531.000000000000000000
     Size.PlatformDefault = False
     StyleLookup = 'tabcontrolstyle'
-    TabIndex = 3
+    TabIndex = 0
     TabOrder = 2
     TabPosition = PlatformDefault
     Sizes = (
@@ -2769,7 +2770,7 @@ object Main: TMain
       TextSettings.Font.Size = 16.000000000000000000
       TextSettings.FontColor = xFFD7263D
       StyledSettings = [Style]
-      IsSelected = False
+      IsSelected = True
       Size.Width = 141.000000000000000000
       Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
@@ -3138,7 +3139,7 @@ object Main: TMain
           Size.Width = 145.000000000000000000
           Size.Height = 17.000000000000000000
           Size.PlatformDefault = False
-          Text = 'Nombre de Interns'
+          Text = 'Nombre des Interns'
           TabOrder = 1
         end
         object Label60: TLabel
@@ -3147,7 +3148,7 @@ object Main: TMain
           Size.Width = 153.000000000000000000
           Size.Height = 17.000000000000000000
           Size.PlatformDefault = False
-          Text = 'Nombre de Externs'
+          Text = 'Nombre des Externs'
           TabOrder = 2
         end
       end
@@ -3456,7 +3457,7 @@ object Main: TMain
       TextSettings.Font.Size = 16.000000000000000000
       TextSettings.FontColor = xFFF46063
       StyledSettings = [Style]
-      IsSelected = True
+      IsSelected = False
       Size.Width = 155.000000000000000000
       Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
@@ -3598,10 +3599,10 @@ object Main: TMain
                   Position.Y = 195.537185668945300000
                 end
                 inherited Hemog_Label3: TLabel
-                  Position.Y = 134.818176269531300000
+                  Position.Y = 134.818176269531200000
                 end
                 inherited Hemog_Edit3: TEdit
-                  Position.Y = 134.818176269531300000
+                  Position.Y = 134.818176269531200000
                 end
                 inherited Hemog_Edit2: TEdit
                   Position.Y = 74.099174499511720000
@@ -3632,10 +3633,10 @@ object Main: TMain
                   Position.Y = 14.359502792358400000
                 end
                 inherited Hemog_Label7: TLabel
-                  Position.Y = 134.818176269531300000
+                  Position.Y = 134.818176269531200000
                 end
                 inherited Hemog_Edit7: TEdit
-                  Position.Y = 134.818176269531300000
+                  Position.Y = 134.818176269531200000
                 end
                 inherited Hemog_Edit8: TEdit
                   Position.Y = 195.537185668945300000
@@ -4052,11 +4053,11 @@ object Main: TMain
                     Size.Height = 194.000000000000000000
                     inherited CB_MI_Anti_EBV: TCheckBox
                       Position.X = 169.184570312500000000
-                      Position.Y = 49.910247802734380000
+                      Position.Y = 49.910247802734370000
                       Size.Width = 100.000000000000000000
                     end
                     inherited CB_MI_VCA: TCheckBox
-                      Position.X = 34.830535888671880000
+                      Position.X = 34.830535888671870000
                       Position.Y = 49.935897827148440000
                       Size.Width = 97.000000000000000000
                       Size.Height = 22.000000000000000000
@@ -4249,7 +4250,7 @@ object Main: TMain
                 Size.Width = 79.000000000000000000
               end
               inherited IP_Edit3: TEdit
-                Position.Y = 4.425531387329102000
+                Position.Y = 4.425531387329101000
               end
             end
             inherited Layout_Left_4: TLayout
@@ -4549,15 +4550,15 @@ object Main: TMain
                 end
                 inherited Hemog_Label4: TLabel
                   Position.Y = 195.537185668945300000
-                  TabOrder = 16
+                  TabOrder = 15
                 end
                 inherited Hemog_Label3: TLabel
-                  Position.Y = 134.818176269531300000
-                  TabOrder = 17
+                  Position.Y = 134.818176269531200000
+                  TabOrder = 16
                 end
                 inherited Hemog_Edit3: TEdit
                   TabOrder = 2
-                  Position.Y = 134.818176269531300000
+                  Position.Y = 134.818176269531200000
                 end
                 inherited Hemog_Edit2: TEdit
                   TabOrder = 1
@@ -4593,10 +4594,10 @@ object Main: TMain
                   Position.Y = 14.359502792358400000
                 end
                 inherited Hemog_Label7: TLabel
-                  Position.Y = 134.818176269531300000
+                  Position.Y = 134.818176269531200000
                 end
                 inherited Hemog_Edit7: TEdit
-                  Position.Y = 134.818176269531300000
+                  Position.Y = 134.818176269531200000
                 end
                 inherited Hemog_Edit8: TEdit
                   Position.Y = 195.537185668945300000
@@ -4705,10 +4706,10 @@ object Main: TMain
                   Position.Y = 15.418182373046880000
                 end
                 inherited Bio_Edit12: TEdit
-                  Position.Y = 68.436363220214840000
+                  Position.Y = 68.436363220214850000
                 end
                 inherited Label4: TLabel
-                  Position.Y = 68.436363220214840000
+                  Position.Y = 68.436363220214850000
                 end
                 inherited Bio_Edit13: TEdit
                   Position.Y = 121.454544067382800000
@@ -4732,7 +4733,7 @@ object Main: TMain
                   Position.Y = 15.418182373046880000
                 end
                 inherited Label52: TLabel
-                  Position.Y = 68.436363220214840000
+                  Position.Y = 68.436363220214850000
                 end
                 inherited Label53: TLabel
                   Position.Y = 121.454544067382800000
@@ -4755,10 +4756,10 @@ object Main: TMain
                   Position.Y = 15.418182373046880000
                 end
                 inherited Bio_Edit17: TEdit
-                  Position.Y = 68.436363220214840000
+                  Position.Y = 68.436363220214850000
                 end
                 inherited Label14: TLabel
-                  Position.Y = 68.436363220214840000
+                  Position.Y = 68.436363220214850000
                 end
                 inherited Bio_Edit18: TEdit
                   Position.Y = 121.454544067382800000
@@ -4776,7 +4777,7 @@ object Main: TMain
                   Position.Y = 15.418182373046880000
                 end
                 inherited Label57: TLabel
-                  Position.Y = 68.436363220214840000
+                  Position.Y = 68.436363220214850000
                 end
                 inherited Label58: TLabel
                   Position.Y = 121.454544067382800000
@@ -4795,10 +4796,10 @@ object Main: TMain
                   Position.Y = 15.418182373046880000
                 end
                 inherited Bio_Edit2: TEdit
-                  Position.Y = 68.436363220214840000
+                  Position.Y = 68.436363220214850000
                 end
                 inherited Label24: TLabel
-                  Position.Y = 68.436363220214840000
+                  Position.Y = 68.436363220214850000
                 end
                 inherited Bio_Edit3: TEdit
                   Position.Y = 121.454544067382800000
@@ -4822,7 +4823,7 @@ object Main: TMain
                   Position.Y = 15.418182373046880000
                 end
                 inherited Label42: TLabel
-                  Position.Y = 68.436363220214840000
+                  Position.Y = 68.436363220214850000
                 end
                 inherited Label43: TLabel
                   Position.Y = 121.454544067382800000
@@ -4844,10 +4845,10 @@ object Main: TMain
                   Position.Y = 15.418182373046880000
                 end
                 inherited Bio_Edit7: TEdit
-                  Position.Y = 68.436363220214840000
+                  Position.Y = 68.436363220214850000
                 end
                 inherited Label34: TLabel
-                  Position.Y = 68.436363220214840000
+                  Position.Y = 68.436363220214850000
                 end
                 inherited Bio_Edit8: TEdit
                   Position.Y = 121.454544067382800000
@@ -4871,7 +4872,7 @@ object Main: TMain
                   Position.Y = 15.418182373046880000
                 end
                 inherited Label47: TLabel
-                  Position.Y = 68.436363220214840000
+                  Position.Y = 68.436363220214850000
                 end
                 inherited Label48: TLabel
                   Position.Y = 121.454544067382800000
@@ -4936,7 +4937,7 @@ object Main: TMain
                 inherited GroupBox7: TGroupBox
                   Size.Height = 234.000000000000000000
                   inherited CB_HB_Anti_VHB: TCheckBox
-                    Position.Y = 61.483253479003910000
+                    Position.Y = 61.483253479003900000
                   end
                   inherited CB_HB_Antigene_BHs: TCheckBox
                     Position.Y = 147.589950561523400000

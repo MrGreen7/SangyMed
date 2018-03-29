@@ -10,7 +10,8 @@ uses
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Phys, FireDAC.Phys.SQLite,
   FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs, FireDAC.FMXUI.Wait,
   FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
-  IdHashMessageDigest;
+  IdHashMessageDigest, FireDAC.Phys.MSAccDef, FireDAC.Phys.ODBCBase,
+  FireDAC.Phys.MSAcc, FireDAC.Phys.ODBC;
 
 type
   TDataModule1 = class(TDataModule)
@@ -32,6 +33,9 @@ type
     FDQuery1: TFDQuery;
     FDQuery2: TFDQuery;
     FDSQLiteSecurity1: TFDSQLiteSecurity;
+    FDSQLiteBackup1: TFDSQLiteBackup;
+    FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink;
+    FDConnection3: TFDConnection;
     function GenerateID: String;
     procedure DataModuleCreate(Sender: TObject);
   private
