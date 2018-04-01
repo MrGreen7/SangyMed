@@ -22,7 +22,8 @@ uses
   U_Print_Bio in 'U_Print_Bio.pas' {Print_Bio},
   U_Print_HS in 'U_Print_HS.pas' {Print_HS},
   U_Print_Ordo in 'U_Print_Ordo.pas' {Print_Ordo},
-  U_Print_SR in 'U_Print_SR.pas' {Print_SR};
+  U_Print_SR in 'U_Print_SR.pas' {Print_SR},
+  U_Remontre in 'U_Remontre.pas' {Remontre};
 
 {$R *.res}
 
@@ -31,5 +32,6 @@ begin
   Application.CreateForm(TMain, Main);
   Application.CreateForm(TBase_Form, Base_Form);
   Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TRemontre, Remontre);
   Application.Run;
 end.

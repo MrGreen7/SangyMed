@@ -167,39 +167,48 @@ begin
       with DataModule1 do
       begin
         FDQuery1.Active := False;
-        FDQuery1.SQl.Text := ('SELECT * FROM Medecin;');
+        FDQuery1.SQL.Text := ('SELECT * FROM Medecin;');
         FDQuery1.Active := True;
-        FDQuery1.Insert;
-        repeat
+        FDQuery1.Open;
+        if (FDQuery1.Locate('Pseudo', Edit2.Text, [])) then
         Begin
-          try
-            Rand := DataModule1.GenerateID;
-            Rand := 'U' + Rand;
-            FDQuery1.FieldByName('ID').AsString := Rand;
-          except
-            On E: Exception do
-            Begin
-              bol := True;
-            End;
+          InnerGlowEffect2.Enabled := True;
+          ShowMessage('ce nom d''utilisateur est déjà utilisé');
+        End
+        else
+        Begin
+          FDQuery1.Insert;
+          repeat
+          Begin
+            try
+              Rand := DataModule1.GenerateID;
+              Rand := 'U' + Rand;
+              FDQuery1.FieldByName('ID').AsString := Rand;
+            except
+              On E: Exception do
+              Begin
+                bol := True;
+              End;
+            end;
+            bol := False;
+          End;
+          until bol = False;
+          FDQuery1.FieldByName('Nom').AsString := Edit1.Text;
+          FDQuery1.FieldByName('Pseudo').AsString := Edit2.Text;
+          FDQuery1.FieldByName('Telephone').AsString := Edit5.Text;
+          begin
+            HexPass := Encrypt(Edit3.Text);
+            FDQuery1.FieldByName('Mot_de_pass').AsString := HexPass;
           end;
-          bol := False;
-        End;
-        until bol = False;
-        FDQuery1.FieldByName('Nom').AsString := Edit1.Text;
-        FDQuery1.FieldByName('Pseudo').AsString := Edit2.Text;
-        FDQuery1.FieldByName('Telephone').AsString := Edit5.Text;
-        begin
-          HexPass := Encrypt(Edit3.Text);
-          FDQuery1.FieldByName('Mot_de_pass').AsString := HexPass;
+          FDQuery1.Post;
+          FDQuery1.Active := False;
+          FDQuery1.SQL.Clear;
+          Button2.OnClick(Button2);
+          MessageDlg('Votre compte a été engregistré',
+            TMsgDlgType.mtConfirmation, [TMsgDlgBtn.mbOK], 0);
+          ModalResult := mrCancel;
         end;
-        FDQuery1.Post;
-        FDQuery1.Active := False;
-        FDQuery1.SQl.Clear;
-        Button2.OnClick(Button2);
-        MessageDlg('Votre compte a été engregistré', TMsgDlgType.mtConfirmation,
-          [TMsgDlgBtn.mbOK], 0);
-        ModalResult := mrCancel;
-      end;
+      End;
     end;
   end;
 end;

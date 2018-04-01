@@ -201,7 +201,7 @@ object Main: TMain
     Size.Height = 161.000000000000000000
     Size.PlatformDefault = False
     StyleLookup = 'tabcontrolstyle'
-    TabIndex = 1
+    TabIndex = 0
     TabOrder = 0
     TabPosition = PlatformDefault
     Sizes = (
@@ -228,7 +228,7 @@ object Main: TMain
       TextSettings.Font.Size = 16.000000000000000000
       StyledSettings = [Style, FontColor]
       HelpType = htKeyword
-      IsSelected = False
+      IsSelected = True
       Size.Width = 82.000000000000000000
       Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
@@ -665,7 +665,7 @@ object Main: TMain
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 16.000000000000000000
       StyledSettings = [Style, FontColor]
-      IsSelected = True
+      IsSelected = False
       Size.Width = 89.000000000000000000
       Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
@@ -2811,8 +2811,8 @@ object Main: TMain
             TabOrder = 1
             RowCount = 10
             Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
-            Viewport.Width = 504.000000000000000000
-            Viewport.Height = 173.000000000000000000
+            Viewport.Width = 508.000000000000000000
+            Viewport.Height = 198.000000000000000000
           end
           object Label_Refresh1: TLabel
             Anchors = [akTop, akRight]
@@ -2876,8 +2876,8 @@ object Main: TMain
             TabOrder = 1
             RowCount = 10
             Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
-            Viewport.Width = 504.000000000000000000
-            Viewport.Height = 173.000000000000000000
+            Viewport.Width = 508.000000000000000000
+            Viewport.Height = 198.000000000000000000
           end
           object Label_Refresh3: TLabel
             Anchors = [akTop, akRight]
@@ -2948,8 +2948,8 @@ object Main: TMain
             TabOrder = 1
             RowCount = 10
             Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
-            Viewport.Width = 504.000000000000000000
-            Viewport.Height = 173.000000000000000000
+            Viewport.Width = 508.000000000000000000
+            Viewport.Height = 198.000000000000000000
           end
           object Label_Refresh2: TLabel
             Anchors = [akTop, akRight]
@@ -3014,8 +3014,8 @@ object Main: TMain
             TabOrder = 1
             RowCount = 10
             Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
-            Viewport.Width = 504.000000000000000000
-            Viewport.Height = 173.000000000000000000
+            Viewport.Width = 508.000000000000000000
+            Viewport.Height = 198.000000000000000000
           end
           object Label_Refresh4: TLabel
             Anchors = [akTop, akRight]
@@ -3206,8 +3206,8 @@ object Main: TMain
         Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
         OnCellClick = StringGrid5CellClick
         OnCellDblClick = StringGrid5CellDblClick
-        Viewport.Width = 1045.000000000000000000
-        Viewport.Height = 429.000000000000000000
+        Viewport.Width = 1049.000000000000000000
+        Viewport.Height = 454.000000000000000000
       end
     end
     object Recherche_Patient: TTabItem
@@ -3249,8 +3249,8 @@ object Main: TMain
           TabOrder = 0
           OnCellClick = StringGrid6CellClick
           OnCellDblClick = StringGrid6CellDblClick
-          Viewport.Width = 1045.000000000000000000
-          Viewport.Height = 271.000000000000000000
+          Viewport.Width = 1049.000000000000000000
+          Viewport.Height = 296.000000000000000000
         end
       end
       object Layout2: TLayout
@@ -4550,11 +4550,11 @@ object Main: TMain
                 end
                 inherited Hemog_Label4: TLabel
                   Position.Y = 195.537185668945300000
-                  TabOrder = 15
+                  TabOrder = 14
                 end
                 inherited Hemog_Label3: TLabel
                   Position.Y = 134.818176269531200000
-                  TabOrder = 16
+                  TabOrder = 15
                 end
                 inherited Hemog_Edit3: TEdit
                   TabOrder = 2

@@ -13135,7 +13135,7 @@ object Connecter: TConnecter
     TextSettings.Font.Size = 18.000000000000000000
     TextSettings.FontColor = xFF44BCCA
     Text = 'Cr'#233'e un nouvelle compte'
-    TabOrder = 5
+    TabOrder = 7
     object ShadowEffect2: TShadowEffect
       Distance = 3.000000000000000000
       Direction = 45.000000000000000000
@@ -13144,7 +13144,7 @@ object Connecter: TConnecter
       ShadowColor = claBlack
     end
   end
-  object Label1: TLabel
+  object Label3: TLabel
     Cursor = crHandPoint
     StyledSettings = [Style]
     HitTest = True
@@ -13159,6 +13159,54 @@ object Connecter: TConnecter
     TextSettings.FontColor = xFF44BCCA
     Text = #62004
     TabOrder = 4
+    OnClick = Label3Click
+    object ShadowEffect3: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 0.400000005960464400
+      ShadowColor = claBlack
+    end
+  end
+  object Label4: TLabel
+    AutoTranslate = False
+    Cursor = crHandPoint
+    StyledSettings = [Style]
+    HitTest = True
+    Position.X = 355.000000000000000000
+    Position.Y = 185.000000000000000000
+    Size.Width = 190.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listboxheaderlabel'
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 18.000000000000000000
+    TextSettings.FontColor = xFF44BCCA
+    Text = 'Oubli'#233' le mot de pass'
+    TabOrder = 6
+    object ShadowEffect4: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 0.400000005960464400
+      ShadowColor = claBlack
+    end
+  end
+  object Label1: TLabel
+    Cursor = crHandPoint
+    StyledSettings = [Style]
+    HitTest = True
+    Position.X = 323.000000000000000000
+    Position.Y = 185.000000000000000000
+    Size.Width = 198.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'buttonstylelabel'
+    TextSettings.Font.Family = 'FontAwesome'
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.FontColor = xFF44BCCA
+    Text = #61572
+    TabOrder = 5
     OnClick = Label1Click
     object ShadowEffect1: TShadowEffect
       Distance = 3.000000000000000000

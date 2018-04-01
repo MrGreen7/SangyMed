@@ -22,14 +22,19 @@ type
     ShadowEffect1: TShadowEffect;
     Label2: TLabel;
     ShadowEffect2: TShadowEffect;
+    Label3: TLabel;
+    ShadowEffect3: TShadowEffect;
+    Label4: TLabel;
+    ShadowEffect4: TShadowEffect;
     procedure Button1Click(Sender: TObject);
     procedure Edit1Change(Sender: TObject);
     procedure Edit2Change(Sender: TObject);
-    procedure Label1Click(Sender: TObject);
+    procedure Label3Click(Sender: TObject);
     procedure SpeedButton1MouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Single);
     procedure SpeedButton1MouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Single);
+    procedure Label1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -42,18 +47,8 @@ var
 implementation
 
 Uses
-  U_Main, U_Inscription, U_DataModule, Winapi.Messages, U_Parametre;
+  U_Main, U_Inscription, U_DataModule, Winapi.Messages, U_Parametre, U_Remontre;
 {$R *.fmx}
-
-function Decrypt(Str: string): string;
-var
-  Md5: TIdHashMessageDigest5;
-  Hash: string;
-begin
-  Md5 := TIdHashMessageDigest5.Create;
-  Hash := Md5.HashStringAsHex(Str);
-  Result := Hash;
-end;
 
 procedure TConnecter.Button1Click(Sender: TObject);
 var
@@ -88,14 +83,14 @@ begin
   end
   else
   begin
-    HexPass := Decrypt(Edit2.Text);
-    with DataModule1.FDQuery1 do
+    with DataModule1 do
     begin
-      Active := False;
-      SQL.Text := ('SELECT * FROM Medecin');
-      Active := True;
-      Open;
-      if not(Locate('Pseudo;Mot_de_pass', VarArrayOf([Edit1.Text, HexPass]), []))
+      HexPass := Encryt(Edit2.Text);
+      FDQuery1.Active := False;
+      FDQuery1.SQL.Text := ('SELECT * FROM Medecin');
+      FDQuery1.Active := True;
+      FDQuery1.Open;
+      if not(FDQuery1.Locate('Pseudo;Mot_de_pass', VarArrayOf([Edit1.Text, HexPass]), []))
       then
       begin
         InnerGlowEffect1.Enabled := True;
@@ -116,7 +111,7 @@ begin
       else
       begin
         ShowMessage('Bienvenu Mr.' + Edit1.Text);
-        Main.ID_Medecin := FieldByName('ID').AsString;
+        Main.ID_Medecin := FDQuery1.FieldByName('ID').AsString;
         ModalResult := mrOk;
       end;
     end;
@@ -136,17 +131,27 @@ begin
 end;
 
 procedure TConnecter.Label1Click(Sender: TObject);
+Var
+  RemontreDlg: TRemontre;
+begin
+  inherited;
+  RemontreDlg := TRemontre.Create(Self);
+  if (RemontreDlg.ShowModal = mrCancel) then
+    RemontreDlg.Free;
+end;
+
+procedure TConnecter.Label3Click(Sender: TObject);
 var
   InsDlg: TInscription;
 begin
   inherited;
-  InsDlg := TInscription.Create(self);
+  InsDlg := TInscription.Create(Self);
   if (InsDlg.ShowModal = mrCancel) then
     InsDlg.Close;
 end;
 
-procedure TConnecter.SpeedButton1MouseDown(Sender: TObject; Button: TMouseButton;
-  Shift: TShiftState; X, Y: Single);
+procedure TConnecter.SpeedButton1MouseDown(Sender: TObject;
+  Button: TMouseButton; Shift: TShiftState; X, Y: Single);
 begin
   inherited;
   Edit2.Password := False;

@@ -1,0 +1,168 @@
+object Remontre: TRemontre
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'R'#233'initialiser le mot de passe'
+  ClientHeight = 221
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object TabControl1: TTabControl
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 221.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 1
+    TabOrder = 0
+    TabPosition = None
+    Sizes = (
+      640s
+      221s
+      640s
+      221s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem1'
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 0
+        Position.X = 72.000000000000000000
+        Position.Y = 67.000000000000000000
+        Size.Width = 497.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Pseufo'
+        OnChange = Edit1Change
+        object InnerGlowEffect1: TInnerGlowEffect
+          Softness = 0.400000005960464400
+          GlowColor = claCrimson
+          Opacity = 0.899999976158142100
+          Enabled = False
+        end
+      end
+      object Button1: TButton
+        Position.X = 72.000000000000000000
+        Position.Y = 120.000000000000000000
+        Size.Width = 97.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Valid'#233
+        OnClick = Button1Click
+      end
+      object Button2: TButton
+        ModalResult = 2
+        Position.X = 472.000000000000000000
+        Position.Y = 120.000000000000000000
+        Size.Width = 97.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Annuler'
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem2'
+      object Edit2: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 0
+        Password = True
+        MaxLength = 12
+        Position.X = 104.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 449.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Mot de passe'
+        OnChange = Edit2Change
+        object InnerGlowEffect2: TInnerGlowEffect
+          Softness = 0.400000005960464400
+          GlowColor = claCrimson
+          Opacity = 0.899999976158142100
+          Enabled = False
+        end
+        object SpeedButton1: TSpeedButton
+          Align = Right
+          Cursor = crHandPoint
+          Position.X = 409.000000000000000000
+          Size.Width = 40.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'passwordeditbutton'
+          OnMouseDown = SpeedButton1MouseDown
+          OnMouseUp = SpeedButton1MouseUp
+        end
+      end
+      object Edit3: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 1
+        Password = True
+        MaxLength = 12
+        Position.X = 104.000000000000000000
+        Position.Y = 104.000000000000000000
+        Size.Width = 449.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Mot de passe'
+        OnChange = Edit3Change
+        object InnerGlowEffect3: TInnerGlowEffect
+          Softness = 0.400000005960464400
+          GlowColor = claCrimson
+          Opacity = 0.899999976158142100
+          Enabled = False
+        end
+        object SpeedButton2: TSpeedButton
+          Align = Right
+          Cursor = crHandPoint
+          Position.X = 409.000000000000000000
+          Size.Width = 40.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'passwordeditbutton'
+          OnMouseDown = SpeedButton2MouseDown
+          OnMouseUp = SpeedButton2MouseUp
+        end
+      end
+      object Button3: TButton
+        Position.X = 104.000000000000000000
+        Position.Y = 144.000000000000000000
+        Size.Width = 89.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Valid'#233
+        OnClick = Button3Click
+      end
+      object Button4: TButton
+        ModalResult = 2
+        Position.X = 464.000000000000000000
+        Position.Y = 144.000000000000000000
+        Size.Width = 89.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Annuler'
+      end
+    end
+  end
+end
