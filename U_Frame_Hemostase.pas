@@ -28,7 +28,7 @@ type
     Label16: TLabel;
     GroupBox5: TGroupBox;
     Memo1: TMemo;
-    function IsSet: Boolean;
+    function Pret: Boolean;
     procedure Clear;
     procedure Insert(const RandD: String);
     procedure Edit(const RandD: String);
@@ -73,7 +73,7 @@ begin
   End;
 end;
 
-function TFrame4.IsSet;
+function TFrame4.Pret;
 begin
   if ((Hemos_Edit1.Text = '') and (Hemos_Edit2.Text = '') and
     (Hemos_Edit3.Text = '') and (Hemos_Edit4.Text = '') and (Memo1.Text = ''))

@@ -39,7 +39,7 @@ type
     AC_ComboBox3: TComboBox;
     Label0: TLabel;
     Wilaya_Code: TEdit;
-    function IsSet: Boolean;
+    function Pret: Boolean;
     procedure WiliyaLoad(const Combo: TComboBox);
     procedure CommuneLoad(const Combo: TComboBox);
     procedure Insert();
@@ -111,7 +111,7 @@ begin
   CommuneLoad(AC_ComboBox2);
 end;
 
-function TFrame2.IsSet;
+function TFrame2.Pret;
 begin
   if ((AC_Edit1.Text = '') and (AC_Edit2.Text = '') and (AC_Edit3.Text = '') and
     (AC_Edit4.Text = '') and (AC_Edit5.Text = '') and

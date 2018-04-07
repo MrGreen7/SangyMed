@@ -91,7 +91,7 @@ type
     Label48: TLabel;
     Label49: TLabel;
     Label50: TLabel;
-    function IsSet: Boolean;
+    function Pret: Boolean;
     procedure Clear;
     procedure Insert(const RandD: String);
     procedure Edit(const RandD: String);
@@ -150,7 +150,7 @@ begin
   End;
 end;
 
-function TFrame6.IsSet;
+function TFrame6.Pret;
 begin
   if ((Bio_Edit1.Text = '') and (Bio_Edit2.Text = '') and (Bio_Edit3.Text = '')
     and (Bio_Edit4.Text = '') and (Bio_Edit5.Text = '') and

@@ -996,6 +996,7 @@ object Main: TMain
       StyleLookup = ''
       TabOrder = 0
       Text = #61918' G'#233'n'#233'ral'
+      Visible = False
       ExplicitSize.cx = 94.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
       object Panel10: TPanel
@@ -2746,7 +2747,7 @@ object Main: TMain
     TabPosition = PlatformDefault
     Sizes = (
       1059s
-      499s
+      503s
       1059s
       499s
       1059s
@@ -2772,7 +2773,7 @@ object Main: TMain
       StyledSettings = [Style]
       IsSelected = True
       Size.Width = 141.000000000000000000
-      Size.Height = 32.000000000000000000
+      Size.Height = 28.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'tabitemcustom'
       TabOrder = 0
@@ -2784,7 +2785,7 @@ object Main: TMain
       object L_Left_P_Accueil: TLayout
         Align = Left
         Size.Width = 528.000000000000000000
-        Size.Height = 499.000000000000000000
+        Size.Height = 503.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
         object GrouBox1_Table: TGroupBox
@@ -2811,8 +2812,8 @@ object Main: TMain
             TabOrder = 1
             RowCount = 10
             Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
-            Viewport.Width = 508.000000000000000000
-            Viewport.Height = 198.000000000000000000
+            Viewport.Width = 504.000000000000000000
+            Viewport.Height = 173.000000000000000000
           end
           object Label_Refresh1: TLabel
             Anchors = [akTop, akRight]
@@ -2858,7 +2859,7 @@ object Main: TMain
           Padding.Top = 25.000000000000000000
           Padding.Right = 10.000000000000000000
           Padding.Bottom = 10.000000000000000000
-          Position.Y = 266.000000000000000000
+          Position.Y = 270.000000000000000000
           Size.Width = 528.000000000000000000
           Size.Height = 233.000000000000000000
           Size.PlatformDefault = False
@@ -2876,8 +2877,8 @@ object Main: TMain
             TabOrder = 1
             RowCount = 10
             Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
-            Viewport.Width = 508.000000000000000000
-            Viewport.Height = 198.000000000000000000
+            Viewport.Width = 504.000000000000000000
+            Viewport.Height = 173.000000000000000000
           end
           object Label_Refresh3: TLabel
             Anchors = [akTop, akRight]
@@ -2921,7 +2922,7 @@ object Main: TMain
         Align = Right
         Position.X = 531.000000000000000000
         Size.Width = 528.000000000000000000
-        Size.Height = 499.000000000000000000
+        Size.Height = 503.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         object GrouBox2_Table: TGroupBox
@@ -2948,8 +2949,8 @@ object Main: TMain
             TabOrder = 1
             RowCount = 10
             Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
-            Viewport.Width = 508.000000000000000000
-            Viewport.Height = 198.000000000000000000
+            Viewport.Width = 504.000000000000000000
+            Viewport.Height = 173.000000000000000000
           end
           object Label_Refresh2: TLabel
             Anchors = [akTop, akRight]
@@ -2996,7 +2997,7 @@ object Main: TMain
           Padding.Top = 25.000000000000000000
           Padding.Right = 10.000000000000000000
           Padding.Bottom = 10.000000000000000000
-          Position.Y = 266.000000000000000000
+          Position.Y = 270.000000000000000000
           Size.Width = 528.000000000000000000
           Size.Height = 233.000000000000000000
           Size.PlatformDefault = False
@@ -3014,8 +3015,8 @@ object Main: TMain
             TabOrder = 1
             RowCount = 10
             Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
-            Viewport.Width = 508.000000000000000000
-            Viewport.Height = 198.000000000000000000
+            Viewport.Width = 504.000000000000000000
+            Viewport.Height = 173.000000000000000000
           end
           object Label_Refresh4: TLabel
             Anchors = [akTop, akRight]
@@ -3072,6 +3073,7 @@ object Main: TMain
       StyleLookup = ''
       TabOrder = 0
       Text = #61981' Patient'
+      Visible = False
       OnClick = PatientClick
       ExplicitSize.cx = 88.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
@@ -3206,8 +3208,8 @@ object Main: TMain
         Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
         OnCellClick = StringGrid5CellClick
         OnCellDblClick = StringGrid5CellDblClick
-        Viewport.Width = 1049.000000000000000000
-        Viewport.Height = 454.000000000000000000
+        Viewport.Width = 1045.000000000000000000
+        Viewport.Height = 429.000000000000000000
       end
     end
     object Recherche_Patient: TTabItem
@@ -3249,8 +3251,8 @@ object Main: TMain
           TabOrder = 0
           OnCellClick = StringGrid6CellClick
           OnCellDblClick = StringGrid6CellDblClick
-          Viewport.Width = 1049.000000000000000000
-          Viewport.Height = 296.000000000000000000
+          Viewport.Width = 1045.000000000000000000
+          Viewport.Height = 271.000000000000000000
         end
       end
       object Layout2: TLayout
@@ -3464,6 +3466,7 @@ object Main: TMain
       StyleLookup = ''
       TabOrder = 0
       Text = #61870' Nouveau patient'
+      Visible = False
       OnClick = Nouveau_PatientClick
       OnResize = Nouveau_PatientResize
       ExplicitSize.cx = 155.000000000000000000
@@ -4355,6 +4358,7 @@ object Main: TMain
       StyleLookup = ''
       TabOrder = 0
       Text = #61827' Edit Patient'
+      Visible = False
       OnResize = Edit_PatientResize
       ExplicitSize.cx = 114.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
@@ -4550,11 +4554,11 @@ object Main: TMain
                 end
                 inherited Hemog_Label4: TLabel
                   Position.Y = 195.537185668945300000
-                  TabOrder = 14
+                  TabOrder = 11
                 end
                 inherited Hemog_Label3: TLabel
                   Position.Y = 134.818176269531200000
-                  TabOrder = 15
+                  TabOrder = 12
                 end
                 inherited Hemog_Edit3: TEdit
                   TabOrder = 2

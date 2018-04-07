@@ -710,13 +710,13 @@ begin
     Post;
     Active := False;
     SQl.Clear;
-    if (Frame_EP_Hemogramme.IsSet = True) then
+    if (Frame_EP_Hemogramme.Pret = True) then
       Frame_EP_Hemogramme.Edit(ID);
-    if (Frame_EP_Hemostase.IsSet = True) then
+    if (Frame_EP_Hemostase.Pret = True) then
       Frame_EP_Hemostase.Edit(ID);
-    if (Frame_EP_Serologie.IsSet = True) then
+    if (Frame_EP_Serologie.Pret = True) then
       Frame_EP_Serologie.Edit(ID);
-    if (Frame_EP_Biochimic.IsSet) then
+    if (Frame_EP_Biochimic.Pret) then
       Frame_EP_Biochimic.Edit(ID);
     // Frame_EP_Ordonnance.Edit();
     // Frame_EP_Ordonnance.LoadGrid(ID);
@@ -770,13 +770,13 @@ begin
       SQl.Clear;
       Active := False;
     End;
-    if (Frame_Hemogramme.IsSet = True) then
+    if (Frame_Hemogramme.Pret = True) then
       Frame_Hemogramme.Insert(ID);
-    if (Frame_Hemostase.IsSet = True) then
+    if (Frame_Hemostase.Pret = True) then
       Frame_Hemostase.Insert(ID);
-    if (Frame_Serologie.IsSet = True) then
+    if (Frame_Serologie.Pret = True) then
       Frame_Serologie.Insert(ID);
-    if (Frame_Biochimic.IsSet = True) then
+    if (Frame_Biochimic.Pret = True) then
       Frame_Biochimic.Insert(ID);
     // Frame_Ordonnance.ID(ID);
     // Frame_Ordonnance.LoadGrid(ID);

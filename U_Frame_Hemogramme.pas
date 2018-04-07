@@ -39,7 +39,7 @@ type
     Hemog_Edit8: TEdit;
     Label21: TLabel;
     Hemog_Label8: TLabel;
-    function IsSet: Boolean;
+    function Pret: Boolean;
     procedure Clear;
     procedure Insert(const RandD: String);
     procedure Edit(const RandD: String);
@@ -87,7 +87,7 @@ begin
   End;
 end;
 
-function TFrame3.IsSet;
+function TFrame3.Pret;
 begin
   if ((Hemog_Edit1.Text = '') and (Hemog_Edit2.Text = '') and
     (Hemog_Edit3.Text = '') and (Hemog_Edit4.Text = '') and

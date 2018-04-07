@@ -45,7 +45,7 @@ object Frame5: TFrame5
           Enabled = False
           StyledSettings = [Style, FontColor]
           Position.X = 50.000000000000000000
-          Position.Y = 142.644348144531300000
+          Position.Y = 142.644348144531200000
           Size.Width = 61.000000000000000000
           Size.Height = 24.000000000000000000
           Size.PlatformDefault = False
@@ -59,7 +59,7 @@ object Frame5: TFrame5
           Enabled = False
           StyledSettings = [Style, FontColor]
           Position.X = 186.000000000000000000
-          Position.Y = 142.644348144531300000
+          Position.Y = 142.644348144531200000
           Size.Width = 61.000000000000000000
           Size.Height = 24.000000000000000000
           Size.PlatformDefault = False
@@ -97,7 +97,7 @@ object Frame5: TFrame5
           Anchors = []
           StyledSettings = [Style, FontColor]
           Position.X = 61.000000000000000000
-          Position.Y = 60.573219299316410000
+          Position.Y = 60.573219299316400000
           Size.Width = 85.000000000000000000
           Size.Height = 19.000000000000000000
           Size.PlatformDefault = False
@@ -294,7 +294,7 @@ object Frame5: TFrame5
             Anchors = []
             StyledSettings = [Style, FontColor]
             Position.X = 60.000000000000000000
-            Position.Y = 79.979896545410160000
+            Position.Y = 79.979896545410150000
             Size.Width = 125.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -387,7 +387,7 @@ object Frame5: TFrame5
             Anchors = []
             StyledSettings = [Style, FontColor]
             Position.X = 89.000000000000000000
-            Position.Y = 79.979896545410160000
+            Position.Y = 79.979896545410150000
             Size.Width = 76.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False

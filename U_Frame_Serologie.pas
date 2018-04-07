@@ -40,7 +40,7 @@ type
     GroupBox17: TGroupBox;
     GroupBox15: TGroupBox;
     CB_Toxo_Anti_IgM: TCheckBox;
-    function IsSet: Boolean;
+    function Pret: Boolean;
     procedure Clear;
     procedure Insert(const RandD: String);
     procedure Edit(const RandD: String);
@@ -167,7 +167,7 @@ begin
   End;
 end;
 
-function TFrame5.IsSet;
+function TFrame5.Pret;
 begin
   if ((CB_HA_Anit_VHA.IsChecked = False) and (RB_HA_IgG.IsChecked = False) and
     (RB_HA_IgM.IsChecked = False) and (CB_HB_Anti_VHB.IsChecked = False) and
