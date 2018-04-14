@@ -17,16 +17,8 @@ type
     Cancel_Button: TButton;
     Print_Button: TButton;
     Rectangle1: TRectangle;
-    Line1: TLine;
     Text9: TText;
-    Text1: TText;
-    Text2: TText;
-    Text3: TText;
-    Text4: TText;
     Text5: TText;
-    Text6: TText;
-    Text7: TText;
-    Text8: TText;
     Line2: TLine;
     Line3: TLine;
     Line4: TLine;
@@ -38,10 +30,7 @@ type
     Text11: TText;
     Text12: TText;
     Layout1: TLayout;
-    Text13: TText;
-    Text14: TText;
-    Text15: TText;
-    Text16: TText;
+    Line9: TLine;
     Text17: TText;
     Text18: TText;
     Text19: TText;
@@ -50,7 +39,6 @@ type
     Text22: TText;
     Text23: TText;
     Text24: TText;
-    Text25: TText;
     Text26: TText;
     Text27: TText;
     Text28: TText;
@@ -67,8 +55,33 @@ type
     Text39: TText;
     Text40: TText;
     Text41: TText;
-    Line9: TLine;
+    Layout_Header: TLayout;
+    Text4: TText;
+    Text1: TText;
+    Text2: TText;
+    Text7: TText;
+    Text6: TText;
+    Text8: TText;
+    Text15: TText;
+    Text16: TText;
+    Text14: TText;
+    Text42: TText;
+    Text43: TText;
+    Text13: TText;
+    Text25: TText;
+    Text44: TText;
+    Text45: TText;
+    Text46: TText;
+    Text47: TText;
+    Text: TText;
+    Text3: TText;
+    Rectangle2: TRectangle;
+    Rectangle3: TRectangle;
+    Rectangle4: TRectangle;
+    Rectangle5: TRectangle;
+    Rectangle6: TRectangle;
     procedure OnLoad;
+    procedure Rez;
     procedure FormCreate(Sender: TObject);
     procedure Print_ButtonClick(Sender: TObject);
   private
@@ -97,7 +110,7 @@ begin
   Begin
     SetPrinter(Printer);
     Printer.Orientation := TPrinterOrientation.poPortrait;
-    Printer.Title := 'Test';
+    Printer.Title := 'Hémogramme';
     Printer.ActivePrinter.SelectDPI(1200, 1200);
     Printer.BeginDoc;
     DestRect := TRectF.Create(0, 0, Printer.PageWidth, Printer.PageHeight);
@@ -113,6 +126,94 @@ begin
   OnLoad;
 end;
 
+procedure Resiz(const Obj: TText; const JRDQ: String);
+Var
+  i, n, n1, w, w1: integer;
+Begin
+  n := 0;
+  for i := 0 to Obj.Text.Length do
+    n := i;
+  if (JRDQ = '') then
+  Begin
+    if (n > 5) then
+    Begin
+      n1 := 7;
+      w1 := 84;
+      n := n - n1;
+      w := 12 * n;
+      w1 := w1 + w;
+      Obj.Width := w1;
+    End
+    else if ((n <= 5) and (n > 0)) then
+    Begin
+      n1 := 1;
+      w1 := 10;
+      n := n - n1;
+      w := 10 * n;
+      w1 := w1 + w;
+      Obj.Width := w1;
+    End;
+  End
+  else
+  Begin
+    if (JRDQ = 'EPH') then
+    Begin
+      n1 := 38;
+      w1 := 453;
+      n := n - n1;
+      w := 11 * n;
+      w1 := w1 + w;
+      Obj.Width := w1;
+      Obj.Position.X := ((794 - w1) / 2);
+    End
+    else if (JRDQ = 'EPSP') then
+    Begin
+      n1 := 49;
+      w1 := 511;
+      n := n - n1;
+      w := 10 * n;
+      w1 := w1 + w;
+      Obj.Width := w1;
+      Obj.Position.X := ((794 - w1) / 2);
+    End;
+  End;
+End;
+
+procedure LabelRez(const Obj: TText);
+Var
+  i, n, n1, w, w1: integer;
+Begin
+  n := 0;
+  for i := 0 to Obj.Text.Length do
+    n := i;
+  n1 := 3;
+  w1 := 11;
+  n := n - n1;
+  w := w1 * n;
+  w1 := w1 + w;
+  Obj.Width := w1;
+  Obj.Position.X := ((794 - w1) / 2);
+End;
+
+procedure TPrint_HM.Rez();
+Begin
+  Resiz(Text13, '');
+  //
+  Resiz(Text33, '');
+  Resiz(Text34, '');
+  Resiz(Text35, '');
+  Resiz(Text36, '');
+  Resiz(Text37, '');
+  Resiz(Text38, '');
+  Resiz(Text39, '');
+  Resiz(Text40, '');
+  Resiz(Text43, '');
+  Resiz(Text3, '');
+  Resiz(Text45, '');
+  Resiz(Text47, '');
+  LabelRez(Text2);
+end;
+
 procedure TPrint_HM.OnLoad();
 Var
   JRDQ: String;
@@ -126,13 +227,16 @@ Begin
     Open;
     JRDQ := FieldByName('Form_Juridique').AsString;
     if (JRDQ = 'EPH') then
-      Text1.Text := ('Etablissement Publique Hospitalier de ')
+      Text1.Text := ('Établissement Publique Hospitalier de ')
     else if (JRDQ = 'EPSP') then
-      Text1.Text := ('Etablessement Publique de Santé de Proximité de ');
+      Text1.Text := ('Établissement Publique de Santé de Proximité de ');
     Text1.Text := Text1.Text + FieldByName('Commune').AsString;
     Text2.Text := FieldByName('Libelle').AsString;
     Text4.Text := FieldByName('Mobile').AsString;
     Text7.Text := DateToStr(date);
+    Text3.Text := FieldByName('Email').AsString;
+    Text45.Text := FieldByName('Adresse').AsString;;
+    Text47.Text := FieldByName('Web').AsString;
     Close;
     Active := False;
     SQL.Clear;
@@ -170,8 +274,17 @@ Begin
     Text40.Text := FieldByName('Reticulocytes').AsString;
     Close;
     Active := False;
-    SQL.Clear
+    SQL.Clear;
+    SQL.Text := ('Select Nom From Medecin Where ID="' + Main.ID_Medecin + '";');
+    Active := True;
+    Open;
+    Text43.Text := FieldByName('Nom').AsString;
+    Close;
+    SQL.Clear;
+    Active := False;
   End;
+  Resiz(Text1, JRDQ);
+  Rez;
 End;
 
 end.

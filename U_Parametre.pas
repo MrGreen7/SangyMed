@@ -29,6 +29,7 @@ type
     Generale: TTreeViewItem;
     Tree_Sub_GenerAccueil: TTreeViewItem;
     Tab_Accueil: TTabItem;
+    Switch1: TSwitch;
     procedure CompteClick(Sender: TObject);
     procedure Tree_Sub_CompteModClick(Sender: TObject);
     procedure Tree_Sub_CompteRemClick(Sender: TObject);

@@ -27,12 +27,6 @@ type
     Patient_Recherche: TTreeViewItem;
     New_Patient: TTreeViewItem;
     T_RDV: TTreeViewItem;
-    T_Analyses: TTreeViewItem;
-    TreeViewItem6: TTreeViewItem;
-    TreeViewItem2: TTreeViewItem;
-    TreeViewItem3: TTreeViewItem;
-    TreeViewItem4: TTreeViewItem;
-    TreeViewItem5: TTreeViewItem;
     HeaderT: TTabControl;
     H_Accueil: TTabItem;
     Panel4: TPanel;
@@ -160,37 +154,6 @@ type
     ShadowEffect44: TShadowEffect;
     ColorAnimation27: TColorAnimation;
     Line10: TLine;
-    H_Gen_RDV: TTabItem;
-    Panel11: TPanel;
-    Layout27: TLayout;
-    Layout10: TLayout;
-    Label35: TLabel;
-    ShadowEffect27: TShadowEffect;
-    Label36: TLabel;
-    ColorAnimation19: TColorAnimation;
-    ShadowEffect28: TShadowEffect;
-    Layout11: TLayout;
-    Label37: TLabel;
-    ColorAnimation20: TColorAnimation;
-    ShadowEffect29: TShadowEffect;
-    Label38: TLabel;
-    ShadowEffect30: TShadowEffect;
-    Layout4: TLayout;
-    Label21: TLabel;
-    ShadowEffect17: TShadowEffect;
-    Label22: TLabel;
-    ColorAnimation9: TColorAnimation;
-    ShadowEffect18: TShadowEffect;
-    Layout9: TLayout;
-    Label33: TLabel;
-    ShadowEffect25: TShadowEffect;
-    Label34: TLabel;
-    ShadowEffect26: TShadowEffect;
-    ColorAnimation18: TColorAnimation;
-    Line24: TLine;
-    Line25: TLine;
-    Line26: TLine;
-    Line27: TLine;
     H_Gen_Ordo: TTabItem;
     Panel9: TPanel;
     Layout28: TLayout;
@@ -335,7 +298,6 @@ type
     TabItem6: TTabItem;
     TabItem7: TTabItem;
     Frame_Principale: TFrame1;
-    RDV: TTabItem;
     Ordonnance: TTabItem;
     Edit_Patient: TTabItem;
     Frame_EP_Principale: TFrame1;
@@ -383,6 +345,8 @@ type
     PoP2_Hemostase: TMenuItem;
     PoP2_Serologie: TMenuItem;
     PoP2_Ordonnance: TMenuItem;
+    BindSourceDB4: TBindSourceDB;
+    LinkGridToDataSourceBindSourceDB4: TLinkGridToDataSource;
     procedure FormShow(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormCreate(Sender: TObject);
@@ -420,11 +384,9 @@ type
     procedure Frame_EP_PrincipaleButton3Click(Sender: TObject);
     procedure Frame_EP_PrincipaleButton2Click(Sender: TObject);
     procedure Frame_PrincipaleButton2Click(Sender: TObject);
-    procedure StringGrid5ColResize;
     procedure FloatAnimation2Finish(Sender: TObject);
     procedure FloatAnimation4Finish(Sender: TObject);
     procedure FloatAnimation5Finish(Sender: TObject);
-    procedure StatusBar;
     procedure StringGrid5CellClick(const Column: TColumn; const Row: Integer);
     procedure StringGrid5CellDblClick(const Column: TColumn;
       const Row: Integer);
@@ -461,6 +423,7 @@ type
     procedure PoP2_HemostaseClick(Sender: TObject);
     procedure PoP2_SerologieClick(Sender: TObject);
     procedure Label71Click(Sender: TObject);
+    procedure Edit1Change(Sender: TObject);
   private
     { Private declarations }
     WidthX, HeightX: Integer;
@@ -481,30 +444,33 @@ Uses
 {$R *.fmx}
 {$R Alg_Res.RES}
 
-procedure TMain.StatusBar;
+procedure StatusBar;
 Begin
-  With DataModule1.FDQ_Status_Patient do
+  With Main Do
   Begin
-    Active := False;
-    SQl.Clear;
-    SQl.Text := 'Select count(*) From Patient';
-    Active := True;
-    Open;
-    Status_Edit1.Text := IntToStr(Fields[0].AsInteger);
-    Active := False;
-    SQl.Clear;
-    SQl.Text := 'Select Count(*) From Patient Where Type="Externe"';
-    Active := True;
-    Open;
-    Status_Edit2.Text := IntToStr(Fields[0].AsInteger);
-    Active := False;
-    SQl.Clear;
-    SQl.Text := 'Select Count(*) From Patient Where type="Interne"';
-    Active := True;
-    Open;
-    Status_Edit3.Text := IntToStr(Fields[0].AsInteger);
-    Active := False;
-    SQl.Clear;
+    With DataModule1.FDQ_Status_Patient do
+    Begin
+      Active := False;
+      SQL.Clear;
+      SQL.Text := 'Select count(*) From Patient';
+      Active := True;
+      Open;
+      Status_Edit1.Text := IntToStr(Fields[0].AsInteger);
+      Active := False;
+      SQL.Clear;
+      SQL.Text := 'Select Count(*) From Patient Where Type="Externe"';
+      Active := True;
+      Open;
+      Status_Edit2.Text := IntToStr(Fields[0].AsInteger);
+      Active := False;
+      SQL.Clear;
+      SQL.Text := 'Select Count(*) From Patient Where type="Interne"';
+      Active := True;
+      Open;
+      Status_Edit3.Text := IntToStr(Fields[0].AsInteger);
+      Active := False;
+      SQL.Clear;
+    End;
   End;
 End;
 
@@ -515,7 +481,7 @@ begin
   inherited;
   Patient_ID := '';
   tRow := StringGrid5.Row;
-  Patient_ID := StringGrid5.cells[0, tRow];
+  Patient_ID := StringGrid5.Cells[0, tRow];
 end;
 
 procedure TMain.StringGrid5CellDblClick(const Column: TColumn;
@@ -526,24 +492,27 @@ begin
   Label65Click(self);
 end;
 
-procedure TMain.StringGrid5ColResize;
+procedure StringGrid5ColResize;
 Var
   i: Integer;
 Begin
-  for i := 0 to 15 do
+  With Main do
   Begin
-    StringGrid5.Columns[i].Width := 120;
-    if (i = 0) then
-      StringGrid5.Columns[i].Width := 80;
-    if (i = 5) then
-      StringGrid5.Columns[i].Width := 70;
-    if (i = 6) then
-      StringGrid5.Columns[i].Width := 70;
-  End;
-  for i := 0 to 2 do
-  Begin
-    StringGrid2.Columns[i].Width := 140;
-    StringGrid4.Columns[i].Width := 140;
+    for i := 0 to 15 do
+    Begin
+      StringGrid5.Columns[i].Width := 120;
+      if (i = 0) then
+        StringGrid5.Columns[i].Width := 80;
+      if (i = 5) then
+        StringGrid5.Columns[i].Width := 70;
+      if (i = 6) then
+        StringGrid5.Columns[i].Width := 70;
+    End;
+    for i := 0 to 2 do
+    Begin
+      StringGrid2.Columns[i].Width := 140;
+      StringGrid4.Columns[i].Width := 140;
+    End;
   End;
 End;
 
@@ -554,7 +523,7 @@ begin
   inherited;
   Patient_ID := '';
   tRow := StringGrid6.Row;
-  Patient_ID := StringGrid6.cells[0, tRow];
+  Patient_ID := StringGrid6.Cells[0, tRow];
 end;
 
 procedure TMain.StringGrid6CellDblClick(const Column: TColumn;
@@ -580,6 +549,47 @@ Begin
     ResStream.Free;
   end;
 End;
+
+Procedure Recherche(Recherche, filter, typ: String);
+Begin
+  With DataModule1.FDQ_Recherche do
+  Begin
+    if (typ = 'Interne') then
+      typ := (' and Type="' + typ + '"')
+    else if (typ = 'Externe') then
+      typ := (' and Type="' + typ + '"')
+    else
+      typ := ('');
+    Active := False;
+    SQL.Clear;
+    filter := ('');
+    SQL.Text := ('Select * From patient Where type="' + typ + '";');
+  End;
+End;
+
+procedure TMain.Edit1Change(Sender: TObject);
+Var
+  filter, typ: string;
+begin
+  inherited;
+  // Searh By
+  if (RB_Nom.IsChecked = True) then
+    filter := ('Nom')
+  else if (RB_Prenom.IsChecked = True) then
+    filter := ('Prenom');
+  // Show By
+  if (RB_Interne.IsChecked = True) then
+    typ := ('Interne')
+  else if (RB_Externe.IsChecked = True) then
+    typ := ('Externe');
+  if (Edit1.Text <> '') then
+  Begin
+    Recherche(Edit1.Text, filter, typ);
+    DataModule1.FDQ_Recherche.Active := True;
+  End
+  else
+    DataModule1.FDQ_Recherche.Active := False;
+end;
 
 procedure TMain.Edit_PatientResize(Sender: TObject);
 begin
@@ -662,7 +672,6 @@ begin
   //
   P_Accueil.OnResize(P_Accueil);
   // Minmum Size for MainForm -- U_Main.pas --
-
   if ((Main.Width <= Screen.Width) or (Main.Height <= Screen.Height)) then
   begin
     // Setting Main form Sizes
@@ -679,6 +688,33 @@ begin
   end;
 end;
 
+procedure Load();
+Begin
+  With DataModule1 do
+  Begin
+    FDQ_Groupage.Active := False;
+    FDQ_Patient.Active := False;
+    FDQ_Patient_Table.Active := False;
+    FDQ_Groupage.SQL.Clear;
+    FDQ_Groupage.SQL.Text :=
+      ('Select Nom, Prenom, Groupage From Patient Where ID="' +
+      Main.ID_Medecin + '";');
+    FDQ_Groupage.Active := True;
+    // Patient Table
+    FDQ_Patient.SQL.Clear;
+    FDQ_Patient.SQL.Text := ('Select Nom, Prenom,Type From Patient Where ID="' +
+      Main.ID_Medecin + '";');
+    FDQ_Patient.Active := True;
+    // Main patient Table
+    FDQ_Patient_Table.SQL.Clear;
+    FDQ_Patient_Table.SQL.Text :=
+      ('Select Patient_ID, Nom, Prenom, Date_de_Nai, Date_de_Entre, Type, Sexe, Etat_Civil, Wilaya, Commune, Adresse, Mobile, Email, Groupage, Telephone, Fax From Patient '
+      + 'Where ID="' + Main.ID_Medecin + '";');
+    FDQ_Patient_Table.Active := True;
+  End;
+  StringGrid5ColResize;
+End;
+
 procedure TMain.FormShow(Sender: TObject);
 var
   LogDlg: TConnecter;
@@ -689,6 +725,7 @@ begin
   if (LogDlg.ShowModal = mrCancel) then
     Application.Terminate;
   LogDlg.Free;
+  Load();
   // StatusBar;
 end;
 
@@ -700,8 +737,8 @@ begin
   With DataModule1.FDQuery1 do
   Begin
     Active := False;
-    SQl.Clear;
-    SQl.Text := 'Select * From Patient Where Patient_ID="' + Patient_ID + '";';
+    SQL.Clear;
+    SQL.Text := 'Select * From Patient Where Patient_ID="' + Patient_ID + '";';
     Active := True;
     Edit;
     ID := Frame_EP_Principale.Edit;
@@ -709,7 +746,7 @@ begin
     Frame_EP_Information.Edit;
     Post;
     Active := False;
-    SQl.Clear;
+    SQL.Clear;
     if (Frame_EP_Hemogramme.Pret = True) then
       Frame_EP_Hemogramme.Edit(ID);
     if (Frame_EP_Hemostase.Pret = True) then
@@ -759,15 +796,15 @@ begin
     with DataModule1.FDQuery1 do
     Begin
       Active := False;
-      SQl.Clear;
-      SQl.Text := ('Select * From Patient');
+      SQL.Clear;
+      SQL.Text := ('Select * From Patient');
       Active := True;
       Insert;
       FieldByName('ID').AsString := ID_Medecin;
       ID := Frame_Principale.Insert;
       Frame_Information.Insert;
       Post;
-      SQl.Clear;
+      SQL.Clear;
       Active := False;
     End;
     if (Frame_Hemogramme.Pret = True) then
@@ -832,10 +869,10 @@ begin
   Patient.Visible := False;
   Nouveau_Patient.Visible := False;
   Recherche_Patient.Visible := False;
-  RDV.Visible := False;
+
   Ordonnance.Visible := False;
   H_Gen_Patient.Visible := False;
-  H_Gen_RDV.Visible := False;
+
   H_Gen_Ordo.Visible := False;
   H_Gen_NouveauP.Visible := False;
   H_Gen_RechercheP.Visible := False;
@@ -852,8 +889,7 @@ end;
 procedure TMain.Label22Click(Sender: TObject);
 begin
   inherited;
-  RDV.Visible := False;
-  H_Gen_RDV.Visible := False;
+
   H_Accueil.IsSelected := True;
 end;
 
@@ -1046,7 +1082,7 @@ Var
 begin
   inherited;
   SaveDialog1 := TSaveDialog.Create(self);
-  SaveDialog1.Filter := ('db file|*.db|All|*.*');
+  SaveDialog1.filter := ('db file|*.db|All|*.*');
   SaveDialog1.FileName := 'patient_backup';
   if (SaveDialog1.Execute) then
   Begin
@@ -1079,7 +1115,7 @@ begin
   inherited;
   H_Gen_Patient.Visible := False;
   H_Gen_Ordo.Visible := False;
-  H_Gen_RDV.Visible := False;
+
   H_Accueil.IsSelected := False;
   H_Gen_NouveauP.Visible := True;
   H_Gen_RechercheP.Visible := False;
@@ -1104,7 +1140,7 @@ begin
   H_Gen_Patient.Visible := False;
   H_Gen_Ordo.Visible := True;
   H_Gen_Ordo.IsSelected := True;
-  H_Gen_RDV.Visible := False;
+
   H_Gen_RechercheP.Visible := False;
   H_Gen_NouveauP.Visible := False;
 end;
@@ -1115,7 +1151,7 @@ begin
   H_Gen_Patient.Visible := True;
   H_Gen_Patient.IsSelected := True;
   H_Gen_Ordo.Visible := False;
-  H_Gen_RDV.Visible := False;
+
   H_Gen_RechercheP.Visible := False;
   H_Gen_NouveauP.Visible := False;
 end;
@@ -1173,7 +1209,7 @@ begin
   inherited;
   H_Gen_Patient.Visible := False;
   H_Gen_Ordo.Visible := False;
-  H_Gen_RDV.Visible := False;
+
   H_Accueil.IsSelected := True;
   H_Gen_RechercheP.Visible := False;
   H_Gen_NouveauP.Visible := False;
@@ -1197,8 +1233,6 @@ begin
   inherited;
   H_Gen_Patient.Visible := False;
   H_Gen_Ordo.Visible := False;
-  H_Gen_RDV.Visible := True;
-  H_Gen_RDV.IsSelected := True;
   H_Gen_RechercheP.Visible := False;
   H_Gen_NouveauP.Visible := False;
 end;
@@ -1208,7 +1242,6 @@ begin
   inherited;
   H_Gen_Patient.Visible := False;
   H_Gen_Ordo.Visible := False;
-  H_Gen_RDV.Visible := False;
   H_Accueil.IsSelected := False;
   H_Gen_NouveauP.Visible := False;
   H_Gen_RechercheP.Visible := True;
@@ -1254,11 +1287,23 @@ begin
 end;
 
 procedure TMain.T_RDVClick(Sender: TObject);
+Var
+  ConnecterDlg: TConnecter;
+  Msg: Integer;
 begin
   inherited;
-  RDV.Visible := True;
-  RDV.OnClick(RDV);
-  RDV.IsSelected := True;
+  Msg := MessageDlg('êtes-vous sûr', TMsgDlgType.mtInformation,
+    [TMsgDlgBtn.mbYes, TMsgDlgBtn.mbNo], 0);
+  if (Msg = mrYes) then
+  Begin
+    ConnecterDlg := TConnecter.Create(self);
+    if (ConnecterDlg.ShowModal = mrCancel) then
+    Begin
+      ConnecterDlg.Free;
+      Halt(0);
+    End;
+  End;
+  Load();
 end;
 
 end.

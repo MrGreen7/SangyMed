@@ -84,10 +84,17 @@ end;
 procedure TRemontre.Button3Click(Sender: TObject);
 Var
   HexCode: String;
+  Msg: Integer;
 begin
   With DataModule1 do
   Begin
-    if (Edit2.Text <> Edit3.Text) then
+    if ((Edit2.Text = '') or (Edit3.Text = '')) then
+    Begin
+      Msg := MessageDlg('š''il vous plaît remplir les champs',
+        TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
+      Edit2.SetFocus;
+    End
+    else if (Edit2.Text <> Edit3.Text) then
     Begin
       InnerGlowEffect2.Enabled := True;
       InnerGlowEffect3.Enabled := True;

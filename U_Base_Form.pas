@@ -9,6 +9,8 @@ uses
 
 type
   TBase_Form = class(TForm)
+    Windows10SlateGrey: TStyleBook;
+    Windows10: TStyleBook;
   private
     { Private declarations }
   public
@@ -19,8 +21,6 @@ var
   Base_Form: TBase_Form;
 
 implementation
-
-Uses U_DataModule;
 {$R *.fmx}
 
 end.

@@ -177,7 +177,7 @@ object Frame3: TFrame3
         TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 16.000000000000000000
         Position.X = 95.000000000000000000
-        Position.Y = 10.516529083251950000
+        Position.Y = 11.000000000000000000
         Size.Width = 417.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False

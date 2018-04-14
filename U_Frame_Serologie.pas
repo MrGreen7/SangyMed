@@ -195,6 +195,8 @@ begin
   End
   else
   Begin
+    RB_HA_IgM.IsChecked := False;
+    RB_HA_IgG.IsChecked := False;
     RB_HA_IgM.Enabled := False;
     RB_HA_IgG.Enabled := False;
   End;

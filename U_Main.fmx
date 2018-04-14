@@ -4,6 +4,7 @@ object Main: TMain
   Caption = 'Accueil'
   ClientHeight = 692
   ClientWidth = 1260
+  Position = DesktopCenter
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
@@ -114,80 +115,8 @@ object Main: TMain
             IsExpanded = False
             IsSelected = False
             TabOrder = 2
-            Text = #61555' Rendez vous pateints'
+            Text = #62142' D'#233'connecter'
             OnClick = T_RDVClick
-          end
-          object T_Analyses: TTreeViewItem
-            StyledSettings = [Style]
-            TextSettings.Font.Family = 'FontAwesome'
-            TextSettings.Font.Size = 16.000000000000000000
-            TextSettings.FontColor = xFFB36A46
-            IsChecked = False
-            IsExpanded = True
-            IsSelected = False
-            TabOrder = 3
-            Text = 'Analyses'
-            object TreeViewItem6: TTreeViewItem
-              StyledSettings = [Style]
-              TextSettings.Font.Family = 'FontAwesome'
-              TextSettings.Font.Size = 16.000000000000000000
-              TextSettings.FontColor = xFF5E0D60
-              IsChecked = False
-              IsExpanded = False
-              IsSelected = False
-              TabOrder = 4
-              Text = #61680' Ordonnance'
-              Visible = False
-              OnClick = TreeViewItem6Click
-            end
-            object TreeViewItem2: TTreeViewItem
-              StyledSettings = [Style]
-              TextSettings.Font.Family = 'FontAwesome'
-              TextSettings.Font.Size = 16.000000000000000000
-              TextSettings.FontColor = xFF6F1A07
-              IsChecked = False
-              IsExpanded = False
-              IsSelected = False
-              TabOrder = 0
-              Text = #61681' Hemogramme'
-              Visible = False
-            end
-            object TreeViewItem3: TTreeViewItem
-              StyledSettings = [Style]
-              TextSettings.Font.Family = 'FontAwesome'
-              TextSettings.Font.Size = 16.000000000000000000
-              TextSettings.FontColor = xFF3D2B3D
-              IsChecked = False
-              IsExpanded = False
-              IsSelected = False
-              TabOrder = 1
-              Text = #61635' Biochimic'
-              Visible = False
-            end
-            object TreeViewItem4: TTreeViewItem
-              StyledSettings = [Style]
-              TextSettings.Font.Family = 'FontAwesome'
-              TextSettings.Font.Size = 16.000000000000000000
-              TextSettings.FontColor = xFF83781B
-              IsChecked = False
-              IsExpanded = False
-              IsSelected = False
-              TabOrder = 2
-              Text = #61506' Serologie'
-              Visible = False
-            end
-            object TreeViewItem5: TTreeViewItem
-              StyledSettings = [Style]
-              TextSettings.Font.Family = 'FontAwesome'
-              TextSettings.Font.Size = 16.000000000000000000
-              TextSettings.FontColor = xFF9055A2
-              IsChecked = False
-              IsExpanded = False
-              IsSelected = True
-              TabOrder = 3
-              Text = #61982' Hemostase | VS'
-              Visible = False
-            end
           end
         end
       end
@@ -205,8 +134,6 @@ object Main: TMain
     TabOrder = 0
     TabPosition = PlatformDefault
     Sizes = (
-      1260s
-      129s
       1260s
       129s
       1260s
@@ -1544,321 +1471,6 @@ object Main: TMain
         end
       end
     end
-    object H_Gen_RDV: TTabItem
-      CustomIcon = <
-        item
-        end>
-      TextSettings.Font.Family = 'FontAwesome'
-      TextSettings.Font.Size = 16.000000000000000000
-      StyledSettings = [Style, FontColor]
-      IsSelected = False
-      Size.Width = 94.000000000000000000
-      Size.Height = 32.000000000000000000
-      Size.PlatformDefault = False
-      StyleLookup = ''
-      TabOrder = 0
-      Text = #61918' G'#233'n'#233'ral'
-      Visible = False
-      ExplicitSize.cx = 94.000000000000000000
-      ExplicitSize.cy = 30.000000000000000000
-      object Panel11: TPanel
-        Align = Client
-        Opacity = 0.699999988079071100
-        Size.Width = 1260.000000000000000000
-        Size.Height = 129.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 3
-      end
-      object Layout27: TLayout
-        Align = Client
-        Size.Width = 1260.000000000000000000
-        Size.Height = 129.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 4
-        object Layout10: TLayout
-          Align = Left
-          Size.Width = 129.000000000000000000
-          Size.Height = 129.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 2
-          object Label35: TLabel
-            StyledSettings = [Style, FontColor]
-            Position.X = 18.000000000000000000
-            Position.Y = 64.000000000000000000
-            Size.Width = 93.000000000000000000
-            Size.Height = 49.000000000000000000
-            Size.PlatformDefault = False
-            TextSettings.Font.Family = 'Candara'
-            TextSettings.Font.Size = 14.000000000000000000
-            TextSettings.HorzAlign = Center
-            Text = 'Supprimer le patient'
-            TabOrder = 1
-            object ShadowEffect27: TShadowEffect
-              Distance = 3.000000000000000000
-              Direction = 45.000000000000000000
-              Softness = 0.200000002980232200
-              Opacity = 0.600000023841857900
-              ShadowColor = claBlack
-            end
-          end
-          object Label36: TLabel
-            Cursor = crHandPoint
-            StyledSettings = [Style]
-            HitTest = True
-            Position.X = 24.000000000000000000
-            Position.Y = 17.000000000000000000
-            Size.Width = 81.000000000000000000
-            Size.Height = 88.000000000000000000
-            Size.PlatformDefault = False
-            TextSettings.Font.Family = 'FontAwesome'
-            TextSettings.Font.Size = 50.000000000000000000
-            TextSettings.FontColor = xFFD11149
-            TextSettings.HorzAlign = Center
-            TextSettings.VertAlign = Leading
-            Text = #61526
-            TabOrder = 0
-            object ColorAnimation19: TColorAnimation
-              AnimationType = InOut
-              Delay = 0.200000002980232200
-              Duration = 0.500000000000000000
-              PropertyName = 'TextSettings.FontColor'
-              StartValue = xFFD11149
-              StopValue = xFF0197F6
-              Trigger = 'IsMouseOver=true'
-              TriggerInverse = 'IsMouseOver=false'
-            end
-            object ShadowEffect28: TShadowEffect
-              Distance = 3.000000000000000000
-              Direction = 45.000000000000000000
-              Softness = 0.200000002980232200
-              Opacity = 0.600000023841857900
-              ShadowColor = claBlack
-            end
-          end
-        end
-        object Layout11: TLayout
-          Align = Left
-          Position.X = 129.000000000000000000
-          Size.Width = 129.000000000000000000
-          Size.Height = 129.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 0
-          object Label37: TLabel
-            Cursor = crHandPoint
-            StyledSettings = [Style]
-            HitTest = True
-            Position.X = 24.000000000000000000
-            Position.Y = 17.000000000000000000
-            Size.Width = 81.000000000000000000
-            Size.Height = 88.000000000000000000
-            Size.PlatformDefault = False
-            TextSettings.Font.Family = 'FontAwesome'
-            TextSettings.Font.Size = 50.000000000000000000
-            TextSettings.FontColor = xFFFFAD05
-            TextSettings.HorzAlign = Center
-            TextSettings.VertAlign = Leading
-            Text = #61635
-            TabOrder = 0
-            object ColorAnimation20: TColorAnimation
-              AnimationType = InOut
-              Delay = 0.200000002980232200
-              Duration = 0.500000000000000000
-              PropertyName = 'TextSettings.FontColor'
-              StartValue = xFFFFAD05
-              StopValue = xFF0197F6
-              Trigger = 'IsMouseOver=true'
-              TriggerInverse = 'IsMouseOver=false'
-            end
-            object ShadowEffect29: TShadowEffect
-              Distance = 3.000000000000000000
-              Direction = 45.000000000000000000
-              Softness = 0.200000002980232200
-              Opacity = 0.600000023841857900
-              ShadowColor = claBlack
-            end
-          end
-          object Label38: TLabel
-            StyledSettings = [Style, FontColor]
-            Position.X = 18.000000000000000000
-            Position.Y = 64.000000000000000000
-            Size.Width = 93.000000000000000000
-            Size.Height = 49.000000000000000000
-            Size.PlatformDefault = False
-            TextSettings.Font.Family = 'Candara'
-            TextSettings.Font.Size = 14.000000000000000000
-            TextSettings.HorzAlign = Center
-            Text = 'Ajouter une analyse'
-            TabOrder = 1
-            object ShadowEffect30: TShadowEffect
-              Distance = 3.000000000000000000
-              Direction = 45.000000000000000000
-              Softness = 0.200000002980232200
-              Opacity = 0.600000023841857900
-              ShadowColor = claBlack
-            end
-          end
-        end
-        object Layout4: TLayout
-          Align = Left
-          Position.X = 258.000000000000000000
-          Size.Width = 129.000000000000000000
-          Size.Height = 129.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 1
-          object Label21: TLabel
-            StyledSettings = [Size, Style, FontColor]
-            Position.X = 40.000000000000000000
-            Position.Y = 80.000000000000000000
-            Size.Width = 49.000000000000000000
-            Size.Height = 17.000000000000000000
-            Size.PlatformDefault = False
-            TextSettings.Font.Family = 'Candara'
-            TextSettings.Font.Size = 16.000000000000000000
-            Text = 'Fermer'
-            TabOrder = 1
-            object ShadowEffect17: TShadowEffect
-              Distance = 3.000000000000000000
-              Direction = 45.000000000000000000
-              Softness = 0.200000002980232200
-              Opacity = 0.600000023841857900
-              ShadowColor = claBlack
-            end
-          end
-          object Label22: TLabel
-            Cursor = crHandPoint
-            StyledSettings = [Style]
-            HitTest = True
-            Position.X = 36.000000000000000000
-            Position.Y = 17.000000000000000000
-            Size.Width = 57.000000000000000000
-            Size.Height = 88.000000000000000000
-            Size.PlatformDefault = False
-            TextSettings.Font.Family = 'FontAwesome'
-            TextSettings.Font.Size = 50.000000000000000000
-            TextSettings.FontColor = xFFD7263D
-            TextSettings.HorzAlign = Center
-            TextSettings.VertAlign = Leading
-            Text = #61453
-            TabOrder = 0
-            OnClick = Label22Click
-            object ColorAnimation9: TColorAnimation
-              AnimationType = InOut
-              Delay = 0.200000002980232200
-              Duration = 0.500000000000000000
-              PropertyName = 'TextSettings.FontColor'
-              StartValue = xFFD7263D
-              StopValue = xFF0197F6
-              Trigger = 'IsMouseOver=true'
-              TriggerInverse = 'IsMouseOver=false'
-            end
-            object ShadowEffect18: TShadowEffect
-              Distance = 3.000000000000000000
-              Direction = 45.000000000000000000
-              Softness = 0.200000002980232200
-              Opacity = 0.600000023841857900
-              ShadowColor = claBlack
-            end
-          end
-        end
-        object Layout9: TLayout
-          Align = Left
-          Position.X = 387.000000000000000000
-          Size.Width = 129.000000000000000000
-          Size.Height = 129.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 4
-          object Label33: TLabel
-            StyledSettings = [Style, FontColor]
-            Position.X = 40.000000000000000000
-            Position.Y = 80.000000000000000000
-            Size.Width = 49.000000000000000000
-            Size.Height = 17.000000000000000000
-            Size.PlatformDefault = False
-            TextSettings.Font.Family = 'Candara'
-            TextSettings.Font.Size = 17.000000000000000000
-            Text = #201'diter'
-            TabOrder = 1
-            object ShadowEffect25: TShadowEffect
-              Distance = 3.000000000000000000
-              Direction = 45.000000000000000000
-              Softness = 0.200000002980232200
-              Opacity = 0.600000023841857900
-              ShadowColor = claBlack
-            end
-          end
-          object Label34: TLabel
-            Cursor = crHandPoint
-            StyledSettings = [Style]
-            HitTest = True
-            Position.X = 32.000000000000000000
-            Position.Y = 16.000000000000000000
-            Size.Width = 57.000000000000000000
-            Size.Height = 88.000000000000000000
-            Size.PlatformDefault = False
-            TextSettings.Font.Family = 'FontAwesome'
-            TextSettings.Font.Size = 50.000000000000000000
-            TextSettings.FontColor = xFFEC4E20
-            TextSettings.HorzAlign = Center
-            TextSettings.VertAlign = Leading
-            Text = #61827
-            TabOrder = 0
-            object ShadowEffect26: TShadowEffect
-              Distance = 3.000000000000000000
-              Direction = 45.000000000000000000
-              Softness = 0.200000002980232200
-              Opacity = 0.600000023841857900
-              ShadowColor = claBlack
-            end
-            object ColorAnimation18: TColorAnimation
-              AnimationType = InOut
-              Delay = 0.200000002980232200
-              Duration = 0.500000000000000000
-              PropertyName = 'TextSettings.FontColor'
-              StartValue = xFFEC4E20
-              StopValue = xFF0197F6
-              Trigger = 'IsMouseOver=true'
-              TriggerInverse = 'IsMouseOver=false'
-            end
-          end
-        end
-        object Line24: TLine
-          LineType = Left
-          Opacity = 0.800000011920928900
-          Position.X = 128.000000000000000000
-          Position.Y = -6.000000000000000000
-          Size.Width = 9.000000000000000000
-          Size.Height = 137.000000000000000000
-          Size.PlatformDefault = False
-        end
-        object Line25: TLine
-          LineType = Left
-          Opacity = 0.800000011920928900
-          Position.X = 257.000000000000000000
-          Position.Y = -6.000000000000000000
-          Size.Width = 9.000000000000000000
-          Size.Height = 137.000000000000000000
-          Size.PlatformDefault = False
-        end
-        object Line26: TLine
-          LineType = Left
-          Opacity = 0.800000011920928900
-          Position.X = 387.000000000000000000
-          Position.Y = -6.000000000000000000
-          Size.Width = 9.000000000000000000
-          Size.Height = 137.000000000000000000
-          Size.PlatformDefault = False
-        end
-        object Line27: TLine
-          LineType = Left
-          Opacity = 0.800000011920928900
-          Position.X = 515.000000000000000000
-          Position.Y = -6.000000000000000000
-          Size.Width = 9.000000000000000000
-          Size.Height = 137.000000000000000000
-          Size.PlatformDefault = False
-        end
-      end
-    end
     object H_Gen_Ordo: TTabItem
       CustomIcon = <
         item
@@ -2187,7 +1799,6 @@ object Main: TMain
       StyleLookup = ''
       TabOrder = 0
       Text = #61918' G'#233'n'#233'ral'
-      Visible = False
       ExplicitSize.cx = 94.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
       object Panel12: TPanel
@@ -2742,12 +2353,10 @@ object Main: TMain
     Size.Height = 531.000000000000000000
     Size.PlatformDefault = False
     StyleLookup = 'tabcontrolstyle'
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 2
     TabPosition = PlatformDefault
     Sizes = (
-      1059s
-      503s
       1059s
       499s
       1059s
@@ -2771,9 +2380,9 @@ object Main: TMain
       TextSettings.Font.Size = 16.000000000000000000
       TextSettings.FontColor = xFFD7263D
       StyledSettings = [Style]
-      IsSelected = True
+      IsSelected = False
       Size.Width = 141.000000000000000000
-      Size.Height = 28.000000000000000000
+      Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'tabitemcustom'
       TabOrder = 0
@@ -2785,7 +2394,7 @@ object Main: TMain
       object L_Left_P_Accueil: TLayout
         Align = Left
         Size.Width = 528.000000000000000000
-        Size.Height = 503.000000000000000000
+        Size.Height = 499.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
         object GrouBox1_Table: TGroupBox
@@ -2812,8 +2421,8 @@ object Main: TMain
             TabOrder = 1
             RowCount = 10
             Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
-            Viewport.Width = 504.000000000000000000
-            Viewport.Height = 173.000000000000000000
+            Viewport.Width = 508.000000000000000000
+            Viewport.Height = 198.000000000000000000
           end
           object Label_Refresh1: TLabel
             Anchors = [akTop, akRight]
@@ -2859,7 +2468,7 @@ object Main: TMain
           Padding.Top = 25.000000000000000000
           Padding.Right = 10.000000000000000000
           Padding.Bottom = 10.000000000000000000
-          Position.Y = 270.000000000000000000
+          Position.Y = 266.000000000000000000
           Size.Width = 528.000000000000000000
           Size.Height = 233.000000000000000000
           Size.PlatformDefault = False
@@ -2877,8 +2486,8 @@ object Main: TMain
             TabOrder = 1
             RowCount = 10
             Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
-            Viewport.Width = 504.000000000000000000
-            Viewport.Height = 173.000000000000000000
+            Viewport.Width = 508.000000000000000000
+            Viewport.Height = 198.000000000000000000
           end
           object Label_Refresh3: TLabel
             Anchors = [akTop, akRight]
@@ -2922,7 +2531,7 @@ object Main: TMain
         Align = Right
         Position.X = 531.000000000000000000
         Size.Width = 528.000000000000000000
-        Size.Height = 503.000000000000000000
+        Size.Height = 499.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         object GrouBox2_Table: TGroupBox
@@ -2949,8 +2558,8 @@ object Main: TMain
             TabOrder = 1
             RowCount = 10
             Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
-            Viewport.Width = 504.000000000000000000
-            Viewport.Height = 173.000000000000000000
+            Viewport.Width = 508.000000000000000000
+            Viewport.Height = 198.000000000000000000
           end
           object Label_Refresh2: TLabel
             Anchors = [akTop, akRight]
@@ -2997,7 +2606,7 @@ object Main: TMain
           Padding.Top = 25.000000000000000000
           Padding.Right = 10.000000000000000000
           Padding.Bottom = 10.000000000000000000
-          Position.Y = 270.000000000000000000
+          Position.Y = 266.000000000000000000
           Size.Width = 528.000000000000000000
           Size.Height = 233.000000000000000000
           Size.PlatformDefault = False
@@ -3015,8 +2624,8 @@ object Main: TMain
             TabOrder = 1
             RowCount = 10
             Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
-            Viewport.Width = 504.000000000000000000
-            Viewport.Height = 173.000000000000000000
+            Viewport.Width = 508.000000000000000000
+            Viewport.Height = 198.000000000000000000
           end
           object Label_Refresh4: TLabel
             Anchors = [akTop, akRight]
@@ -3066,14 +2675,13 @@ object Main: TMain
       TextSettings.Font.Size = 16.000000000000000000
       TextSettings.FontColor = xFF0197F6
       StyledSettings = [Style]
-      IsSelected = False
+      IsSelected = True
       Size.Width = 88.000000000000000000
       Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
       Text = #61981' Patient'
-      Visible = False
       OnClick = PatientClick
       ExplicitSize.cx = 88.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
@@ -3227,7 +2835,6 @@ object Main: TMain
       StyleLookup = ''
       TabOrder = 0
       Text = #61442' Recherche patient'
-      Visible = False
       OnClick = Recherche_PatientClick
       ExplicitSize.cx = 167.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
@@ -3251,8 +2858,8 @@ object Main: TMain
           TabOrder = 0
           OnCellClick = StringGrid6CellClick
           OnCellDblClick = StringGrid6CellDblClick
-          Viewport.Width = 1045.000000000000000000
-          Viewport.Height = 271.000000000000000000
+          Viewport.Width = 1049.000000000000000000
+          Viewport.Height = 296.000000000000000000
         end
       end
       object Layout2: TLayout
@@ -3447,6 +3054,7 @@ object Main: TMain
             Size.PlatformDefault = False
             TextPrompt = 'Recherch'
             StyledSettings = [Size, Style, FontColor]
+            OnChange = Edit1Change
           end
         end
       end
@@ -4303,26 +3911,6 @@ object Main: TMain
         end
       end
     end
-    object RDV: TTabItem
-      CustomIcon = <
-        item
-        end>
-      TextSettings.Font.Family = 'FontAwesome'
-      TextSettings.Font.Size = 16.000000000000000000
-      TextSettings.FontColor = xFF6DB425
-      StyledSettings = [Style]
-      IsSelected = False
-      Size.Width = 129.000000000000000000
-      Size.Height = 32.000000000000000000
-      Size.PlatformDefault = False
-      StyleLookup = ''
-      TabOrder = 0
-      Text = #61555' Rendez vous'
-      Visible = False
-      OnClick = RDVClick
-      ExplicitSize.cx = 129.000000000000000000
-      ExplicitSize.cy = 30.000000000000000000
-    end
     object Ordonnance: TTabItem
       CustomIcon = <
         item
@@ -4554,11 +4142,11 @@ object Main: TMain
                 end
                 inherited Hemog_Label4: TLabel
                   Position.Y = 195.537185668945300000
-                  TabOrder = 11
+                  TabOrder = 8
                 end
                 inherited Hemog_Label3: TLabel
                   Position.Y = 134.818176269531200000
-                  TabOrder = 12
+                  TabOrder = 9
                 end
                 inherited Hemog_Edit3: TEdit
                   TabOrder = 2
@@ -5167,6 +4755,12 @@ object Main: TMain
       GridControl = StringGrid5
       Columns = <>
     end
+    object LinkGridToDataSourceBindSourceDB4: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB4
+      GridControl = StringGrid6
+      Columns = <>
+    end
   end
   object BindSourceDB2: TBindSourceDB
     DataSet = DataModule1.FDQ_Patient
@@ -5179,5 +4773,11 @@ object Main: TMain
     ScopeMappings = <>
     Left = 1144
     Top = 56
+  end
+  object BindSourceDB4: TBindSourceDB
+    DataSet = DataModule1.FDQ_Recherche
+    ScopeMappings = <>
+    Left = 792
+    Top = 48
   end
 end

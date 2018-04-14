@@ -109,8 +109,6 @@ procedure TFenetre.Btn_RDVClick(Sender: TObject);
 begin
   inherited;
   Fla_RDV.Enabled := True;
-  Main.RDV.Visible := False;
-  Main.H_Gen_RDV.Visible := False;
 end;
 
 procedure TFenetre.Btn_RecherchePClick(Sender: TObject);
@@ -174,10 +172,6 @@ begin
     F_Patient.Visible := True
   else
     F_Patient.Visible := False;
-  if (Main.RDV.Visible = True) then
-    F_RDV.Visible := True
-  else
-    F_RDV.Visible := False;
   if (Main.Ordonnance.Visible = True) then
     F_Ordonnance.Visible := True
   else

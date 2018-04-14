@@ -11,7 +11,7 @@ uses
   FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs, FireDAC.FMXUI.Wait,
   FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
   IdHashMessageDigest, FireDAC.Phys.MSAccDef, FireDAC.Phys.ODBCBase,
-  FireDAC.Phys.MSAcc, FireDAC.Phys.ODBC;
+  FireDAC.Phys.MSAcc, FireDAC.Phys.ODBC, FireDAC.VCLUI.Wait;
 
 type
   TDataModule1 = class(TDataModule)
@@ -50,6 +50,7 @@ var
 
 implementation
 
+Uses U_Main;
 {%CLASSGROUP 'FMX.Controls.TControl'}
 {$R *.dfm}
 
@@ -177,15 +178,12 @@ begin
         end;
       except
         on E: Exception do
-
       end;
     end;
   end;
-  // Groupage Table
+  // Groupage Table  Groupage_Index!="-1"
   FDQ_Groupage.Active := True;
-  // Patient Table
   FDQ_Patient.Active := True;
-  // Main patient Table
   FDQ_Patient_Table.Active := True;
   // Search Query
   // FDQ_Recherche.Active := True;
