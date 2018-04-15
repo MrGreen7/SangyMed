@@ -13216,4 +13216,24 @@ object Connecter: TConnecter
       ShadowColor = claBlack
     end
   end
+  object Label5: TLabel
+    StyledSettings = []
+    Position.X = 139.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 330.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 20.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.FontColor = claWhite
+    Text = 'S'#39'il vous pla'#238't confirmez votre identit'#233
+    Visible = False
+    TabOrder = 8
+    object GlowEffect1: TGlowEffect
+      Softness = 0.400000005960464400
+      GlowColor = claBlack
+      Opacity = 1.000000000000000000
+    end
+  end
 end

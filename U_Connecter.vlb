@@ -7,3 +7,12 @@ Visible=False
 [DataModule1.FDQ_Patient_Table]
 Visible=False
 
+[DataModule1.FDQ_Recherche]
+Visible=False
+
+[DataModule1.FDQ_Homme]
+Visible=False
+
+[DataModule1.FDQ_Femme]
+Visible=False
+

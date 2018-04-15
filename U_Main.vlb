@@ -14,10 +14,6 @@ Visible=False
 Coordinates=670,510,190,36
 Visible=False
 
-[H_Gen_Ordo]
-Coordinates=1609,724,90,36
-Visible=False
-
 [Frame_EP_Hemogramme.Hemog_LabelEdit4]
 Coordinates=3168,78,276,36
 Visible=False
@@ -60,10 +56,6 @@ Visible=False
 
 [DataModule1.FDQ_Entreprise]
 Coordinates=770,240,187,36
-Visible=False
-
-[Frame_Ordonnance.Layout2]
-Coordinates=1258,820,178,36
 Visible=False
 
 [Panel10]
@@ -192,10 +184,6 @@ Coordinates=746,1282,110,36
 Coordinates=3381,2216,60,36
 Visible=False
 
-[Frame_EP_Ordonnance.Edit4]
-Coordinates=628,2216,186,36
-Visible=False
-
 [Frame_EP_Biochimic.Label29]
 Coordinates=3168,1849,187,36
 Visible=False
@@ -230,10 +218,6 @@ Visible=False
 [Frame_EP_Principale.InnerGlowEffectEdit2]
 Coordinates=120,1282,264,36
 
-[Frame_Ordonnance.Button1]
-Coordinates=2686,2216,177,36
-Visible=False
-
 [Label9]
 Coordinates=0,1686,53,36
 Visible=False
@@ -266,10 +250,6 @@ Visible=False
 Coordinates=3168,309,221,36
 Visible=False
 
-[Frame_Ordonnance.Label1]
-Coordinates=3168,771,171,36
-Visible=False
-
 [Frame_EP_Serologie.CB_VIH_Anti_VIH]
 Coordinates=1499,1235,245,36
 Visible=False
@@ -288,14 +268,6 @@ Visible=False
 
 [Frame_EP_Biochimic.Label7]
 Coordinates=3833,2312,180,36
-Visible=False
-
-[Label44]
-Coordinates=754,1004,60,36
-Visible=False
-
-[Frame_Ordonnance.Layout4]
-Coordinates=2140,1513,178,36
 Visible=False
 
 [ColorAnimation5]
@@ -341,14 +313,6 @@ Visible=False
 Coordinates=215,1186,219,36
 Visible=False
 
-[Frame_EP_Ordonnance.Edit1]
-Coordinates=2252,1648,186,36
-Visible=False
-
-[Frame_EP_Ordonnance.Edit2]
-Coordinates=2858,1552,186,36
-Visible=False
-
 [Frame_EP_Biochimic.Label12]
 Coordinates=2392,1928,187,36
 Visible=False
@@ -382,10 +346,6 @@ Visible=False
 [ColorAnimation13]
 Coordinates=977,1513,117,36
 
-[Frame_EP_Ordonnance.ComboBox1]
-Coordinates=1126,540,227,36
-Visible=False
-
 [Frame_EP_Principale.Button3]
 Coordinates=2579,386,188,36
 Visible=False
@@ -402,16 +362,8 @@ Visible=False
 Coordinates=383,1648,180,36
 Visible=False
 
-[Frame_Ordonnance.StringGridBindSourceDB1]
-Coordinates=2538,1,282,36
-Visible=False
-
 [Frame_EP_Biochimic.Label56]
 Coordinates=457,724,187,36
-Visible=False
-
-[Frame_EP_Ordonnance.Edit3]
-Coordinates=1095,1417,186,36
 Visible=False
 
 [Frame_Principale.IP_ComboBox3]
@@ -458,8 +410,8 @@ Coordinates=3482,309,245,36
 Visible=False
 
 [StringGrid3]
-Coordinates=1090,220,80,36
-Visible=False
+Coordinates=3210,1020,80,58
+Visible=True
 
 [Frame_EP_Biochimic.Bio_Edit4]
 Coordinates=1445,2312,197,36
@@ -541,17 +493,13 @@ Visible=False
 [ColorAnimation6]
 Coordinates=2670,1697,110,36
 
-[Frame_EP_Ordonnance.StringGridBindSourceDB1]
-Coordinates=4086,78,306,36
-Visible=False
-
 [Frame_Information.AC_Label6]
 Coordinates=2579,1541,190,36
 Visible=False
 
 [StringGrid1]
-Coordinates=1060,530,80,36
-Visible=False
+Coordinates=1060,530,80,58
+Visible=True
 
 [Frame_Biochimic.Bio_Edit19]
 Coordinates=4086,1002,180,36
@@ -563,10 +511,6 @@ Visible=False
 
 [Frame_Hemogramme]
 Coordinates=632,1697,139,36
-Visible=False
-
-[TabItem6]
-Coordinates=2591,1697,69,36
 Visible=False
 
 [Frame_Information.AC_Label4]
@@ -589,20 +533,12 @@ Visible=False
 Coordinates=3168,694,163,36
 Visible=False
 
-[Label58]
-Coordinates=27,270,60,36
-Visible=False
-
 [Line21]
 Coordinates=0,1477,53,36
 Visible=False
 
 [DataModule1.FDQ_Commune]
 Coordinates=300,190,187,36
-Visible=False
-
-[Frame_EP_Ordonnance.Button2]
-Coordinates=4430,2080,201,36
 Visible=False
 
 [ShadowEffect38]
@@ -617,10 +553,6 @@ Coordinates=4321,1928,101,36
 
 [Frame_Hemostase]
 Coordinates=3643,1928,123,36
-Visible=False
-
-[Frame_EP_Ordonnance.Layout4]
-Coordinates=4722,1,202,36
 Visible=False
 
 [Label51]
@@ -675,9 +607,6 @@ Visible=False
 [Panel4]
 Coordinates=3713,1802,55,36
 Visible=False
-
-[ShadowEffect31]
-Coordinates=4722,331,108,36
 
 [Layout29]
 Coordinates=4282,2024,67,36
@@ -771,10 +700,6 @@ Visible=False
 [ShadowEffect46]
 Coordinates=4722,1046,108,36
 
-[Label42]
-Coordinates=139,366,60,36
-Visible=False
-
 [Frame_Principale.IP_Label3]
 Coordinates=3482,1695,177,36
 Visible=False
@@ -800,14 +725,6 @@ Visible=False
 
 [Label14]
 Coordinates=598,550,60,36
-Visible=False
-
-[Frame_Ordonnance.Layout1]
-Coordinates=4722,1156,178,36
-Visible=False
-
-[Frame_Ordonnance.Edit2]
-Coordinates=3168,1310,162,36
 Visible=False
 
 [Frame_Biochimic.Label52]
@@ -909,9 +826,6 @@ Visible=False
 Coordinates=768,2024,187,36
 Visible=False
 
-[ColorAnimation21]
-Coordinates=4722,1376,117,36
-
 [Frame_Biochimic.Label1]
 Coordinates=2858,1398,156,36
 Visible=False
@@ -932,10 +846,6 @@ Visible=False
 Coordinates=277,366,60,36
 Visible=False
 
-[Frame_Ordonnance.Edit3]
-Coordinates=4430,1079,162,36
-Visible=False
-
 [TabItem10]
 Coordinates=4722,1431,76,36
 Visible=False
@@ -943,9 +853,6 @@ Visible=False
 [Label12]
 Coordinates=667,550,60,36
 Visible=False
-
-[ShadowEffect35]
-Coordinates=4722,1486,108,36
 
 [StringGrid2]
 Coordinates=740,360,80,36
@@ -957,10 +864,6 @@ Visible=False
 
 [Frame_Biochimic.Label35]
 Coordinates=957,2024,163,36
-Visible=False
-
-[TabItem7]
-Coordinates=4722,1596,69,36
 Visible=False
 
 [Frame_Biochimic.Label4]
@@ -1057,10 +960,6 @@ Visible=False
 Coordinates=1986,386,214,36
 Visible=False
 
-[Frame_Ordonnance.Edit4]
-Coordinates=1986,463,162,36
-Visible=False
-
 [Frame_EP_Serologie.CB_HB_Antigene_BHs]
 Coordinates=2858,1321,272,36
 Visible=False
@@ -1096,10 +995,6 @@ Visible=False
 Coordinates=4986,166,201,36
 Visible=False
 
-[Layout13]
-Coordinates=4722,2079,67,36
-Visible=False
-
 [ShadowEffect5]
 Coordinates=4986,221,101,36
 
@@ -1110,16 +1005,8 @@ Visible=False
 [ShadowEffect60]
 Coordinates=4986,276,108,36
 
-[Frame_EP_Ordonnance.Layout2]
-Coordinates=4986,331,202,36
-Visible=False
-
 [Frame_EP_Information.L_Top_2]
 Coordinates=4986,386,201,36
-Visible=False
-
-[Frame_Ordonnance.Layout7]
-Coordinates=4986,441,178,36
 Visible=False
 
 [Frame_EP_Principale.Button1]
@@ -1143,10 +1030,6 @@ Visible=False
 
 [Label27]
 Coordinates=733,366,60,36
-Visible=False
-
-[Frame_EP_Ordonnance.Label1]
-Coordinates=1872,2024,195,36
 Visible=False
 
 [Frame_Hemogramme.Hemog_Label4]
@@ -1189,9 +1072,6 @@ Visible=False
 Coordinates=3168,1464,245,36
 Visible=False
 
-[ColorAnimation30]
-Coordinates=4986,606,117,36
-
 [Frame_EP_Biochimic.Label51]
 Coordinates=2013,2120,187,36
 Visible=False
@@ -1220,10 +1100,6 @@ Coordinates=4986,771,108,36
 
 [ShadowEffect57]
 Coordinates=4986,881,108,36
-
-[TabItem13]
-Coordinates=4986,936,76,36
-Visible=False
 
 [Frame_EP_Information.AC_Label4]
 Coordinates=1094,309,214,36
@@ -1269,10 +1145,6 @@ Visible=False
 
 [Frame_EP_Biochimic.Label35]
 Coordinates=3772,1849,187,36
-Visible=False
-
-[Layout12]
-Coordinates=4986,1321,67,36
 Visible=False
 
 [Frame_EP_Principale.IP_Label1]
@@ -1327,19 +1199,8 @@ Visible=False
 Coordinates=4986,1596,67,36
 Visible=False
 
-[Label43]
-Coordinates=0,1359,60,36
-Visible=False
-
-[ShadowEffect49]
-Coordinates=4986,1651,108,36
-
 [ShadowEffect56]
 Coordinates=4986,1706,108,36
-
-[Frame_Ordonnance.Edit1]
-Coordinates=424,270,162,36
-Visible=False
 
 [Frame_EP_Biochimic.Label40]
 Coordinates=2289,1233,187,36
@@ -1587,9 +1448,6 @@ Visible=False
 Coordinates=4430,1233,221,36
 Visible=False
 
-[ShadowEffect32]
-Coordinates=5227,661,108,36
-
 [Frame_EP_Hemostase.Hemos_Edit2]
 Coordinates=4086,1387,228,36
 Visible=False
@@ -1649,9 +1507,6 @@ Coordinates=5227,881,117,36
 Coordinates=1094,232,173,36
 Visible=False
 
-[ColorAnimation22]
-Coordinates=5227,936,117,36
-
 [Frame_EP_Serologie.CB_MI_EA]
 Coordinates=3772,1464,204,36
 Visible=False
@@ -1666,10 +1521,6 @@ Visible=False
 
 [Frame_EP_Hemostase.Label23]
 Coordinates=727,1417,197,36
-Visible=False
-
-[Ordonnance]
-Coordinates=5227,991,85,36
 Visible=False
 
 [Frame_EP_Serologie.CB_Toxo_Anti_IgM]
@@ -1702,10 +1553,6 @@ Visible=False
 
 [Frame_Biochimic.Label59]
 Coordinates=169,724,163,36
-Visible=False
-
-[Label39]
-Coordinates=2579,1310,60,36
 Visible=False
 
 [Frame_Principale.IP_DateEdit1]
@@ -1746,10 +1593,6 @@ Visible=False
 
 [Recherche_Patient]
 Coordinates=5227,1046,124,36
-Visible=False
-
-[Label41]
-Coordinates=823,1004,60,36
 Visible=False
 
 [Frame_EP_Hemostase.Hemos_Edit3]
@@ -1809,10 +1652,6 @@ Visible=False
 
 [Frame_EP_Principale.IP_Label6]
 Coordinates=1198,1648,201,36
-Visible=False
-
-[Frame_Ordonnance.Button2]
-Coordinates=2470,1744,177,36
 Visible=False
 
 [Frame_EP_Principale.IP_Label4]
@@ -1937,10 +1776,6 @@ Visible=False
 [ShadowEffect9]
 Coordinates=5227,2091,101,36
 
-[Frame_Ordonnance.L_Top_Ordonnance]
-Coordinates=5491,56,246,36
-Visible=False
-
 [Frame_Hemogramme.L_Left]
 Coordinates=5227,2146,179,36
 Visible=False
@@ -1960,16 +1795,8 @@ Visible=False
 Coordinates=530,2312,163,36
 Visible=False
 
-[Frame_Ordonnance.Layout3]
-Coordinates=5491,111,178,36
-Visible=False
-
 [Frame_EP_Hemostase.Hemos_Label2]
 Coordinates=4430,1926,237,36
-Visible=False
-
-[Layout14]
-Coordinates=5227,2256,67,36
 Visible=False
 
 [FloatAnimation2]
@@ -1978,9 +1805,6 @@ Coordinates=5118,2220,108,36
 [Label6]
 Coordinates=23,173,53,36
 Visible=False
-
-[ShadowEffect33]
-Coordinates=5491,166,108,36
 
 [Frame_Biochimic.Label48]
 Coordinates=1986,232,163,36
@@ -1998,10 +1822,6 @@ Coordinates=5491,276,117,36
 
 [Frame_Serologie.GroupBox16]
 Coordinates=4430,848,189,36
-Visible=False
-
-[Frame_Ordonnance.ComboBox1]
-Coordinates=572,1513,203,36
 Visible=False
 
 [Frame_EP_Information.GroupBox2]
@@ -2082,10 +1902,6 @@ Visible=False
 
 [Frame_Biochimic.Label53]
 Coordinates=1315,2024,163,36
-Visible=False
-
-[Frame_Ordonnance]
-Coordinates=5491,606,129,36
 Visible=False
 
 [ShadowEffect16]
@@ -2228,8 +2044,8 @@ Visible=False
 Coordinates=5491,1046,108,36
 
 [StringGrid6]
-Coordinates=50,70,80,58
-Visible=True
+Coordinates=50,70,80,36
+Visible=False
 
 [Layout_Exit_RechercheP]
 Coordinates=5491,1101,159,36
@@ -2341,9 +2157,6 @@ Visible=False
 Coordinates=2252,155,182,36
 Visible=False
 
-[ShadowEffect36]
-Coordinates=5491,1431,108,36
-
 [ColorAnimation12]
 Coordinates=5491,1486,117,36
 
@@ -2365,10 +2178,6 @@ Visible=False
 
 [Frame_EP_Biochimic.Bio_Edit8]
 Coordinates=329,1417,197,36
-Visible=False
-
-[Frame_EP_Ordonnance.Button1]
-Coordinates=593,270,201,36
 Visible=False
 
 [Frame_EP_Information.GroupBox1]
@@ -2472,10 +2281,6 @@ Visible=False
 Coordinates=1686,1928,189,36
 Visible=False
 
-[Frame_EP_Ordonnance.Layout3]
-Coordinates=5282,2330,202,36
-Visible=False
-
 [Frame_EP_Hemostase.L_topVs]
 Coordinates=134,2330,198,36
 Visible=False
@@ -2508,10 +2313,6 @@ Visible=False
 Coordinates=5786,166,195,36
 Visible=False
 
-[Frame_EP_Ordonnance.Layout1]
-Coordinates=5786,221,202,36
-Visible=False
-
 [Frame_Principale.InnerGlowEffect3Combo3]
 Coordinates=5786,276,266,36
 
@@ -2530,14 +2331,6 @@ Coordinates=5786,386,108,36
 Coordinates=1029,1648,163,36
 Visible=False
 
-[Frame_EP_Ordonnance.Layout7]
-Coordinates=5786,441,202,36
-Visible=False
-
-[Label40]
-Coordinates=3772,1002,60,36
-Visible=False
-
 [Frame_Information.GroupBox2]
 Coordinates=4086,1618,192,36
 Visible=False
@@ -2548,10 +2341,6 @@ Visible=False
 
 [ShadowEffect22]
 Coordinates=5786,496,108,36
-
-[Layout28]
-Coordinates=5422,2408,67,36
-Visible=False
 
 [Frame_EP_Hemostase.Hemos_Label1]
 Coordinates=3482,78,237,36
@@ -2708,23 +2497,11 @@ Visible=False
 Coordinates=4430,1695,245,36
 Visible=False
 
-[Frame_EP_Ordonnance]
-Coordinates=5786,1211,153,36
-Visible=False
-
 [ColorAnimation16]
 Coordinates=5786,1266,117,36
 
 [Frame_Biochimic.Label17]
 Coordinates=2112,1744,163,36
-Visible=False
-
-[Panel9]
-Coordinates=5107,2408,55,36
-Visible=False
-
-[TabItem14]
-Coordinates=5028,2408,76,36
 Visible=False
 
 [Frame_EP_Hemogramme.Label19]
@@ -2736,10 +2513,6 @@ Coordinates=5786,1321,108,36
 
 [Frame_Information.AC_Label3]
 Coordinates=2289,540,190,36
-Visible=False
-
-[Label57]
-Coordinates=3168,1079,60,36
 Visible=False
 
 [Frame_EP_Biochimic.Label33]
@@ -2829,10 +2602,6 @@ Visible=False
 Coordinates=1219,1928,187,36
 Visible=False
 
-[Layout21]
-Coordinates=4762,2408,67,36
-Visible=False
-
 [Frame_EP_Information.L_Right_3]
 Coordinates=5786,1596,209,36
 Visible=False
@@ -2869,16 +2638,8 @@ Visible=False
 Coordinates=4634,2408,67,36
 Visible=False
 
-[Frame_EP_Ordonnance.Layout6]
-Coordinates=5786,1761,202,36
-Visible=False
-
 [Frame_EP_Biochimic.Label31]
 Coordinates=1126,2024,187,36
-Visible=False
-
-[Frame_Ordonnance.Layout6]
-Coordinates=5786,1816,178,36
 Visible=False
 
 [Frame_EP_Biochimic.Label32]
@@ -2896,9 +2657,6 @@ Visible=False
 [Frame_Principale.Layout_Right2]
 Coordinates=5786,1871,202,36
 Visible=False
-
-[ShadowEffect50]
-Coordinates=5786,1926,108,36
 
 [Frame_EP_Hemogramme.Hemog_Edit6]
 Coordinates=2858,1475,245,36
@@ -2924,19 +2682,12 @@ Visible=False
 Coordinates=3713,2120,53,36
 Visible=False
 
-[ShadowEffect34]
-Coordinates=5786,2036,108,36
-
 [TabControl1]
 Coordinates=5786,2091,85,36
 Visible=False
 
 [ColorAnimation14]
 Coordinates=5786,2146,117,36
-
-[Frame_Ordonnance.Layout5]
-Coordinates=5786,2201,178,36
-Visible=False
 
 [Frame_Biochimic.Label38]
 Coordinates=4430,694,163,36
@@ -2948,10 +2699,6 @@ Visible=False
 
 [Frame_Biochimic.Label16]
 Coordinates=2590,2120,163,36
-Visible=False
-
-[DataModule1.FDQ_Ordonnance]
-Coordinates=1390,250,199,36
 Visible=False
 
 [Frame_EP_Information.AC_Edit3]
@@ -2994,9 +2741,6 @@ Visible=False
 Coordinates=5786,2421,201,36
 Visible=False
 
-[ColorAnimation23]
-Coordinates=5667,2440,117,36
-
 [Frame_EP_Biochimic.Bio_Edit12]
 Coordinates=3054,2024,204,36
 Visible=False
@@ -3009,20 +2753,12 @@ Visible=False
 Coordinates=4376,2440,187,36
 Visible=False
 
-[Frame_EP_Ordonnance.Layout5]
-Coordinates=4167,2440,202,36
-Visible=False
-
 [Frame_EP_Hemogramme.Hemog_LabelEdit3]
 Coordinates=1094,1,276,36
 Visible=False
 
 [Frame_Principale.Layout_Left_3]
 Coordinates=3958,2440,201,36
-Visible=False
-
-[Frame_EP_Ordonnance.L_Top_Ordonnance]
-Coordinates=6114,1,271,36
 Visible=False
 
 [Label11]
@@ -3080,7 +2816,7 @@ Coordinates=2289,1387,197,36
 Visible=False
 
 []
-Coordinates=2484,1186,75,33
+Coordinates=1609,724,90,36
 Visible=False
 
 [BindSourceDB1]
@@ -3114,19 +2850,8 @@ Visible=False
 Coordinates=766,606,107,36
 Visible=False
 
-[Frame_Ordonnance.BindSourceDB1]
-Coordinates=321,52,224,36
-Visible=False
-
-[Frame_Ordonnance.BindingsList1]
-Coordinates=310,606,210,36
-
 [PoP_Hemogramme]
 Coordinates=181,606,126,36
-Visible=False
-
-[Line30]
-Coordinates=41,820,53,36
 Visible=False
 
 [PoP2_Hemogramme]
@@ -3137,19 +2862,8 @@ Visible=False
 Coordinates=2252,463,110,36
 Visible=False
 
-[Frame_EP_Ordonnance.BindingsList1]
-Coordinates=2858,463,234,36
-
-[Line31]
-Coordinates=1440,1282,53,36
-Visible=False
-
 [PopupMenu2]
 Coordinates=0,737,90,36
-
-[Frame_EP_Ordonnance.Button3]
-Coordinates=583,78,201,36
-Visible=False
 
 [PoP_Biochimic]
 Coordinates=1877,955,101,36
@@ -3157,10 +2871,6 @@ Visible=False
 
 [PoP_Serologie]
 Coordinates=1181,1051,100,36
-Visible=False
-
-[Line28]
-Coordinates=389,1282,53,36
 Visible=False
 
 [PoP2_Biochimic]
@@ -3171,14 +2881,6 @@ Visible=False
 Coordinates=953,1051,118,36
 Visible=False
 
-[Line29]
-Coordinates=61,1282,53,36
-Visible=False
-
-[Frame_EP_Ordonnance.BindSourceDB1]
-Coordinates=1408,386,248,36
-Visible=False
-
 [Label23]
 Coordinates=211,386,60,36
 Visible=False
@@ -3187,10 +2889,50 @@ Visible=False
 Coordinates=556,1051,123,36
 Visible=False
 
-[Frame_Ordonnance.Button3]
-Coordinates=1694,155,177,36
+[BindSourceDB4]
+Coordinates=670,510,106,36
 Visible=False
 
-[BindSourceDB4]
-Coordinates=670,510,176,80
+[DataModule1.]
+Coordinates=1390,250,199,36
+Visible=False
+
+[Edit2]
+Coordinates=251,173,44,36
+Visible=False
+
+[ShadowEffect18]
+Coordinates=657,628,108,36
+
+[Layout4]
+Coordinates=0,1246,60,36
+Visible=False
+
+[DataModule1.FDQ_Homme]
+Coordinates=3168,386,173,36
+Visible=False
+
+[Label223]
+Coordinates=1986,1079,67,36
+Visible=False
+
+[DataModule1.FDQ_Femme]
+Coordinates=3482,1002,171,36
+Visible=False
+
+[ShadowEffect17]
+Coordinates=548,628,108,36
+
+[Label21]
+Coordinates=2579,1464,60,36
+Visible=False
+
+[ColorAnimation9]
+Coordinates=437,1051,110,36
+
+[BindSourceDB5]
+Coordinates=3168,386,160,80
+
+[BindSourceDB6]
+Coordinates=3482,1002,158,80
 

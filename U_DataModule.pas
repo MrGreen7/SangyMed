@@ -15,8 +15,6 @@ uses
 
 type
   TDataModule1 = class(TDataModule)
-    Windows10: TStyleBook;
-    Windows10StaleGrey: TStyleBook;
     FDCmnd_Drop_Patient: TFDCommand;
     FDCommand1: TFDCommand;
     FDConnection1: TFDConnection;
@@ -24,7 +22,6 @@ type
     FDQ_Commune: TFDQuery;
     FDQ_Entreprise: TFDQuery;
     FDQ_Groupage: TFDQuery;
-    FDQ_Ordonnance: TFDQuery;
     FDQ_Patient: TFDQuery;
     FDQ_Patient_Table: TFDQuery;
     FDQ_Recherche: TFDQuery;
@@ -36,6 +33,9 @@ type
     FDSQLiteBackup1: TFDSQLiteBackup;
     FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink;
     FDConnection3: TFDConnection;
+    FDQ_Homme: TFDQuery;
+    FDQ_Femme: TFDQuery;
+    procedure Init();
     function GenerateID: String;
     function Encryt(Str: string): string;
     procedure DataModuleCreate(Sender: TObject);
@@ -84,6 +84,31 @@ begin
   Result := Hash;
 end;
 
+procedure TDataModule1.Init();
+Begin
+  FDQ_Groupage.SQL.Text :=
+    ('Select Nom, Prenom, Groupage From Patient Where Patient_ID="Null";');
+  FDQ_Groupage.Active := True;
+  // Patient Table
+  FDQ_Patient.SQL.Clear;
+  FDQ_Patient.SQL.Text :=
+    ('Select Nom, Prenom,Type From Patient Where Patient_ID="Null";');
+  FDQ_Patient.Active := True;
+  // Main patient Table
+  FDQ_Patient_Table.SQL.Clear;
+  FDQ_Patient_Table.SQL.Text :=
+    ('Select Patient_ID, Nom, Prenom, Date_de_Nai, Date_de_Entre, Type, Sexe, Etat_Civil, Wilaya, Commune, Adresse, Mobile, Email, Groupage, Telephone, Fax From Patient Where Patient_ID="Null";');
+  FDQ_Patient_Table.Active := True;
+  FDQ_Homme.SQL.Clear;
+  FDQ_Homme.SQL.Text :=
+    ('Select Nom,Prenom, Date_de_Entre From Patient Where Patient_ID="Null";');
+  FDQ_Homme.Active := True;
+  FDQ_Femme.SQL.Clear;
+  FDQ_Femme.SQL.Text :=
+    ('Select Nom,Prenom, Date_de_Entre From Patient Where Patient_ID="Null";');
+  FDQ_Femme.Active := True;
+End;
+
 procedure TDataModule1.DataModuleCreate(Sender: TObject);
 var
   Path, PathInf, DirPath, HexPass, Db_Entrprise: string;
@@ -98,11 +123,11 @@ begin
     + '`Libelle`	varchar ( 40 ),`Libelle_Sec`	varchar ( 40 ),`Wilaya`	varchar ( 20 ),`Code_de_Wilaya`	Integer ( 3 ),`Commune`	varchar ( 20 ),'
     + '`Code_Postal`	Integer ( 7 ),`Adresse`	varchar ( 100 ),`Telephone`	Integer ( 9 ),`Mobile`	Integer ( 10 ),`Fax`	Integer ( 9 ),`Email`	varchar ( 30 ),`Web`	varchar ( 40 ));');
   Contact :=
-    ('CREATE TABLE `Medecin` (`ID`	varchar( 7 ) NOT NULL UNIQUE,`Nom`	varchar ( 20 ),`Pseudo`	varchar ( 10 ),`Mot_de_pass`	varchar ( 64 ),Telephone Integer( 10 ),PRIMARY KEY(`ID`));');
+    ('CREATE TABLE `Medecin` (`ID`	varchar( 7 ) NOT NULL UNIQUE,`Nom`	varchar ( 20 ),`Pseudo`	varchar ( 10 ),`Mot_de_pass`	varchar ( 64 ), `Privilege` boolean,Telephone Integer( 10 ),PRIMARY KEY(`ID`));');
   Patient :=
     ('CREATE TABLE `Patient` (`Patient_ID`	varchar ( 7 ) NOT NULL UNIQUE,`Nom`	Varchar ( 15 ),`Prenom`	varchar ( 20 ),`Date_de_Nai`	varchar ( 10 ),`Date_de_Entre`	varchar ( 10 ),`Type`	varchar ( 7 ),`Sexe`	varchar ( 5 ),`Etat_Civil`	varchar ( 13 ),'
     + '`Wilaya`	varchar ( 20 ),`Commune`	varchar ( 20 ),`Adresse`	varchar ( 100 ),`Mobile`	INTEGER,`Email`	varchar ( 35 ),`Groupage`	varchar ( 5 ),`Telephone`	Integer ( 9 ),`Fax`	Integer (13),`Type_Index`	INTEGER,`Sexe_Index`	INTEGER,`Etat_Civil_Index`	INTEGER,'
-    + '`Groupage_Index`	INTEGER,`Wilaya_Index`	Integer,`Commune_Index`	Integer,`ID`	varchar(7) NOT NULL, PRIMARY KEY(`Patient_ID`),FOREIGN KEY(`ID`) REFERENCES `Medecin`(`ID`));');
+    + '`Groupage_Index`	INTEGER,`Wilaya_Index`	Integer,`Commune_Index`	Integer,`Image` BLOB,`ID`	varchar(7) NOT NULL, PRIMARY KEY(`Patient_ID`),FOREIGN KEY(`ID`) REFERENCES `Medecin`(`ID`));');
   Biochimie :=
     ('CREATE TABLE `Biochimie` (`Biochimi_ID`	varchar ( 7 ) NOT NULL UNIQUE,`Glycemie`	REAL,`Uree_Sang`	REAL,`Createnine`	REAL,`Cholesterole`	REAL,`Triglycerides`	REAL,`HDL`	REAL,'
     + '`LDL`	REAL,`Acide_Urique`	REAL,`CRP`	REAL,`TGO`	REAL,`TGP`	REAL,`PAL`	REAL,`TP`	REAL,`INR`	REAL,`BilirubineT`	REAL,`BilirubineD`	REAL,`ASLO`	REAL,'
@@ -173,6 +198,7 @@ begin
           FieldByName('Nom').AsString := ('Computer');
           FieldByName('Pseudo').AsString := ('admin');
           FieldByName('Mot_de_pass').AsString := HexPass;
+          FieldByName('Privilege').AsBoolean := True;
           Post;
           Active := False;
         end;
@@ -182,9 +208,7 @@ begin
     end;
   end;
   // Groupage Table  Groupage_Index!="-1"
-  FDQ_Groupage.Active := True;
-  FDQ_Patient.Active := True;
-  FDQ_Patient_Table.Active := True;
+  Init();
   // Search Query
   // FDQ_Recherche.Active := True;
 end;

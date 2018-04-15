@@ -26,6 +26,8 @@ type
     ShadowEffect3: TShadowEffect;
     Label4: TLabel;
     ShadowEffect4: TShadowEffect;
+    Label5: TLabel;
+    GlowEffect1: TGlowEffect;
     procedure Button1Click(Sender: TObject);
     procedure Edit1Change(Sender: TObject);
     procedure Edit2Change(Sender: TObject);
@@ -90,8 +92,8 @@ begin
       FDQuery1.SQL.Text := ('SELECT * FROM Medecin');
       FDQuery1.Active := True;
       FDQuery1.Open;
-      if not(FDQuery1.Locate('Pseudo;Mot_de_pass', VarArrayOf([Edit1.Text, HexPass]), []))
-      then
+      if not(FDQuery1.Locate('Pseudo;Mot_de_pass',
+        VarArrayOf([Edit1.Text, HexPass]), [])) then
       begin
         InnerGlowEffect1.Enabled := True;
         InnerGlowEffect2.Enabled := True;
@@ -110,8 +112,9 @@ begin
       end
       else
       begin
-        ShowMessage('Bienvenu Mr.' + Edit1.Text);
+        Main.Nom := Edit1.Text;
         Main.ID_Medecin := FDQuery1.FieldByName('ID').AsString;
+        Main.Privilege := FDQuery1.FieldByName('Privilege').AsBoolean;
         ModalResult := mrOk;
       end;
     end;

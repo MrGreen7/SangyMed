@@ -41,21 +41,16 @@ object DataModule1: TDataModule1
   object FDQ_Groupage: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
-      'Select Nom, Prenom, Groupage From Patient')
-    Left = 120
+      
+        'Select Nom, Prenom, Groupage From Patient Where Patient_ID="Null' +
+        '"')
+    Left = 128
     Top = 280
-  end
-  object FDQ_Ordonnance: TFDQuery
-    Connection = FDConnection1
-    UpdateOptions.AssignedValues = [uvCountUpdatedRecords]
-    UpdateOptions.CountUpdatedRecords = False
-    Left = 216
-    Top = 336
   end
   object FDQ_Patient: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
-      'Select Nom, Prenom,Type From Patient')
+      'Select Nom, Prenom,Type From Patient Where Patient_ID="Null"')
     Left = 32
     Top = 336
   end
@@ -65,7 +60,7 @@ object DataModule1: TDataModule1
       
         'Select Patient_ID, Nom, Prenom, Date_de_Nai, Date_de_Entre, Type' +
         ', Sexe, Etat_Civil, Wilaya, Commune, Adresse, Mobile, Email, Gro' +
-        'upage, Telephone, Fax From Patient;')
+        'upage, Telephone, Fax From Patient Where Patient_ID="Null";')
     Left = 40
     Top = 280
   end
@@ -116,5 +111,15 @@ object DataModule1: TDataModule1
     LoginPrompt = False
     Left = 416
     Top = 216
+  end
+  object FDQ_Homme: TFDQuery
+    Connection = FDConnection1
+    Left = 32
+    Top = 384
+  end
+  object FDQ_Femme: TFDQuery
+    Connection = FDConnection1
+    Left = 120
+    Top = 392
   end
 end

@@ -77,10 +77,6 @@ Coordinates=427,166,187,58
 [DataModule1.FDQuery2]
 Coordinates=264,166,153,58
 
-[DataModule1.FDQ_Ordonnance]
-Coordinates=10,234,199,36
-Visible=False
-
 [DataModule1.FDQ_Status_Patient]
 Coordinates=390,234,212,58
 
@@ -101,4 +97,8 @@ Coordinates=10,302,59,58
 
 [Button1]
 Coordinates=79,302,59,58
+
+[DataModule1.FDQ_Homme]
+Coordinates=10,234,199,36
+Visible=False
 

@@ -7,7 +7,7 @@ uses
   System.Variants,
   FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
   FMX.Edit, FMX.DateTimeCtrls, FMX.Effects, FMX.ListBox, FMX.Layouts,
-  FMX.Controls.Presentation;
+  FMX.Controls.Presentation, FMX.Objects;
 
 type
   TFrame1 = class(TFrame)
@@ -48,6 +48,7 @@ type
     Button2: TButton;
     Button3: TButton;
     ImageControl1: TImageControl;
+    InnerGlowEffect2Combo2: TInnerGlowEffect;
     function SetEdit: Boolean;
     function Edit(): String;
     function Insert(): String;
@@ -57,6 +58,8 @@ type
     procedure IP_ComboBox3Change(Sender: TObject);
     procedure IP_ComboBox2Change(Sender: TObject);
     procedure IP_ComboBox1Change(Sender: TObject);
+    procedure IP_Edit2Change(Sender: TObject);
+    procedure IP_Edit3Change(Sender: TObject);
   private
     { Private declarations }
   public
@@ -111,7 +114,7 @@ end;
 function TFrame1.SetEdit: Boolean;
 begin
   if ((IP_Edit2.Text = '') or (IP_Edit3.Text = '') or
-    (IP_ComboBox3.ItemIndex = -1)) then
+    (IP_ComboBox3.ItemIndex = -1) or (IP_ComboBox2.ItemIndex = -1)) then
   Begin
     if (IP_Edit2.Text = '') then
       InnerGlowEffectEdit2.Enabled := True;
@@ -119,6 +122,8 @@ begin
       InnerGlowEffectEdit3.Enabled := True;
     if (IP_ComboBox3.ItemIndex = -1) then
       InnerGlowEffect3Combo3.Enabled := True;
+    if (IP_ComboBox2.ItemIndex = -1) then
+      InnerGlowEffect2Combo2.Enabled := True;
     Result := False;
   End
   Else
@@ -248,12 +253,22 @@ end;
 
 procedure TFrame1.IP_ComboBox2Change(Sender: TObject);
 begin
-  InnerGlowEffectEdit2.Enabled := False;
+  InnerGlowEffect2Combo2.Enabled := False;
 end;
 
 procedure TFrame1.IP_ComboBox3Change(Sender: TObject);
 begin
   InnerGlowEffect3Combo3.Enabled := False;
+end;
+
+procedure TFrame1.IP_Edit2Change(Sender: TObject);
+begin
+  InnerGlowEffectEdit2.Enabled := False;
+end;
+
+procedure TFrame1.IP_Edit3Change(Sender: TObject);
+begin
+  InnerGlowEffectEdit3.Enabled := False;
 end;
 
 procedure TFrame1.Clear();

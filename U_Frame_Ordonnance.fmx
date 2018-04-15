@@ -2,7 +2,6 @@ object Frame7: TFrame7
   Size.Width = 1061.000000000000000000
   Size.Height = 240.000000000000000000
   Size.PlatformDefault = False
-  OnResize = FrameResize
   object L_Top_Ordonnance: TLayout
     Align = Top
     Size.Width = 1061.000000000000000000
@@ -2131,7 +2130,6 @@ object Frame7: TFrame7
       Text = 'Ajouter'
       TextSettings.Font.Family = 'Candara'
       TextSettings.Font.Size = 14.000000000000000000
-      OnClick = Button1Click
     end
     object Button3: TButton
       Align = Right
@@ -2166,12 +2164,11 @@ object Frame7: TFrame7
     Size.PlatformDefault = False
     TabOrder = 3
     Options = [Editing, ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
-    OnCellClick = StringGridBindSourceDB1CellClick
-    Viewport.Width = 1057.000000000000000000
-    Viewport.Height = 126.000000000000000000
+    Viewport.Width = 1061.000000000000000000
+    Viewport.Height = 151.000000000000000000
   end
   object BindSourceDB1: TBindSourceDB
-    DataSet = DataModule1.FDQ_Ordonnance
+    DataSet = DataModule1.FDQ_Homme
     ScopeMappings = <>
     Left = 648
     Top = 56

@@ -4,7 +4,7 @@ object Inscription: TInscription
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = Single
   Caption = 'Inscription'
-  ClientHeight = 344
+  ClientHeight = 383
   ClientWidth = 625
   Fill.Bitmap.Bitmap.PNG = {
     89504E470D0A1A0A0000000D49484452000006400000032008060000007BC0AE
@@ -34835,7 +34835,7 @@ object Inscription: TInscription
   object Button1: TButton
     StyledSettings = [Style, FontColor]
     Position.X = 40.000000000000000000
-    Position.Y = 285.000000000000000000
+    Position.Y = 317.000000000000000000
     Size.Width = 113.000000000000000000
     Size.Height = 33.000000000000000000
     Size.PlatformDefault = False
@@ -34848,7 +34848,7 @@ object Inscription: TInscription
   object Button2: TButton
     StyledSettings = [Style, FontColor]
     Position.X = 256.000000000000000000
-    Position.Y = 287.000000000000000000
+    Position.Y = 319.000000000000000000
     Size.Width = 113.000000000000000000
     Size.Height = 33.000000000000000000
     Size.PlatformDefault = False
@@ -34861,7 +34861,7 @@ object Inscription: TInscription
   object Button3: TButton
     StyledSettings = [Style, FontColor]
     Position.X = 472.000000000000000000
-    Position.Y = 289.000000000000000000
+    Position.Y = 321.000000000000000000
     Size.Width = 113.000000000000000000
     Size.Height = 33.000000000000000000
     Size.PlatformDefault = False
@@ -34897,7 +34897,7 @@ object Inscription: TInscription
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 16.000000000000000000
     Position.X = 40.000000000000000000
-    Position.Y = 85.000000000000000000
+    Position.Y = 86.000000000000000000
     Size.Width = 545.000000000000000000
     Size.Height = 32.000000000000000000
     Size.PlatformDefault = False
@@ -34919,7 +34919,7 @@ object Inscription: TInscription
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 16.000000000000000000
     Position.X = 40.000000000000000000
-    Position.Y = 175.000000000000000000
+    Position.Y = 177.000000000000000000
     Size.Width = 545.000000000000000000
     Size.Height = 32.000000000000000000
     Size.PlatformDefault = False
@@ -34953,7 +34953,7 @@ object Inscription: TInscription
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 16.000000000000000000
     Position.X = 40.000000000000000000
-    Position.Y = 220.000000000000000000
+    Position.Y = 222.000000000000000000
     Size.Width = 545.000000000000000000
     Size.Height = 32.000000000000000000
     Size.PlatformDefault = False
@@ -34986,7 +34986,7 @@ object Inscription: TInscription
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 16.000000000000000000
     Position.X = 40.000000000000000000
-    Position.Y = 130.000000000000000000
+    Position.Y = 131.000000000000000000
     Size.Width = 545.000000000000000000
     Size.Height = 32.000000000000000000
     Size.PlatformDefault = False
@@ -34998,6 +34998,44 @@ object Inscription: TInscription
       GlowColor = xFFD7263D
       Opacity = 0.899999976158142100
       Enabled = False
+    end
+  end
+  object ComboBox1: TComboBox
+    Items.Strings = (
+      'Administrator'
+      'Utilisateur')
+    Position.X = 184.000000000000000000
+    Position.Y = 268.000000000000000000
+    Size.Width = 401.000000000000000000
+    Size.Height = 31.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    ParentShowHint = False
+    ShowHint = False
+    OnChange = ComboBox1Change
+    object InnerGlowEffect6: TInnerGlowEffect
+      Softness = 0.400000005960464400
+      GlowColor = xFFD7263D
+      Opacity = 0.899999976158142100
+      Enabled = False
+    end
+  end
+  object Label1: TLabel
+    StyledSettings = [Style]
+    Position.X = 40.000000000000000000
+    Position.Y = 272.000000000000000000
+    Size.Width = 145.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 20.000000000000000000
+    TextSettings.FontColor = claWhite
+    Text = 'Type de compte'
+    TabOrder = 10
+    object GlowEffect1: TGlowEffect
+      Softness = 0.200000002980232200
+      GlowColor = claBlack
+      Opacity = 1.000000000000000000
     end
   end
 end

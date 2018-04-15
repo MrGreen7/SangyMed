@@ -7,7 +7,7 @@ uses
   System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, U_Base_Form,
   FMX.StdCtrls, FMX.Effects, FMX.Edit, FMX.Controls.Presentation,
-  IdHashMessageDigest, FMX.Objects;
+  IdHashMessageDigest, FMX.Objects, FMX.ListBox;
 
 type
   TInscription = class(TBase_Form)
@@ -26,6 +26,10 @@ type
     SpeedButton2: TSpeedButton;
     Edit5: TEdit;
     InnerGlowEffect5: TInnerGlowEffect;
+    ComboBox1: TComboBox;
+    InnerGlowEffect6: TInnerGlowEffect;
+    Label1: TLabel;
+    GlowEffect1: TGlowEffect;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -41,6 +45,7 @@ type
       Shift: TShiftState; X, Y: Single);
     procedure SpeedButton2MouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Single);
+    procedure ComboBox1Change(Sender: TObject);
   private
     { Private declarations }
   public
@@ -73,7 +78,8 @@ var
 begin
   inherited;
   bol := False;
-  if ((Edit1.Text = '') or (Edit2.Text = '') or (Edit3.Text = '')) then
+  if ((Edit1.Text = '') or (Edit2.Text = '') or (Edit3.Text = '') or
+    (ComboBox1.ItemIndex = -1)) then
   begin
     if ((Edit1.Text = '') and (Edit2.Text = '') and (Edit3.Text = '')) then
     begin
@@ -86,6 +92,8 @@ begin
       Edit1.SetFocus;
       if (Edit4.Text = '') then
         InnerGlowEffect4.Enabled := True;
+      if (ComboBox1.ItemIndex = -1) then
+        InnerGlowEffect6.Enabled := True;
     end
     else if (((Edit1.Text = '') and (Edit2.Text = '')) or
       ((Edit1.Text = '') and (Edit3.Text = ''))) then
@@ -99,6 +107,8 @@ begin
         Edit1.SetFocus;
         if (Edit4.Text = '') then
           InnerGlowEffect4.Enabled := True;
+        if (ComboBox1.ItemIndex = -1) then
+          InnerGlowEffect6.Enabled := True;
       end
       else if (Edit3.Text = '') then
       begin
@@ -109,6 +119,8 @@ begin
         Edit1.SetFocus;
         if (Edit4.Text = '') then
           InnerGlowEffect4.Enabled := True;
+        if (ComboBox1.ItemIndex = -1) then
+          InnerGlowEffect6.Enabled := True;
       end;
     end
     else if ((Edit2.Text = '') and (Edit3.Text = '')) then
@@ -120,6 +132,8 @@ begin
       Edit2.SetFocus;
       if (Edit4.Text = '') then
         InnerGlowEffect4.Enabled := True;
+      if (ComboBox1.ItemIndex = -1) then
+        InnerGlowEffect6.Enabled := True;
     end
     else if (Edit1.Text = '') then
     begin
@@ -129,6 +143,8 @@ begin
       Edit1.SetFocus;
       if (Edit4.Text = '') then
         InnerGlowEffect4.Enabled := True;
+      if (ComboBox1.ItemIndex = -1) then
+        InnerGlowEffect6.Enabled := True;
     end
     else if (Edit2.Text = '') then
     begin
@@ -138,6 +154,8 @@ begin
       Edit2.SetFocus;
       if (Edit4.Text = '') then
         InnerGlowEffect4.Enabled := True;
+      if (ComboBox1.ItemIndex = -1) then
+        InnerGlowEffect6.Enabled := True;
     end
     else if (Edit3.Text = '') then
     begin
@@ -147,6 +165,8 @@ begin
       Edit3.SetFocus;
       if (Edit4.Text = '') then
         InnerGlowEffect4.Enabled := True;
+      if (ComboBox1.ItemIndex = -1) then
+        InnerGlowEffect6.Enabled := True;
     end;
   end
   else
@@ -160,6 +180,8 @@ begin
       Edit4.Text := '';
       InnerGlowEffect3.Enabled := True;
       InnerGlowEffect4.Enabled := True;
+      if (ComboBox1.ItemIndex = -1) then
+        InnerGlowEffect6.Enabled := True;
       Edit3.SetFocus;
     end
     else
@@ -196,6 +218,10 @@ begin
           FDQuery1.FieldByName('Nom').AsString := Edit1.Text;
           FDQuery1.FieldByName('Pseudo').AsString := Edit2.Text;
           FDQuery1.FieldByName('Telephone').AsString := Edit5.Text;
+          if (ComboBox1.ItemIndex = 0) then
+            FDQuery1.FieldByName('Privilege').AsBoolean := True
+          else if (ComboBox1.ItemIndex = 1) then
+            FDQuery1.FieldByName('Privilege').AsBoolean := False;
           begin
             HexPass := Encrypt(Edit3.Text);
             FDQuery1.FieldByName('Mot_de_pass').AsString := HexPass;
@@ -231,6 +257,12 @@ procedure TInscription.Button3Click(Sender: TObject);
 begin
   inherited;
   ModalResult := mrCancel;
+end;
+
+procedure TInscription.ComboBox1Change(Sender: TObject);
+begin
+  inherited;
+  InnerGlowEffect6.Enabled := False;
 end;
 
 procedure TInscription.Edit1Change(Sender: TObject);

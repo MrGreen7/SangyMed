@@ -18,7 +18,7 @@ object Fenetre: TFenetre
     Size.Width = 368.000000000000000000
     Size.Height = 24.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 11
+    TabOrder = 10
   end
   object F_Accueil: TPanel
     Align = Top
@@ -43,7 +43,7 @@ object Fenetre: TFenetre
     end
     object Label3: TLabel
       Align = Left
-      StyledSettings = [Family, FontColor]
+      StyledSettings = [Family]
       Position.X = 57.000000000000000000
       Size.Width = 120.000000000000000000
       Size.Height = 56.000000000000000000
@@ -92,7 +92,7 @@ object Fenetre: TFenetre
       Size.PlatformDefault = False
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 32.000000000000000000
-      TextSettings.FontColor = xFFF46063
+      TextSettings.FontColor = xFF6DB425
       TextSettings.HorzAlign = Center
       Text = #61870
       TabOrder = 0
@@ -132,66 +132,10 @@ object Fenetre: TFenetre
       OnClick = Btn_NouveauPClick
     end
   end
-  object F_Ordonnance: TPanel
-    Align = Top
-    Margins.Bottom = 5.000000000000000000
-    Position.Y = 242.000000000000000000
-    Size.Width = 368.000000000000000000
-    Size.Height = 56.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 7
-    object Label8: TLabel
-      Align = Left
-      StyledSettings = [Style]
-      Size.Width = 57.000000000000000000
-      Size.Height = 56.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.Font.Family = 'FontAwesome'
-      TextSettings.Font.Size = 32.000000000000000000
-      TextSettings.FontColor = xFF5E0D60
-      TextSettings.HorzAlign = Center
-      Text = #61680
-      TabOrder = 0
-    end
-    object Label9: TLabel
-      Align = Left
-      StyledSettings = [Family, FontColor]
-      Position.X = 57.000000000000000000
-      Size.Width = 120.000000000000000000
-      Size.Height = 56.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.Font.Size = 15.000000000000000000
-      TextSettings.Font.StyleExt = {00070000000000000004000000}
-      Text = 'Ordonnance'
-      ParentShowHint = False
-      ShowHint = False
-      TabOrder = 1
-    end
-    object Fla_Ordonnace: TFloatAnimation
-      AnimationType = Out
-      Delay = 0.100000001490116100
-      Duration = 0.500000000000000000
-      OnFinish = Fla_OrdonnaceFinish
-      PropertyName = 'Scale.Y'
-      StartValue = 1.000000000000000000
-      StopValue = 0.000000000000000000
-    end
-    object Btn_Ordonnace: TButton
-      Align = Right
-      Position.X = 312.000000000000000000
-      Size.Width = 56.000000000000000000
-      Size.Height = 56.000000000000000000
-      Size.PlatformDefault = False
-      StyleLookup = 'stoptoolbuttonbordered'
-      TabOrder = 3
-      Text = 'Button1'
-      OnClick = Btn_OrdonnaceClick
-    end
-  end
   object F_Patient: TPanel
     Align = Top
     Margins.Bottom = 5.000000000000000000
-    Position.Y = 364.000000000000000000
+    Position.Y = 303.000000000000000000
     Size.Width = 368.000000000000000000
     Size.Height = 56.000000000000000000
     Size.PlatformDefault = False
@@ -247,7 +191,7 @@ object Fenetre: TFenetre
   object F_RDV: TPanel
     Align = Top
     Margins.Bottom = 5.000000000000000000
-    Position.Y = 303.000000000000000000
+    Position.Y = 242.000000000000000000
     Size.Width = 368.000000000000000000
     Size.Height = 56.000000000000000000
     Size.PlatformDefault = False
@@ -260,9 +204,9 @@ object Fenetre: TFenetre
       Size.PlatformDefault = False
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 32.000000000000000000
-      TextSettings.FontColor = xFF6DB425
+      TextSettings.FontColor = xFFF46063
       TextSettings.HorzAlign = Center
-      Text = #61555
+      Text = #61827' '
       TabOrder = 0
     end
     object Label11: TLabel
@@ -274,7 +218,7 @@ object Fenetre: TFenetre
       Size.PlatformDefault = False
       TextSettings.Font.Size = 15.000000000000000000
       TextSettings.Font.StyleExt = {00070000000000000004000000}
-      Text = 'Rendez vous'
+      Text = 'Edit Patient'
       ParentShowHint = False
       ShowHint = False
       TabOrder = 1
@@ -366,7 +310,7 @@ object Fenetre: TFenetre
     TextSettings.Font.Size = 26.000000000000000000
     TextSettings.HorzAlign = Center
     Text = #62162' Fen'#234'tres disponibles'
-    TabOrder = 9
+    TabOrder = 8
   end
   object Label14: TLabel
     Anchors = [akRight, akBottom]
