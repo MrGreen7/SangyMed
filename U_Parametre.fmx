@@ -4,8 +4,8 @@ object Parametre: TParametre
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = Single
   Caption = 'Param'#232'tre'
-  ClientHeight = 569
-  ClientWidth = 866
+  ClientHeight = 376
+  ClientWidth = 758
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
@@ -14,17 +14,17 @@ object Parametre: TParametre
   object Panel1: TPanel
     Align = Left
     Size.Width = 193.000000000000000000
-    Size.Height = 569.000000000000000000
+    Size.Height = 376.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     object TreeView2: TTreeView
       Align = Client
       Size.Width = 193.000000000000000000
-      Size.Height = 304.000000000000000000
+      Size.Height = 199.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
       Viewport.Width = 189.000000000000000000
-      Viewport.Height = 300.000000000000000000
+      Viewport.Height = 195.000000000000000000
       object Tree_Sub_CompteMod: TTreeViewItem
         StyledSettings = [Style, FontColor]
         TextSettings.Font.Family = 'FontAwesome'
@@ -64,11 +64,11 @@ object Parametre: TParametre
     object TreeView1: TTreeView
       Align = Top
       Size.Width = 193.000000000000000000
-      Size.Height = 265.000000000000000000
+      Size.Height = 177.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
       Viewport.Width = 189.000000000000000000
-      Viewport.Height = 261.000000000000000000
+      Viewport.Height = 173.000000000000000000
       object Generale: TTreeViewItem
         StyledSettings = [Style, FontColor]
         TextSettings.Font.Family = 'FontAwesome'
@@ -95,19 +95,18 @@ object Parametre: TParametre
   end
   object TabControl1: TTabControl
     Align = Client
-    Size.Width = 673.000000000000000000
-    Size.Height = 569.000000000000000000
+    Size.Width = 565.000000000000000000
+    Size.Height = 376.000000000000000000
     Size.PlatformDefault = False
-    TabIndex = 2
     TabOrder = 3
     TabPosition = PlatformDefault
     Sizes = (
+      565s
+      346s
       673s
       539s
-      673s
-      539s
-      673s
-      543s)
+      565s
+      350s)
     object Tab_Compte: TTabItem
       CustomIcon = <
         item
@@ -132,8 +131,8 @@ object Parametre: TParametre
         TextSettings.Font.Family = 'FontAwesome'
         TextSettings.Font.Size = 16.000000000000000000
         Position.X = 88.000000000000000000
-        Position.Y = 74.000000000000000000
-        Size.Width = 481.000000000000000000
+        Position.Y = 43.564006805419920000
+        Size.Width = 373.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TextPrompt = 'Nom'
@@ -153,8 +152,8 @@ object Parametre: TParametre
         TextSettings.Font.Family = 'FontAwesome'
         TextSettings.Font.Size = 16.000000000000000000
         Position.X = 88.000000000000000000
-        Position.Y = 198.000000000000000000
-        Size.Width = 481.000000000000000000
+        Position.Y = 110.000000000000000000
+        Size.Width = 373.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TextPrompt = 'Pseudo'
@@ -169,8 +168,8 @@ object Parametre: TParametre
       end
       object Mod_Button1: TButton
         StyledSettings = [Style, FontColor]
-        Position.X = 144.000000000000000000
-        Position.Y = 482.000000000000000000
+        Position.X = 32.000000000000000000
+        Position.Y = 290.000000000000000000
         Size.Width = 137.000000000000000000
         Size.Height = 31.000000000000000000
         Size.PlatformDefault = False
@@ -182,8 +181,8 @@ object Parametre: TParametre
       end
       object Mod_Button2: TButton
         StyledSettings = [Style, FontColor]
-        Position.X = 324.000000000000000000
-        Position.Y = 482.000000000000000000
+        Position.X = 212.000000000000000000
+        Position.Y = 290.000000000000000000
         Size.Width = 137.000000000000000000
         Size.Height = 31.000000000000000000
         Size.PlatformDefault = False
@@ -200,8 +199,8 @@ object Parametre: TParametre
         TextSettings.Font.Family = 'FontAwesome'
         TextSettings.Font.Size = 16.000000000000000000
         Position.X = 88.000000000000000000
-        Position.Y = 322.000000000000000000
-        Size.Width = 481.000000000000000000
+        Position.Y = 176.000000000000000000
+        Size.Width = 373.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TextPrompt = 'T'#233'lephone'
@@ -217,8 +216,8 @@ object Parametre: TParametre
       object Mod_Button3: TButton
         StyledSettings = [Style, FontColor]
         ModalResult = 2
-        Position.X = 504.000000000000000000
-        Position.Y = 482.000000000000000000
+        Position.X = 392.000000000000000000
+        Position.Y = 290.000000000000000000
         Size.Width = 137.000000000000000000
         Size.Height = 31.000000000000000000
         Size.PlatformDefault = False
@@ -250,7 +249,7 @@ object Parametre: TParametre
       CustomIcon = <
         item
         end>
-      IsSelected = True
+      IsSelected = False
       Size.Width = 58.000000000000000000
       Size.Height = 26.000000000000000000
       Size.PlatformDefault = False

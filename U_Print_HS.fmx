@@ -311,13 +311,13 @@ object Print_HS: TPrint_HS
           TextSettings.Font.Size = 15.000000000000000000
         end
         object Text8: TText
-          Position.X = 182.000000000000000000
+          Position.X = 174.000000000000000000
           Position.Y = 260.000000000000000000
           Size.Width = 446.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           Stretch = True
-          Text = 'Analyse Hemogramme'
+          Text = 'Analyse Hemostase | VS'
           TextSettings.Trimming = Word
         end
         object Text15: TText

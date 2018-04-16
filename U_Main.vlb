@@ -2816,7 +2816,7 @@ Coordinates=2289,1387,197,36
 Visible=False
 
 []
-Coordinates=1609,724,90,36
+Coordinates=556,1051,123,36
 Visible=False
 
 [BindSourceDB1]
@@ -2854,10 +2854,6 @@ Visible=False
 Coordinates=181,606,126,36
 Visible=False
 
-[PoP2_Hemogramme]
-Coordinates=42,606,134,36
-Visible=False
-
 [PoP_Hemostase]
 Coordinates=2252,463,110,36
 Visible=False
@@ -2873,20 +2869,8 @@ Visible=False
 Coordinates=1181,1051,100,36
 Visible=False
 
-[PoP2_Biochimic]
-Coordinates=1072,1051,108,36
-Visible=False
-
-[PoP2_Hemostase]
-Coordinates=953,1051,118,36
-Visible=False
-
 [Label23]
 Coordinates=211,386,60,36
-Visible=False
-
-[PoP2_Ordonnance]
-Coordinates=556,1051,123,36
 Visible=False
 
 [BindSourceDB4]
@@ -2935,4 +2919,16 @@ Coordinates=3168,386,160,80
 
 [BindSourceDB6]
 Coordinates=3482,1002,158,80
+
+[PoP2_Hemog]
+Coordinates=1072,1051,108,36
+Visible=False
+
+[PoP2_Boi]
+Coordinates=953,1051,118,36
+Visible=False
+
+[PoP2_Hemos]
+Coordinates=42,606,134,36
+Visible=False
 

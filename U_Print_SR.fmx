@@ -641,13 +641,13 @@ object Print_SR: TPrint_SR
           TextSettings.Font.Size = 15.000000000000000000
         end
         object Text8: TText
-          Position.X = 182.000000000000000000
+          Position.X = 235.000000000000000000
           Position.Y = 244.000000000000000000
-          Size.Width = 446.000000000000000000
+          Size.Width = 323.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           Stretch = True
-          Text = 'Analyse Hemogramme'
+          Text = 'Analyse de S'#233'rologie'
           TextSettings.Trimming = Word
         end
         object Text15: TText

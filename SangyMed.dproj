@@ -391,15 +391,15 @@
             <Form>Print_HS</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="U_Print_Ordo.pas">
-            <Form>Print_Ordo</Form>
-            <FormType>fmx</FormType>
-        </DCCReference>
         <DCCReference Include="U_Print_SR.pas">
             <Form>Print_SR</Form>
         </DCCReference>
         <DCCReference Include="U_Remontre.pas">
             <Form>Remontre</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="U_Propre.pas">
+            <Form>Propre</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

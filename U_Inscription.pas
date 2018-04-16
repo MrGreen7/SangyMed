@@ -25,7 +25,6 @@ type
     InnerGlowEffect4: TInnerGlowEffect;
     SpeedButton2: TSpeedButton;
     Edit5: TEdit;
-    InnerGlowEffect5: TInnerGlowEffect;
     ComboBox1: TComboBox;
     InnerGlowEffect6: TInnerGlowEffect;
     Label1: TLabel;
@@ -168,6 +167,8 @@ begin
       if (ComboBox1.ItemIndex = -1) then
         InnerGlowEffect6.Enabled := True;
     end;
+    if (ComboBox1.ItemIndex = -1) then
+      InnerGlowEffect6.Enabled := True;
   end
   else
   begin
@@ -196,6 +197,16 @@ begin
         Begin
           InnerGlowEffect2.Enabled := True;
           ShowMessage('ce nom d''utilisateur est déjà utilisé');
+        End
+        else if (Edit3.Text.Length <= 3) then
+        Begin
+          MessageDlg('Le mot de passe doit comporter au moins 4 caractères',
+            TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
+          Edit3.Text := '';
+          Edit4.Text := '';
+          InnerGlowEffect3.Enabled := True;
+          InnerGlowEffect4.Enabled := True;
+          Edit3.SetFocus;
         End
         else
         Begin
@@ -247,10 +258,12 @@ begin
   Edit3.Text := '';
   Edit4.Text := '';
   Edit5.Text := '';
+  ComboBox1.ItemIndex := -1;
   InnerGlowEffect1.Enabled := False;
   InnerGlowEffect2.Enabled := False;
   InnerGlowEffect3.Enabled := False;
   InnerGlowEffect4.Enabled := False;
+  InnerGlowEffect6.Enabled := False;
 end;
 
 procedure TInscription.Button3Click(Sender: TObject);

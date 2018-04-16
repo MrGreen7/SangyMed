@@ -302,11 +302,10 @@ type
     PoP_Hemostase: TMenuItem;
     Label23: TLabel;
     PopupMenu2: TPopupMenu;
-    PoP2_Biochimic: TMenuItem;
-    PoP2_Hemogramme: TMenuItem;
-    PoP2_Hemostase: TMenuItem;
+    PoP2_Hemog: TMenuItem;
+    PoP2_Hemos: TMenuItem;
+    PoP2_Boi: TMenuItem;
     PoP2_Serologie: TMenuItem;
-    PoP2_Ordonnance: TMenuItem;
     BindSourceDB4: TBindSourceDB;
     LinkGridToDataSourceBindSourceDB4: TLinkGridToDataSource;
     Edit2: TEdit;
@@ -388,11 +387,11 @@ type
     procedure Refresh_Patient_TableMouseUp(Sender: TObject;
       Button: TMouseButton; Shift: TShiftState; X, Y: Single);
     procedure Label27Click(Sender: TObject);
-    procedure PoP2_HemogrammeClick(Sender: TObject);
+    procedure PoP2_HemosClick(Sender: TObject);
     procedure Refresh_Patient_TableMouseDown(Sender: TObject;
       Button: TMouseButton; Shift: TShiftState; X, Y: Single);
-    procedure PoP2_BiochimicClick(Sender: TObject);
-    procedure PoP2_HemostaseClick(Sender: TObject);
+    procedure PoP2_HemogClick(Sender: TObject);
+    procedure PoP2_BoiClick(Sender: TObject);
     procedure PoP2_SerologieClick(Sender: TObject);
     procedure Label71Click(Sender: TObject);
     procedure PoP_BiochimicClick(Sender: TObject);
@@ -412,6 +411,7 @@ type
     procedure Label46Click(Sender: TObject);
     procedure FloatAnimation1Finish(Sender: TObject);
     procedure FloatAnimation3Finish(Sender: TObject);
+    procedure Label10Click(Sender: TObject);
   private
     { Private declarations }
     WidthX, HeightX: Integer;
@@ -429,7 +429,7 @@ implementation
 Uses
   U_Parametre, U_Connecter, U_Entreprise, Winapi.Windows, U_DataModule,
   FireDAC.Comp.Client, U_Fenetre, U_Print_HM, U_Print_Bio, U_Print_HS,
-  U_Print_SR;
+  U_Print_SR, U_Propre;
 {$R *.fmx}
 {$R Alg_Res.RES}
 
@@ -852,6 +852,7 @@ var
 begin
   inherited;
   P_Accueil.IsSelected := True;
+  H_Accueil.IsSelected := True;
   LogDlg := TConnecter.Create(Self);
   if (LogDlg.ShowModal = mrOk) then
   Begin
@@ -967,6 +968,16 @@ begin
   Frame_Hemostase.Clear;
   Frame_Biochimic.Clear;
   Frame_Serologie.Clear;
+end;
+
+procedure TMain.Label10Click(Sender: TObject);
+Var
+  PropreDlg: TPropre;
+begin
+  inherited;
+  PropreDlg := TPropre.Create(Self);
+  if (PropreDlg.ShowModal = mrCancel) then
+    PropreDlg.Free;
 end;
 
 procedure TMain.Label12Click(Sender: TObject);
@@ -1204,6 +1215,7 @@ begin
     Edit_Patient.Visible := True;
     Edit_Patient.IsSelected := True;
     H_Accueil.IsSelected := True;
+    TabItem8.IsSelected := True;
     Frame_EP_Principale.OnDataLoad;
     Frame_EP_Information.OnDataLoad;
     Frame_EP_Hemogramme.OnDataLoad;
@@ -1284,6 +1296,7 @@ begin
   Nouveau_Patient.Visible := True;
   Nouveau_Patient.OnClick(Patient);
   Nouveau_Patient.IsSelected := True;
+  TabItem1.IsSelected := True;
 end;
 
 procedure TMain.Nouveau_PatientClick(Sender: TObject);
@@ -1307,6 +1320,28 @@ begin
   Frame_Serologie.OnResize(Frame_Serologie);
   // Frame_Ordonnance.OnResize(Frame_Ordonnance);
 end;
+
+function TabExist(Tab: String): Boolean;
+Begin
+  With Main do
+  Begin
+    With DataModule1.FDQuery1 do
+    Begin
+      Active := False;
+      SQL.Clear;
+      SQL.Text := ('Select * From ' + Tab + ' Where Patient_ID="' +
+        Patient_ID + '"');
+      Active := True;
+      Open;
+      if (Locate('Patient_ID', Patient_ID, [])) then
+        Result := True
+      else
+        Result := False;
+      Active := False;
+      SQL.Clear;
+    End;
+  End;
+End;
 
 procedure TMain.OrdonnanceClick(Sender: TObject);
 begin
@@ -1333,34 +1368,65 @@ begin
   Recherche_Patient.IsSelected := True;
 end;
 
-procedure TMain.PoP2_BiochimicClick(Sender: TObject);
-Var
-  PrintBioDLg: TPrint_Bio;
-begin
-  inherited;
-  PrintBioDLg := TPrint_Bio.Create(Self);
-  if (PrintBioDLg.ShowModal = mrCancel) then
-    PrintBioDLg.Free;
-end;
-
-procedure TMain.PoP2_HemogrammeClick(Sender: TObject);
+procedure TMain.PoP2_HemogClick(Sender: TObject);
 Var
   Print_HMDlg: TPrint_HM;
 begin
   inherited;
-  Print_HMDlg := TPrint_HM.Create(Self);
-  if (Print_HMDlg.ShowModal = mrCancel) then
-    Print_HMDlg.Free;
+  if (Patient_ID <> '') then
+  Begin
+    if (TabExist('Hemogramme') = True) then
+    Begin
+      Print_HMDlg := TPrint_HM.Create(Self);
+      if (Print_HMDlg.ShowModal = mrCancel) then
+        Print_HMDlg.Free;
+    End
+    else
+      ShowMessage('Ce patient ñ''a pas de dossier d''analyse de l''Hémogramme');
+  End
+  else
+    ShowMessage('Sil vous plait choisir une patient');
 end;
 
-procedure TMain.PoP2_HemostaseClick(Sender: TObject);
+procedure TMain.PoP2_HemosClick(Sender: TObject);
 Var
-  PrintHSDlg: TPrint_HS;
+  PrintHSDlg: Tprint_HS;
 begin
   inherited;
-  PrintHSDlg := TPrint_HS.Create(Self);
-  if (PrintHSDlg.ShowModal = mrCancel) then
-    PrintHSDlg.Free;
+  if (Patient_ID <> '') then
+  Begin
+    if (TabExist('Hemostase_VS') = True) then
+    Begin
+      PrintHSDlg := Tprint_HS.Create(Self);
+      if (PrintHSDlg.ShowModal = mrCancel) then
+        PrintHSDlg.Free;
+    End
+    else
+      ShowMessage
+        ('Ce patient ñ''a pas de dossier d''analyse de l''Hémostase et VS');
+  End
+  else
+    ShowMessage('Sil vous plait choisir une patient');
+end;
+
+procedure TMain.PoP2_BoiClick(Sender: TObject);
+Var
+  PrintBioDLg: TPrint_Bio;
+begin
+  inherited;
+  if (Patient_ID <> '') then
+  Begin
+    if (TabExist('Biochimie') = True) then
+    Begin
+      PrintBioDLg := TPrint_Bio.Create(Self);
+      if (PrintBioDLg.ShowModal = mrCancel) then
+        PrintBioDLg.Free;
+    End
+    else
+      ShowMessage('Ce patient ñ''a pas de dossier d''analyse de la Biochimie');
+  end
+  else
+    ShowMessage('Sil vous plait choisir une patient');
 end;
 
 procedure TMain.PoP2_SerologieClick(Sender: TObject);
@@ -1368,9 +1434,19 @@ Var
   PrintSRDlg: TPrint_SR;
 begin
   inherited;
-  PrintSRDlg := TPrint_SR.Create(Self);
-  if (PrintSRDlg.ShowModal = mrCancel) then
-    PrintSRDlg.Free;
+  if (Patient_ID <> '') then
+  Begin
+    if (TabExist('Serologie') = True) then
+    Begin
+      PrintSRDlg := TPrint_SR.Create(Self);
+      if (PrintSRDlg.ShowModal = mrCancel) then
+        PrintSRDlg.Free;
+    End
+    else
+      ShowMessage('Ce patient ñ''a pas de dossier d''analyse de la Sérologie');
+  End
+  else
+    ShowMessage('Sil vous plait choisir une patient');
 end;
 
 procedure TMain.PoP_BiochimicClick(Sender: TObject);
@@ -1580,7 +1656,7 @@ begin
       ConnecterDlg.Free;
     End
     else
-    Application.Terminate;
+      Application.Terminate;
   End;
 
 end;
