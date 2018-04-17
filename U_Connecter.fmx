@@ -4,8 +4,8 @@ object Connecter: TConnecter
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = Single
   Caption = 'Se Connecter'
-  ClientHeight = 312
-  ClientWidth = 607
+  ClientHeight = 263
+  ClientWidth = 548
   Fill.Bitmap.Bitmap.PNG = {
     89504E470D0A1A0A0000000D4948445200000332000001CB08060000001337AD
     D5000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
@@ -13043,8 +13043,8 @@ object Connecter: TConnecter
     StyleName = 'StyleBook1'
     Cursor = crHandPoint
     StyledSettings = [Style, FontColor]
-    Position.X = 59.000000000000000000
-    Position.Y = 220.000000000000000000
+    Position.X = 22.000000000000000000
+    Position.Y = 188.000000000000000000
     Size.Width = 153.000000000000000000
     Size.Height = 57.000000000000000000
     Size.PlatformDefault = False
@@ -13057,8 +13057,8 @@ object Connecter: TConnecter
   object Button2: TButton
     StyledSettings = [Style, FontColor]
     ModalResult = 2
-    Position.X = 411.000000000000000000
-    Position.Y = 220.000000000000000000
+    Position.X = 374.000000000000000000
+    Position.Y = 188.000000000000000000
     Size.Width = 153.000000000000000000
     Size.Height = 57.000000000000000000
     Size.PlatformDefault = False
@@ -13072,8 +13072,8 @@ object Connecter: TConnecter
     TabOrder = 0
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 16.000000000000000000
-    Position.X = 59.000000000000000000
-    Position.Y = 68.000000000000000000
+    Position.X = 22.000000000000000000
+    Position.Y = 52.000000000000000000
     Size.Width = 505.000000000000000000
     Size.Height = 32.000000000000000000
     Size.PlatformDefault = False
@@ -13093,8 +13093,8 @@ object Connecter: TConnecter
     Password = True
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 16.000000000000000000
-    Position.X = 59.000000000000000000
-    Position.Y = 148.000000000000000000
+    Position.X = 22.000000000000000000
+    Position.Y = 116.000000000000000000
     Size.Width = 505.000000000000000000
     Size.Height = 32.000000000000000000
     Size.PlatformDefault = False
@@ -13125,8 +13125,8 @@ object Connecter: TConnecter
     Cursor = crHandPoint
     StyledSettings = [Style]
     HitTest = True
-    Position.X = 91.000000000000000000
-    Position.Y = 185.000000000000000000
+    Position.X = 55.000000000000000000
+    Position.Y = 153.000000000000000000
     Size.Width = 233.000000000000000000
     Size.Height = 25.000000000000000000
     Size.PlatformDefault = False
@@ -13144,12 +13144,56 @@ object Connecter: TConnecter
       ShadowColor = claBlack
     end
   end
+  object Label4: TLabel
+    AutoTranslate = False
+    Cursor = crHandPoint
+    StyledSettings = [Style]
+    HitTest = True
+    Position.X = 359.000000000000000000
+    Position.Y = 153.000000000000000000
+    Size.Width = 166.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listboxheaderlabel'
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 18.000000000000000000
+    TextSettings.FontColor = xFF44BCCA
+    Text = 'Oubli'#233' le mot de pass'
+    TabOrder = 6
+    object ShadowEffect4: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 0.400000005960464400
+      ShadowColor = claBlack
+    end
+  end
+  object Label5: TLabel
+    StyledSettings = []
+    Position.X = 109.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 330.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 20.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.FontColor = claWhite
+    Text = 'S'#39'il vous pla'#238't confirmez votre identit'#233
+    Visible = False
+    TabOrder = 8
+    object GlowEffect1: TGlowEffect
+      Softness = 0.400000005960464400
+      GlowColor = claBlack
+      Opacity = 1.000000000000000000
+    end
+  end
   object Label3: TLabel
     Cursor = crHandPoint
     StyledSettings = [Style]
     HitTest = True
-    Position.X = 59.000000000000000000
-    Position.Y = 185.000000000000000000
+    Position.X = 22.000000000000000000
+    Position.Y = 153.000000000000000000
     Size.Width = 225.000000000000000000
     Size.Height = 25.000000000000000000
     Size.PlatformDefault = False
@@ -13168,36 +13212,12 @@ object Connecter: TConnecter
       ShadowColor = claBlack
     end
   end
-  object Label4: TLabel
-    AutoTranslate = False
-    Cursor = crHandPoint
-    StyledSettings = [Style]
-    HitTest = True
-    Position.X = 395.000000000000000000
-    Position.Y = 185.000000000000000000
-    Size.Width = 166.000000000000000000
-    Size.Height = 25.000000000000000000
-    Size.PlatformDefault = False
-    StyleLookup = 'listboxheaderlabel'
-    TextSettings.Font.Family = 'Candara'
-    TextSettings.Font.Size = 18.000000000000000000
-    TextSettings.FontColor = xFF44BCCA
-    Text = 'Oubli'#233' le mot de pass'
-    TabOrder = 6
-    object ShadowEffect4: TShadowEffect
-      Distance = 3.000000000000000000
-      Direction = 45.000000000000000000
-      Softness = 0.300000011920929000
-      Opacity = 0.400000005960464400
-      ShadowColor = claBlack
-    end
-  end
   object Label1: TLabel
     Cursor = crHandPoint
     StyledSettings = [Style]
     HitTest = True
-    Position.X = 363.000000000000000000
-    Position.Y = 185.000000000000000000
+    Position.X = 326.000000000000000000
+    Position.Y = 153.000000000000000000
     Size.Width = 198.000000000000000000
     Size.Height = 25.000000000000000000
     Size.PlatformDefault = False
@@ -13214,26 +13234,6 @@ object Connecter: TConnecter
       Softness = 0.300000011920929000
       Opacity = 0.400000005960464400
       ShadowColor = claBlack
-    end
-  end
-  object Label5: TLabel
-    StyledSettings = []
-    Position.X = 139.000000000000000000
-    Position.Y = 24.000000000000000000
-    Size.Width = 330.000000000000000000
-    Size.Height = 17.000000000000000000
-    Size.PlatformDefault = False
-    TextSettings.Font.Family = 'Candara'
-    TextSettings.Font.Size = 20.000000000000000000
-    TextSettings.Font.StyleExt = {00070000000000000004000000}
-    TextSettings.FontColor = claWhite
-    Text = 'S'#39'il vous pla'#238't confirmez votre identit'#233
-    Visible = False
-    TabOrder = 8
-    object GlowEffect1: TGlowEffect
-      Softness = 0.400000005960464400
-      GlowColor = claBlack
-      Opacity = 1.000000000000000000
     end
   end
 end

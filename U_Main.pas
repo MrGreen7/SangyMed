@@ -412,13 +412,14 @@ type
     procedure FloatAnimation1Finish(Sender: TObject);
     procedure FloatAnimation3Finish(Sender: TObject);
     procedure Label10Click(Sender: TObject);
+    procedure LoadParam;
   private
     { Private declarations }
     WidthX, HeightX: Integer;
   public
     { Public declarations }
     Patient_ID, ID_Medecin, Nom: String;
-    Privilege: Boolean;
+    Pass, Privilege: Boolean;
   end;
 
 var
@@ -433,10 +434,116 @@ Uses
 {$R *.fmx}
 {$R Alg_Res.RES}
 
-procedure Tab();
+procedure TMain.LoadParam();
+Var
+  Bar1, Bar2, Bar3, Bar4, Theme: Integer;
+  HM, HS, Bio, Serlg: Boolean;
+  Lang: String;
 Begin
   With Main Do
   Begin
+    With DataModule1.FDQuery1 do
+    Begin
+      Active := False;
+      SQl.Clear;
+      SQl.Text := ('Select * From Parametre Where Id="' + ID_Medecin + '"');
+      Open;
+      Bar1 := FieldByName('Bar1').AsInteger;
+      Bar2 := FieldByName('Bar2').AsInteger;
+      Bar3 := FieldByName('Bar3').AsInteger;
+      Bar4 := FieldByName('Bar4').AsInteger;
+      Theme := FieldByName('Theme').AsInteger;
+      HM := FieldByName('HM').AsBoolean;
+      HS := FieldByName('HS').AsBoolean;
+      Bio := FieldByName('Bio').AsBoolean;
+      Serlg := FieldByName('Serlg').AsBoolean;
+      Lang := FieldByName('Lang').AsString;
+      Close;
+      SQl.Clear;
+    End;
+    // Setting the Tables
+    Begin
+      GrouBox1_Table.Text :=
+        ('Les ' + Bar1.ToString + ' dernières homme ajouter');
+      GrouBox2_Table.Text := ('Les ' + Bar2.ToString + ' dernières groupage');
+      GrouBox3_Table.Text :=
+        ('Les ' + Bar3.ToString + ' dernières femmes ajouter');
+      GrouBox4_Table.Text :=
+        ('Les ' + Bar4.ToString + ' dernières patient ajouter');
+      // StringGrids
+      Begin
+        StringGrid1.RowCount := Bar1;
+        StringGrid2.RowCount := Bar2;
+        StringGrid3.RowCount := Bar3;
+        StringGrid4.RowCount := Bar4;
+      End;
+    End;
+    // Setting The Tabs Visibility
+    Begin
+      TabItem2.Visible := HM;
+      TabItem3.Visible := HS;
+      TabItem4.Visible := Bio;
+      TabItem5.Visible := Serlg;
+      TabItem9.Visible := HM;
+      TabItem10.Visible := HS;
+      TabItem11.Visible := Bio;
+      TabItem12.Visible := Serlg;
+    End;
+  End;
+End;
+
+procedure LoadParam2(const Dlg: TParametre);
+Var
+  Bar1, Bar2, Bar3, Bar4, Theme: Integer;
+  HM, HS, Bio, Serlg: Boolean;
+  Lang: String;
+Begin
+  With Dlg Do
+  Begin
+    With DataModule1.FDQuery1 do
+    Begin
+      Active := False;
+      SQl.Clear;
+      SQl.Text := ('Select * From Parametre Where Id="' +
+        Main.ID_Medecin + '"');
+      Open;
+      Bar1 := FieldByName('Bar1').AsInteger;
+      Bar2 := FieldByName('Bar2').AsInteger;
+      Bar3 := FieldByName('Bar3').AsInteger;
+      Bar4 := FieldByName('Bar4').AsInteger;
+      Theme := FieldByName('Theme').AsInteger;
+      HM := FieldByName('HM').AsBoolean;
+      HS := FieldByName('HS').AsBoolean;
+      Bio := FieldByName('Bio').AsBoolean;
+      Serlg := FieldByName('Serlg').AsBoolean;
+      Lang := FieldByName('Lang').AsString;
+      Close;
+      SQl.Clear;
+    End;
+    // Visibility
+    Begin
+      if (HM = True) then
+        Switch1.IsChecked := True;
+      if (HS = True) then
+        Switch2.IsChecked := True;
+      if (Bio = True) then
+        Switch3.IsChecked := True;
+      if (Serlg = True) then
+        Switch4.IsChecked := True;
+    End;
+    // Bars & Edit's
+    Begin
+      // Edit
+      Edit1.Text := Bar1.ToString;
+      Edit2.Text := Bar2.ToString;
+      Edit3.Text := Bar3.ToString;
+      Edit4.Text := Bar4.ToString;
+      // Bars
+      TrackBar1.Value := Bar1.ToSingle;
+      TrackBar2.Value := Bar2.ToSingle;
+      TrackBar3.Value := Bar3.ToSingle;
+      TrackBar4.Value := Bar4.ToSingle;
+    End;
   End;
 End;
 
@@ -447,25 +554,25 @@ Begin
     With DataModule1.FDQ_Status_Patient do
     Begin
       Active := False;
-      SQL.Clear;
-      SQL.Text := 'Select count(*) From Patient';
+      SQl.Clear;
+      SQl.Text := 'Select count(*) From Patient';
       Active := True;
       Open;
       Status_Edit1.Text := IntToStr(Fields[0].AsInteger);
       Active := False;
-      SQL.Clear;
-      SQL.Text := 'Select Count(*) From Patient Where Type="Externe"';
+      SQl.Clear;
+      SQl.Text := 'Select Count(*) From Patient Where Type="Externe"';
       Active := True;
       Open;
       Status_Edit2.Text := IntToStr(Fields[0].AsInteger);
       Active := False;
-      SQL.Clear;
-      SQL.Text := 'Select Count(*) From Patient Where type="Interne"';
+      SQl.Clear;
+      SQl.Text := 'Select Count(*) From Patient Where type="Interne"';
       Active := True;
       Open;
       Status_Edit3.Text := IntToStr(Fields[0].AsInteger);
       Active := False;
-      SQL.Clear;
+      SQl.Clear;
     End;
   End;
 End;
@@ -574,11 +681,11 @@ Begin
   With DataModule1.FDQ_Recherche do
   Begin
     if (Main.Privilege = False) then
-      SQL.Text :=
+      SQl.Text :=
         ('Select Patient_ID, Nom,Prenom,Type,Wilaya,Commune,Groupage,Date_de_Nai,Date_de_Entre,Sexe,Etat_Civil,Adresse,Mobile,Email,Telephone,Fax From patient Where ID="'
         + Main.ID_Medecin + '";')
     else
-      SQL.Text :=
+      SQl.Text :=
         ('Select Patient_ID, Nom,Prenom,Type,Wilaya,Commune,Groupage,Date_de_Nai,Date_de_Entre,Sexe,Etat_Civil,Adresse,Mobile,Email,Telephone,Fax From patient;');
     // Where type="' + typ + '";');
     { if (Recherche = '') then
@@ -722,6 +829,7 @@ end;
 procedure TMain.FormCreate(Sender: TObject);
 Var
   AppData: String;
+  Num: Integer;
 begin
   AppData := GetEnvironmentVariable('AppData');
   AppData := AppData + '\SangyMed\Alg_info.db';
@@ -779,28 +887,28 @@ Begin
       FDQ_Patient_Table.Active := False;
       FDQ_Homme.Active := False;
       FDQ_Femme.Active := False;
-      FDQ_Groupage.SQL.Clear;
-      FDQ_Groupage.SQL.Text :=
+      FDQ_Groupage.SQl.Clear;
+      FDQ_Groupage.SQl.Text :=
         ('Select Nom, Prenom, Groupage From Patient Where Groupage !="Null" ORDER BY Date_de_Entre DESC LIMIT 10;');
       FDQ_Groupage.Active := True;
       // Patient Table
-      FDQ_Patient.SQL.Clear;
-      FDQ_Patient.SQL.Text :=
+      FDQ_Patient.SQl.Clear;
+      FDQ_Patient.SQl.Text :=
         ('Select Nom, Prenom,Type From Patient ORDER BY Date_de_Entre DESC LIMIT 10;');
       FDQ_Patient.Active := True;
       // Homme
-      FDQ_Homme.SQL.Clear;
-      FDQ_Homme.SQL.Text :=
+      FDQ_Homme.SQl.Clear;
+      FDQ_Homme.SQl.Text :=
         ('Select Nom, Prenom, Date_de_Entre From Patient Where Sexe="Homme" ORDER BY Date_de_Entre DESC LIMIT 10;');
       FDQ_Homme.Active := True;
       // Femme
-      FDQ_Femme.SQL.Clear;
-      FDQ_Femme.SQL.Text :=
+      FDQ_Femme.SQl.Clear;
+      FDQ_Femme.SQl.Text :=
         ('Select Nom,Prenom, Date_de_Entre From Patient Where Sexe="Femme" ORDER BY Date_de_Entre DESC LIMIT 10;');
       FDQ_Femme.Active := True;
       // Main patient Table
-      FDQ_Patient_Table.SQL.Clear;
-      FDQ_Patient_Table.SQL.Text :=
+      FDQ_Patient_Table.SQl.Clear;
+      FDQ_Patient_Table.SQl.Text :=
         ('Select Patient_ID, Nom, Prenom, Date_de_Nai, Date_de_Entre, Type, Sexe, Etat_Civil, Wilaya, Commune, Adresse, Mobile, Email, Groupage, Telephone, Fax From Patient ;');
       FDQ_Patient_Table.Active := True;
     End;
@@ -812,31 +920,31 @@ Begin
       FDQ_Groupage.Active := False;
       FDQ_Patient.Active := False;
       FDQ_Patient_Table.Active := False;
-      FDQ_Groupage.SQL.Clear;
-      FDQ_Groupage.SQL.Text :=
+      FDQ_Groupage.SQl.Clear;
+      FDQ_Groupage.SQl.Text :=
         ('Select Nom, Prenom, Groupage From Patient Where Groupage!="Null" And ID="'
         + Main.ID_Medecin + '" ORDER BY Date_de_Entre DESC LIMIT 10;');
       FDQ_Groupage.Active := True;
       // Patient Table
-      FDQ_Patient.SQL.Clear;
-      FDQ_Patient.SQL.Text := ('Select Nom, Prenom,Type From Patient Where ID="'
+      FDQ_Patient.SQl.Clear;
+      FDQ_Patient.SQl.Text := ('Select Nom, Prenom,Type From Patient Where ID="'
         + Main.ID_Medecin + '" ORDER BY Date_de_Entre DESC LIMIT 10;');
       FDQ_Patient.Active := True;
       // Homme
-      FDQ_Homme.SQL.Clear;
-      FDQ_Homme.SQL.Text :=
+      FDQ_Homme.SQl.Clear;
+      FDQ_Homme.SQl.Text :=
         ('Select Nom,Prenom, Date_de_Entre From Patient Where Sexe="Homme" And ID="'
         + Main.ID_Medecin + '"ORDER BY Date_de_Entre DESC LIMIT 10;');
       FDQ_Homme.Active := True;
       // Femme
-      FDQ_Femme.SQL.Clear;
-      FDQ_Femme.SQL.Text :=
+      FDQ_Femme.SQl.Clear;
+      FDQ_Femme.SQl.Text :=
         ('Select Nom,Prenom, Date_de_Entre From Patient Where Sexe="Femme" And ID="'
         + Main.ID_Medecin + '"ORDER BY Date_de_Entre DESC LIMIT 10;');
       FDQ_Femme.Active := True;
       // Main patient Table
-      FDQ_Patient_Table.SQL.Clear;
-      FDQ_Patient_Table.SQL.Text :=
+      FDQ_Patient_Table.SQl.Clear;
+      FDQ_Patient_Table.SQl.Text :=
         ('Select Patient_ID, Nom, Prenom, Date_de_Nai, Date_de_Entre, Type, Sexe, Etat_Civil, Wilaya, Commune, Adresse, Mobile, Email, Groupage, Telephone, Fax From Patient '
         + 'Where ID="' + Main.ID_Medecin +
         '" ORDER BY Date_de_Entre DESC LIMIT 10;');
@@ -859,6 +967,7 @@ begin
     LogDlg.Free;
     ShowMessage('Bienvenue MR ''' + Nom);
     Load();
+    LoadParam;
   End
   else
     Application.Terminate;
@@ -875,8 +984,8 @@ begin
     With DataModule1.FDQuery1 do
     Begin
       Active := False;
-      SQL.Clear;
-      SQL.Text := 'Select * From Patient Where Patient_ID="' +
+      SQl.Clear;
+      SQl.Text := 'Select * From Patient Where Patient_ID="' +
         Patient_ID + '";';
       Active := True;
       Edit;
@@ -885,7 +994,7 @@ begin
       Frame_EP_Information.Edit;
       Post;
       Active := False;
-      SQL.Clear;
+      SQl.Clear;
       if (Frame_EP_Hemogramme.Pret = True) then
         Frame_EP_Hemogramme.Edit(ID);
       if (Frame_EP_Hemostase.Pret = True) then
@@ -923,7 +1032,6 @@ begin
   Edit_Patient.Visible := False;
   Patient.IsSelected := True;
   H_Gen_Patient.IsSelected := True;
-  Tab();
 end;
 
 procedure TMain.Frame_PrincipaleButton1Click(Sender: TObject);
@@ -936,15 +1044,15 @@ begin
     with DataModule1.FDQuery1 do
     Begin
       Active := False;
-      SQL.Clear;
-      SQL.Text := ('Select * From Patient');
+      SQl.Clear;
+      SQl.Text := ('Select * From Patient');
       Active := True;
       Insert;
       FieldByName('ID').AsString := ID_Medecin;
       ID := Frame_Principale.Insert;
       Frame_Information.Insert;
       Post;
-      SQL.Clear;
+      SQl.Clear;
       Active := False;
     End;
     if (Frame_Hemogramme.Pret = True) then
@@ -985,9 +1093,15 @@ var
   EtablissementDlg: TEtablissement;
 begin
   inherited;
-  EtablissementDlg := TEtablissement.Create(Self);
-  if (EtablissementDlg.ShowModal = mrClose) then
-    EtablissementDlg.Free;
+  if (Privilege = True) then
+  Begin
+    EtablissementDlg := TEtablissement.Create(Self);
+    if (EtablissementDlg.ShowModal = mrClose) then
+      EtablissementDlg.Free;
+  End
+  else
+    ShowMessage
+      ('Ce type de compte n''est pas autorisé à afficher ce type de paramètre');
 end;
 
 procedure TMain.Label15Click(Sender: TObject);
@@ -996,7 +1110,6 @@ begin
   Patient.Visible := False;
   H_Gen_Patient.Visible := False;
   H_Accueil.IsSelected := True;
-  Tab();
 end;
 
 procedure TMain.Label18Click(Sender: TObject);
@@ -1005,7 +1118,6 @@ begin
   Recherche_Patient.Visible := False;
   H_Gen_RechercheP.Visible := False;
   H_Accueil.IsSelected := True;
-  Tab();
 end;
 
 procedure TMain.Label1Click(Sender: TObject);
@@ -1029,7 +1141,6 @@ begin
   Nouveau_Patient.Visible := False;
   H_Gen_NouveauP.Visible := False;
   H_Accueil.IsSelected := True;
-  Tab();
 end;
 
 procedure TMain.Label223Click(Sender: TObject);
@@ -1233,11 +1344,17 @@ end;
 procedure TMain.Label6Click(Sender: TObject);
 var
   OptionDlg: TParametre;
+  Result: Integer;
 begin
   inherited;
   OptionDlg := TParametre.Create(Self);
-  if (OptionDlg.ShowModal = mrCancel) then
+  LoadParam2(OptionDlg);
+  if (OptionDlg.ShowModal = mrOk) then
+  Begin
     OptionDlg.Free;
+    Pass := True;
+    T_RDV.OnClick(T_RDV);
+  End;
 end;
 
 procedure TMain.Label71Click(Sender: TObject);
@@ -1328,8 +1445,8 @@ Begin
     With DataModule1.FDQuery1 do
     Begin
       Active := False;
-      SQL.Clear;
-      SQL.Text := ('Select * From ' + Tab + ' Where Patient_ID="' +
+      SQl.Clear;
+      SQl.Text := ('Select * From ' + Tab + ' Where Patient_ID="' +
         Patient_ID + '"');
       Active := True;
       Open;
@@ -1338,7 +1455,7 @@ Begin
       else
         Result := False;
       Active := False;
-      SQL.Clear;
+      SQl.Clear;
     End;
   End;
 End;
@@ -1643,9 +1760,10 @@ Var
   Msg: Integer;
 begin
   inherited;
-  Msg := MessageDlg('êtes-vous sûr', TMsgDlgType.mtInformation,
-    [TMsgDlgBtn.mbYes, TMsgDlgBtn.mbNo], 0);
-  if (Msg = mrYes) then
+  if (Pass = False) then
+    Msg := MessageDlg('êtes-vous sûr', TMsgDlgType.mtInformation,
+      [TMsgDlgBtn.mbYes, TMsgDlgBtn.mbNo], 0);
+  if ((Msg = mrYes) or (Pass = True)) then
   Begin
     DataModule1.Init();
     ConnecterDlg := TConnecter.Create(Self);
@@ -1653,6 +1771,7 @@ begin
     Begin
       ShowMessage('Bienvenue MR ''' + Nom);
       Load();
+      LoadParam;
       ConnecterDlg.Free;
     End
     else

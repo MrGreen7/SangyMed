@@ -10,6 +10,7 @@ object Parametre: TParametre
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
+  OnShow = FormShow
   DesignerMasterStyle = 0
   object Panel1: TPanel
     Align = Left
@@ -26,9 +27,10 @@ object Parametre: TParametre
       Viewport.Width = 189.000000000000000000
       Viewport.Height = 195.000000000000000000
       object Tree_Sub_CompteMod: TTreeViewItem
-        StyledSettings = [Style, FontColor]
+        StyledSettings = [Style]
         TextSettings.Font.Family = 'FontAwesome'
         TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFF2F4858
         IsChecked = False
         IsExpanded = False
         IsSelected = False
@@ -38,27 +40,67 @@ object Parametre: TParametre
         OnClick = Tree_Sub_CompteModClick
       end
       object Tree_Sub_CompteRem: TTreeViewItem
-        StyledSettings = [Style, FontColor]
+        StyledSettings = [Style]
         TextSettings.Font.Family = 'FontAwesome'
         TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFF1C7C54
         IsChecked = False
         IsExpanded = False
         IsSelected = False
         TabOrder = 1
-        Text = #62005' Supprim'#233' le compte'
+        Text = #62005' '#201'diter Mot de passe'
         Visible = False
         OnClick = Tree_Sub_CompteRemClick
       end
-      object Tree_Sub_GenerAccueil: TTreeViewItem
-        StyledSettings = [Style, FontColor]
+      object Tree_Sub_Pref: TTreeViewItem
+        StyledSettings = [Style]
         TextSettings.Font.Family = 'FontAwesome'
         TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFF700548
         IsChecked = False
         IsExpanded = False
         IsSelected = False
         TabOrder = 2
-        Text = #61461' Accueil'
-        OnClick = Tree_Sub_GenerAccueilClick
+        Text = #61918' Pr'#233'f'#233'rence'
+        OnClick = Tree_Sub_PrefClick
+      end
+      object Tree_Sub_Patient: TTreeViewItem
+        StyledSettings = [Style]
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFFFF3562
+        IsChecked = False
+        IsExpanded = False
+        IsSelected = False
+        TabOrder = 3
+        Text = #61981' Patient'
+        Visible = False
+        OnClick = Tree_Sub_PatientClick
+      end
+      object Tree_Sub_PAccueil: TTreeViewItem
+        StyledSettings = [Style]
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFF324376
+        IsChecked = False
+        IsExpanded = False
+        IsSelected = False
+        TabOrder = 4
+        Text = #61461' Page d'#39'accueil'
+        Visible = False
+        OnClick = Tree_Sub_PAccueilClick
+      end
+      object Tree_Sub_CompteDel: TTreeViewItem
+        StyledSettings = [Style]
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFFD7263D
+        IsChecked = False
+        IsExpanded = False
+        IsSelected = False
+        TabOrder = 5
+        Text = #62005' Supprim'#233' le compte'
+        OnClick = Tree_Sub_CompteDelClick
       end
     end
     object TreeView1: TTreeView
@@ -70,26 +112,40 @@ object Parametre: TParametre
       Viewport.Width = 189.000000000000000000
       Viewport.Height = 173.000000000000000000
       object Generale: TTreeViewItem
-        StyledSettings = [Style, FontColor]
+        StyledSettings = [Style]
         TextSettings.Font.Family = 'FontAwesome'
         TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFF700548
         IsChecked = False
         IsExpanded = False
         IsSelected = False
         TabOrder = 0
-        Text = #61918' G'#233'n'#233'rale'
+        Text = #61918' Pr'#233'f'#233'rence'
         OnClick = GeneraleClick
       end
       object TreeViewItem1: TTreeViewItem
-        StyledSettings = [Style, FontColor]
+        StyledSettings = [Style]
         TextSettings.Font.Family = 'FontAwesome'
         TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFFD74E09
         IsChecked = False
         IsExpanded = False
         IsSelected = False
         TabOrder = 1
         Text = #61632' Compte'
         OnClick = TreeViewItem1Click
+      end
+      object TreeViewItem3: TTreeViewItem
+        StyledSettings = [Style]
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFFF05D5E
+        IsChecked = False
+        IsExpanded = False
+        IsSelected = False
+        TabOrder = 2
+        Text = #61681' M'#233'dical'
+        OnClick = TreeViewItem3Click
       end
     end
   end
@@ -98,15 +154,22 @@ object Parametre: TParametre
     Size.Width = 565.000000000000000000
     Size.Height = 376.000000000000000000
     Size.PlatformDefault = False
+    TabIndex = 3
     TabOrder = 3
     TabPosition = PlatformDefault
     Sizes = (
       565s
       346s
-      673s
-      539s
       565s
-      350s)
+      346s
+      565s
+      347s
+      565s
+      347s
+      565s
+      347s
+      565s
+      347s)
     object Tab_Compte: TTabItem
       CustomIcon = <
         item
@@ -127,11 +190,11 @@ object Parametre: TParametre
       object Mod_Edit1: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 2
+        TabOrder = 3
         TextSettings.Font.Family = 'FontAwesome'
         TextSettings.Font.Size = 16.000000000000000000
-        Position.X = 88.000000000000000000
-        Position.Y = 43.564006805419920000
+        Position.X = 96.000000000000000000
+        Position.Y = 44.000000000000000000
         Size.Width = 373.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
@@ -151,7 +214,7 @@ object Parametre: TParametre
         TabOrder = 1
         TextSettings.Font.Family = 'FontAwesome'
         TextSettings.Font.Size = 16.000000000000000000
-        Position.X = 88.000000000000000000
+        Position.X = 96.000000000000000000
         Position.Y = 110.000000000000000000
         Size.Width = 373.000000000000000000
         Size.Height = 22.000000000000000000
@@ -168,12 +231,12 @@ object Parametre: TParametre
       end
       object Mod_Button1: TButton
         StyledSettings = [Style, FontColor]
-        Position.X = 32.000000000000000000
-        Position.Y = 290.000000000000000000
+        Position.X = 34.000000000000000000
+        Position.Y = 298.000000000000000000
         Size.Width = 137.000000000000000000
         Size.Height = 31.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 5
+        TabOrder = 6
         Text = 'OK'
         TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 16.000000000000000000
@@ -181,12 +244,12 @@ object Parametre: TParametre
       end
       object Mod_Button2: TButton
         StyledSettings = [Style, FontColor]
-        Position.X = 212.000000000000000000
-        Position.Y = 290.000000000000000000
+        Position.X = 214.000000000000000000
+        Position.Y = 298.000000000000000000
         Size.Width = 137.000000000000000000
         Size.Height = 31.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 4
+        TabOrder = 5
         Text = 'Vid'#233
         TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 16.000000000000000000
@@ -198,7 +261,7 @@ object Parametre: TParametre
         TabOrder = 0
         TextSettings.Font.Family = 'FontAwesome'
         TextSettings.Font.Size = 16.000000000000000000
-        Position.X = 88.000000000000000000
+        Position.X = 96.000000000000000000
         Position.Y = 176.000000000000000000
         Size.Width = 373.000000000000000000
         Size.Height = 22.000000000000000000
@@ -216,12 +279,12 @@ object Parametre: TParametre
       object Mod_Button3: TButton
         StyledSettings = [Style, FontColor]
         ModalResult = 2
-        Position.X = 392.000000000000000000
-        Position.Y = 290.000000000000000000
+        Position.X = 394.000000000000000000
+        Position.Y = 298.000000000000000000
         Size.Width = 137.000000000000000000
         Size.Height = 31.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 3
+        TabOrder = 2
         Text = 'Annuler'
         TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 16.000000000000000000
@@ -235,29 +298,557 @@ object Parametre: TParametre
       TextSettings.Font.Size = 16.000000000000000000
       StyledSettings = [Style, FontColor]
       IsSelected = False
-      Size.Width = 158.000000000000000000
+      Size.Width = 188.000000000000000000
       Size.Height = 30.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
-      Text = 'Supprim'#233' le compte'
+      Text = 'Modifier le mot de passe'
       Visible = False
       ExplicitSize.cx = 128.000000000000000000
       ExplicitSize.cy = 26.000000000000000000
+      object Button5: TButton
+        StyledSettings = [Style, FontColor]
+        Position.X = 34.000000000000000000
+        Position.Y = 298.000000000000000000
+        Size.Width = 137.000000000000000000
+        Size.Height = 31.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = 'OK'
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        OnClick = Button5Click
+      end
+      object Button6: TButton
+        StyledSettings = [Style, FontColor]
+        Position.X = 214.000000000000000000
+        Position.Y = 298.000000000000000000
+        Size.Width = 137.000000000000000000
+        Size.Height = 31.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Vid'#233
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        OnClick = Mod_Button2Click
+      end
+      object Button7: TButton
+        StyledSettings = [Style, FontColor]
+        ModalResult = 2
+        Position.X = 394.000000000000000000
+        Position.Y = 298.000000000000000000
+        Size.Width = 137.000000000000000000
+        Size.Height = 31.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Annuler'
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+      end
+      object Edit5: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 5
+        Password = True
+        MaxLength = 12
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Position.X = 98.000000000000000000
+        Position.Y = 138.000000000000000000
+        Size.Width = 369.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Nouvelle Mot de passe'
+        StyledSettings = [Style, FontColor]
+        object SpeedButton1: TSpeedButton
+          Align = Right
+          Cursor = crHandPoint
+          Position.X = 336.000000000000000000
+          Size.Width = 33.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'passwordeditbutton'
+          OnMouseDown = SpeedButton1MouseDown
+          OnMouseUp = SpeedButton1MouseUp
+        end
+      end
     end
-    object Tab_Accueil: TTabItem
+    object Tab_Pref: TTabItem
       CustomIcon = <
         item
         end>
+      TextSettings.Font.Family = 'FontAwesome'
+      TextSettings.Font.Size = 14.000000000000000000
+      StyledSettings = [Style, FontColor]
       IsSelected = False
-      Size.Width = 58.000000000000000000
-      Size.Height = 26.000000000000000000
+      Size.Width = 102.000000000000000000
+      Size.Height = 29.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
-      Text = 'Accueil'
+      Text = #61918' Pr'#233'f'#233'rence'
       ExplicitSize.cx = 58.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
+      object Label1: TLabel
+        Position.X = 24.000000000000000000
+        Position.Y = 78.000000000000000000
+        Size.Width = 169.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+      end
+      object ComboBox1: TComboBox
+        Items.Strings = (
+          'Windows10'
+          'Windows10SlateGrey')
+        Position.X = 184.000000000000000000
+        Position.Y = 83.000000000000000000
+        Size.Width = 353.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+      object Label2: TLabel
+        StyledSettings = [Style, FontColor]
+        Position.X = 24.000000000000000000
+        Position.Y = 83.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Th'#233'me'
+        TabOrder = 2
+      end
+    end
+    object Tab_Patient: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'FontAwesome'
+      TextSettings.Font.Size = 14.000000000000000000
+      StyledSettings = [Style, FontColor]
+      IsSelected = True
+      Size.Width = 79.000000000000000000
+      Size.Height = 29.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #61981' Patient'
+      ExplicitSize.cx = 79.000000000000000000
+      ExplicitSize.cy = 30.000000000000000000
+      object Label8: TLabel
+        StyledSettings = [Style, FontColor]
+        Position.X = 24.000000000000000000
+        Position.Y = 23.000000000000000000
+        Size.Width = 153.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Tab d'#39'Hemogramme'
+        TabOrder = 11
+      end
+      object Label9: TLabel
+        StyledSettings = [Style, FontColor]
+        Position.X = 24.000000000000000000
+        Position.Y = 97.000000000000000000
+        Size.Width = 153.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Tab d'#39'Hemostase | VS'
+        TabOrder = 5
+      end
+      object Label10: TLabel
+        StyledSettings = [Style, FontColor]
+        Position.X = 24.000000000000000000
+        Position.Y = 172.000000000000000000
+        Size.Width = 153.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Tab de Biochimique'
+        TabOrder = 3
+      end
+      object Label11: TLabel
+        StyledSettings = [Style, FontColor]
+        Position.X = 24.000000000000000000
+        Position.Y = 247.000000000000000000
+        Size.Width = 153.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Tab de S'#233'rologie'
+        TabOrder = 2
+      end
+      object Switch1: TSwitch
+        IsChecked = False
+        Position.X = 384.000000000000000000
+        Position.Y = 23.000000000000000000
+        TabOrder = 15
+      end
+      object Switch2: TSwitch
+        IsChecked = False
+        Position.X = 384.000000000000000000
+        Position.Y = 97.000000000000000000
+        TabOrder = 14
+      end
+      object Switch3: TSwitch
+        IsChecked = False
+        Position.X = 384.000000000000000000
+        Position.Y = 172.000000000000000000
+        TabOrder = 13
+      end
+      object Switch4: TSwitch
+        IsChecked = False
+        Position.X = 384.000000000000000000
+        Position.Y = 247.000000000000000000
+        TabOrder = 12
+      end
+      object Label12: TLabel
+        StyledSettings = [Style, FontColor]
+        Position.X = 492.000000000000000000
+        Position.Y = 23.000000000000000000
+        Size.Width = 49.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Visible'
+        TabOrder = 10
+      end
+      object Label13: TLabel
+        StyledSettings = [Style, FontColor]
+        Position.X = 492.000000000000000000
+        Position.Y = 247.000000000000000000
+        Size.Width = 49.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Visible'
+        TabOrder = 1
+      end
+      object Label14: TLabel
+        StyledSettings = [Style, FontColor]
+        Position.X = 492.000000000000000000
+        Position.Y = 97.000000000000000000
+        Size.Width = 49.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Visible'
+        TabOrder = 9
+      end
+      object Label15: TLabel
+        StyledSettings = [Style, FontColor]
+        Position.X = 492.000000000000000000
+        Position.Y = 172.000000000000000000
+        Size.Width = 49.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Visible'
+        TabOrder = 7
+      end
+      object Label16: TLabel
+        StyledSettings = [Style, FontColor]
+        Position.X = 304.000000000000000000
+        Position.Y = 247.000000000000000000
+        Size.Width = 60.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Invisible'
+        TabOrder = 0
+      end
+      object Label17: TLabel
+        StyledSettings = [Style, FontColor]
+        Position.X = 304.000000000000000000
+        Position.Y = 23.000000000000000000
+        Size.Width = 60.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Invisible'
+        TabOrder = 8
+      end
+      object Label18: TLabel
+        StyledSettings = [Style, FontColor]
+        Position.X = 304.000000000000000000
+        Position.Y = 97.000000000000000000
+        Size.Width = 60.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Invisible'
+        TabOrder = 6
+      end
+      object Label19: TLabel
+        StyledSettings = [Style, FontColor]
+        Position.X = 304.000000000000000000
+        Position.Y = 172.000000000000000000
+        Size.Width = 60.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Invisible'
+        TabOrder = 4
+      end
+      object Button1: TButton
+        ModalResult = 2
+        Position.X = 416.000000000000000000
+        Position.Y = 306.000000000000000000
+        Size.Width = 129.000000000000000000
+        Size.Height = 31.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 17
+        Text = 'Annuler'
+      end
+      object Button2: TButton
+        Position.X = 24.000000000000000000
+        Position.Y = 306.000000000000000000
+        Size.Width = 129.000000000000000000
+        Size.Height = 31.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 16
+        Text = 'Enregistre'
+        OnClick = Button2Click
+      end
+    end
+    object Tab_PAccueil: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'FontAwesome'
+      TextSettings.Font.Size = 14.000000000000000000
+      StyledSettings = [Style, FontColor]
+      IsSelected = False
+      Size.Width = 125.000000000000000000
+      Size.Height = 29.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #61461' Page d'#39'accueil'
+      ExplicitSize.cx = 125.000000000000000000
+      ExplicitSize.cy = 30.000000000000000000
+      object Label4: TLabel
+        StyledSettings = [Style, FontColor]
+        Position.X = 32.000000000000000000
+        Position.Y = 18.000000000000000000
+        Size.Width = 241.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Les top derni'#232'res Hommes ajouter'
+        TabOrder = 3
+      end
+      object Label5: TLabel
+        StyledSettings = [Style, FontColor]
+        Position.X = 32.000000000000000000
+        Position.Y = 98.000000000000000000
+        Size.Width = 241.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Les top derni'#232'res Femmes ajouter'
+        TabOrder = 2
+      end
+      object Label6: TLabel
+        StyledSettings = [Style, FontColor]
+        Position.X = 32.000000000000000000
+        Position.Y = 178.000000000000000000
+        Size.Width = 241.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Les top derni'#232'res Groupage'
+        TabOrder = 1
+      end
+      object Label7: TLabel
+        StyledSettings = [Style, FontColor]
+        Position.X = 32.000000000000000000
+        Position.Y = 258.000000000000000000
+        Size.Width = 241.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Les top derni'#232'res Patient ajouter'
+        TabOrder = 0
+      end
+      object TrackBar1: TTrackBar
+        CanParentFocus = True
+        Min = 10.000000000000000000
+        Orientation = Horizontal
+        Position.X = 288.000000000000000000
+        Position.Y = 18.000000000000000000
+        Size.Width = 200.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 7
+        Value = 10.000000000000000000
+        OnChange = TrackBar1Change
+      end
+      object TrackBar4: TTrackBar
+        CanParentFocus = True
+        Min = 10.000000000000000000
+        Orientation = Horizontal
+        Position.X = 288.000000000000000000
+        Position.Y = 258.000000000000000000
+        Size.Width = 200.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 6
+        Value = 10.000000000000000000
+        OnChange = TrackBar4Change
+      end
+      object TrackBar3: TTrackBar
+        CanParentFocus = True
+        Min = 10.000000000000000000
+        Orientation = Horizontal
+        Position.X = 288.000000000000000000
+        Position.Y = 178.000000000000000000
+        Size.Width = 200.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Value = 10.000000000000000000
+        OnChange = TrackBar3Change
+      end
+      object TrackBar2: TTrackBar
+        CanParentFocus = True
+        Min = 10.000000000000000000
+        Orientation = Horizontal
+        Position.X = 288.000000000000000000
+        Position.Y = 98.000000000000000000
+        Size.Width = 200.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Value = 10.000000000000000000
+        OnChange = TrackBar2Change
+      end
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 11
+        ReadOnly = True
+        Position.X = 497.000000000000000000
+        Position.Y = 18.000000000000000000
+        Size.Width = 52.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Edit2: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 10
+        ReadOnly = True
+        Position.X = 497.000000000000000000
+        Position.Y = 98.000000000000000000
+        Size.Width = 52.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Edit3: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 9
+        ReadOnly = True
+        Position.X = 497.000000000000000000
+        Position.Y = 178.000000000000000000
+        Size.Width = 52.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Edit4: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 8
+        ReadOnly = True
+        Position.X = 497.000000000000000000
+        Position.Y = 258.000000000000000000
+        Size.Width = 52.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Button3: TButton
+        Position.X = 24.000000000000000000
+        Position.Y = 306.000000000000000000
+        Size.Width = 129.000000000000000000
+        Size.Height = 31.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 16
+        Text = 'Enregistre'
+        OnClick = Button3Click
+      end
+      object Button4: TButton
+        ModalResult = 2
+        Position.X = 416.000000000000000000
+        Position.Y = 306.000000000000000000
+        Size.Width = 129.000000000000000000
+        Size.Height = 31.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 17
+        Text = 'Annuler'
+      end
+    end
+    object Tab_Del: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'FontAwesome'
+      TextSettings.Font.Size = 14.000000000000000000
+      StyledSettings = [Style, FontColor]
+      IsSelected = False
+      Size.Width = 165.000000000000000000
+      Size.Height = 29.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #62005' Supprim'#233' le compte'
+      Visible = False
+      object Label3: TLabel
+        StyledSettings = [Style]
+        Position.X = 40.000000000000000000
+        Position.Y = 51.000000000000000000
+        Size.Width = 465.000000000000000000
+        Size.Height = 126.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.FontColor = claRed
+        TextSettings.HorzAlign = Center
+        Text = 
+          'Cette action effacera votre compte avec tous les enregistrements' +
+          ' du patient que vous avez ajout'#233' ou modifier avec leurs dossiers' +
+          ' d'#39'analyse, nous vous encourageons '#224' sauvegarder toutes les donn' +
+          #233'es au cas o'#249' vous le souhaitez'
+        TabOrder = 0
+      end
+      object Button8: TButton
+        StyledSettings = [Style, FontColor]
+        Position.X = 162.000000000000000000
+        Position.Y = 243.000000000000000000
+        Size.Width = 241.000000000000000000
+        Size.Height = 62.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = #61460
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 50.000000000000000000
+        OnClick = Button8Click
+      end
     end
   end
 end

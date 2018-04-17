@@ -240,6 +240,7 @@ begin
           FDQuery1.Post;
           FDQuery1.Active := False;
           FDQuery1.SQL.Clear;
+          DataModule1.Param(Rand);
           Button2.OnClick(Button2);
           MessageDlg('Votre compte a été engregistré',
             TMsgDlgType.mtConfirmation, [TMsgDlgBtn.mbOK], 0);

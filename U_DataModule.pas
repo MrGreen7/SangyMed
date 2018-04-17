@@ -36,6 +36,7 @@ type
     FDQ_Homme: TFDQuery;
     FDQ_Femme: TFDQuery;
     procedure Init();
+    procedure Param(const ID: String);
     function GenerateID: String;
     function Encryt(Str: string): string;
     procedure DataModuleCreate(Sender: TObject);
@@ -109,11 +110,55 @@ Begin
   FDQ_Femme.Active := True;
 End;
 
+procedure TDataModule1.Param(const ID: String);
+Var
+  Rand: String;
+  bol: Boolean;
+Begin
+  With FDQuery1 do
+  Begin
+    bol := False;
+    SQL.Clear;
+    SQL.Text := ('Select * From Parametre');
+    Active := True;
+    Insert;
+    repeat
+    Begin
+      try
+        Rand := GenerateID;
+        Rand := 'R' + Rand;
+        FieldByName('Param_ID').AsString := Rand;
+      except
+        on E: Exception do
+        Begin
+          bol := True;
+        End;
+      end;
+      bol := False;
+    End;
+    until bol = False;
+    FieldByName('Bar1').AsInteger := 10;
+    FieldByName('Bar2').AsInteger := 10;
+    FieldByName('Bar3').AsInteger := 10;
+    FieldByName('Bar4').AsInteger := 10;
+    FieldByName('HM').AsBoolean := True;
+    FieldByName('HS').AsBoolean := True;
+    FieldByName('Bio').AsBoolean := True;
+    FieldByName('Serlg').AsBoolean := True;
+    FieldByName('Theme').AsInteger := 0;
+    FieldByName('Lang').AsString := ('FR');
+    FieldByName('ID').AsString := ID;
+    Post;
+    Active := False;
+    SQL.Clear;
+  End;
+End;
+
 procedure TDataModule1.DataModuleCreate(Sender: TObject);
 var
   Path, PathInf, DirPath, HexPass, Db_Entrprise: string;
   Contact, Patient, Biochimie, Entreprise, Hemogramme, Hemostase_VS, Serologie,
-    Ordonnance: String;
+    Parametre: String;
   Rand: String;
   bol: Boolean;
 begin
@@ -127,7 +172,7 @@ begin
   Patient :=
     ('CREATE TABLE `Patient` (`Patient_ID`	varchar ( 7 ) NOT NULL UNIQUE,`Nom`	Varchar ( 15 ),`Prenom`	varchar ( 20 ),`Date_de_Nai`	varchar ( 10 ),`Date_de_Entre`	varchar ( 10 ),`Type`	varchar ( 7 ),`Sexe`	varchar ( 5 ),`Etat_Civil`	varchar ( 13 ),'
     + '`Wilaya`	varchar ( 20 ),`Commune`	varchar ( 20 ),`Adresse`	varchar ( 100 ),`Mobile`	INTEGER,`Email`	varchar ( 35 ),`Groupage`	varchar ( 5 ),`Telephone`	Integer ( 9 ),`Fax`	Integer (13),`Type_Index`	INTEGER,`Sexe_Index`	INTEGER,`Etat_Civil_Index`	INTEGER,'
-    + '`Groupage_Index`	INTEGER,`Wilaya_Index`	Integer,`Commune_Index`	Integer,`Image` BLOB,`ID`	varchar(7) NOT NULL, PRIMARY KEY(`Patient_ID`),FOREIGN KEY(`ID`) REFERENCES `Medecin`(`ID`));');
+    + '`Groupage_Index`	INTEGER,`Wilaya_Index`	Integer,`Commune_Index`	Integer,`Image` BLOB,`ID`	varchar(7) NOT NULL, PRIMARY KEY(`Patient_ID`),FOREIGN KEY(`ID`) REFERENCES `Medecin`(`ID`) ON DELETE CASCADE);');
   Biochimie :=
     ('CREATE TABLE `Biochimie` (`Biochimi_ID`	varchar ( 7 ) NOT NULL UNIQUE,`Glycemie`	REAL,`Uree_Sang`	REAL,`Createnine`	REAL,`Cholesterole`	REAL,`Triglycerides`	REAL,`HDL`	REAL,'
     + '`LDL`	REAL,`Acide_Urique`	REAL,`CRP`	REAL,`TGO`	REAL,`TGP`	REAL,`PAL`	REAL,`TP`	REAL,`INR`	REAL,`BilirubineT`	REAL,`BilirubineD`	REAL,`ASLO`	REAL,'
@@ -143,9 +188,9 @@ begin
     + '`HB_Anti-VHB`	Boolean,`HB_Antigene_HBs`	boolean,`HC_Anit-VHC`	boolean,`VIH_Anti-VIH`	boolean,`RUB_Anti_M`	boolean,`RUB_Anti_A`	boolean,'
     + '`RUB_Anti_G`	boolean,`Salm_Anti_H`	boolean,`Salm_Anti_O`	boolean,`Mono_Anti_EBV`	boolean,`Mono_Anti_G_Anti_VCA`	boolean,`Mono_Anti_G_Anti_EBNA`	boolean,`Mono_Anti_G_Anti_EA`	boolean,'
     + '`Toxo_Anti_M`	boolean,`Patient_ID` varchar ( 7 ),PRIMARY KEY(`Serologie_ID`),FOREIGN KEY(`Patient_ID`) REFERENCES `Patient`(`Patient_ID`) ON DELETE CASCADE);');
-  Ordonnance :=
-    ('CREATE TABLE `Ordonnance` (`Ordo_ID`	varchar(7) NOT NULL UNIQUE,`Medicament`	varchar(150),`Dose`	INTEGER,`Prise`	INTEGER,`Jour`	INTEGER,`Pendent`	INTEGER,'
-    + '`Patient_ID`	varchar(7),PRIMARY KEY(`Ordo_ID`),FOREIGN KEY(`Patient_ID`) REFERENCES `Patient`(`Patient_ID`) ON DELETE CASCADE);');
+  Parametre :=
+    ('CREATE TABLE `Parametre` (`Param_ID`	varchar ( 7 ) NOT NULL UNIQUE,`Bar1`	INTEGER,`Bar2`	INTEGER,`Bar3`	INTEGER,`Bar4`	INTEGER,`HM`	boolean,`HS`	boolean,`Bio`	boolean,'
+    + '`Serlg`	boolean,`Theme`	INTEGER,`Lang`	varchar(20),`ID`	varchar(7),PRIMARY KEY(`Param_ID`),FOREIGN KEY(`ID`) REFERENCES `Medecin`(`ID`) ON DELETE CASCADE);');
   // Database Anitialse and Location
   DirPath := GetEnvironmentVariable('AppData');
   Path := (DirPath + '\SangyMed\Data.db');
@@ -171,7 +216,7 @@ begin
         FDCommand1.Connection := FDConnection1;
         FDCommand1.CommandText.Text :=
           (Contact + Patient + Biochimie + Entreprise + Hemogramme +
-          Hemostase_VS + Serologie + Ordonnance);
+          Hemostase_VS + Serologie + Parametre);
         FDCommand1.Execute();
         with FDQuery1 do
         begin
@@ -201,6 +246,8 @@ begin
           FieldByName('Privilege').AsBoolean := True;
           Post;
           Active := False;
+          SQL.Clear;
+          Param(Rand);
         end;
       except
         on E: Exception do

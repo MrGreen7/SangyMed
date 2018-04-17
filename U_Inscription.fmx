@@ -4,8 +4,8 @@ object Inscription: TInscription
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = Single
   Caption = 'Inscription'
-  ClientHeight = 383
-  ClientWidth = 625
+  ClientHeight = 359
+  ClientWidth = 584
   Fill.Bitmap.Bitmap.PNG = {
     89504E470D0A1A0A0000000D49484452000006400000032008060000007BC0AE
     5A000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
@@ -34834,8 +34834,8 @@ object Inscription: TInscription
   DesignerMasterStyle = 0
   object Button1: TButton
     StyledSettings = [Style, FontColor]
-    Position.X = 40.000000000000000000
-    Position.Y = 317.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 307.000000000000000000
     Size.Width = 113.000000000000000000
     Size.Height = 33.000000000000000000
     Size.PlatformDefault = False
@@ -34847,8 +34847,8 @@ object Inscription: TInscription
   end
   object Button2: TButton
     StyledSettings = [Style, FontColor]
-    Position.X = 256.000000000000000000
-    Position.Y = 319.000000000000000000
+    Position.X = 236.000000000000000000
+    Position.Y = 309.000000000000000000
     Size.Width = 113.000000000000000000
     Size.Height = 33.000000000000000000
     Size.PlatformDefault = False
@@ -34860,8 +34860,8 @@ object Inscription: TInscription
   end
   object Button3: TButton
     StyledSettings = [Style, FontColor]
-    Position.X = 472.000000000000000000
-    Position.Y = 321.000000000000000000
+    Position.X = 452.000000000000000000
+    Position.Y = 311.000000000000000000
     Size.Width = 113.000000000000000000
     Size.Height = 33.000000000000000000
     Size.PlatformDefault = False
@@ -34876,8 +34876,8 @@ object Inscription: TInscription
     TabOrder = 0
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 16.000000000000000000
-    Position.X = 40.000000000000000000
-    Position.Y = 41.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 31.000000000000000000
     Size.Width = 545.000000000000000000
     Size.Height = 32.000000000000000000
     Size.PlatformDefault = False
@@ -34896,8 +34896,8 @@ object Inscription: TInscription
     TabOrder = 1
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 16.000000000000000000
-    Position.X = 40.000000000000000000
-    Position.Y = 86.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 76.000000000000000000
     Size.Width = 545.000000000000000000
     Size.Height = 32.000000000000000000
     Size.PlatformDefault = False
@@ -34918,8 +34918,8 @@ object Inscription: TInscription
     MaxLength = 12
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 16.000000000000000000
-    Position.X = 40.000000000000000000
-    Position.Y = 177.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 166.000000000000000000
     Size.Width = 545.000000000000000000
     Size.Height = 32.000000000000000000
     Size.PlatformDefault = False
@@ -34952,8 +34952,8 @@ object Inscription: TInscription
     MaxLength = 12
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 16.000000000000000000
-    Position.X = 40.000000000000000000
-    Position.Y = 222.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 212.000000000000000000
     Size.Width = 545.000000000000000000
     Size.Height = 32.000000000000000000
     Size.PlatformDefault = False
@@ -34985,8 +34985,8 @@ object Inscription: TInscription
     FilterChar = '+0123456789'
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 16.000000000000000000
-    Position.X = 40.000000000000000000
-    Position.Y = 131.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 121.000000000000000000
     Size.Width = 545.000000000000000000
     Size.Height = 32.000000000000000000
     Size.PlatformDefault = False
@@ -34998,8 +34998,8 @@ object Inscription: TInscription
     Items.Strings = (
       'Administrator'
       'Utilisateur')
-    Position.X = 184.000000000000000000
-    Position.Y = 268.000000000000000000
+    Position.X = 164.000000000000000000
+    Position.Y = 258.000000000000000000
     Size.Width = 401.000000000000000000
     Size.Height = 31.000000000000000000
     Size.PlatformDefault = False
@@ -35016,8 +35016,8 @@ object Inscription: TInscription
   end
   object Label1: TLabel
     StyledSettings = [Style]
-    Position.X = 40.000000000000000000
-    Position.Y = 272.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 262.000000000000000000
     Size.Width = 145.000000000000000000
     Size.Height = 25.000000000000000000
     Size.PlatformDefault = False
