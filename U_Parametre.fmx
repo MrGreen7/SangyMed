@@ -154,7 +154,7 @@ object Parametre: TParametre
     Size.Width = 565.000000000000000000
     Size.Height = 376.000000000000000000
     Size.PlatformDefault = False
-    TabIndex = 3
+    TabIndex = 2
     TabOrder = 3
     TabPosition = PlatformDefault
     Sizes = (
@@ -380,7 +380,7 @@ object Parametre: TParametre
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 14.000000000000000000
       StyledSettings = [Style, FontColor]
-      IsSelected = False
+      IsSelected = True
       Size.Width = 102.000000000000000000
       Size.Height = 29.000000000000000000
       Size.PlatformDefault = False
@@ -399,8 +399,11 @@ object Parametre: TParametre
       end
       object ComboBox1: TComboBox
         Items.Strings = (
-          'Windows10'
-          'Windows10SlateGrey')
+          'Windows 10'
+          'Windows 10 SlateGrey'
+          'Windows 10 Blue'
+          'Windows 10 Green'
+          'Windows 10 Purple')
         Position.X = 184.000000000000000000
         Position.Y = 83.000000000000000000
         Size.Width = 353.000000000000000000
@@ -420,6 +423,26 @@ object Parametre: TParametre
         Text = 'Th'#233'me'
         TabOrder = 2
       end
+      object Button9: TButton
+        Position.X = 22.000000000000000000
+        Position.Y = 306.000000000000000000
+        Size.Width = 129.000000000000000000
+        Size.Height = 31.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 16
+        Text = 'Enregistre'
+        OnClick = Button9Click
+      end
+      object Button10: TButton
+        ModalResult = 2
+        Position.X = 414.000000000000000000
+        Position.Y = 306.000000000000000000
+        Size.Width = 129.000000000000000000
+        Size.Height = 31.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 17
+        Text = 'Annuler'
+      end
     end
     object Tab_Patient: TTabItem
       CustomIcon = <
@@ -428,7 +451,7 @@ object Parametre: TParametre
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 14.000000000000000000
       StyledSettings = [Style, FontColor]
-      IsSelected = True
+      IsSelected = False
       Size.Width = 79.000000000000000000
       Size.Height = 29.000000000000000000
       Size.PlatformDefault = False
@@ -818,6 +841,8 @@ object Parametre: TParametre
       TabOrder = 0
       Text = #62005' Supprim'#233' le compte'
       Visible = False
+      ExplicitSize.cx = 165.000000000000000000
+      ExplicitSize.cy = 29.000000000000000000
       object Label3: TLabel
         StyledSettings = [Style]
         Position.X = 40.000000000000000000

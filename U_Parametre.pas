@@ -81,6 +81,8 @@ type
     Tab_Del: TTabItem;
     Label3: TLabel;
     Button8: TButton;
+    Button9: TButton;
+    Button10: TButton;
     procedure CompteClick(Sender: TObject);
     procedure Tree_Sub_CompteModClick(Sender: TObject);
     procedure Tree_Sub_CompteRemClick(Sender: TObject);
@@ -112,6 +114,7 @@ type
     procedure SpeedButton2Click(Sender: TObject);
     procedure Tree_Sub_CompteDelClick(Sender: TObject);
     procedure Button8Click(Sender: TObject);
+    procedure Button9Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -297,6 +300,24 @@ begin
     LogDlg.Free;
     ModalResult := mrOk;
   End;
+end;
+
+procedure TParametre.Button9Click(Sender: TObject);
+begin
+  inherited;
+  With DataModule1.FDQuery1 do
+  Begin
+    Active := False;
+    SQl.Clear;
+    SQl.Text := ('Select * From Parametre Where ID="' + Main.ID_Medecin + '";');
+    Active := True;
+    Edit;
+    FieldByName('Theme').AsInteger := ComboBox1.ItemIndex;
+    Post;
+    Active := False;
+    SQl.Clear;
+  End;
+  Main.LoadParam;
 end;
 
 procedure TParametre.CompteClick(Sender: TObject);

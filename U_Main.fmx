@@ -56,8 +56,8 @@ object Main: TMain
           Size.Height = 501.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
-          Viewport.Width = 197.000000000000000000
-          Viewport.Height = 497.000000000000000000
+          Viewport.Width = 201.000000000000000000
+          Viewport.Height = 501.000000000000000000
           object T_Accueil: TTreeViewItem
             Cursor = crHandPoint
             StyledSettings = [Style]
