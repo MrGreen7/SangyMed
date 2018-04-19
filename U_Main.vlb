@@ -642,10 +642,6 @@ Coordinates=4722,606,101,36
 Coordinates=4430,155,254,36
 Visible=False
 
-[Edit_Search_Wilaya]
-Coordinates=2311,2312,130,36
-Visible=False
-
 [Frame_Information.AC_Edit5]
 Coordinates=2281,1744,181,36
 Visible=False
@@ -977,10 +973,6 @@ Visible=False
 
 [GrouBox4_Table]
 Coordinates=2273,1928,111,36
-Visible=False
-
-[Edit_Search_Commune]
-Coordinates=3222,2216,150,36
 Visible=False
 
 [Frame_Principale.Layout_Left_4]
@@ -2787,7 +2779,7 @@ Coordinates=2289,1387,197,36
 Visible=False
 
 []
-Coordinates=5050,2330,53,36
+Coordinates=251,173,44,36
 Visible=False
 
 [BindSourceDB1]
@@ -2850,10 +2842,6 @@ Visible=False
 
 [DataModule1.]
 Coordinates=1390,250,199,36
-Visible=False
-
-[Edit2]
-Coordinates=251,173,44,36
 Visible=False
 
 [ShadowEffect18]

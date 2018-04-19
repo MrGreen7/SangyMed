@@ -245,8 +245,6 @@ type
     RB_Externe: TRadioButton;
     Label76: TLabel;
     GroupBox4: TGroupBox;
-    Edit_Search_Commune: TEdit;
-    Edit_Search_Wilaya: TEdit;
     Layout31: TLayout;
     Edit1: TEdit;
     Nouveau_Patient: TTabItem;
@@ -301,7 +299,6 @@ type
     PoP2_Serologie: TMenuItem;
     BindSourceDB4: TBindSourceDB;
     LinkGridToDataSourceBindSourceDB4: TLinkGridToDataSource;
-    Edit2: TEdit;
     Layout4: TLayout;
     Label21: TLabel;
     ShadowEffect17: TShadowEffect;
@@ -316,6 +313,12 @@ type
     Label22: TLabel;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     SaveDialog1: TSaveDialog;
+    Layout10: TLayout;
+    Layout11: TLayout;
+    Layout12: TLayout;
+    Edit_Search_Wilaya: TEdit;
+    Edit_Search_Commune: TEdit;
+    Edit2: TEdit;
     procedure FormShow(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormCreate(Sender: TObject);
@@ -1165,6 +1168,11 @@ procedure TMain.FormResize(Sender: TObject);
 begin
   inherited;
   // Frame resize
+
+  Layout10.Width := (GroupBox4.Width) / 3;
+  Layout11.Width := (GroupBox4.Width) / 3;
+  Layout12.Width := (GroupBox4.Width) / 3;
+
   Nouveau_Patient.OnResize(Nouveau_Patient);
   Edit_Patient.OnResize(Edit_Patient);
   //
@@ -1691,8 +1699,10 @@ begin
   DirPath := '';
   if (SaveDialog1.Execute) then
   Begin
-    Msg := MessageDlg('', TMsgDlgType.mtConfirmation,
-      [TMsgDlgBtn.mbYes, TMsgDlgBtn.mbNo], 0);
+    Msg := MessageDlg('Voulez-vous crypter la base de données! ' + sLineBreak +
+      '' + sLineBreak +
+      'Le cryptage des données signifie que la base de données ne sera ouverte qu''à partir de cette Application.',
+      TMsgDlgType.mtConfirmation, [TMsgDlgBtn.mbYes, TMsgDlgBtn.mbNo], 0);
     if (Msg = mrYes) then
       Encrypt := True
     else

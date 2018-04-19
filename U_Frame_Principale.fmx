@@ -15,7 +15,7 @@ object Frame1: TFrame1
     Text = 'Information principale'
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 14.000000000000000000
-    TabOrder = 1
+    TabOrder = 0
     object Layout_Top_1: TLayout
       Align = Top
       Position.X = 5.000000000000000000
@@ -306,7 +306,7 @@ object Frame1: TFrame1
         end
         object IP_DateEdit2: TDateEdit
           IsChecked = False
-          Date = 43208.000000000000000000
+          Date = 43209.000000000000000000
           WeekNumbers = True
           TodayDefault = True
           Anchors = [akLeft, akRight]
@@ -370,7 +370,7 @@ object Frame1: TFrame1
     Text = 'Liens'
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 14.000000000000000000
-    TabOrder = 3
+    TabOrder = 2
     object Button1: TButton
       StyledSettings = [Style, FontColor]
       Position.X = 73.000000000000000000
@@ -407,19 +407,5 @@ object Frame1: TFrame1
       TextSettings.Font.Family = 'Candara'
       TextSettings.Font.Size = 14.000000000000000000
     end
-  end
-  object ImageControl1: TImageControl
-    Align = Left
-    Margins.Left = 10.000000000000000000
-    Margins.Top = 10.000000000000000000
-    Margins.Right = 10.000000000000000000
-    Margins.Bottom = 30.000000000000000000
-    Position.X = 10.000000000000000000
-    Position.Y = 10.000000000000000000
-    Size.Width = 140.000000000000000000
-    Size.Height = 151.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 0
-    Visible = False
   end
 end

@@ -46,7 +46,6 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
-    ImageControl1: TImageControl;
     InnerGlowEffect2Combo2: TInnerGlowEffect;
     Edit_Date: TEdit;
     function SetEdit: Boolean;

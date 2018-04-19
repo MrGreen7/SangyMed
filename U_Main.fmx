@@ -1449,7 +1449,7 @@ object Main: TMain
         object Layout_Exit_RechercheP: TLayout
           Align = Left
           Position.X = 516.000000000000000000
-          Size.Width = 129.000000000000000000
+          Size.Width = 187.000000000000000000
           Size.Height = 129.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
@@ -1644,13 +1644,12 @@ object Main: TMain
           TabOrder = 4
           object Label50: TLabel
             StyledSettings = [Style, FontColor]
-            Position.X = 5.000000000000000000
-            Position.Y = 64.000000000000000000
-            Size.Width = 119.000000000000000000
-            Size.Height = 65.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 72.000000000000000000
+            Size.Width = 108.000000000000000000
+            Size.Height = 41.000000000000000000
             Size.PlatformDefault = False
             TextSettings.Font.Family = 'Candara'
-            TextSettings.Font.Size = 16.000000000000000000
             TextSettings.HorzAlign = Center
             Text = 'Afficher/cacher Param'#232'tre de Filter'
             TabOrder = 1
@@ -1669,10 +1668,10 @@ object Main: TMain
             Position.X = 8.000000000000000000
             Position.Y = 17.000000000000000000
             Size.Width = 113.000000000000000000
-            Size.Height = 112.000000000000000000
+            Size.Height = 96.000000000000000000
             Size.PlatformDefault = False
             TextSettings.Font.Family = 'FontAwesome'
-            TextSettings.Font.Size = 45.000000000000000000
+            TextSettings.Font.Size = 50.000000000000000000
             TextSettings.FontColor = xFFFFAD05
             TextSettings.HorzAlign = Center
             TextSettings.VertAlign = Leading
@@ -2709,50 +2708,73 @@ object Main: TMain
             TextSettings.Font.Family = 'Candara'
             TextSettings.Font.Size = 16.000000000000000000
             TabOrder = 3
-            object Edit_Search_Commune: TEdit
-              Touch.InteractiveGestures = [LongTap, DoubleTap]
-              Anchors = [akLeft, akRight]
-              TabOrder = 2
-              TextSettings.Font.Family = 'Candara'
-              TextSettings.Font.Size = 16.000000000000000000
-              Position.X = 200.000000000000000000
-              Position.Y = 36.000000000000000000
-              Size.Width = 161.000000000000000000
-              Size.Height = 32.000000000000000000
+            object Layout12: TLayout
+              Align = Left
+              Position.X = 374.000000000000000000
+              Size.Width = 187.000000000000000000
+              Size.Height = 87.000000000000000000
               Size.PlatformDefault = False
-              TextPrompt = 'Commune'
-              StyledSettings = [Style, FontColor]
-              OnChangeTracking = Edit_Search_CommuneChangeTracking
-            end
-            object Edit_Search_Wilaya: TEdit
-              Touch.InteractiveGestures = [LongTap, DoubleTap]
-              Anchors = [akLeft, akRight]
               TabOrder = 0
-              TextSettings.Font.Family = 'Candara'
-              TextSettings.Font.Size = 16.000000000000000000
-              Position.X = 16.000000000000000000
-              Position.Y = 36.000000000000000000
-              Size.Width = 161.000000000000000000
-              Size.Height = 32.000000000000000000
-              Size.PlatformDefault = False
-              TextPrompt = 'Wilaya'
-              StyledSettings = [Style, FontColor]
-              OnChangeTracking = Edit_Search_WilayaChangeTracking
+              object Edit2: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Anchors = [akLeft, akRight]
+                TabOrder = 0
+                TextSettings.Font.Family = 'Candara'
+                TextSettings.Font.Size = 16.000000000000000000
+                Position.X = 13.000000000000000000
+                Position.Y = 36.000000000000000000
+                Size.Width = 161.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                TextPrompt = 'Groupage'
+                StyledSettings = [Style, FontColor]
+                OnChangeTracking = Edit2ChangeTracking
+              end
             end
-            object Edit2: TEdit
-              Touch.InteractiveGestures = [LongTap, DoubleTap]
-              Anchors = [akLeft, akRight]
-              TabOrder = 1
-              TextSettings.Font.Family = 'Candara'
-              TextSettings.Font.Size = 16.000000000000000000
-              Position.X = 384.000000000000000000
-              Position.Y = 36.000000000000000000
-              Size.Width = 161.000000000000000000
-              Size.Height = 32.000000000000000000
+            object Layout11: TLayout
+              Align = Left
+              Position.X = 187.000000000000000000
+              Size.Width = 187.000000000000000000
+              Size.Height = 87.000000000000000000
               Size.PlatformDefault = False
-              TextPrompt = 'Groupage'
-              StyledSettings = [Style, FontColor]
-              OnChangeTracking = Edit2ChangeTracking
+              TabOrder = 1
+              object Edit_Search_Commune: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Anchors = [akLeft, akRight]
+                TabOrder = 1
+                TextSettings.Font.Family = 'Candara'
+                TextSettings.Font.Size = 16.000000000000000000
+                Position.X = 13.000000000000000000
+                Position.Y = 36.000000000000000000
+                Size.Width = 161.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                TextPrompt = 'Commune'
+                StyledSettings = [Style, FontColor]
+                OnChangeTracking = Edit_Search_CommuneChangeTracking
+              end
+            end
+            object Layout10: TLayout
+              Align = Left
+              Size.Width = 187.000000000000000000
+              Size.Height = 87.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 2
+              object Edit_Search_Wilaya: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Anchors = [akLeft, akRight]
+                TabOrder = 0
+                TextSettings.Font.Family = 'Candara'
+                TextSettings.Font.Size = 16.000000000000000000
+                Position.X = 16.000000000000000000
+                Position.Y = 36.000000000000000000
+                Size.Width = 161.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                TextPrompt = 'Wilaya'
+                StyledSettings = [Style, FontColor]
+                OnChangeTracking = Edit_Search_WilayaChangeTracking
+              end
             end
           end
         end
@@ -3542,9 +3564,6 @@ object Main: TMain
             Visible = False
           end
         end
-        inherited ImageControl1: TImageControl
-          Size.Height = 160.000000000000000000
-        end
       end
     end
     object Edit_Patient: TTabItem
@@ -3634,9 +3653,6 @@ object Main: TMain
             TabOrder = 3
             OnClick = Frame_EP_PrincipaleButton3Click
           end
-        end
-        inherited ImageControl1: TImageControl
-          Size.Height = 160.000000000000000000
         end
       end
       object TabControl1: TTabControl
@@ -4270,6 +4286,14 @@ object Main: TMain
       OnClick = PoP2_SerologieClick
     end
   end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.Bak'
+    FileName = 'Backupbase'
+    Filter = 'BAK file|*.BAK|db file|*.db'
+    OnTypeChange = SaveDialog1TypeChange
+    Left = 720
+    Top = 48
+  end
   object BindSourceDB1: TBindSourceDB
     DataSet = DataModule1.FDQ_Groupage
     ScopeMappings = <>
@@ -4352,13 +4376,5 @@ object Main: TMain
     Provider = 'FMX'
     Left = 976
     Top = 72
-  end
-  object SaveDialog1: TSaveDialog
-    DefaultExt = '.Bak'
-    FileName = 'Backupbase'
-    Filter = 'BAK file|*.BAK|db file|*.db'
-    OnTypeChange = SaveDialog1TypeChange
-    Left = 720
-    Top = 48
   end
 end
