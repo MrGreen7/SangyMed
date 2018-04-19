@@ -1399,10 +1399,21 @@ end;
 procedure TMain.Label10Click(Sender: TObject);
 Var
   PropreDlg: TPropre;
+  i: Integer;
 begin
   inherited;
   PropreDlg := TPropre.Create(Self);
-  LoadTheme(PropreDlg);
+  i := LoadTheme(PropreDlg);
+  if (i = 0) then
+  Begin
+    PropreDlg.Rectangle1.Visible := True;
+    PropreDlg.Rectangle2.Visible := False;
+  End
+  else if (i = 1) then
+  begin
+    PropreDlg.Rectangle2.Visible := True;
+    PropreDlg.Rectangle1.Visible := False;
+  end;
   if (PropreDlg.ShowModal = mrCancel) then
     PropreDlg.Free;
 end;
@@ -1410,12 +1421,13 @@ end;
 procedure TMain.Label12Click(Sender: TObject);
 var
   EtablissementDlg: TEtablissement;
+  i: Integer;
 begin
   inherited;
   if (Privilege = True) then
   Begin
     EtablissementDlg := TEtablissement.Create(Self);
-    LoadTheme(EtablissementDlg);
+    i := LoadTheme(EtablissementDlg);
     if (EtablissementDlg.ShowModal = mrClose) then
       EtablissementDlg.Free;
   End
