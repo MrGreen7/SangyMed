@@ -1,13 +1,12 @@
 object DataModule1: TDataModule1
   OldCreateOrder = False
-  OnCreate = DataModuleCreate
-  Height = 523
-  Width = 818
+  Height = 444
+  Width = 687
   object FDCmnd_Drop_Patient: TFDCommand
     Connection = FDConnection1
     CommandKind = skDrop
-    Left = 288
-    Top = 192
+    Left = 16
+    Top = 144
   end
   object FDCommand1: TFDCommand
     Connection = FDConnection1
@@ -25,13 +24,14 @@ object DataModule1: TDataModule1
   object FDConnection2: TFDConnection
     Params.Strings = (
       'DriverID=sQLite')
-    Left = 536
-    Top = 32
+    LoginPrompt = False
+    Left = 296
+    Top = 8
   end
   object FDQ_Commune: TFDQuery
     Connection = FDConnection2
-    Left = 592
-    Top = 64
+    Left = 208
+    Top = 232
   end
   object FDQ_Entreprise: TFDQuery
     Connection = FDConnection1
@@ -72,13 +72,13 @@ object DataModule1: TDataModule1
   end
   object FDQ_Status_Patient: TFDQuery
     Connection = FDConnection1
-    Left = 616
-    Top = 192
+    Left = 48
+    Top = 224
   end
   object FDQ_Wilaya: TFDQuery
     Connection = FDConnection2
-    Left = 392
-    Top = 48
+    Left = 136
+    Top = 232
   end
   object FDQuery1: TFDQuery
     Connection = FDConnection1
@@ -87,30 +87,34 @@ object DataModule1: TDataModule1
   end
   object FDQuery2: TFDQuery
     Connection = FDConnection1
-    Left = 224
-    Top = 104
+    Left = 176
+    Top = 80
   end
   object FDSQLiteSecurity1: TFDSQLiteSecurity
-    Left = 216
-    Top = 24
+    Left = 424
+    Top = 360
   end
   object FDSQLiteBackup1: TFDSQLiteBackup
+    WaitForLocks = False
     Catalog = 'MAIN'
     DestCatalog = 'MAIN'
-    Left = 592
-    Top = 296
+    Left = 608
+    Top = 352
   end
   object FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink
-    Left = 424
-    Top = 288
+    OnDriverCreated = DataModuleCreate
+    OnDriverDestroying = DataModuleCreate
+    Left = 520
+    Top = 376
   end
   object FDConnection3: TFDConnection
     Params.Strings = (
-      'Database=C:\Users\Kacemo\Desktop\Data.db'
-      'ConnectionDef=sQLite_Demo')
+      'DriverID=sQLite')
+    ResourceOptions.AssignedValues = [rvBackup]
+    ResourceOptions.Backup = True
     LoginPrompt = False
-    Left = 416
-    Top = 216
+    Left = 504
+    Top = 24
   end
   object FDQ_Homme: TFDQuery
     Connection = FDConnection1
@@ -121,5 +125,38 @@ object DataModule1: TDataModule1
     Connection = FDConnection1
     Left = 120
     Top = 392
+  end
+  object FDBatchMove1: TFDBatchMove
+    Reader = FDBatchMoveDataSetReader1
+    Writer = FDBatchMoveDataSetWriter1
+    Mappings = <>
+    LogFileName = 'Data.log'
+    Left = 592
+    Top = 168
+  end
+  object FDBatchMoveDataSetWriter1: TFDBatchMoveDataSetWriter
+    Left = 520
+    Top = 208
+  end
+  object FDBatchMoveDataSetReader1: TFDBatchMoveDataSetReader
+    Left = 536
+    Top = 96
+  end
+  object FDConnection4: TFDConnection
+    Params.Strings = (
+      'DriverID=sQLite')
+    LoginPrompt = False
+    Left = 608
+    Top = 24
+  end
+  object FDQuery3: TFDQuery
+    Connection = FDConnection3
+    Left = 384
+    Top = 88
+  end
+  object FDQuery4: TFDQuery
+    Connection = FDConnection4
+    Left = 440
+    Top = 80
   end
 end

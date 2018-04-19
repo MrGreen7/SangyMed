@@ -4,7 +4,7 @@ object Etablissement: TEtablissement
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = Single
   Caption = #201'tablissement'
-  ClientHeight = 550
+  ClientHeight = 553
   ClientWidth = 742
   FormFactor.Width = 320
   FormFactor.Height = 480
@@ -102,14 +102,14 @@ object Etablissement: TEtablissement
     Position.X = 8.000000000000000000
     Position.Y = 160.000000000000000000
     Size.Width = 726.000000000000000000
-    Size.Height = 385.000000000000000000
+    Size.Height = 393.000000000000000000
     Size.PlatformDefault = False
     TabIndex = 0
     TabOrder = 1
     TabPosition = PlatformDefault
     Sizes = (
       726s
-      359s)
+      367s)
     object TabItem1: TTabItem
       CustomIcon = <
         item
@@ -272,7 +272,7 @@ object Etablissement: TEtablissement
         Align = Top
         Position.Y = 177.000000000000000000
         Size.Width = 726.000000000000000000
-        Size.Height = 176.000000000000000000
+        Size.Height = 184.000000000000000000
         Size.PlatformDefault = False
         Text = 'Contact'
         TabOrder = 1
@@ -280,7 +280,7 @@ object Etablissement: TEtablissement
         object Label7: TLabel
           StyledSettings = [FontColor]
           Position.X = 15.000000000000000000
-          Position.Y = 40.000000000000000000
+          Position.Y = 32.000000000000000000
           Size.Width = 74.000000000000000000
           Size.Height = 25.000000000000000000
           Size.PlatformDefault = False
@@ -304,7 +304,7 @@ object Etablissement: TEtablissement
         object Label9: TLabel
           StyledSettings = [FontColor]
           Position.X = 15.000000000000000000
-          Position.Y = 96.000000000000000000
+          Position.Y = 103.000000000000000000
           Size.Width = 66.000000000000000000
           Size.Height = 25.000000000000000000
           Size.PlatformDefault = False
@@ -345,7 +345,7 @@ object Etablissement: TEtablissement
           TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 16.000000000000000000
           Position.X = 96.000000000000000000
-          Position.Y = 40.000000000000000000
+          Position.Y = 32.000000000000000000
           Size.Width = 257.000000000000000000
           Size.Height = 22.000000000000000000
           Size.PlatformDefault = False
@@ -370,7 +370,7 @@ object Etablissement: TEtablissement
           TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 16.000000000000000000
           Position.X = 96.000000000000000000
-          Position.Y = 96.000000000000000000
+          Position.Y = 103.000000000000000000
           Size.Width = 257.000000000000000000
           Size.Height = 22.000000000000000000
           Size.PlatformDefault = False
@@ -405,7 +405,7 @@ object Etablissement: TEtablissement
       end
       object Button1: TButton
         Position.X = 256.000000000000000000
-        Position.Y = 310.000000000000000000
+        Position.Y = 326.000000000000000000
         Size.Width = 96.000000000000000000
         Size.Height = 27.000000000000000000
         Size.PlatformDefault = False
@@ -415,7 +415,7 @@ object Etablissement: TEtablissement
       end
       object Button2: TButton
         Position.X = 600.000000000000000000
-        Position.Y = 310.000000000000000000
+        Position.Y = 326.000000000000000000
         Size.Width = 96.000000000000000000
         Size.Height = 27.000000000000000000
         Size.PlatformDefault = False
@@ -425,7 +425,7 @@ object Etablissement: TEtablissement
       end
       object Button3: TButton
         Position.X = 428.000000000000000000
-        Position.Y = 310.000000000000000000
+        Position.Y = 326.000000000000000000
         Size.Width = 96.000000000000000000
         Size.Height = 27.000000000000000000
         Size.PlatformDefault = False

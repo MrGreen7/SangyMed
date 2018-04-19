@@ -7,7 +7,8 @@ uses
   System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, U_Base_Form,
   FMX.StdCtrls, FMX.Controls.Presentation, FMX.Objects, FMX.Layouts,
-  FMX.Printer, FMX.Utils;
+  FMX.Printer, FMX.Utils, FireDAC.UI.Intf, FireDAC.FMXUI.Wait,
+  FireDAC.Stan.Intf, FireDAC.Comp.UI;
 
 type
   TPrint_HM = class(TBase_Form)
@@ -80,6 +81,8 @@ type
     Rectangle4: TRectangle;
     Rectangle5: TRectangle;
     Rectangle6: TRectangle;
+    Image1: TImage;
+    FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     procedure OnLoad;
     procedure Rez;
     procedure FormCreate(Sender: TObject);

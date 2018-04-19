@@ -9,7 +9,7 @@ object Frame1: TFrame1
     Padding.Left = 5.000000000000000000
     Padding.Top = 20.000000000000000000
     Padding.Right = 5.000000000000000000
-    Size.Width = 629.000000000000000000
+    Size.Width = 789.000000000000000000
     Size.Height = 191.000000000000000000
     Size.PlatformDefault = False
     Text = 'Information principale'
@@ -20,13 +20,13 @@ object Frame1: TFrame1
       Align = Top
       Position.X = 5.000000000000000000
       Position.Y = 140.000000000000000000
-      Size.Width = 619.000000000000000000
+      Size.Width = 779.000000000000000000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 3
       object Layout_Right1: TLayout
         Align = Right
-        Position.X = 316.000000000000000000
+        Position.X = 476.000000000000000000
         Size.Width = 303.000000000000000000
         Size.Height = 40.000000000000000000
         Size.PlatformDefault = False
@@ -104,13 +104,13 @@ object Frame1: TFrame1
       Align = Top
       Position.X = 5.000000000000000000
       Position.Y = 100.000000000000000000
-      Size.Width = 619.000000000000000000
+      Size.Width = 779.000000000000000000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
       object Layout_Right3: TLayout
         Align = Right
-        Position.X = 316.000000000000000000
+        Position.X = 476.000000000000000000
         Size.Width = 303.000000000000000000
         Size.Height = 40.000000000000000000
         Size.PlatformDefault = False
@@ -165,20 +165,24 @@ object Frame1: TFrame1
           TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 14.000000000000000000
           Text = 'N'#233' le'
-          TabOrder = 8
+          TabOrder = 7
         end
-        object IP_DateEdit1: TDateEdit
-          Date = 43152.000000000000000000
+        object Edit_Date: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
           Anchors = [akLeft, akRight]
+          TabOrder = 1
+          MaxLength = 10
+          FilterChar = '0123456789-'
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
           Position.X = 90.000000000000000000
-          Position.Y = 3.710144758224487000
+          Position.Y = 4.000000000000000000
           Size.Width = 207.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextPrompt = 'DD-MM-YYYY'
           StyledSettings = [Style, FontColor]
-          TabOrder = 3
-          TextSettings.Font.Family = 'Candara'
-          TextSettings.Font.Size = 14.000000000000000000
+          OnChange = IP_Edit2Change
         end
       end
     end
@@ -186,13 +190,13 @@ object Frame1: TFrame1
       Align = Top
       Position.X = 5.000000000000000000
       Position.Y = 60.000000000000000000
-      Size.Width = 619.000000000000000000
+      Size.Width = 779.000000000000000000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
       object Layout_Right4: TLayout
         Align = Right
-        Position.X = 316.000000000000000000
+        Position.X = 476.000000000000000000
         Size.Width = 303.000000000000000000
         Size.Height = 40.000000000000000000
         Size.PlatformDefault = False
@@ -201,7 +205,7 @@ object Frame1: TFrame1
           Anchors = [akLeft]
           StyledSettings = [Style, FontColor]
           Position.X = 10.000000000000000000
-          Position.Y = 3.574468135833740000
+          Position.Y = 3.574466705322266000
           Size.Width = 55.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
@@ -217,7 +221,7 @@ object Frame1: TFrame1
           TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 14.000000000000000000
           Position.X = 90.000000000000000000
-          Position.Y = 4.425531864166260000
+          Position.Y = 4.425531387329101000
           Size.Width = 207.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
@@ -253,10 +257,11 @@ object Frame1: TFrame1
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           Anchors = [akLeft, akRight]
           TabOrder = 1
+          MaxLength = 10
           TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 14.000000000000000000
           Position.X = 90.000000000000000000
-          Position.Y = 3.574468135833740000
+          Position.Y = 3.574466705322266000
           Size.Width = 207.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
@@ -275,13 +280,13 @@ object Frame1: TFrame1
       Align = Top
       Position.X = 5.000000000000000000
       Position.Y = 20.000000000000000000
-      Size.Width = 619.000000000000000000
+      Size.Width = 779.000000000000000000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
       object Layout_Right2: TLayout
         Align = Right
-        Position.X = 316.000000000000000000
+        Position.X = 476.000000000000000000
         Size.Width = 303.000000000000000000
         Size.Height = 40.000000000000000000
         Size.PlatformDefault = False
@@ -300,17 +305,22 @@ object Frame1: TFrame1
           TabOrder = 3
         end
         object IP_DateEdit2: TDateEdit
-          Date = 43126.000000000000000000
+          IsChecked = False
+          Date = 43208.000000000000000000
+          WeekNumbers = True
+          TodayDefault = True
           Anchors = [akLeft, akRight]
           Position.X = 90.000000000000000000
           Position.Y = 3.710144996643066000
+          ReadOnly = True
           Size.Width = 207.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
-          StyledSettings = [Style, FontColor]
+          StyledSettings = []
           TabOrder = 0
-          TextSettings.Font.Family = 'Candara'
-          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.Family = '(Default)'
+          ParentShowHint = False
+          ShowHint = False
         end
       end
       object Layout_Left_2: TLayout
@@ -410,5 +420,6 @@ object Frame1: TFrame1
     Size.Height = 151.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
+    Visible = False
   end
 end

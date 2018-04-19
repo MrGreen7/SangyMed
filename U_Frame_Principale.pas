@@ -26,7 +26,6 @@ type
     InnerGlowEffect3Combo3: TInnerGlowEffect;
     Layout_Left_3: TLayout;
     IP_Label3: TLabel;
-    IP_DateEdit1: TDateEdit;
     Layout_Top_4: TLayout;
     Layout_Right4: TLayout;
     IP_Label6: TLabel;
@@ -49,6 +48,7 @@ type
     Button3: TButton;
     ImageControl1: TImageControl;
     InnerGlowEffect2Combo2: TInnerGlowEffect;
+    Edit_Date: TEdit;
     function SetEdit: Boolean;
     function Edit(): String;
     function Insert(): String;
@@ -91,7 +91,7 @@ begin
         IP_Edit1.Text := FieldByName('Patient_ID').AsString;
         IP_Edit2.Text := FieldByName('Nom').AsString;
         IP_Edit3.Text := FieldByName('Prenom').AsString;
-        IP_DateEdit1.Text := FieldByName('Date_de_Nai').AsString;
+        Edit_Date.Text := FieldByName('Date_de_Nai').AsString;
         IP_DateEdit2.Text := FieldByName('date_de_Entre').AsString;
         try
           IP_ComboBox1.ItemIndex := FieldByName('Etat_Civil_Index').Value;
@@ -140,7 +140,7 @@ begin
     Rand := FieldByName('Patient_ID').AsString;
     FieldByName('Nom').AsString := IP_Edit2.Text;
     FieldByName('Prenom').AsString := IP_Edit3.Text;
-    FieldByName('Date_de_Nai').AsString := IP_DateEdit1.Text;
+    FieldByName('Date_de_Nai').AsString := Edit_Date.Text;
     FieldByName('Date_de_Entre').AsString := IP_DateEdit2.Text;
     if (IP_ComboBox1.ItemIndex <> -1) then
     Begin
@@ -224,7 +224,7 @@ begin
     until bol = False;
     FieldByName('Nom').AsString := IP_Edit2.Text;
     FieldByName('Prenom').AsString := IP_Edit3.Text;
-    FieldByName('Date_de_Nai').AsString := IP_DateEdit1.Text;
+    FieldByName('Date_de_Nai').AsString := Edit_Date.Text;
     FieldByName('Date_de_Entre').AsString := IP_DateEdit2.Text;
     if (IP_ComboBox1.ItemIndex <> -1) then
     Begin
@@ -279,8 +279,8 @@ Begin
   IP_Edit1.Text := '';
   IP_Edit2.Text := '';
   IP_Edit3.Text := '';
-  IP_DateEdit1.Date := 26 - 01 - 2018;
-  IP_DateEdit2.Date := 26 - 01 - 2018;
+  Edit_Date.Text := DateToStr(date);
+  IP_DateEdit2.date := date;
   IP_ComboBox1.ItemIndex := -1;
   IP_ComboBox2.ItemIndex := -1;
   IP_ComboBox3.ItemIndex := -1;

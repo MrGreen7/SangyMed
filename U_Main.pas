@@ -14,7 +14,8 @@ uses
   FMX.Edit, U_Frame_Ordonnance, FMX.Menus, FMX.Grid.Style, FMX.ScrollBox,
   FMX.Grid, FMX.Bind.Grid, FMX.Bind.Editors, FireDAC.Stan.Def,
   FireDAC.FMXUI.Wait, FireDAC.Phys.SQLiteWrapper, FireDAC.Stan.Intf,
-  FireDAC.Phys, FireDAC.Phys.SQLite, FMX.ListBox;
+  FireDAC.Phys, FireDAC.Phys.SQLite, FMX.ListBox, FMX.DateTimeCtrls,
+  FireDAC.UI.Intf, FireDAC.Comp.UI;
 
 type
   TMain = class(TBase_Form)
@@ -72,13 +73,6 @@ type
     H_Editeur: TTabItem;
     Panel6: TPanel;
     Layout26: TLayout;
-    Layout32: TLayout;
-    Label67: TLabel;
-    ShadowEffect54: TShadowEffect;
-    Label68: TLabel;
-    Label69: TLabel;
-    ColorAnimation32: TColorAnimation;
-    ShadowEffect57: TShadowEffect;
     Layout33: TLayout;
     Label70: TLabel;
     ShadowEffect58: TShadowEffect;
@@ -93,7 +87,6 @@ type
     ColorAnimation35: TColorAnimation;
     Line17: TLine;
     Line18: TLine;
-    Line19: TLine;
     Layout35: TLayout;
     Label74: TLabel;
     ShadowEffect62: TShadowEffect;
@@ -319,6 +312,10 @@ type
     LinkGridToDataSourceBindSourceDB5: TLinkGridToDataSource;
     BindSourceDB6: TBindSourceDB;
     LinkGridToDataSourceBindSourceDB6: TLinkGridToDataSource;
+    Layout9: TLayout;
+    Label22: TLabel;
+    FDGUIxWaitCursor1: TFDGUIxWaitCursor;
+    SaveDialog1: TSaveDialog;
     procedure FormShow(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormCreate(Sender: TObject);
@@ -413,6 +410,10 @@ type
     procedure FloatAnimation3Finish(Sender: TObject);
     procedure Label10Click(Sender: TObject);
     procedure LoadParam;
+    procedure Label73Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Label75Click(Sender: TObject);
+    procedure SaveDialog1TypeChange(Sender: TObject);
   private
     { Private declarations }
     WidthX, HeightX: Integer;
@@ -430,7 +431,7 @@ implementation
 Uses
   U_Parametre, U_Connecter, U_Entreprise, Winapi.Windows, U_DataModule,
   FireDAC.Comp.Client, U_Fenetre, U_Print_HM, U_Print_Bio, U_Print_HS,
-  U_Print_SR, U_Propre;
+  U_Print_SR, U_Propre, ShellApi;
 {$R *.fmx}
 {$R Alg_Res.RES}
 
@@ -438,6 +439,12 @@ procedure ChangeParaMinus;
 Begin
   With Main do
   Begin
+    Label71.StyledSettings := Label71.StyledSettings -
+      [TStyledSetting.FontColor];
+    Label75.StyledSettings := Label75.StyledSettings -
+      [TStyledSetting.FontColor];
+    Label73.StyledSettings := Label73.StyledSettings -
+      [TStyledSetting.FontColor];
     Label1.StyledSettings := Label1.StyledSettings - [TStyledSetting.FontColor];
     Label4.StyledSettings := Label4.StyledSettings - [TStyledSetting.FontColor];
     Label6.StyledSettings := Label6.StyledSettings - [TStyledSetting.FontColor];
@@ -524,6 +531,12 @@ procedure ChangeParamPlus;
 Begin
   With Main do
   Begin
+    Label71.StyledSettings := Label71.StyledSettings +
+      [TStyledSetting.FontColor];
+    Label75.StyledSettings := Label75.StyledSettings +
+      [TStyledSetting.FontColor];
+    Label73.StyledSettings := Label73.StyledSettings +
+      [TStyledSetting.FontColor];
     Label1.StyledSettings := Label1.StyledSettings + [TStyledSetting.FontColor];
     Label4.StyledSettings := Label4.StyledSettings + [TStyledSetting.FontColor];
     Label6.StyledSettings := Label6.StyledSettings + [TStyledSetting.FontColor];
@@ -850,6 +863,17 @@ Begin
   End;
 End;
 
+procedure TMain.SaveDialog1TypeChange(Sender: TObject);
+begin
+  inherited;
+  case SaveDialog1.FilterIndex of
+    1:
+      SaveDialog1.DefaultExt := '.BAK';
+    2:
+      SaveDialog1.DefaultExt := '.db';
+  end;
+end;
+
 procedure TMain.StringGrid5CellClick(const Column: TColumn; const Row: Integer);
 Var
   tRow: Integer;
@@ -1086,6 +1110,19 @@ begin
   DataModule1.FDQ_Patient_Table.Active := True;
   StringGrid5ColResize;
   StatusBar;
+end;
+
+procedure TMain.FormClose(Sender: TObject; var Action: TCloseAction);
+Var
+  Pass: String;
+begin
+  inherited;
+  with DataModule1 do
+  Begin
+    Pass := GenerateID;
+    Pass := Encryt(Pass);
+    Database_Encrypt(Pass);
+  End;
 end;
 
 procedure TMain.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -1385,6 +1422,7 @@ begin
   Patient.Visible := False;
   H_Gen_Patient.Visible := False;
   H_Accueil.IsSelected := True;
+  H_Accueil.IsSelected := True;
 end;
 
 procedure TMain.Label18Click(Sender: TObject);
@@ -1392,6 +1430,7 @@ begin
   inherited;
   Recherche_Patient.Visible := False;
   H_Gen_RechercheP.Visible := False;
+  H_Accueil.IsSelected := True;
   H_Accueil.IsSelected := True;
 end;
 
@@ -1415,6 +1454,7 @@ begin
   inherited;
   Nouveau_Patient.Visible := False;
   H_Gen_NouveauP.Visible := False;
+  H_Accueil.IsSelected := True;
   H_Accueil.IsSelected := True;
 end;
 
@@ -1609,6 +1649,7 @@ begin
     Frame_EP_Hemostase.OnDataLoad;
     Frame_EP_Serologie.OnDataLoad;
     Frame_EP_Biochimic.OnDataLoad;
+    Main.OnResize(Self);
   End
   else
   Begin
@@ -1640,29 +1681,124 @@ end;
 
 procedure TMain.Label71Click(Sender: TObject);
 Var
-  output, Path, DirPath: String;
-  SaveDialog1: TSaveDialog;
+  output, Path, DirPath, Ext: String;
+  Encrypt: Boolean;
+  Msg: Integer;
 begin
   inherited;
-  SaveDialog1 := TSaveDialog.Create(Self);
-  SaveDialog1.Filter := ('db file|*.db|All|*.*');
-  SaveDialog1.FileName := 'patient_backup';
+  output := '';
+  Path := '';
+  DirPath := '';
   if (SaveDialog1.Execute) then
   Begin
-    output := 'C:\Users\Kacemo\Desktop\Pateint_backup.db';
-    FileCreate(output);
+    Msg := MessageDlg('', TMsgDlgType.mtConfirmation,
+      [TMsgDlgBtn.mbYes, TMsgDlgBtn.mbNo], 0);
+    if (Msg = mrYes) then
+      Encrypt := True
+    else
+      Encrypt := False;
     With DataModule1 do
     Begin
+      SaveDialog1.DefaultExt := '';
+      output := SaveDialog1.FileName;
       DirPath := GetEnvironmentVariable('AppData');
       Path := (DirPath + '\SangyMed\Data.db');
-      FDConnection1.Open();
+      FDConnection3.Params.Add('Database=' + Path);
+      FDConnection3.Open();
       FDSQLiteBackup1.DriverLink := FDPhysSQLiteDriverLink1;
-      FDSQLiteBackup1.Database := output;
-      FDSQLiteBackup1.DestDatabase := Path;
+      FDSQLiteBackup1.DatabaseObj := FDConnection3.CliObj;
+      SaveDialog1.OnTypeChange(Self);
+      FDSQLiteBackup1.DestDatabase := output;
       FDSQLiteBackup1.Backup;
+      if (Encrypt = True) then
+      Begin
+        FDSQLiteSecurity1.DriverLink := FDPhysSQLiteDriverLink1;
+        FDSQLiteSecurity1.database := output;
+        FDSQLiteSecurity1.Password := 'Painkiller';
+        FDSQLiteSecurity1.SetPassword;
+      End;
     End;
   End;
-  SaveDialog1.Free;
+end;
+
+procedure TMain.Label73Click(Sender: TObject);
+begin
+  inherited;
+  try
+    ShellExecute(0, 'open', 'c:\Windows\system32\calc.exe', nil, nil,
+      SW_SHOWNORMAL);
+  except
+    on E: Exception do
+      ShowMessage
+        ('Il semble que la calculatrice ne fonctionne pas bien dans votre système');
+  end;
+end;
+
+procedure TMain.Label75Click(Sender: TObject);
+Var
+  OpenDialog1: TOpenDialog;
+  Path, DirPath, input: String;
+  i: Integer;
+const
+  Tabs: array [1 .. 8] of String = ('Medecin', 'Etablissement', 'Parametre',
+    'Patient', 'Biochimie', 'Hemogramme', 'Hemostase_VS', 'Serologie');
+begin
+  inherited;
+  Path := '';
+  DirPath := '';
+  input := '';
+  OpenDialog1 := TOpenDialog.Create(Self);
+  OpenDialog1.Filter := ('BAK file|*.BAK|db file|*.db|All|*.*');
+  DirPath := GetEnvironmentVariable('AppData');
+  Path := (DirPath + '\SangyMed\Data.db');
+  if (OpenDialog1.Execute) then
+  Begin
+    input := OpenDialog1.FileName;
+    With DataModule1 do
+    begin
+      // Dencrypt
+      FDSQLiteSecurity1.DriverLink := FDPhysSQLiteDriverLink1;
+      FDSQLiteSecurity1.database := input;
+      FDSQLiteSecurity1.Password := 'Painkiller';
+      try
+        FDSQLiteSecurity1.RemovePassword;
+      except
+        on E: Exception do
+      end;
+      for i := 1 to length(Tabs) do
+      Begin
+        FDConnection3.Params.Add('Database=' + input);
+        FDConnection3.Connected := True;
+        FDConnection4.Params.Add('Database=' + Path);
+        FDConnection4.Connected := True;
+        FDQuery3.SQl.Clear;
+        FDQuery3.SQl.Text := ('Select * From ' + Tabs[i] + ';');
+        FDQuery3.Active := True;
+        FDQuery4.SQl.Clear;
+        FDQuery4.SQl.Text := ('Select * From ' + Tabs[i] + ';');
+        FDQuery4.Active := True;
+        FDBatchMoveDataSetReader1.DataSet := FDQuery3;
+        FDBatchMoveDataSetWriter1.DataSet := FDQuery4;
+        try
+          FDBatchMove1.Execute();
+        except
+          on E: Exception do
+          Begin
+            ShowMessage
+              ('Il semble que les données que vous essayez de restaurer déjà existent.');
+            Break;
+          End;
+        end;
+        FDQuery3.Active := False;
+        FDQuery4.Active := False;
+      End;
+      // Encrypt
+      FDSQLiteSecurity1.DriverLink := FDPhysSQLiteDriverLink1;
+      FDSQLiteSecurity1.database := input;
+      FDSQLiteSecurity1.Password := 'Painkiller';
+      FDSQLiteSecurity1.SetPassword;
+    end;
+  End;
 end;
 
 procedure TMain.Label76Click(Sender: TObject);
@@ -1695,6 +1831,7 @@ begin
   Nouveau_Patient.OnClick(Patient);
   Nouveau_Patient.IsSelected := True;
   TabItem1.IsSelected := True;
+  Main.OnResize(Self);
 end;
 
 procedure TMain.Nouveau_PatientClick(Sender: TObject);
@@ -1776,6 +1913,7 @@ begin
     if (TabExist('Hemogramme') = True) then
     Begin
       Print_HMDlg := TPrint_HM.Create(Self);
+      LoadTheme(Print_HMDlg);
       if (Print_HMDlg.ShowModal = mrCancel) then
         Print_HMDlg.Free;
     End
@@ -1796,6 +1934,7 @@ begin
     if (TabExist('Hemostase_VS') = True) then
     Begin
       PrintHSDlg := Tprint_HS.Create(Self);
+      LoadTheme(PrintHSDlg);
       if (PrintHSDlg.ShowModal = mrCancel) then
         PrintHSDlg.Free;
     End
@@ -1817,6 +1956,7 @@ begin
     if (TabExist('Biochimie') = True) then
     Begin
       PrintBioDLg := TPrint_Bio.Create(Self);
+      LoadTheme(PrintBioDLg);
       if (PrintBioDLg.ShowModal = mrCancel) then
         PrintBioDLg.Free;
     End
@@ -1837,6 +1977,7 @@ begin
     if (TabExist('Serologie') = True) then
     Begin
       PrintSRDlg := TPrint_SR.Create(Self);
+      LoadTheme(PrintSRDlg);
       if (PrintSRDlg.ShowModal = mrCancel) then
         PrintSRDlg.Free;
     End

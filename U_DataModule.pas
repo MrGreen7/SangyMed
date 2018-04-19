@@ -11,7 +11,9 @@ uses
   FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs, FireDAC.FMXUI.Wait,
   FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
   IdHashMessageDigest, FireDAC.Phys.MSAccDef, FireDAC.Phys.ODBCBase,
-  FireDAC.Phys.MSAcc, FireDAC.Phys.ODBC, FireDAC.VCLUI.Wait;
+  FireDAC.Phys.MSAcc, FireDAC.Phys.ODBC, FireDAC.VCLUI.Wait,
+  FireDAC.Phys.SQLiteWrapper, FireDAC.Comp.BatchMove,
+  FireDAC.Comp.BatchMove.SQL, FireDAC.Comp.BatchMove.DataSet;
 
 type
   TDataModule1 = class(TDataModule)
@@ -35,10 +37,17 @@ type
     FDConnection3: TFDConnection;
     FDQ_Homme: TFDQuery;
     FDQ_Femme: TFDQuery;
+    FDBatchMove1: TFDBatchMove;
+    FDBatchMoveDataSetWriter1: TFDBatchMoveDataSetWriter;
+    FDBatchMoveDataSetReader1: TFDBatchMoveDataSetReader;
+    FDConnection4: TFDConnection;
+    FDQuery3: TFDQuery;
+    FDQuery4: TFDQuery;
     procedure Init();
     procedure Param(const ID: String);
     function GenerateID: String;
     function Encryt(Str: string): string;
+    procedure Database_Encrypt(const pass: string);
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
@@ -154,6 +163,21 @@ Begin
   End;
 End;
 
+procedure TDataModule1.Database_Encrypt(const pass: String);
+Var
+  Path, output: String;
+Begin
+  Path := GetEnvironmentVariable('AppData');
+  Path := (Path + '\SangyMed\Data.db');
+  With DataModule1 Do
+  Begin
+    FDSQLiteSecurity1.DriverLink := FDPhysSQLiteDriverLink1;
+    FDSQLiteSecurity1.Database := Path;
+    FDSQLiteSecurity1.Password := 'Painkiller';
+    FDSQLiteSecurity1.SetPassword;
+  End;
+End;
+
 procedure TDataModule1.DataModuleCreate(Sender: TObject);
 var
   Path, PathInf, DirPath, HexPass, Db_Entrprise: string;
@@ -198,6 +222,16 @@ begin
   PathInf := ExpandFileName(DirPath + '\SangyMed\Alg_info.db');
   FDConnection1.Params.Add('Database=' + Path);
   FDConnection2.Params.Add('Database=' + PathInf);
+
+  FDSQLiteSecurity1.DriverLink := FDPhysSQLiteDriverLink1;
+  FDSQLiteSecurity1.Database := Path;
+  FDSQLiteSecurity1.Password := ('Painkiller');
+  try
+    FDSQLiteSecurity1.RemovePassword;
+  except
+    on E: Exception do
+  end;
+
   FDConnection1.Connected := True;
   FDConnection2.Connected := True;
 
@@ -248,6 +282,10 @@ begin
           Active := False;
           SQL.Clear;
           Param(Rand);
+          FDSQLiteSecurity1.DriverLink := FDPhysSQLiteDriverLink1;
+          FDSQLiteSecurity1.Database := Path;
+          FDSQLiteSecurity1.Password := 'Painkiller';
+          FDSQLiteSecurity1.SetPassword;
         end;
       except
         on E: Exception do

@@ -34997,7 +34997,7 @@ object Inscription: TInscription
   object ComboBox1: TComboBox
     Items.Strings = (
       'Administrator'
-      'Utilisateur')
+      'Standard')
     Position.X = 164.000000000000000000
     Position.Y = 258.000000000000000000
     Size.Width = 401.000000000000000000

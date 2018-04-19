@@ -400,10 +400,7 @@ object Parametre: TParametre
       object ComboBox1: TComboBox
         Items.Strings = (
           'Windows 10'
-          'Windows 10 SlateGrey'
-          'Windows 10 Blue'
-          'Windows 10 Green'
-          'Windows 10 Purple')
+          'Windows 10 SlateGrey')
         Position.X = 184.000000000000000000
         Position.Y = 83.000000000000000000
         Size.Width = 353.000000000000000000

@@ -7,7 +7,8 @@ uses
   System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
   FMX.StdCtrls, FMX.Controls.Presentation, FMX.Objects, FMX.Layouts,
-  FMX.Printer;
+  FMX.Printer, FireDAC.UI.Intf, FireDAC.FMXUI.Wait, FireDAC.Stan.Intf,
+  FireDAC.Comp.UI;
 
 type
   TPrint_Bio = class(TBase_Form)
@@ -132,6 +133,8 @@ type
     Text93: TText;
     Text94: TText;
     Rectangle6: TRectangle;
+    Image1: TImage;
+    FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     procedure Rez();
     procedure OnLoad;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

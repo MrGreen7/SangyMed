@@ -7,7 +7,8 @@ uses
   System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, U_Base_Form,
   FMX.Effects, FMX.StdCtrls, FMX.Edit, FMX.Controls.Presentation,
-  IdHashMessageDigest, FMX.Objects;
+  IdHashMessageDigest, FMX.Objects, FireDAC.UI.Intf, FireDAC.FMXUI.Wait,
+  FireDAC.Stan.Intf, FireDAC.Comp.UI;
 
 type
   TConnecter = class(TBase_Form)
@@ -28,6 +29,7 @@ type
     ShadowEffect4: TShadowEffect;
     Label5: TLabel;
     GlowEffect1: TGlowEffect;
+    FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     procedure Button1Click(Sender: TObject);
     procedure Edit1Change(Sender: TObject);
     procedure Edit2Change(Sender: TObject);
@@ -37,6 +39,7 @@ type
     procedure SpeedButton1MouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Single);
     procedure Label1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -121,6 +124,19 @@ begin
   end;
 end;
 
+procedure TConnecter.Button2Click(Sender: TObject);
+Var
+  pass: String;
+begin
+  inherited;
+  With DataModule1 do
+  Begin
+    pass := GenerateID;
+    pass := Encryt(pass);
+    Database_Encrypt(pass);
+  End;
+end;
+
 procedure TConnecter.Edit1Change(Sender: TObject);
 begin
   inherited;
@@ -138,7 +154,7 @@ Var
   RemontreDlg: TRemontre;
 begin
   inherited;
-  RemontreDlg := TRemontre.Create(Self);
+  RemontreDlg := TRemontre.Create(self);
   if (RemontreDlg.ShowModal = mrCancel) then
     RemontreDlg.Free;
 end;
@@ -148,7 +164,7 @@ var
   InsDlg: TInscription;
 begin
   inherited;
-  InsDlg := TInscription.Create(Self);
+  InsDlg := TInscription.Create(self);
   if (InsDlg.ShowModal = mrCancel) then
     InsDlg.Close;
 end;

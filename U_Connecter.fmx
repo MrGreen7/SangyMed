@@ -13066,6 +13066,7 @@ object Connecter: TConnecter
     Text = 'Annuler'
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 16.000000000000000000
+    OnClick = Button2Click
   end
   object Edit1: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
@@ -13235,5 +13236,10 @@ object Connecter: TConnecter
       Opacity = 0.400000005960464400
       ShadowColor = claBlack
     end
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'FMX'
+    Left = 240
+    Top = 208
   end
 end

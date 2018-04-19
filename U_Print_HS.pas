@@ -6,7 +6,8 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, U_Base_Form,
   System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
-  FMX.Controls.Presentation, FMX.Objects, FMX.Layouts, FMX.Printer;
+  FMX.Controls.Presentation, FMX.Objects, FMX.Layouts, FMX.Printer,
+  FireDAC.UI.Intf, FireDAC.FMXUI.Wait, FireDAC.Stan.Intf, FireDAC.Comp.UI;
 
 type
   TPrint_HS = class(TBase_Form)
@@ -59,6 +60,8 @@ type
     Text27: TText;
     Text28: TText;
     Text29: TText;
+    Image1: TImage;
+    FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     procedure Rez();
     procedure OnLoad;
     procedure Print_ButtonClick(Sender: TObject);
