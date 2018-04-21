@@ -11,6 +11,26 @@ object Etablissement: TEtablissement
   FormFactor.Devices = [Desktop]
   OnShow = FormShow
   DesignerMasterStyle = 0
+  object Rectangle1: TRectangle
+    Align = Client
+    Fill.Color = claWhite
+    Opacity = 0.500000000000000000
+    Size.Width = 742.000000000000000000
+    Size.Height = 553.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    Visible = False
+  end
+  object Rectangle2: TRectangle
+    Align = Client
+    Fill.Color = claSlategray
+    Opacity = 0.500000000000000000
+    Size.Width = 742.000000000000000000
+    Size.Height = 553.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    Visible = False
+  end
   object GroupBox1: TGroupBox
     Position.X = -4.000000000000000000
     Position.Y = 8.000000000000000000

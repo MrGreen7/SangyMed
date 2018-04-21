@@ -7,7 +7,7 @@ uses
   System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, U_Base_Form,
   FMX.TabControl, FMX.Controls.Presentation, FMX.Edit, FMX.StdCtrls,
-  FMX.Effects;
+  FMX.Effects, FMX.Objects;
 
 type
   TRemontre = class(TBase_Form)
@@ -26,6 +26,8 @@ type
     InnerGlowEffect3: TInnerGlowEffect;
     SpeedButton1: TSpeedButton;
     SpeedButton2: TSpeedButton;
+    Rectangle1: TRectangle;
+    Rectangle2: TRectangle;
     procedure Button1Click(Sender: TObject);
     procedure Edit1Change(Sender: TObject);
     procedure FormCreate(Sender: TObject);

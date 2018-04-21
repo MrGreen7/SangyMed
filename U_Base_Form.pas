@@ -11,7 +11,6 @@ type
   TBase_Form = class(TForm)
     Windows10SlateGrey: TStyleBook;
     Windows10: TStyleBook;
-    Base_Rectangle: TRectangle;
   private
     { Private declarations }
   public

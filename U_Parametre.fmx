@@ -12,6 +12,24 @@ object Parametre: TParametre
   OnCreate = FormCreate
   OnShow = FormShow
   DesignerMasterStyle = 0
+  object Rectangle2: TRectangle
+    Align = Client
+    Fill.Color = claSlategray
+    Opacity = 0.500000000000000000
+    Size.Width = 565.000000000000000000
+    Size.Height = 376.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+  end
+  object Rectangle1: TRectangle
+    Align = Client
+    Fill.Color = claWhite
+    Opacity = 0.500000000000000000
+    Size.Width = 565.000000000000000000
+    Size.Height = 376.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+  end
   object Panel1: TPanel
     Align = Left
     Size.Width = 193.000000000000000000

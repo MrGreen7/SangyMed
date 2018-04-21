@@ -7,7 +7,7 @@ uses
   System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, U_Base_Form,
   FMX.StdCtrls, FMX.TabControl, FMX.Edit, FMX.ListBox,
-  FMX.Controls.Presentation, FMX.Effects;
+  FMX.Controls.Presentation, FMX.Effects, FMX.Objects;
 
 type
   TEtablissement = class(TBase_Form)
@@ -48,6 +48,8 @@ type
     InnerGlowEffect1: TInnerGlowEffect;
     InnerGlowEffect2: TInnerGlowEffect;
     InnerGlowEffect3: TInnerGlowEffect;
+    Rectangle1: TRectangle;
+    Rectangle2: TRectangle;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);

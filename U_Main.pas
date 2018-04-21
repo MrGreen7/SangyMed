@@ -319,6 +319,9 @@ type
     Edit_Search_Wilaya: TEdit;
     Edit_Search_Commune: TEdit;
     Edit2: TEdit;
+    Layout13: TLayout;
+    Rectangle1: TRectangle;
+    Rectangle2: TRectangle;
     procedure FormShow(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormCreate(Sender: TObject);
@@ -442,91 +445,99 @@ procedure ChangeParaMinus;
 Begin
   With Main do
   Begin
+    Label_Refresh1.StyledSettings := Label_Refresh1.StyledSettings -
+      [TStyledsetting.FontColor];
+    Label_Refresh2.StyledSettings := Label_Refresh2.StyledSettings -
+      [TStyledsetting.FontColor];
+    Label_Refresh3.StyledSettings := Label_Refresh3.StyledSettings -
+      [TStyledsetting.FontColor];
+    Label_Refresh4.StyledSettings := Label_Refresh4.StyledSettings -
+      [TStyledsetting.FontColor];
     Label71.StyledSettings := Label71.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label75.StyledSettings := Label75.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label73.StyledSettings := Label73.StyledSettings -
-      [TStyledSetting.FontColor];
-    Label1.StyledSettings := Label1.StyledSettings - [TStyledSetting.FontColor];
-    Label4.StyledSettings := Label4.StyledSettings - [TStyledSetting.FontColor];
-    Label6.StyledSettings := Label6.StyledSettings - [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
+    Label1.StyledSettings := Label1.StyledSettings - [TStyledsetting.FontColor];
+    Label4.StyledSettings := Label4.StyledSettings - [TStyledsetting.FontColor];
+    Label6.StyledSettings := Label6.StyledSettings - [TStyledsetting.FontColor];
     Label12.StyledSettings := Label12.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label10.StyledSettings := Label10.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label49.StyledSettings := Label49.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label48.StyledSettings := Label48.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label46.StyledSettings := Label46.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label223.StyledSettings := Label223.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label18.StyledSettings := Label18.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label52.StyledSettings := Label52.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label65.StyledSettings := Label65.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label61.StyledSettings := Label61.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label32.StyledSettings := Label32.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label30.StyledSettings := Label30.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label27.StyledSettings := Label27.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label55.StyledSettings := Label55.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label54.StyledSettings := Label54.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label20.StyledSettings := Label20.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label15.StyledSettings := Label15.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     //
     T_Accueil.StyledSettings := T_Accueil.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     T_Patient.StyledSettings := T_Patient.StyledSettings -
-      [TStyledSetting.FontColor];
-    T_RDV.StyledSettings := T_RDV.StyledSettings - [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
+    T_RDV.StyledSettings := T_RDV.StyledSettings - [TStyledsetting.FontColor];
     Patient_Recherche.StyledSettings := Patient_Recherche.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     New_Patient.StyledSettings := New_Patient.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     //
     Edit_Patient.StyledSettings := Edit_Patient.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Nouveau_Patient.StyledSettings := Nouveau_Patient.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Patient.StyledSettings := Patient.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Recherche_Patient.StyledSettings := Recherche_Patient.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     P_Accueil.StyledSettings := P_Accueil.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     //
     TabItem1.StyledSettings := TabItem1.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TabItem2.StyledSettings := TabItem2.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TabItem3.StyledSettings := TabItem3.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TabItem4.StyledSettings := TabItem4.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TabItem5.StyledSettings := TabItem5.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TabItem8.StyledSettings := TabItem8.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TabItem9.StyledSettings := TabItem9.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TabItem10.StyledSettings := TabItem10.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TabItem11.StyledSettings := TabItem11.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TabItem12.StyledSettings := TabItem12.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
   End;
 End;
 
@@ -534,91 +545,99 @@ procedure ChangeParamPlus;
 Begin
   With Main do
   Begin
+    Label_Refresh1.StyledSettings := Label_Refresh1.StyledSettings +
+      [TStyledsetting.FontColor];
+    Label_Refresh2.StyledSettings := Label_Refresh2.StyledSettings +
+      [TStyledsetting.FontColor];
+    Label_Refresh3.StyledSettings := Label_Refresh3.StyledSettings +
+      [TStyledsetting.FontColor];
+    Label_Refresh4.StyledSettings := Label_Refresh4.StyledSettings +
+      [TStyledsetting.FontColor];
     Label71.StyledSettings := Label71.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label75.StyledSettings := Label75.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label73.StyledSettings := Label73.StyledSettings +
-      [TStyledSetting.FontColor];
-    Label1.StyledSettings := Label1.StyledSettings + [TStyledSetting.FontColor];
-    Label4.StyledSettings := Label4.StyledSettings + [TStyledSetting.FontColor];
-    Label6.StyledSettings := Label6.StyledSettings + [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
+    Label1.StyledSettings := Label1.StyledSettings + [TStyledsetting.FontColor];
+    Label4.StyledSettings := Label4.StyledSettings + [TStyledsetting.FontColor];
+    Label6.StyledSettings := Label6.StyledSettings + [TStyledsetting.FontColor];
     Label12.StyledSettings := Label12.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label10.StyledSettings := Label10.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label49.StyledSettings := Label49.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label48.StyledSettings := Label48.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label46.StyledSettings := Label46.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label223.StyledSettings := Label223.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label18.StyledSettings := Label18.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label52.StyledSettings := Label52.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label65.StyledSettings := Label65.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label61.StyledSettings := Label61.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label32.StyledSettings := Label32.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label30.StyledSettings := Label30.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label27.StyledSettings := Label27.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label55.StyledSettings := Label55.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label54.StyledSettings := Label54.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label20.StyledSettings := Label20.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Label15.StyledSettings := Label15.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     //
     T_Accueil.StyledSettings := T_Accueil.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     T_Patient.StyledSettings := T_Patient.StyledSettings +
-      [TStyledSetting.FontColor];
-    T_RDV.StyledSettings := T_RDV.StyledSettings + [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
+    T_RDV.StyledSettings := T_RDV.StyledSettings + [TStyledsetting.FontColor];
     Patient_Recherche.StyledSettings := Patient_Recherche.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     New_Patient.StyledSettings := New_Patient.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     //
     Edit_Patient.StyledSettings := Edit_Patient.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Nouveau_Patient.StyledSettings := Nouveau_Patient.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Patient.StyledSettings := Patient.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Recherche_Patient.StyledSettings := Recherche_Patient.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     P_Accueil.StyledSettings := P_Accueil.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     //
     TabItem1.StyledSettings := TabItem1.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TabItem2.StyledSettings := TabItem2.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TabItem3.StyledSettings := TabItem3.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TabItem4.StyledSettings := TabItem4.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TabItem5.StyledSettings := TabItem5.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TabItem8.StyledSettings := TabItem8.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TabItem9.StyledSettings := TabItem9.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TabItem10.StyledSettings := TabItem10.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TabItem11.StyledSettings := TabItem11.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TabItem12.StyledSettings := TabItem12.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
   End;
 end;
 
@@ -628,24 +647,24 @@ Begin
   Begin
     //
     Generale.StyledSettings := Generale.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TreeViewItem1.StyledSettings := TreeViewItem1.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TreeViewItem3.StyledSettings := TreeViewItem3.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     //
     Tree_Sub_CompteMod.StyledSettings := Tree_Sub_CompteMod.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Tree_Sub_CompteRem.StyledSettings := Tree_Sub_CompteRem.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Tree_Sub_Pref.StyledSettings := Tree_Sub_Pref.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Tree_Sub_Patient.StyledSettings := Tree_Sub_Patient.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Tree_Sub_PAccueil.StyledSettings := Tree_Sub_PAccueil.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Tree_Sub_CompteDel.StyledSettings := Tree_Sub_CompteDel.StyledSettings +
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
   End;
 End;
 
@@ -655,24 +674,24 @@ Begin
   Begin
     //
     Generale.StyledSettings := Generale.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TreeViewItem1.StyledSettings := TreeViewItem1.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     TreeViewItem3.StyledSettings := TreeViewItem3.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     //
     Tree_Sub_CompteMod.StyledSettings := Tree_Sub_CompteMod.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Tree_Sub_CompteRem.StyledSettings := Tree_Sub_CompteRem.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Tree_Sub_Pref.StyledSettings := Tree_Sub_Pref.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Tree_Sub_Patient.StyledSettings := Tree_Sub_Patient.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Tree_Sub_PAccueil.StyledSettings := Tree_Sub_PAccueil.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
     Tree_Sub_CompteDel.StyledSettings := Tree_Sub_CompteDel.StyledSettings -
-      [TStyledSetting.FontColor];
+      [TStyledsetting.FontColor];
   End;
 End;
 
@@ -748,11 +767,15 @@ Begin
         Begin
           StyleBook := Windows10;
           ChangeParaMinus;
+          Rectangle1.Visible := True;
+          Rectangle2.Visible := False;
         End
         else if (Theme = 1) then
         Begin
           StyleBook := Windows10SlateGrey;
           ChangeParamPlus;
+          Rectangle2.Visible := True;
+          Rectangle1.Visible := False;
         End;
       End;
       // StringGrids
@@ -1428,6 +1451,16 @@ begin
   Begin
     EtablissementDlg := TEtablissement.Create(Self);
     i := LoadTheme(EtablissementDlg);
+    if (i = 0) then
+    Begin
+      EtablissementDlg.Rectangle1.Visible := True;
+      EtablissementDlg.Rectangle2.Visible := False;
+    End
+    else if (i = 1) then
+    Begin
+      EtablissementDlg.Rectangle2.Visible := True;
+      EtablissementDlg.Rectangle1.Visible := False;
+    End;
     if (EtablissementDlg.ShowModal = mrClose) then
       EtablissementDlg.Free;
   End
@@ -1602,10 +1635,22 @@ end;
 procedure TMain.Label4Click(Sender: TObject);
 Var
   FenetreDlg: TFenetre;
+  i: Integer;
 begin
   inherited;
   FenetreDlg := TFenetre.Create(Self);
-  LoadTheme(FenetreDlg);
+  i := LoadTheme(FenetreDlg);
+  if (i = 0) then
+  Begin
+    FenetreDlg.Rectangle1.Visible := True;
+    FenetreDlg.Rectangle2.Visible := False;
+  End
+  else if (i = 1) then
+  Begin
+    FenetreDlg.Rectangle2.Visible := True;
+    FenetreDlg.Rectangle1.Visible := False;
+  End;
+
   if (FenetreDlg.ShowModal = mrClose) then
     FenetreDlg.Free;
 end;
@@ -1688,9 +1733,17 @@ begin
   LoadParam2(OptionDlg);
   Theme := LoadTheme(OptionDlg);
   if (Theme = 0) then
-    ChangeParamM(OptionDlg)
+  Begin
+    ChangeParamM(OptionDlg);
+    OptionDlg.Rectangle1.Visible := True;
+    OptionDlg.Rectangle2.Visible := False;
+  End
   else if (Theme = 1) then
+  Begin
     ChangeParamP(OptionDlg);
+    OptionDlg.Rectangle2.Visible := True;
+    OptionDlg.Rectangle1.Visible := False;
+  End;
   if (OptionDlg.ShowModal = mrOk) then
   Begin
     OptionDlg.Free;
@@ -1731,13 +1784,25 @@ begin
       FDSQLiteBackup1.DatabaseObj := FDConnection3.CliObj;
       SaveDialog1.OnTypeChange(Self);
       FDSQLiteBackup1.DestDatabase := output;
-      FDSQLiteBackup1.Backup;
+      try
+        FDSQLiteBackup1.Backup;
+      except
+        on E: Exception do
+        BEgin
+          FDSQLiteSecurity1.DriverLink := FDPhysSQLiteDriverLink1;
+          FDSQLiteSecurity1.database := output;
+          FDSQLiteSecurity1.Password := 'Painkiller';
+          FDSQLiteSecurity1.RemovePassword;
+          FDSQLiteBackup1.Backup;
+        End;
+      end;
       if (Encrypt = True) then
       Begin
         FDSQLiteSecurity1.DriverLink := FDPhysSQLiteDriverLink1;
         FDSQLiteSecurity1.database := output;
         FDSQLiteSecurity1.Password := 'Painkiller';
         FDSQLiteSecurity1.SetPassword;
+        ShowMessage('La base de données a été sauvegardent avec succès');
       End;
     End;
   End;
@@ -1761,11 +1826,13 @@ Var
   OpenDialog1: TOpenDialog;
   Path, DirPath, input: String;
   i: Integer;
+  bol: Boolean;
 const
   Tabs: array [1 .. 8] of String = ('Medecin', 'Etablissement', 'Parametre',
     'Patient', 'Biochimie', 'Hemogramme', 'Hemostase_VS', 'Serologie');
 begin
   inherited;
+  bol := False;
   Path := '';
   DirPath := '';
   input := '';
@@ -1808,6 +1875,7 @@ begin
           Begin
             ShowMessage
               ('Il semble que les données que vous essayez de restaurer déjà existent.');
+            bol := True;
             Break;
           End;
         end;
@@ -1819,6 +1887,8 @@ begin
       FDSQLiteSecurity1.database := input;
       FDSQLiteSecurity1.Password := 'Painkiller';
       FDSQLiteSecurity1.SetPassword;
+      if (bol = False) then
+        ShowMessage('La base de données a été restaurer avec succès');
     end;
   End;
 end;
@@ -1928,6 +1998,7 @@ end;
 procedure TMain.PoP2_HemogClick(Sender: TObject);
 Var
   Print_HMDlg: TPrint_HM;
+  i: Integer;
 begin
   inherited;
   if (Patient_ID <> '') then
@@ -1935,7 +2006,17 @@ begin
     if (TabExist('Hemogramme') = True) then
     Begin
       Print_HMDlg := TPrint_HM.Create(Self);
-      LoadTheme(Print_HMDlg);
+      i := LoadTheme(Print_HMDlg);
+      if (i = 0) then
+      Begin
+        Print_HMDlg.Rectangle1.Visible := True;
+        Print_HMDlg.Rectangle2.Visible := False;
+      End
+      else if (i = 1) then
+      Begin
+        Print_HMDlg.Rectangle1.Visible := True;
+        Print_HMDlg.Rectangle2.Visible := False;
+      End;
       if (Print_HMDlg.ShowModal = mrCancel) then
         Print_HMDlg.Free;
     End
@@ -1949,6 +2030,7 @@ end;
 procedure TMain.PoP2_HemosClick(Sender: TObject);
 Var
   PrintHSDlg: Tprint_HS;
+  i: Integer;
 begin
   inherited;
   if (Patient_ID <> '') then
@@ -1956,7 +2038,17 @@ begin
     if (TabExist('Hemostase_VS') = True) then
     Begin
       PrintHSDlg := Tprint_HS.Create(Self);
-      LoadTheme(PrintHSDlg);
+      i := LoadTheme(PrintHSDlg);
+      if (i = 0) then
+      Begin
+        PrintHSDlg.Rectangle1.Visible := True;
+        PrintHSDlg.Rectangle2.Visible := False;
+      End
+      else if (i = 1) then
+      Begin
+        PrintHSDlg.Rectangle2.Visible := True;
+        PrintHSDlg.Rectangle1.Visible := False;
+      End;
       if (PrintHSDlg.ShowModal = mrCancel) then
         PrintHSDlg.Free;
     End
@@ -1971,6 +2063,7 @@ end;
 procedure TMain.PoP2_BoiClick(Sender: TObject);
 Var
   PrintBioDLg: TPrint_Bio;
+  i: Integer;
 begin
   inherited;
   if (Patient_ID <> '') then
@@ -1978,7 +2071,17 @@ begin
     if (TabExist('Biochimie') = True) then
     Begin
       PrintBioDLg := TPrint_Bio.Create(Self);
-      LoadTheme(PrintBioDLg);
+      i := LoadTheme(PrintBioDLg);
+      if (i = 0) then
+      Begin
+        PrintBioDLg.Rectangle1.Visible := True;
+        PrintBioDLg.Rectangle2.Visible := False;
+      End
+      else if (i = 1) then
+      Begin
+        PrintBioDLg.Rectangle1.Visible := True;
+        PrintBioDLg.Rectangle2.Visible := False;
+      End;
       if (PrintBioDLg.ShowModal = mrCancel) then
         PrintBioDLg.Free;
     End
@@ -1992,6 +2095,7 @@ end;
 procedure TMain.PoP2_SerologieClick(Sender: TObject);
 Var
   PrintSRDlg: TPrint_SR;
+  i: Integer;
 begin
   inherited;
   if (Patient_ID <> '') then
@@ -1999,7 +2103,17 @@ begin
     if (TabExist('Serologie') = True) then
     Begin
       PrintSRDlg := TPrint_SR.Create(Self);
-      LoadTheme(PrintSRDlg);
+      i := LoadTheme(PrintSRDlg);
+      if (i = 0) then
+      Begin
+        PrintSRDlg.Rectangle1.Visible := True;
+        PrintSRDlg.Rectangle2.Visible := False;
+      End
+      else if (i = 1) then
+      Begin
+        PrintSRDlg.Rectangle2.Visible := True;
+        PrintSRDlg.Rectangle1.Visible := False;
+      End;
       if (PrintSRDlg.ShowModal = mrCancel) then
         PrintSRDlg.Free;
     End

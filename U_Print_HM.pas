@@ -83,6 +83,8 @@ type
     Rectangle6: TRectangle;
     Image1: TImage;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
+    Rectangle7: TRectangle;
+    Rectangle8: TRectangle;
     procedure OnLoad;
     procedure Rez;
     procedure FormCreate(Sender: TObject);

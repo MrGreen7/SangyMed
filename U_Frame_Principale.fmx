@@ -306,16 +306,16 @@ object Frame1: TFrame1
         end
         object IP_DateEdit2: TDateEdit
           IsChecked = False
-          Date = 43209.000000000000000000
+          Date = 43211.000000000000000000
           WeekNumbers = True
           TodayDefault = True
           Anchors = [akLeft, akRight]
           Position.X = 90.000000000000000000
           Position.Y = 3.710144996643066000
-          ReadOnly = True
           Size.Width = 207.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          StyleLookup = 'dateeditstyle'
           StyledSettings = []
           TabOrder = 0
           TextSettings.Font.Family = '(Default)'

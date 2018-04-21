@@ -12,332 +12,359 @@ object Fenetre: TFenetre
   OnCloseQuery = FormCloseQuery
   OnShow = FormShow
   DesignerMasterStyle = 0
-  object TLabel
-    Align = Top
-    Position.Y = 35.000000000000000000
+  object Rectangle1: TRectangle
+    Align = Client
+    Fill.Color = claWhite
+    Opacity = 0.500000000000000000
     Size.Width = 368.000000000000000000
-    Size.Height = 24.000000000000000000
+    Size.Height = 463.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 10
+    Stroke.Kind = None
+    Visible = False
   end
-  object F_Accueil: TPanel
-    Align = Top
-    Margins.Bottom = 5.000000000000000000
-    Position.Y = 59.000000000000000000
+  object Rectangle2: TRectangle
+    Align = Client
+    Fill.Color = claSlategray
+    Opacity = 0.500000000000000000
     Size.Width = 368.000000000000000000
-    Size.Height = 56.000000000000000000
+    Size.Height = 463.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 0
-    object Label2: TLabel
-      Align = Left
-      StyledSettings = [Style]
-      Size.Width = 57.000000000000000000
-      Size.Height = 56.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.Font.Family = 'FontAwesome'
-      TextSettings.Font.Size = 32.000000000000000000
-      TextSettings.FontColor = xFFD7263D
-      TextSettings.HorzAlign = Center
-      Text = #61474
-      TabOrder = 1
-    end
-    object Label3: TLabel
-      Align = Left
-      StyledSettings = [Family]
-      Position.X = 57.000000000000000000
-      Size.Width = 120.000000000000000000
-      Size.Height = 56.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.Font.Size = 15.000000000000000000
-      TextSettings.Font.StyleExt = {00070000000000000004000000}
-      Text = 'Page d'#39'accueil'
-      ParentShowHint = False
-      ShowHint = False
-      TabOrder = 2
-    end
-    object Fla_Accueil: TFloatAnimation
-      AnimationType = Out
-      Delay = 0.100000001490116100
-      Duration = 0.500000000000000000
-      OnFinish = Fla_AccueilFinish
-      PropertyName = 'Scale.Y'
-      StartValue = 1.000000000000000000
-      StopValue = 0.000000000000000000
-    end
-    object Btn_Accueil: TButton
-      Align = Right
-      Position.X = 312.000000000000000000
-      Size.Width = 56.000000000000000000
-      Size.Height = 56.000000000000000000
-      Size.PlatformDefault = False
-      StyleLookup = 'stoptoolbuttonbordered'
-      TabOrder = 0
-      Text = 'Btn_Accueil'
-      OnClick = Btn_AccueilClick
-    end
+    Stroke.Kind = None
+    Visible = False
   end
-  object F_NouveauP: TPanel
-    Align = Top
-    Margins.Bottom = 5.000000000000000000
-    Position.Y = 120.000000000000000000
+  object Layout1: TLayout
+    Align = Client
     Size.Width = 368.000000000000000000
-    Size.Height = 56.000000000000000000
+    Size.Height = 463.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 1
-    object Label4: TLabel
-      Align = Left
-      StyledSettings = [Style]
-      Size.Width = 57.000000000000000000
-      Size.Height = 56.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.Font.Family = 'FontAwesome'
-      TextSettings.Font.Size = 32.000000000000000000
-      TextSettings.FontColor = xFF6DB425
-      TextSettings.HorzAlign = Center
-      Text = #61870
-      TabOrder = 0
-    end
-    object Label5: TLabel
-      Align = Left
-      StyledSettings = [Family, FontColor]
-      Position.X = 57.000000000000000000
-      Size.Width = 120.000000000000000000
-      Size.Height = 56.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.Font.Size = 15.000000000000000000
-      TextSettings.Font.StyleExt = {00070000000000000004000000}
-      Text = 'Nouveau patient'
-      ParentShowHint = False
-      ShowHint = False
-      TabOrder = 2
-    end
-    object Fla_NouveauP: TFloatAnimation
-      AnimationType = Out
-      Delay = 0.100000001490116100
-      Duration = 0.500000000000000000
-      OnFinish = Fla_NouveauPFinish
-      PropertyName = 'Scale.Y'
-      StartValue = 1.000000000000000000
-      StopValue = 0.000000000000000000
-    end
-    object Btn_NouveauP: TButton
-      Align = Right
-      Position.X = 312.000000000000000000
-      Size.Width = 56.000000000000000000
-      Size.Height = 56.000000000000000000
-      Size.PlatformDefault = False
-      StyleLookup = 'stoptoolbuttonbordered'
-      TabOrder = 1
-      Text = 'Button1'
-      OnClick = Btn_NouveauPClick
-    end
-  end
-  object F_Patient: TPanel
-    Align = Top
-    Margins.Bottom = 5.000000000000000000
-    Position.Y = 303.000000000000000000
-    Size.Width = 368.000000000000000000
-    Size.Height = 56.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 3
-    object Label12: TLabel
-      Align = Left
-      StyledSettings = [Style]
-      Size.Width = 57.000000000000000000
-      Size.Height = 56.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.Font.Family = 'FontAwesome'
-      TextSettings.Font.Size = 32.000000000000000000
-      TextSettings.FontColor = xFF0197F6
-      TextSettings.HorzAlign = Center
-      Text = #61981
-      TabOrder = 0
-    end
-    object Label13: TLabel
-      Align = Left
-      StyledSettings = [Family, FontColor]
-      Position.X = 57.000000000000000000
-      Size.Width = 120.000000000000000000
-      Size.Height = 56.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.Font.Size = 15.000000000000000000
-      TextSettings.Font.StyleExt = {00070000000000000004000000}
-      Text = 'Patient'
-      ParentShowHint = False
-      ShowHint = False
-      TabOrder = 1
-    end
-    object Fla_Patient: TFloatAnimation
-      AnimationType = Out
-      Delay = 0.100000001490116100
-      Duration = 0.500000000000000000
-      OnFinish = Fla_PatientFinish
-      PropertyName = 'Scale.Y'
-      StartValue = 1.000000000000000000
-      StopValue = 0.000000000000000000
-    end
-    object Btn_Patient: TButton
-      Align = Right
-      Position.X = 312.000000000000000000
-      Size.Width = 56.000000000000000000
-      Size.Height = 56.000000000000000000
-      Size.PlatformDefault = False
-      StyleLookup = 'stoptoolbuttonbordered'
-      TabOrder = 5
-      Text = 'Button1'
-      OnClick = Btn_PatientClick
-    end
-  end
-  object F_RDV: TPanel
-    Align = Top
-    Margins.Bottom = 5.000000000000000000
-    Position.Y = 242.000000000000000000
-    Size.Width = 368.000000000000000000
-    Size.Height = 56.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 4
-    object Label10: TLabel
-      Align = Left
-      StyledSettings = [Style]
-      Size.Width = 57.000000000000000000
-      Size.Height = 56.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.Font.Family = 'FontAwesome'
-      TextSettings.Font.Size = 32.000000000000000000
-      TextSettings.FontColor = xFFF46063
-      TextSettings.HorzAlign = Center
-      Text = #61827' '
-      TabOrder = 0
-    end
-    object Label11: TLabel
-      Align = Left
-      StyledSettings = [Family, FontColor]
-      Position.X = 57.000000000000000000
-      Size.Width = 120.000000000000000000
-      Size.Height = 56.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.Font.Size = 15.000000000000000000
-      TextSettings.Font.StyleExt = {00070000000000000004000000}
-      Text = 'Edit Patient'
-      ParentShowHint = False
-      ShowHint = False
-      TabOrder = 1
-    end
-    object Fla_RDV: TFloatAnimation
-      AnimationType = Out
-      Delay = 0.100000001490116100
-      Duration = 0.500000000000000000
-      OnFinish = Fla_RDVFinish
-      PropertyName = 'Scale.Y'
-      StartValue = 1.000000000000000000
-      StopValue = 0.000000000000000000
-    end
-    object Btn_RDV: TButton
-      Align = Right
-      Position.X = 312.000000000000000000
-      Size.Width = 56.000000000000000000
-      Size.Height = 56.000000000000000000
-      Size.PlatformDefault = False
-      StyleLookup = 'stoptoolbuttonbordered'
-      TabOrder = 4
-      Text = 'Button1'
-      OnClick = Btn_RDVClick
-    end
-  end
-  object F_RechercheP: TPanel
-    Align = Top
-    Margins.Bottom = 5.000000000000000000
-    Position.Y = 181.000000000000000000
-    Size.Width = 368.000000000000000000
-    Size.Height = 56.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 2
-    object Label6: TLabel
-      Align = Left
-      StyledSettings = [Style]
-      Size.Width = 57.000000000000000000
-      Size.Height = 56.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.Font.Family = 'FontAwesome'
-      TextSettings.Font.Size = 32.000000000000000000
-      TextSettings.FontColor = xFFB6006B
-      TextSettings.HorzAlign = Center
-      Text = #61442
-      TabOrder = 0
-    end
-    object Label7: TLabel
-      Align = Left
-      StyledSettings = [Family, FontColor]
-      Position.X = 57.000000000000000000
-      Size.Width = 120.000000000000000000
-      Size.Height = 56.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.Font.Size = 14.000000000000000000
-      TextSettings.Font.StyleExt = {00070000000000000004000000}
-      Text = 'Recherche patient'
-      ParentShowHint = False
-      ShowHint = False
-      TabOrder = 1
-    end
-    object Fla_RechercheP: TFloatAnimation
-      AnimationType = Out
-      Delay = 0.100000001490116100
-      Duration = 0.500000000000000000
-      OnFinish = Fla_RecherchePFinish
-      PropertyName = 'Scale.Y'
-      StartValue = 1.000000000000000000
-      StopValue = 0.000000000000000000
-    end
-    object Btn_RechercheP: TButton
-      Align = Right
-      Position.X = 312.000000000000000000
-      Size.Width = 56.000000000000000000
-      Size.Height = 56.000000000000000000
-      Size.PlatformDefault = False
-      StyleLookup = 'stoptoolbuttonbordered'
-      TabOrder = 2
-      Text = 'Button1'
-      OnClick = Btn_RecherchePClick
-    end
-  end
-  object Label1: TLabel
-    Align = Top
-    StyledSettings = [Style, FontColor]
-    Size.Width = 368.000000000000000000
-    Size.Height = 35.000000000000000000
-    Size.PlatformDefault = False
-    TextSettings.Font.Family = 'FontAwesome'
-    TextSettings.Font.Size = 26.000000000000000000
-    TextSettings.HorzAlign = Center
-    Text = #62162' Fen'#234'tres disponibles'
-    TabOrder = 8
-  end
-  object Label14: TLabel
-    Anchors = [akRight, akBottom]
-    Cursor = crHandPoint
-    StyledSettings = [Style]
-    HitTest = True
-    Position.X = 312.000000000000000000
-    Position.Y = 422.000000000000000000
-    Size.Width = 56.000000000000000000
-    Size.Height = 41.000000000000000000
-    Size.PlatformDefault = False
-    TextSettings.Font.Family = 'FontAwesome'
-    TextSettings.Font.Size = 30.000000000000000000
-    TextSettings.FontColor = claCrimson
-    TextSettings.HorzAlign = Center
-    Text = #61641
     TabOrder = 6
-    OnClick = Label14Click
-    object ColorAnimation1: TColorAnimation
-      AnimationType = Out
-      Delay = 0.200000002980232200
-      Duration = 0.500000000000000000
-      PropertyName = 'TextSettings.FontColor'
-      StartValue = xFFD7263D
-      StopValue = xFF448FA3
-      Trigger = 'IsMouseOver=true'
-      TriggerInverse = 'IsMouseOver=false'
+    object Label1: TLabel
+      Align = Top
+      StyledSettings = [Style, FontColor]
+      Size.Width = 368.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'FontAwesome'
+      TextSettings.Font.Size = 26.000000000000000000
+      TextSettings.HorzAlign = Center
+      Text = #62162' Fen'#234'tres disponibles'
+      TabOrder = 0
+    end
+    object Label14: TLabel
+      Anchors = [akRight, akBottom]
+      Cursor = crHandPoint
+      StyledSettings = [Style]
+      HitTest = True
+      Position.X = 312.000000000000000000
+      Position.Y = 422.000000000000000000
+      Size.Width = 56.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'FontAwesome'
+      TextSettings.Font.Size = 30.000000000000000000
+      TextSettings.FontColor = claCrimson
+      TextSettings.HorzAlign = Center
+      Text = #61641
+      TabOrder = 1
+      OnClick = Label14Click
+      object ColorAnimation1: TColorAnimation
+        AnimationType = Out
+        Delay = 0.200000002980232200
+        Duration = 0.500000000000000000
+        PropertyName = 'TextSettings.FontColor'
+        StartValue = xFFD7263D
+        StopValue = xFF448FA3
+        Trigger = 'IsMouseOver=true'
+        TriggerInverse = 'IsMouseOver=false'
+      end
+    end
+    object F_Patient: TPanel
+      Align = Top
+      Margins.Bottom = 5.000000000000000000
+      Position.Y = 181.000000000000000000
+      Size.Width = 368.000000000000000000
+      Size.Height = 56.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object Label12: TLabel
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 57.000000000000000000
+        Size.Height = 56.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 32.000000000000000000
+        TextSettings.FontColor = xFF0197F6
+        TextSettings.HorzAlign = Center
+        Text = #61981
+        TabOrder = 0
+      end
+      object Label13: TLabel
+        Align = Left
+        StyledSettings = [Family, FontColor]
+        Position.X = 57.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 56.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 15.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Patient'
+        ParentShowHint = False
+        ShowHint = False
+        TabOrder = 1
+      end
+      object Fla_Patient: TFloatAnimation
+        AnimationType = Out
+        Delay = 0.100000001490116100
+        Duration = 0.500000000000000000
+        OnFinish = Fla_PatientFinish
+        PropertyName = 'Scale.Y'
+        StartValue = 1.000000000000000000
+        StopValue = 0.000000000000000000
+      end
+      object Btn_Patient: TButton
+        Align = Right
+        Position.X = 312.000000000000000000
+        Size.Width = 56.000000000000000000
+        Size.Height = 56.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'stoptoolbuttonbordered'
+        TabOrder = 5
+        Text = 'Button1'
+        OnClick = Btn_PatientClick
+      end
+    end
+    object F_RDV: TPanel
+      Align = Top
+      Margins.Bottom = 5.000000000000000000
+      Position.Y = 303.000000000000000000
+      Size.Width = 368.000000000000000000
+      Size.Height = 56.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object Label10: TLabel
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 57.000000000000000000
+        Size.Height = 56.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 32.000000000000000000
+        TextSettings.FontColor = xFFF46063
+        TextSettings.HorzAlign = Center
+        Text = #61827' '
+        TabOrder = 0
+      end
+      object Label11: TLabel
+        Align = Left
+        StyledSettings = [Family, FontColor]
+        Position.X = 57.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 56.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 15.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Edit Patient'
+        ParentShowHint = False
+        ShowHint = False
+        TabOrder = 1
+      end
+      object Fla_RDV: TFloatAnimation
+        AnimationType = Out
+        Delay = 0.100000001490116100
+        Duration = 0.500000000000000000
+        OnFinish = Fla_RDVFinish
+        PropertyName = 'Scale.Y'
+        StartValue = 1.000000000000000000
+        StopValue = 0.000000000000000000
+      end
+      object Btn_RDV: TButton
+        Align = Right
+        Position.X = 312.000000000000000000
+        Size.Width = 56.000000000000000000
+        Size.Height = 56.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'stoptoolbuttonbordered'
+        TabOrder = 4
+        Text = 'Button1'
+        OnClick = Btn_RDVClick
+      end
+    end
+    object F_RechercheP: TPanel
+      Align = Top
+      Margins.Bottom = 5.000000000000000000
+      Position.Y = 242.000000000000000000
+      Size.Width = 368.000000000000000000
+      Size.Height = 56.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      object Label6: TLabel
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 57.000000000000000000
+        Size.Height = 56.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 32.000000000000000000
+        TextSettings.FontColor = xFFB6006B
+        TextSettings.HorzAlign = Center
+        Text = #61442
+        TabOrder = 0
+      end
+      object Label7: TLabel
+        Align = Left
+        StyledSettings = [Family, FontColor]
+        Position.X = 57.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 56.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Recherche patient'
+        ParentShowHint = False
+        ShowHint = False
+        TabOrder = 1
+      end
+      object Fla_RechercheP: TFloatAnimation
+        AnimationType = Out
+        Delay = 0.100000001490116100
+        Duration = 0.500000000000000000
+        OnFinish = Fla_RecherchePFinish
+        PropertyName = 'Scale.Y'
+        StartValue = 1.000000000000000000
+        StopValue = 0.000000000000000000
+      end
+      object Btn_RechercheP: TButton
+        Align = Right
+        Position.X = 312.000000000000000000
+        Size.Width = 56.000000000000000000
+        Size.Height = 56.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'stoptoolbuttonbordered'
+        TabOrder = 2
+        Text = 'Button1'
+        OnClick = Btn_RecherchePClick
+      end
+    end
+    object F_Accueil: TPanel
+      Align = Top
+      Margins.Bottom = 5.000000000000000000
+      Position.Y = 59.000000000000000000
+      Size.Width = 368.000000000000000000
+      Size.Height = 56.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      object Label2: TLabel
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 57.000000000000000000
+        Size.Height = 56.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 32.000000000000000000
+        TextSettings.FontColor = xFFD7263D
+        TextSettings.HorzAlign = Center
+        Text = #61474
+        TabOrder = 1
+      end
+      object Label3: TLabel
+        Align = Left
+        StyledSettings = [Family]
+        Position.X = 57.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 56.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 15.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Page d'#39'accueil'
+        ParentShowHint = False
+        ShowHint = False
+        TabOrder = 2
+      end
+      object Fla_Accueil: TFloatAnimation
+        AnimationType = Out
+        Delay = 0.100000001490116100
+        Duration = 0.500000000000000000
+        OnFinish = Fla_AccueilFinish
+        PropertyName = 'Scale.Y'
+        StartValue = 1.000000000000000000
+        StopValue = 0.000000000000000000
+      end
+      object Btn_Accueil: TButton
+        Align = Right
+        Position.X = 312.000000000000000000
+        Size.Width = 56.000000000000000000
+        Size.Height = 56.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'stoptoolbuttonbordered'
+        TabOrder = 0
+        Text = 'Btn_Accueil'
+        OnClick = Btn_AccueilClick
+      end
+    end
+    object F_NouveauP: TPanel
+      Align = Top
+      Margins.Bottom = 5.000000000000000000
+      Position.Y = 120.000000000000000000
+      Size.Width = 368.000000000000000000
+      Size.Height = 56.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      object Label4: TLabel
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 57.000000000000000000
+        Size.Height = 56.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 32.000000000000000000
+        TextSettings.FontColor = xFF6DB425
+        TextSettings.HorzAlign = Center
+        Text = #61870
+        TabOrder = 0
+      end
+      object Label5: TLabel
+        Align = Left
+        StyledSettings = [Family, FontColor]
+        Position.X = 57.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 56.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 15.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Nouveau patient'
+        ParentShowHint = False
+        ShowHint = False
+        TabOrder = 2
+      end
+      object Fla_NouveauP: TFloatAnimation
+        AnimationType = Out
+        Delay = 0.100000001490116100
+        Duration = 0.500000000000000000
+        OnFinish = Fla_NouveauPFinish
+        PropertyName = 'Scale.Y'
+        StartValue = 1.000000000000000000
+        StopValue = 0.000000000000000000
+      end
+      object Btn_NouveauP: TButton
+        Align = Right
+        Position.X = 312.000000000000000000
+        Size.Width = 56.000000000000000000
+        Size.Height = 56.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'stoptoolbuttonbordered'
+        TabOrder = 1
+        Text = 'Button1'
+        OnClick = Btn_NouveauPClick
+      end
+    end
+    object TLabel
+      Align = Top
+      Position.Y = 35.000000000000000000
+      Size.Width = 368.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
     end
   end
 end

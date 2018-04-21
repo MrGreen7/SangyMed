@@ -62,6 +62,8 @@ type
     Text29: TText;
     Image1: TImage;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
+    Rectangle4: TRectangle;
+    Rectangle7: TRectangle;
     procedure Rez();
     procedure OnLoad;
     procedure Print_ButtonClick(Sender: TObject);

@@ -135,6 +135,8 @@ type
     Rectangle6: TRectangle;
     Image1: TImage;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
+    Rectangle2: TRectangle;
+    Rectangle3: TRectangle;
     procedure Rez();
     procedure OnLoad;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

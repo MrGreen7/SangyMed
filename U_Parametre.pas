@@ -83,6 +83,8 @@ type
     Button8: TButton;
     Button9: TButton;
     Button10: TButton;
+    Rectangle1: TRectangle;
+    Rectangle2: TRectangle;
     procedure CompteClick(Sender: TObject);
     procedure Tree_Sub_CompteModClick(Sender: TObject);
     procedure Tree_Sub_CompteRemClick(Sender: TObject);

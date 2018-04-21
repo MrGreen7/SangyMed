@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes,
   System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, U_Base_Form,
-  FMX.Ani, FMX.StdCtrls, FMX.Controls.Presentation;
+  FMX.Ani, FMX.StdCtrls, FMX.Controls.Presentation, FMX.Layouts, FMX.Objects;
 
 type
   TFenetre = class(TBase_Form)
@@ -38,6 +38,9 @@ type
     Label1: TLabel;
     Label14: TLabel;
     ColorAnimation1: TColorAnimation;
+    Rectangle1: TRectangle;
+    Rectangle2: TRectangle;
+    Layout1: TLayout;
     procedure Btn_PatientClick(Sender: TObject);
     procedure Btn_RDVClick(Sender: TObject);
     procedure Btn_RecherchePClick(Sender: TObject);
