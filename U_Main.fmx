@@ -98,7 +98,7 @@ object Main: TMain
       Size.Height = 161.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'tabcontrolstyle'
-      TabIndex = 0
+      TabIndex = 1
       TabOrder = 0
       TabPosition = PlatformDefault
       Sizes = (
@@ -121,7 +121,7 @@ object Main: TMain
         TextSettings.Font.Size = 16.000000000000000000
         StyledSettings = [Style, FontColor]
         HelpType = htKeyword
-        IsSelected = True
+        IsSelected = False
         Size.Width = 91.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
@@ -420,15 +420,15 @@ object Main: TMain
               Cursor = crHandPoint
               StyledSettings = [Style, FontColor]
               HitTest = True
-              Position.X = 179.000000000000000000
+              Position.X = 182.000000000000000000
               Position.Y = 57.000000000000000000
-              Size.Width = 115.000000000000000000
+              Size.Width = 110.000000000000000000
               Size.Height = 46.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.Family = 'Candara'
               TextSettings.Font.Size = 16.000000000000000000
               TextSettings.VertAlign = Trailing
-              Text = 'Informations de l'#39#233'tablissement'
+              Text = 'Param'#232'tre de l'#39#233'tablissement'
               TabOrder = 2
               object ShadowEffect13: TShadowEffect
                 Distance = 3.000000000000000000
@@ -560,7 +560,7 @@ object Main: TMain
         TextSettings.Font.Family = 'FontAwesome'
         TextSettings.Font.Size = 16.000000000000000000
         StyledSettings = [Style, FontColor]
-        IsSelected = False
+        IsSelected = True
         Size.Width = 81.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
@@ -1387,6 +1387,26 @@ object Main: TMain
             Size.Height = 129.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 3
+            object Label24: TLabel
+              StyledSettings = [Style, FontColor]
+              Position.X = 34.000000000000000000
+              Position.Y = 62.000000000000000000
+              Size.Width = 61.000000000000000000
+              Size.Height = 43.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'Candara'
+              TextSettings.Font.Size = 14.000000000000000000
+              TextSettings.HorzAlign = Center
+              Text = 'Le temps passe'
+              TabOrder = 1
+              object ShadowEffect25: TShadowEffect
+                Distance = 3.000000000000000000
+                Direction = 45.000000000000000000
+                Softness = 0.200000002980232200
+                Opacity = 0.600000023841857900
+                ShadowColor = claBlack
+              end
+            end
             object Label25: TLabel
               Cursor = crHandPoint
               StyledSettings = [Style]
@@ -1416,26 +1436,6 @@ object Main: TMain
                 TriggerInverse = 'IsMouseOver=false'
               end
               object ShadowEffect26: TShadowEffect
-                Distance = 3.000000000000000000
-                Direction = 45.000000000000000000
-                Softness = 0.200000002980232200
-                Opacity = 0.600000023841857900
-                ShadowColor = claBlack
-              end
-            end
-            object Label24: TLabel
-              StyledSettings = [Style, FontColor]
-              Position.X = 20.000000000000000000
-              Position.Y = 62.000000000000000000
-              Size.Width = 89.000000000000000000
-              Size.Height = 51.000000000000000000
-              Size.PlatformDefault = False
-              TextSettings.Font.Family = 'Candara'
-              TextSettings.Font.Size = 14.000000000000000000
-              TextSettings.HorzAlign = Center
-              Text = 'Calculer la date pass'#233'e'
-              TabOrder = 1
-              object ShadowEffect25: TShadowEffect
                 Distance = 3.000000000000000000
                 Direction = 45.000000000000000000
                 Softness = 0.200000002980232200
@@ -1721,6 +1721,7 @@ object Main: TMain
                 AnimationType = InOut
                 Delay = 0.200000002980232200
                 Duration = 0.500000000000000000
+                Inverse = True
                 PropertyName = 'TextSettings.FontColor'
                 StartValue = xFFFFAD05
                 StopValue = xFF0197F6
@@ -1781,15 +1782,15 @@ object Main: TMain
             TabOrder = 0
             object Label21: TLabel
               StyledSettings = [Style, FontColor]
-              Position.X = 28.000000000000000000
+              Position.X = 20.000000000000000000
               Position.Y = 80.000000000000000000
-              Size.Width = 73.000000000000000000
+              Size.Width = 89.000000000000000000
               Size.Height = 41.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.Family = 'Candara'
               TextSettings.Font.Size = 16.000000000000000000
               TextSettings.HorzAlign = Center
-              Text = 'Effacer les filtres'
+              Text = 'R'#233'initialiser les filtres'
               TabOrder = 1
               object ShadowEffect17: TShadowEffect
                 Distance = 3.000000000000000000
@@ -1854,14 +1855,15 @@ object Main: TMain
             TabOrder = 1
             object Label33: TLabel
               StyledSettings = [Style, FontColor]
-              Position.X = 28.000000000000000000
+              Position.X = 34.000000000000000000
               Position.Y = 72.000000000000000000
-              Size.Width = 73.000000000000000000
+              Size.Width = 61.000000000000000000
               Size.Height = 41.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.Family = 'Candara'
               TextSettings.Font.Size = 14.000000000000000000
-              Text = 'Calculer la date pass'#233'e'
+              TextSettings.HorzAlign = Center
+              Text = 'Le temps passe'
               TabOrder = 1
               object ShadowEffect27: TShadowEffect
                 Distance = 3.000000000000000000
@@ -1875,9 +1877,9 @@ object Main: TMain
               Cursor = crHandPoint
               StyledSettings = [Style]
               HitTest = True
-              Position.X = 24.000000000000000000
+              Position.X = 32.000000000000000000
               Position.Y = 17.000000000000000000
-              Size.Width = 81.000000000000000000
+              Size.Width = 65.000000000000000000
               Size.Height = 96.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.Family = 'FontAwesome'
@@ -3012,7 +3014,7 @@ object Main: TMain
             Size.Height = 81.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
-            object Edit1: TEdit
+            object Edit_Recherche: TEdit
               Touch.InteractiveGestures = [LongTap, DoubleTap]
               Anchors = [akLeft, akRight]
               StyleLookup = 'searchedit'
@@ -3026,7 +3028,7 @@ object Main: TMain
               Size.PlatformDefault = False
               TextPrompt = 'Recherch'
               StyledSettings = [Size, Style, FontColor]
-              OnChangeTracking = Edit1ChangeTracking
+              OnChangeTracking = Edit_RechercheChangeTracking
             end
           end
         end
@@ -3763,10 +3765,6 @@ object Main: TMain
               Size.Width = 758.000000000000000000
               inherited Layout_Right2: TLayout
                 Position.X = 455.000000000000000000
-                inherited IP_DateEdit2: TDateEdit
-                  Position.Y = 4.000000000000000000
-                  TextSettings.Font.Size = 14.000000000000000000
-                end
               end
               inherited Layout_Left_2: TLayout
                 inherited IP_Edit1: TEdit
@@ -3859,9 +3857,6 @@ object Main: TMain
               Size.Width = 758.000000000000000000
               inherited Layout_Right2: TLayout
                 Position.X = 455.000000000000000000
-                inherited IP_DateEdit2: TDateEdit
-                  TextSettings.Font.Size = 14.000000000000000000
-                end
               end
             end
           end

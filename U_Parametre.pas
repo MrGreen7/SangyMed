@@ -48,10 +48,8 @@ type
     TrackBar4: TTrackBar;
     TrackBar3: TTrackBar;
     TrackBar2: TTrackBar;
-    Edit1: TEdit;
-    Edit2: TEdit;
-    Edit3: TEdit;
-    Edit4: TEdit;
+    Edit_ST_1: TEdit;
+    Edit_ST_2: TEdit;
     Label8: TLabel;
     Label9: TLabel;
     Label10: TLabel;
@@ -85,6 +83,8 @@ type
     Button10: TButton;
     Rectangle1: TRectangle;
     Rectangle2: TRectangle;
+    Edit_ST_3: TEdit;
+    Edit_ST_4: TEdit;
     procedure CompteClick(Sender: TObject);
     procedure Tree_Sub_CompteModClick(Sender: TObject);
     procedure Tree_Sub_CompteRemClick(Sender: TObject);
@@ -210,10 +210,10 @@ begin
     SQl.Text := ('Select * From Parametre Where ID="' + Main.ID_Medecin + '";');
     Active := True;
     Edit;
-    FieldByName('Bar1').AsInteger := Edit1.Text.ToInteger;
-    FieldByName('Bar2').AsInteger := Edit2.Text.ToInteger;
-    FieldByName('Bar3').AsInteger := Edit3.Text.ToInteger;
-    FieldByName('Bar4').AsInteger := Edit4.Text.ToInteger;
+    FieldByName('Bar1').AsInteger := Edit_ST_1.Text.ToInteger;
+    FieldByName('Bar2').AsInteger := Edit_ST_2.Text.ToInteger;
+    FieldByName('Bar3').AsInteger := Edit_ST_3.Text.ToInteger;
+    FieldByName('Bar4').AsInteger := Edit_ST_4.Text.ToInteger;
     Post;
     Active := False;
     SQl.Clear;
@@ -453,25 +453,25 @@ end;
 procedure TParametre.TrackBar1Change(Sender: TObject);
 begin
   inherited;
-  Edit1.Text := Int(TrackBar1.Value).ToString;
+  Edit_ST_1.Text := Int(TrackBar1.Value).ToString;
 end;
 
 procedure TParametre.TrackBar4Change(Sender: TObject);
 begin
   inherited;
-  Edit4.Text := Int(TrackBar4.Value).ToString;
+  Edit_ST_4.Text := Int(TrackBar4.Value).ToString;
 end;
 
 procedure TParametre.TrackBar3Change(Sender: TObject);
 begin
   inherited;
-  Edit3.Text := Int(TrackBar3.Value).ToString;
+  Edit_ST_3.Text := Int(TrackBar3.Value).ToString;
 end;
 
 procedure TParametre.TrackBar2Change(Sender: TObject);
 begin
   inherited;
-  Edit2.Text := Int(TrackBar2.Value).ToString;
+  Edit_ST_2.Text := Int(TrackBar2.Value).ToString;
 end;
 
 procedure TParametre.TreeViewItem1Click(Sender: TObject);

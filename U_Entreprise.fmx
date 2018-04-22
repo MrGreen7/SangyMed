@@ -51,7 +51,7 @@ object Etablissement: TEtablissement
       TabOrder = 0
       OnChange = ComboBox1Change
       object InnerGlowEffect1: TInnerGlowEffect
-        Softness = 0.400000005960464400
+        Softness = 0.400000005960464500
         GlowColor = claGold
         Opacity = 0.899999976158142100
         Enabled = False
@@ -200,7 +200,7 @@ object Etablissement: TEtablissement
           OnChange = ComboBox2Change
           OnMouseEnter = ComboBox2MouseEnter
           object InnerGlowEffect2: TInnerGlowEffect
-            Softness = 0.400000005960464400
+            Softness = 0.400000005960464500
             GlowColor = claGold
             Opacity = 0.899999976158142100
             Enabled = False
@@ -216,7 +216,7 @@ object Etablissement: TEtablissement
           TabOrder = 4
           OnChange = ComboBox3Change
           object InnerGlowEffect3: TInnerGlowEffect
-            Softness = 0.400000005960464400
+            Softness = 0.400000005960464500
             GlowColor = claGold
             Opacity = 0.899999976158142100
             Enabled = False

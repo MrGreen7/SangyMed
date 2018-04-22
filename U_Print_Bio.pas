@@ -283,7 +283,7 @@ Begin
       Text1.Text := ('Établissement Publique de Santé de Proximité de ');
     Text1.Text := Text1.Text + FieldByName('Commune').AsString;
     Text2.Text := FieldByName('Libelle').AsString;
-    Text4.Text := FieldByName('Mobile').AsString;
+    Text4.Text := FieldByName('Telephone').AsString;
     Text7.Text := DateToStr(date);
     Text3.Text := FieldByName('Email').AsString;
     Text91.Text := FieldByName('Adresse').AsString;;

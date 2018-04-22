@@ -51,6 +51,7 @@ type
     procedure AC_ComboBox1Change(Sender: TObject);
     procedure AC_ComboBox1MouseEnter(Sender: TObject);
     procedure FrameResize(Sender: TObject);
+    procedure AC_ComboBox3Change(Sender: TObject);
   private
     { Private declarations }
   public
@@ -64,6 +65,8 @@ Uses
 {$R *.fmx}
 
 procedure TFrame2.OnDataLoad;
+Var
+  Date0: String;
 begin
   With Main do
   Begin
@@ -99,6 +102,13 @@ begin
         except
           on E: Exception do
         end;
+        Date0 := FieldByName('Date_Donner_Sang').AsString;
+        if (Date0 <> '') then
+        Begin
+          CheckBox1.IsChecked := True;
+        End
+        else
+          CheckBox1.IsChecked := False;
         Close;
         Active := False;
         SQL.Clear;
@@ -163,6 +173,16 @@ procedure TFrame2.AC_ComboBox1MouseEnter(Sender: TObject);
 begin
   if (AC_ComboBox1.Items.Capacity = 0) then
     WiliyaLoad(AC_ComboBox1);
+end;
+
+procedure TFrame2.AC_ComboBox3Change(Sender: TObject);
+begin
+  if (AC_ComboBox3.ItemIndex <> -1) then
+  Begin
+    CheckBox1.Enabled := True;
+  End
+  else
+    CheckBox1.Enabled := False;
 end;
 
 procedure TFrame2.CommuneLoad(const Combo: TComboBox);
@@ -262,7 +282,11 @@ begin
     End;
     if (CheckBox1.IsChecked = True) then
     Begin
-      FieldByName('Date_Donner_Sang').AsString := DateToStr(date);
+      FieldByName('Date_Donner_Sang').AsString := DateToStr(date)
+    End
+    else if (CheckBox1.IsChecked = False) then
+    Begin
+      FieldByName('Date_Donner_Sang').AsString := '';
     End;
   End;
 end;

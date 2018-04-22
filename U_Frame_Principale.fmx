@@ -57,7 +57,7 @@ object Frame1: TFrame1
           TabOrder = 6
           OnChange = IP_ComboBox2Change
           object InnerGlowEffect2Combo2: TInnerGlowEffect
-            Softness = 0.400000005960464400
+            Softness = 0.400000005960464500
             GlowColor = xFFD7263D
             Opacity = 0.899999976158142100
             Enabled = False
@@ -141,7 +141,7 @@ object Frame1: TFrame1
           TabOrder = 6
           OnChange = IP_ComboBox3Change
           object InnerGlowEffect3Combo3: TInnerGlowEffect
-            Softness = 0.400000005960464400
+            Softness = 0.400000005960464500
             GlowColor = xFFD7263D
             Opacity = 0.899999976158142100
             Enabled = False
@@ -182,7 +182,6 @@ object Frame1: TFrame1
           Size.PlatformDefault = False
           TextPrompt = 'DD-MM-YYYY'
           StyledSettings = [Style, FontColor]
-          OnChange = IP_Edit2Change
         end
       end
     end
@@ -221,14 +220,14 @@ object Frame1: TFrame1
           TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 14.000000000000000000
           Position.X = 90.000000000000000000
-          Position.Y = 4.425531387329101000
+          Position.Y = 4.425531387329102000
           Size.Width = 207.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
           StyledSettings = [Style, FontColor]
           OnChange = IP_Edit3Change
           object InnerGlowEffectEdit3: TInnerGlowEffect
-            Softness = 0.400000005960464400
+            Softness = 0.400000005960464500
             GlowColor = xFFD7263D
             Opacity = 0.899999976158142100
             Enabled = False
@@ -267,8 +266,9 @@ object Frame1: TFrame1
           Size.PlatformDefault = False
           StyledSettings = [Style, FontColor]
           OnChange = IP_Edit2Change
+          OnChangeTracking = IP_Edit2ChangeTracking
           object InnerGlowEffectEdit2: TInnerGlowEffect
-            Softness = 0.400000005960464400
+            Softness = 0.400000005960464500
             GlowColor = xFFD7263D
             Opacity = 0.899999976158142100
             Enabled = False
@@ -302,26 +302,17 @@ object Frame1: TFrame1
           TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 14.000000000000000000
           Text = 'Admit le'
-          TabOrder = 3
+          TabOrder = 1
         end
-        object IP_DateEdit2: TDateEdit
-          IsChecked = False
-          Date = 43211.000000000000000000
-          WeekNumbers = True
-          TodayDefault = True
-          Anchors = [akLeft, akRight]
+        object DateEdit1: TDateEdit
+          Date = 43212.000000000000000000
           Position.X = 90.000000000000000000
-          Position.Y = 3.710144996643066000
+          Position.Y = 4.000000000000000000
           ReadOnly = True
           Size.Width = 207.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
-          StyleLookup = 'dateeditstyle'
-          StyledSettings = [Style, FontColor]
-          TabOrder = 0
-          TextSettings.Font.Family = '(Default)'
-          ParentShowHint = False
-          ShowHint = False
+          TabOrder = 2
         end
       end
       object Layout_Left_2: TLayout

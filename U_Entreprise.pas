@@ -71,7 +71,7 @@ var
 implementation
 
 uses
-  U_DataModule;
+  U_DataModule, U_Main;
 {$R *.fmx}
 
 procedure WiliyaLoad(const Combo: TComboBox);
@@ -121,58 +121,61 @@ Var
   MDlg: Integer;
 begin
   inherited;
-  if ((ComboBox1.Items.Text <> '') and (ComboBox2.Items.Text <> '') and
-    (ComboBox3.Items.Text <> '') and (Edit1.Text <> '') and (Edit3.Text <> '')
-    and (Edit_Code_Wilaya.Text <> '') and (Edit_Code_Postal.Text <> '')) then
-  begin
-    with DataModule1.FDQ_Entreprise do
-    begin
-      SQL.Clear;
-      SQL.Text := (' Select * From Etablissement ');
-      Active := True;
-      Edit;
-      FieldByName('Form_Juridique').AsString := ComboBox1.Selected.Text;
-      FieldByName('Wilaya').AsString := ComboBox2.Selected.Text;
-      FieldByName('Commune').AsString := ComboBox3.Selected.Text;
-      FieldByName('Libelle').AsString := Edit1.Text;
-      FieldByName('Libelle_Sec').AsString := Edit2.Text;
-      FieldByName('Adresse').AsString := Edit3.Text;
-      FieldByName('Telephone').AsString := Edit4.Text;
-      FieldByName('Mobile').AsString := Edit5.Text;
-      FieldByName('Fax').AsString := Edit6.Text;
-      FieldByName('Email').AsString := Edit7.Text;
-      FieldByName('Web').AsString := Edit8.Text;
-      FieldByName('Code_de_Wilaya').Value := Edit_Code_Wilaya.Text;
-      FieldByName('Code_Postal').Value := Edit_Code_Postal.Text;
-      Post;
-      SQL.Clear;
-      Active := False;
-    end;
-
-    Showmessage('Les iformation a été Enregistrer');
-    ModalResult := mrClose;
-  end
-  else
+  if (Main.Privilege = True) then
   Begin
-    if (ComboBox1.ItemIndex = -1) then
-    Begin
-      InnerGlowEffect1.Enabled := True;
-    End;
+    if ((ComboBox1.Items.Text <> '') and (ComboBox2.Items.Text <> '') and
+      (ComboBox3.Items.Text <> '') and (Edit1.Text <> '') and (Edit3.Text <> '')
+      and (Edit_Code_Wilaya.Text <> '') and (Edit_Code_Postal.Text <> '')) then
+    begin
+      with DataModule1.FDQ_Entreprise do
+      begin
+        SQL.Clear;
+        SQL.Text := (' Select * From Etablissement ');
+        Active := True;
+        Edit;
+        FieldByName('Form_Juridique').AsString := ComboBox1.Selected.Text;
+        FieldByName('Wilaya').AsString := ComboBox2.Selected.Text;
+        FieldByName('Commune').AsString := ComboBox3.Selected.Text;
+        FieldByName('Libelle').AsString := Edit1.Text;
+        FieldByName('Libelle_Sec').AsString := Edit2.Text;
+        FieldByName('Adresse').AsString := Edit3.Text;
+        FieldByName('Telephone').AsString := Edit4.Text;
+        FieldByName('Mobile').AsString := Edit5.Text;
+        FieldByName('Fax').AsString := Edit6.Text;
+        FieldByName('Email').AsString := Edit7.Text;
+        FieldByName('Web').AsString := Edit8.Text;
+        FieldByName('Code_de_Wilaya').Value := Edit_Code_Wilaya.Text;
+        FieldByName('Code_Postal').Value := Edit_Code_Postal.Text;
+        Post;
+        SQL.Clear;
+        Active := False;
+      end;
 
-    if (ComboBox2.ItemIndex = -1) then
+      Showmessage('Les iformation a été Enregistrer');
+      ModalResult := mrClose;
+    end
+    else
     Begin
-      InnerGlowEffect2.Enabled := True;
-    End;
+      if (ComboBox1.ItemIndex = -1) then
+      Begin
+        InnerGlowEffect1.Enabled := True;
+      End;
 
-    if (ComboBox3.ItemIndex = -1) then
-    Begin
-      InnerGlowEffect3.Enabled := True;
-    End;
-    MDlg := MessageDlg('š''il vous plaît rempli les champs necessaire',
-      TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
-    if (MDlg = mrRetry) then
-    Begin
-      ComboBox1.SetFocus;
+      if (ComboBox2.ItemIndex = -1) then
+      Begin
+        InnerGlowEffect2.Enabled := True;
+      End;
+
+      if (ComboBox3.ItemIndex = -1) then
+      Begin
+        InnerGlowEffect3.Enabled := True;
+      End;
+      MDlg := MessageDlg('š''il vous plaît rempli les champs necessaire',
+        TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
+      if (MDlg = mrRetry) then
+      Begin
+        ComboBox1.SetFocus;
+      End;
     End;
   End;
 end;
@@ -193,27 +196,34 @@ end;
 procedure TEtablissement.Button3Click(Sender: TObject);
 begin
   inherited;
-  ComboBox1.HitTest := True;
-  ComboBox2.HitTest := True;
-  ComboBox3.HitTest := True;
-  ComboBox1.Clear;
-  ComboBox2.Clear;
-  ComboBox3.Clear;
-  ComboBox1.Items.Add('EPH');
-  ComboBox1.Items.Add('EPSP');
-  WiliyaLoad(ComboBox2);
-  Edit_Code_Wilaya.Text := '';
-  Edit_Code_Postal.Text := '';
-  CommuneLoad(Edit_Code_Wilaya, ComboBox3);
-  Edit1.HitTest := True;
-  Edit2.HitTest := True;
-  Edit3.HitTest := True;
-  Edit4.HitTest := True;
-  Edit5.HitTest := True;
-  Edit6.HitTest := True;
-  Edit7.HitTest := True;
-  Edit8.HitTest := True;
-  ComboBox1.SetFocus;
+  if (Main.Privilege = True) then
+  Begin
+    ComboBox1.HitTest := True;
+    ComboBox2.HitTest := True;
+    ComboBox3.HitTest := True;
+    ComboBox1.Clear;
+    ComboBox2.Clear;
+    ComboBox3.Clear;
+    ComboBox1.Items.Add('EPH');
+    ComboBox1.Items.Add('EPSP');
+    WiliyaLoad(ComboBox2);
+    Edit_Code_Wilaya.Text := '';
+    Edit_Code_Postal.Text := '';
+    CommuneLoad(Edit_Code_Wilaya, ComboBox3);
+    Edit1.HitTest := True;
+    Edit2.HitTest := True;
+    Edit3.HitTest := True;
+    Edit4.HitTest := True;
+    Edit5.HitTest := True;
+    Edit6.HitTest := True;
+    Edit7.HitTest := True;
+    Edit8.HitTest := True;
+    ComboBox1.SetFocus;
+  end
+  else
+    MessageDlg
+      ('Ce type de compte n''est pas autorisé à modifier ce type de paramètre',
+      TMsgDlgType.mtWarning, [TMsgDlgBtn.mbOK], 0);
 end;
 
 procedure TEtablissement.ComboBox1Change(Sender: TObject);
@@ -278,6 +288,10 @@ var
   Existed: boolean;
 begin
   inherited;
+  if (Main.Privilege = False) then
+    Button1.Enabled := False
+  else if (Main.Privilege = True) then
+    Button1.Enabled := True;
   with DataModule1.FDQ_Entreprise do
   begin
     SQL.Text := ('Select * From Etablissement');

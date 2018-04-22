@@ -208,7 +208,7 @@ object Parametre: TParametre
       object Mod_Edit1: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 3
+        TabOrder = 0
         TextSettings.Font.Family = 'FontAwesome'
         TextSettings.Font.Size = 16.000000000000000000
         Position.X = 96.000000000000000000
@@ -220,7 +220,7 @@ object Parametre: TParametre
         StyledSettings = [Style, FontColor]
         OnChange = Mod_Edit1Change
         object InnerGlowEffect1: TInnerGlowEffect
-          Softness = 0.400000005960464400
+          Softness = 0.400000005960464500
           GlowColor = claCrimson
           Opacity = 0.899999976158142100
           Enabled = False
@@ -241,7 +241,7 @@ object Parametre: TParametre
         StyledSettings = [Style, FontColor]
         OnChange = Mod_Edit2Change
         object InnerGlowEffect2: TInnerGlowEffect
-          Softness = 0.400000005960464400
+          Softness = 0.400000005960464500
           GlowColor = claCrimson
           Opacity = 0.899999976158142100
           Enabled = False
@@ -254,7 +254,7 @@ object Parametre: TParametre
         Size.Width = 137.000000000000000000
         Size.Height = 31.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 6
+        TabOrder = 3
         Text = 'OK'
         TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 16.000000000000000000
@@ -267,7 +267,7 @@ object Parametre: TParametre
         Size.Width = 137.000000000000000000
         Size.Height = 31.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 5
+        TabOrder = 4
         Text = 'Vid'#233
         TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 16.000000000000000000
@@ -276,7 +276,7 @@ object Parametre: TParametre
       object Mod_Edit3: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 0
+        TabOrder = 2
         TextSettings.Font.Family = 'FontAwesome'
         TextSettings.Font.Size = 16.000000000000000000
         Position.X = 96.000000000000000000
@@ -288,7 +288,7 @@ object Parametre: TParametre
         StyledSettings = [Style, FontColor]
         OnChange = Mod_Edit2Change
         object InnerGlowEffect3: TInnerGlowEffect
-          Softness = 0.400000005960464400
+          Softness = 0.400000005960464500
           GlowColor = claCrimson
           Opacity = 0.899999976158142100
           Enabled = False
@@ -302,7 +302,7 @@ object Parametre: TParametre
         Size.Width = 137.000000000000000000
         Size.Height = 31.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 2
+        TabOrder = 5
         Text = 'Annuler'
         TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 16.000000000000000000
@@ -417,8 +417,8 @@ object Parametre: TParametre
       end
       object ComboBox1: TComboBox
         Items.Strings = (
-          'Windows 10'
-          'Windows 10 SlateGrey')
+          'Windows 10 Moderne'
+          'Windows 10 SlateGrey Moderne')
         Position.X = 184.000000000000000000
         Position.Y = 83.000000000000000000
         Size.Width = 353.000000000000000000
@@ -473,6 +473,7 @@ object Parametre: TParametre
       StyleLookup = ''
       TabOrder = 0
       Text = #61981' Patient'
+      Visible = False
       ExplicitSize.cx = 79.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
       object Label8: TLabel
@@ -678,6 +679,7 @@ object Parametre: TParametre
       StyleLookup = ''
       TabOrder = 0
       Text = #61461' Page d'#39'accueil'
+      Visible = False
       ExplicitSize.cx = 125.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
       object Label4: TLabel
@@ -695,7 +697,7 @@ object Parametre: TParametre
       object Label5: TLabel
         StyledSettings = [Style, FontColor]
         Position.X = 32.000000000000000000
-        Position.Y = 98.000000000000000000
+        Position.Y = 178.000000000000000000
         Size.Width = 241.000000000000000000
         Size.Height = 23.000000000000000000
         Size.PlatformDefault = False
@@ -707,7 +709,7 @@ object Parametre: TParametre
       object Label6: TLabel
         StyledSettings = [Style, FontColor]
         Position.X = 32.000000000000000000
-        Position.Y = 178.000000000000000000
+        Position.Y = 98.000000000000000000
         Size.Width = 241.000000000000000000
         Size.Height = 23.000000000000000000
         Size.PlatformDefault = False
@@ -780,9 +782,9 @@ object Parametre: TParametre
         Value = 10.000000000000000000
         OnChange = TrackBar2Change
       end
-      object Edit1: TEdit
+      object Edit_ST_1: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
-        TabOrder = 11
+        TabOrder = 9
         ReadOnly = True
         Position.X = 497.000000000000000000
         Position.Y = 18.000000000000000000
@@ -790,32 +792,12 @@ object Parametre: TParametre
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
       end
-      object Edit2: TEdit
-        Touch.InteractiveGestures = [LongTap, DoubleTap]
-        TabOrder = 10
-        ReadOnly = True
-        Position.X = 497.000000000000000000
-        Position.Y = 98.000000000000000000
-        Size.Width = 52.000000000000000000
-        Size.Height = 22.000000000000000000
-        Size.PlatformDefault = False
-      end
-      object Edit3: TEdit
-        Touch.InteractiveGestures = [LongTap, DoubleTap]
-        TabOrder = 9
-        ReadOnly = True
-        Position.X = 497.000000000000000000
-        Position.Y = 178.000000000000000000
-        Size.Width = 52.000000000000000000
-        Size.Height = 22.000000000000000000
-        Size.PlatformDefault = False
-      end
-      object Edit4: TEdit
+      object Edit_ST_2: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         TabOrder = 8
         ReadOnly = True
         Position.X = 497.000000000000000000
-        Position.Y = 258.000000000000000000
+        Position.Y = 98.000000000000000000
         Size.Width = 52.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
@@ -826,7 +808,7 @@ object Parametre: TParametre
         Size.Width = 129.000000000000000000
         Size.Height = 31.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 16
+        TabOrder = 14
         Text = 'Enregistre'
         OnClick = Button3Click
       end
@@ -837,8 +819,26 @@ object Parametre: TParametre
         Size.Width = 129.000000000000000000
         Size.Height = 31.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 17
+        TabOrder = 15
         Text = 'Annuler'
+      end
+      object Edit_ST_3: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 16
+        Position.X = 497.000000000000000000
+        Position.Y = 178.000000000000000000
+        Size.Width = 52.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Edit_ST_4: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 17
+        Position.X = 497.000000000000000000
+        Position.Y = 258.000000000000000000
+        Size.Width = 52.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
       end
     end
     object Tab_Del: TTabItem

@@ -38,7 +38,6 @@ type
     Layout_Top_2: TLayout;
     Layout_Right2: TLayout;
     IP_Label5: TLabel;
-    IP_DateEdit2: TDateEdit;
     Layout_Left_2: TLayout;
     IP_Label1: TLabel;
     IP_Edit1: TEdit;
@@ -48,6 +47,7 @@ type
     Button3: TButton;
     InnerGlowEffect2Combo2: TInnerGlowEffect;
     Edit_Date: TEdit;
+    DateEdit1: TDateEdit;
     function SetEdit: Boolean;
     function Edit(): String;
     function Insert(): String;
@@ -59,6 +59,7 @@ type
     procedure IP_ComboBox1Change(Sender: TObject);
     procedure IP_Edit2Change(Sender: TObject);
     procedure IP_Edit3Change(Sender: TObject);
+    procedure IP_Edit2ChangeTracking(Sender: TObject);
   private
     { Private declarations }
   public
@@ -91,7 +92,7 @@ begin
         IP_Edit2.Text := FieldByName('Nom').AsString;
         IP_Edit3.Text := FieldByName('Prenom').AsString;
         Edit_Date.Text := FieldByName('Date_de_Nai').AsString;
-        IP_DateEdit2.Text := FieldByName('date_de_Entre').AsString;
+        DateEdit1.Text := FieldByName('date_de_Entre').AsString;
         try
           IP_ComboBox1.ItemIndex := FieldByName('Etat_Civil_Index').Value;
         except
@@ -139,8 +140,7 @@ begin
     Rand := FieldByName('Patient_ID').AsString;
     FieldByName('Nom').AsString := IP_Edit2.Text;
     FieldByName('Prenom').AsString := IP_Edit3.Text;
-    FieldByName('Date_de_Nai').AsString := Edit_Date.Text;
-    FieldByName('Date_de_Entre').AsString := IP_DateEdit2.Text;
+    // FieldByName('Date_de_Entre').AsString := DateEdit1.Text;
     if (IP_ComboBox1.ItemIndex <> -1) then
     Begin
       FieldByName('Etat_Civil').AsString := IP_ComboBox1.Selected.Text;
@@ -224,7 +224,7 @@ begin
     FieldByName('Nom').AsString := IP_Edit2.Text;
     FieldByName('Prenom').AsString := IP_Edit3.Text;
     FieldByName('Date_de_Nai').AsString := Edit_Date.Text;
-    FieldByName('Date_de_Entre').AsString := IP_DateEdit2.Text;
+    FieldByName('Date_de_Entre').AsString := DateEdit1.Text;
     if (IP_ComboBox1.ItemIndex <> -1) then
     Begin
       FieldByName('Etat_Civil').AsString := IP_ComboBox1.Selected.Text;
@@ -265,6 +265,11 @@ begin
   InnerGlowEffectEdit2.Enabled := False;
 end;
 
+procedure TFrame1.IP_Edit2ChangeTracking(Sender: TObject);
+begin
+  DateEdit1.Text := DateToStr(Date);
+end;
+
 procedure TFrame1.IP_Edit3Change(Sender: TObject);
 begin
   InnerGlowEffectEdit3.Enabled := False;
@@ -278,8 +283,8 @@ Begin
   IP_Edit1.Text := '';
   IP_Edit2.Text := '';
   IP_Edit3.Text := '';
-  Edit_Date.Text := DateToStr(date);
-  IP_DateEdit2.date := date;
+  Edit_Date.Text := '';
+  DateEdit1.Date := Date;
   IP_ComboBox1.ItemIndex := -1;
   IP_ComboBox2.ItemIndex := -1;
   IP_ComboBox3.ItemIndex := -1;

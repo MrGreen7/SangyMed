@@ -300,6 +300,7 @@ object Frame2: TFrame2
       Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 17
+      OnChange = AC_ComboBox3Change
     end
     object Label0: TLabel
       StyledSettings = [Style, FontColor]
@@ -322,6 +323,7 @@ object Frame2: TFrame2
       OnChange = Wilaya_CodeChange
     end
     object CheckBox1: TCheckBox
+      Enabled = False
       StyledSettings = [Style, FontColor]
       Position.X = 128.000000000000000000
       Position.Y = 88.000000000000000000

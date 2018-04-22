@@ -650,10 +650,6 @@ Visible=False
 Coordinates=4722,716,188,36
 Visible=False
 
-[Edit1]
-Coordinates=11,77,44,36
-Visible=False
-
 [Frame_Information.L_Top_1]
 Coordinates=4722,771,177,36
 Visible=False
@@ -2889,5 +2885,9 @@ Visible=False
 
 [PoP2_Hemos]
 Coordinates=42,606,134,36
+Visible=False
+
+[Edit_Recherche]
+Coordinates=11,77,44,36
 Visible=False
 
