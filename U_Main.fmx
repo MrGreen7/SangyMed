@@ -36,7 +36,7 @@ object Main: TMain
     Stroke.Kind = None
   end
   object PopupMenu1: TPopupMenu
-    Left = 904
+    Left = 1144
     Top = 104
     object PoP_Biochimic: TMenuItem
       Text = 'Biochimic'
@@ -56,8 +56,8 @@ object Main: TMain
     end
   end
   object PopupMenu2: TPopupMenu
-    Left = 896
-    Top = 48
+    Left = 1216
+    Top = 56
     object PoP2_Hemog: TMenuItem
       Text = 'Hemogramme'
       OnClick = PoP2_HemogClick
@@ -81,8 +81,8 @@ object Main: TMain
     Filter = 'BAK file|*.BAK|db file|*.db'
     Options = [ofOverwritePrompt, ofHideReadOnly, ofFileMustExist, ofEnableSizing]
     OnTypeChange = SaveDialog1TypeChange
-    Left = 720
-    Top = 48
+    Left = 1128
+    Top = 8
   end
   object Layout13: TLayout
     Align = Client
@@ -122,12 +122,12 @@ object Main: TMain
         StyledSettings = [Style, FontColor]
         HelpType = htKeyword
         IsSelected = True
-        Size.Width = 82.000000000000000000
+        Size.Width = 91.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
         StyleLookup = 'tabitemstyle'
         TabOrder = 0
-        Text = #61461' Acceil'
+        Text = #61461' Accueil'
         ExplicitSize.cx = 62.000000000000000000
         ExplicitSize.cy = 30.000000000000000000
         object Panel4: TPanel
@@ -315,7 +315,7 @@ object Main: TMain
               TextSettings.Font.Size = 16.000000000000000000
               TextSettings.HorzAlign = Center
               TextSettings.VertAlign = Trailing
-              Text = 'Page d'#39'acceil'
+              Text = 'Page d'#39'accueil'
               TabOrder = 2
               object ShadowEffect2: TShadowEffect
                 Distance = 3.000000000000000000
@@ -416,53 +416,19 @@ object Main: TMain
             Size.Height = 129.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 4
-            object Label12: TLabel
-              Cursor = crHandPoint
-              StyledSettings = [Style]
-              HitTest = True
-              Position.X = 179.000000000000000000
-              Position.Y = 15.000000000000000000
-              Size.Width = 105.000000000000000000
-              Size.Height = 92.000000000000000000
-              Size.PlatformDefault = False
-              TextSettings.Font.Family = 'FontAwesome'
-              TextSettings.Font.Size = 40.000000000000000000
-              TextSettings.FontColor = xFF0F7A7B
-              TextSettings.HorzAlign = Center
-              TextSettings.VertAlign = Leading
-              Text = #61688
-              TabOrder = 1
-              OnClick = Label12Click
-              object ShadowEffect12: TShadowEffect
-                Distance = 3.000000000000000000
-                Direction = 45.000000000000000000
-                Softness = 0.200000002980232200
-                Opacity = 0.600000023841857900
-                ShadowColor = claBlack
-              end
-              object ColorAnimation4: TColorAnimation
-                Delay = 0.200000002980232200
-                Duration = 0.500000000000000000
-                PropertyName = 'TextSettings.FontColor'
-                StartValue = xFF0F7A7B
-                StopValue = xFF0197F6
-                Trigger = 'IsMouseOver=true'
-                TriggerInverse = 'IsMouseOver=false'
-              end
-            end
             object Label13: TLabel
               Cursor = crHandPoint
               StyledSettings = [Style, FontColor]
               HitTest = True
-              Position.X = 190.000000000000000000
+              Position.X = 179.000000000000000000
               Position.Y = 57.000000000000000000
-              Size.Width = 102.000000000000000000
+              Size.Width = 115.000000000000000000
               Size.Height = 46.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.Family = 'Candara'
               TextSettings.Font.Size = 16.000000000000000000
               TextSettings.VertAlign = Trailing
-              Text = 'Informations de l'#39'H'#244'pital'
+              Text = 'Informations de l'#39#233'tablissement'
               TabOrder = 2
               object ShadowEffect13: TShadowEffect
                 Distance = 3.000000000000000000
@@ -545,6 +511,40 @@ object Main: TMain
                 Inverse = True
                 PropertyName = 'TextSettings.FontColor'
                 StartValue = xFF448FA3
+                StopValue = xFF0197F6
+                Trigger = 'IsMouseOver=true'
+                TriggerInverse = 'IsMouseOver=false'
+              end
+            end
+            object Label12: TLabel
+              Cursor = crHandPoint
+              StyledSettings = [Style]
+              HitTest = True
+              Position.X = 179.000000000000000000
+              Position.Y = 15.000000000000000000
+              Size.Width = 105.000000000000000000
+              Size.Height = 92.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'FontAwesome'
+              TextSettings.Font.Size = 40.000000000000000000
+              TextSettings.FontColor = xFF0F7A7B
+              TextSettings.HorzAlign = Center
+              TextSettings.VertAlign = Leading
+              Text = #61688
+              TabOrder = 1
+              OnClick = Label12Click
+              object ShadowEffect12: TShadowEffect
+                Distance = 3.000000000000000000
+                Direction = 45.000000000000000000
+                Softness = 0.200000002980232200
+                Opacity = 0.600000023841857900
+                ShadowColor = claBlack
+              end
+              object ColorAnimation4: TColorAnimation
+                Delay = 0.200000002980232200
+                Duration = 0.500000000000000000
+                PropertyName = 'TextSettings.FontColor'
+                StartValue = xFF0F7A7B
                 StopValue = xFF0197F6
                 Trigger = 'IsMouseOver=true'
                 TriggerInverse = 'IsMouseOver=false'
@@ -849,11 +849,11 @@ object Main: TMain
           TabOrder = 4
           object Layout_Exit_Patient: TLayout
             Align = Left
-            Position.X = 732.000000000000000000
+            Position.X = 861.000000000000000000
             Size.Width = 129.000000000000000000
             Size.Height = 129.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 3
+            TabOrder = 4
             object Label16: TLabel
               StyledSettings = [Style, FontColor]
               Position.X = 37.000000000000000000
@@ -917,7 +917,7 @@ object Main: TMain
             Size.Width = 129.000000000000000000
             Size.Height = 129.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 4
+            TabOrder = 5
             object Label28: TLabel
               StyledSettings = [Style, FontColor]
               Position.X = 24.000000000000000000
@@ -1112,6 +1112,7 @@ object Main: TMain
                 AnimationType = InOut
                 Delay = 0.200000002980232200
                 Duration = 0.500000000000000000
+                Inverse = True
                 PropertyName = 'TextSettings.FontColor'
                 StartValue = xFFFFAD05
                 StopValue = xFF0197F6
@@ -1379,6 +1380,78 @@ object Main: TMain
             Size.Height = 137.000000000000000000
             Size.PlatformDefault = False
           end
+          object Layout14: TLayout
+            Align = Left
+            Position.X = 732.000000000000000000
+            Size.Width = 129.000000000000000000
+            Size.Height = 129.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+            object Label25: TLabel
+              Cursor = crHandPoint
+              StyledSettings = [Style]
+              HitTest = True
+              Position.X = 20.000000000000000000
+              Position.Y = 15.000000000000000000
+              Size.Width = 89.000000000000000000
+              Size.Height = 90.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'FontAwesome'
+              TextSettings.Font.Size = 45.000000000000000000
+              TextSettings.FontColor = xFFDF37C8
+              TextSettings.HorzAlign = Center
+              TextSettings.VertAlign = Leading
+              Text = #62068
+              TabOrder = 0
+              OnClick = Label25Click
+              object ColorAnimation18: TColorAnimation
+                AnimationType = InOut
+                Delay = 0.200000002980232200
+                Duration = 0.500000000000000000
+                Inverse = True
+                PropertyName = 'TextSettings.FontColor'
+                StartValue = xFFDF37C8
+                StopValue = xFF0197F6
+                Trigger = 'IsMouseOver=true'
+                TriggerInverse = 'IsMouseOver=false'
+              end
+              object ShadowEffect26: TShadowEffect
+                Distance = 3.000000000000000000
+                Direction = 45.000000000000000000
+                Softness = 0.200000002980232200
+                Opacity = 0.600000023841857900
+                ShadowColor = claBlack
+              end
+            end
+            object Label24: TLabel
+              StyledSettings = [Style, FontColor]
+              Position.X = 20.000000000000000000
+              Position.Y = 62.000000000000000000
+              Size.Width = 89.000000000000000000
+              Size.Height = 51.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'Candara'
+              TextSettings.Font.Size = 14.000000000000000000
+              TextSettings.HorzAlign = Center
+              Text = 'Calculer la date pass'#233'e'
+              TabOrder = 1
+              object ShadowEffect25: TShadowEffect
+                Distance = 3.000000000000000000
+                Direction = 45.000000000000000000
+                Softness = 0.200000002980232200
+                Opacity = 0.600000023841857900
+                ShadowColor = claBlack
+              end
+            end
+          end
+          object Line19: TLine
+            LineType = Left
+            Opacity = 0.800000011920928900
+            Position.X = 988.000000000000000000
+            Size.Width = 9.000000000000000000
+            Size.Height = 137.000000000000000000
+            Size.PlatformDefault = False
+          end
         end
       end
       object H_Gen_RechercheP: TTabItem
@@ -1414,11 +1487,11 @@ object Main: TMain
           TabOrder = 4
           object Layout_Exit_RechercheP: TLayout
             Align = Left
-            Position.X = 516.000000000000000000
-            Size.Width = 187.000000000000000000
+            Position.X = 645.000000000000000000
+            Size.Width = 129.000000000000000000
             Size.Height = 129.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 1
+            TabOrder = 2
             object Label17: TLabel
               StyledSettings = [Style, FontColor]
               Position.X = 40.000000000000000000
@@ -1481,7 +1554,7 @@ object Main: TMain
             Size.Width = 129.000000000000000000
             Size.Height = 129.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 2
+            TabOrder = 3
             object Label45: TLabel
               StyledSettings = [Style, FontColor]
               Position.X = 28.000000000000000000
@@ -1544,7 +1617,7 @@ object Main: TMain
             Size.Width = 129.000000000000000000
             Size.Height = 129.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 3
+            TabOrder = 4
             object Label47: TLabel
               StyledSettings = [Style, FontColor]
               Position.X = 18.000000000000000000
@@ -1607,7 +1680,7 @@ object Main: TMain
             Size.Width = 129.000000000000000000
             Size.Height = 129.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 4
+            TabOrder = 5
             object Label50: TLabel
               StyledSettings = [Style, FontColor]
               Position.X = 10.000000000000000000
@@ -1762,6 +1835,87 @@ object Main: TMain
                 ShadowColor = claBlack
               end
             end
+          end
+          object Line24: TLine
+            LineType = Left
+            Opacity = 0.800000011920928900
+            Position.X = 643.000000000000000000
+            Position.Y = -8.000000000000000000
+            Size.Width = 9.000000000000000000
+            Size.Height = 137.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object Layout21: TLayout
+            Align = Left
+            Position.X = 516.000000000000000000
+            Size.Width = 129.000000000000000000
+            Size.Height = 129.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Label33: TLabel
+              StyledSettings = [Style, FontColor]
+              Position.X = 28.000000000000000000
+              Position.Y = 72.000000000000000000
+              Size.Width = 73.000000000000000000
+              Size.Height = 41.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'Candara'
+              TextSettings.Font.Size = 14.000000000000000000
+              Text = 'Calculer la date pass'#233'e'
+              TabOrder = 1
+              object ShadowEffect27: TShadowEffect
+                Distance = 3.000000000000000000
+                Direction = 45.000000000000000000
+                Softness = 0.200000002980232200
+                Opacity = 0.600000023841857900
+                ShadowColor = claBlack
+              end
+            end
+            object Label34: TLabel
+              Cursor = crHandPoint
+              StyledSettings = [Style]
+              HitTest = True
+              Position.X = 24.000000000000000000
+              Position.Y = 17.000000000000000000
+              Size.Width = 81.000000000000000000
+              Size.Height = 96.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'FontAwesome'
+              TextSettings.Font.Size = 45.000000000000000000
+              TextSettings.FontColor = xFFDF37C8
+              TextSettings.HorzAlign = Center
+              TextSettings.VertAlign = Leading
+              Text = #62068
+              TabOrder = 0
+              OnClick = Label34Click
+              object ColorAnimation19: TColorAnimation
+                AnimationType = InOut
+                Delay = 0.200000002980232200
+                Duration = 0.500000000000000000
+                Inverse = True
+                PropertyName = 'TextSettings.FontColor'
+                StartValue = xFFDF37C8
+                StopValue = xFF0197F6
+                Trigger = 'IsMouseOver=true'
+                TriggerInverse = 'IsMouseOver=false'
+              end
+              object ShadowEffect28: TShadowEffect
+                Distance = 3.000000000000000000
+                Direction = 45.000000000000000000
+                Softness = 0.200000002980232200
+                Opacity = 0.600000023841857900
+                ShadowColor = claBlack
+              end
+            end
+          end
+          object Line25: TLine
+            LineType = Left
+            Opacity = 0.800000011920928900
+            Position.X = 771.000000000000000000
+            Position.Y = -8.000000000000000000
+            Size.Width = 9.000000000000000000
+            Size.Height = 137.000000000000000000
+            Size.PlatformDefault = False
           end
         end
       end
@@ -2063,7 +2217,7 @@ object Main: TMain
               IsExpanded = False
               IsSelected = False
               TabOrder = 0
-              Text = #61474' Page d'#39'acceuil'
+              Text = #61474' Page d'#39'accueil'
               OnClick = T_AccueilClick
             end
             object T_Patient: TTreeViewItem
@@ -2155,7 +2309,7 @@ object Main: TMain
         Size.PlatformDefault = False
         StyleLookup = 'tabitemcustom'
         TabOrder = 0
-        Text = #61474' Page d'#39'acceuil'
+        Text = #61474' Page d'#39'accueil'
         OnClick = P_AccueilClick
         OnResize = P_AccueilResize
         ExplicitSize.cx = 141.000000000000000000
@@ -4330,7 +4484,7 @@ object Main: TMain
   object BindingsList1: TBindingsList
     Methods = <>
     OutputConverters = <>
-    Left = 1068
+    Left = 1124
     Top = 77
     object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
       Category = 'Quick Bindings'
@@ -4384,8 +4538,8 @@ object Main: TMain
   object BindSourceDB4: TBindSourceDB
     DataSet = DataModule1.FDQ_Recherche
     ScopeMappings = <>
-    Left = 928
-    Top = 16
+    Left = 1072
+    Top = 24
   end
   object BindSourceDB5: TBindSourceDB
     DataSet = DataModule1.FDQ_Homme
@@ -4396,12 +4550,12 @@ object Main: TMain
   object BindSourceDB6: TBindSourceDB
     DataSet = DataModule1.FDQ_Femme
     ScopeMappings = <>
-    Left = 1000
-    Top = 112
+    Left = 1136
+    Top = 96
   end
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor
     Provider = 'FMX'
-    Left = 976
-    Top = 72
+    Left = 1152
+    Top = 48
   end
 end

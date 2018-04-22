@@ -13039,6 +13039,54 @@ object Connecter: TConnecter
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 0
+  object Label2: TLabel
+    AutoTranslate = False
+    Cursor = crHandPoint
+    StyledSettings = [Style]
+    HitTest = True
+    Position.X = 55.000000000000000000
+    Position.Y = 153.000000000000000000
+    Size.Width = 233.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listboxheaderlabel'
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 18.000000000000000000
+    TextSettings.FontColor = xFF44BCCA
+    Text = 'Cr'#233'e un nouveau compte'
+    TabOrder = 7
+    object ShadowEffect2: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 0.400000005960464500
+      ShadowColor = claBlack
+    end
+  end
+  object Label3: TLabel
+    Cursor = crHandPoint
+    StyledSettings = [Style]
+    HitTest = True
+    Position.X = 22.000000000000000000
+    Position.Y = 153.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'buttonstylelabel'
+    TextSettings.Font.Family = 'FontAwesome'
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.FontColor = xFF44BCCA
+    Text = #62004
+    TabOrder = 4
+    OnClick = Label3Click
+    object ShadowEffect3: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 0.400000005960464500
+      ShadowColor = claBlack
+    end
+  end
   object Button1: TButton
     StyleName = 'StyleBook1'
     Cursor = crHandPoint
@@ -13082,7 +13130,7 @@ object Connecter: TConnecter
     StyledSettings = [Style, FontColor]
     OnChange = Edit1Change
     object InnerGlowEffect1: TInnerGlowEffect
-      Softness = 0.400000005960464400
+      Softness = 0.400000005960464500
       GlowColor = xFFD7263D
       Opacity = 0.899999976158142100
       Enabled = False
@@ -13115,34 +13163,10 @@ object Connecter: TConnecter
       OnMouseUp = SpeedButton1MouseUp
     end
     object InnerGlowEffect2: TInnerGlowEffect
-      Softness = 0.400000005960464400
+      Softness = 0.400000005960464500
       GlowColor = xFFD7263D
       Opacity = 0.899999976158142100
       Enabled = False
-    end
-  end
-  object Label2: TLabel
-    AutoTranslate = False
-    Cursor = crHandPoint
-    StyledSettings = [Style]
-    HitTest = True
-    Position.X = 55.000000000000000000
-    Position.Y = 153.000000000000000000
-    Size.Width = 233.000000000000000000
-    Size.Height = 25.000000000000000000
-    Size.PlatformDefault = False
-    StyleLookup = 'listboxheaderlabel'
-    TextSettings.Font.Family = 'Candara'
-    TextSettings.Font.Size = 18.000000000000000000
-    TextSettings.FontColor = xFF44BCCA
-    Text = 'Cr'#233'e un nouvelle compte'
-    TabOrder = 7
-    object ShadowEffect2: TShadowEffect
-      Distance = 3.000000000000000000
-      Direction = 45.000000000000000000
-      Softness = 0.300000011920929000
-      Opacity = 0.400000005960464400
-      ShadowColor = claBlack
     end
   end
   object Label4: TLabel
@@ -13165,7 +13189,7 @@ object Connecter: TConnecter
       Distance = 3.000000000000000000
       Direction = 45.000000000000000000
       Softness = 0.300000011920929000
-      Opacity = 0.400000005960464400
+      Opacity = 0.400000005960464500
       ShadowColor = claBlack
     end
   end
@@ -13184,33 +13208,9 @@ object Connecter: TConnecter
     Visible = False
     TabOrder = 8
     object GlowEffect1: TGlowEffect
-      Softness = 0.400000005960464400
+      Softness = 0.400000005960464500
       GlowColor = claBlack
       Opacity = 1.000000000000000000
-    end
-  end
-  object Label3: TLabel
-    Cursor = crHandPoint
-    StyledSettings = [Style]
-    HitTest = True
-    Position.X = 22.000000000000000000
-    Position.Y = 153.000000000000000000
-    Size.Width = 225.000000000000000000
-    Size.Height = 25.000000000000000000
-    Size.PlatformDefault = False
-    StyleLookup = 'buttonstylelabel'
-    TextSettings.Font.Family = 'FontAwesome'
-    TextSettings.Font.Size = 25.000000000000000000
-    TextSettings.FontColor = xFF44BCCA
-    Text = #62004
-    TabOrder = 4
-    OnClick = Label3Click
-    object ShadowEffect3: TShadowEffect
-      Distance = 3.000000000000000000
-      Direction = 45.000000000000000000
-      Softness = 0.300000011920929000
-      Opacity = 0.400000005960464400
-      ShadowColor = claBlack
     end
   end
   object Label1: TLabel
@@ -13233,7 +13233,7 @@ object Connecter: TConnecter
       Distance = 3.000000000000000000
       Direction = 45.000000000000000000
       Softness = 0.300000011920929000
-      Opacity = 0.400000005960464400
+      Opacity = 0.400000005960464500
       ShadowColor = claBlack
     end
   end

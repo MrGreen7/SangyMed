@@ -82,9 +82,6 @@ begin
   begin
     if ((Edit1.Text = '') and (Edit2.Text = '') and (Edit3.Text = '')) then
     begin
-      MessageDlg
-        ('š''il vous plaît rempli les champs necessaire pour créen un compte',
-        TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
       InnerGlowEffect1.Enabled := True;
       InnerGlowEffect2.Enabled := True;
       InnerGlowEffect3.Enabled := True;
@@ -93,14 +90,15 @@ begin
         InnerGlowEffect4.Enabled := True;
       if (ComboBox1.ItemIndex = -1) then
         InnerGlowEffect6.Enabled := True;
+      MessageDlg
+        ('š''il vous plaît rempli les champs necessaire pour créen un compte',
+        TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
     end
     else if (((Edit1.Text = '') and (Edit2.Text = '')) or
       ((Edit1.Text = '') and (Edit3.Text = ''))) then
     begin
       if (Edit2.Text = '') then
       begin
-        MessageDlg('š''il vous plaît saisir votre nom et pseudo',
-          TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
         InnerGlowEffect1.Enabled := True;
         InnerGlowEffect2.Enabled := True;
         Edit1.SetFocus;
@@ -108,11 +106,11 @@ begin
           InnerGlowEffect4.Enabled := True;
         if (ComboBox1.ItemIndex = -1) then
           InnerGlowEffect6.Enabled := True;
+        MessageDlg('š''il vous plaît saisir votre nom et pseudo',
+          TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
       end
       else if (Edit3.Text = '') then
       begin
-        MessageDlg('š''il vous plaît saisir votre nom et mot de pass',
-          TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
         InnerGlowEffect1.Enabled := True;
         InnerGlowEffect3.Enabled := True;
         Edit1.SetFocus;
@@ -120,12 +118,12 @@ begin
           InnerGlowEffect4.Enabled := True;
         if (ComboBox1.ItemIndex = -1) then
           InnerGlowEffect6.Enabled := True;
+        MessageDlg('š''il vous plaît saisir votre nom et mot de pass',
+          TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
       end;
     end
     else if ((Edit2.Text = '') and (Edit3.Text = '')) then
     begin
-      MessageDlg('š''il vous plaît saisir votre pseudo et mot de pass',
-        TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
       InnerGlowEffect2.Enabled := True;
       InnerGlowEffect3.Enabled := True;
       Edit2.SetFocus;
@@ -133,39 +131,41 @@ begin
         InnerGlowEffect4.Enabled := True;
       if (ComboBox1.ItemIndex = -1) then
         InnerGlowEffect6.Enabled := True;
+      MessageDlg('š''il vous plaît saisir votre pseudo et mot de pass',
+        TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
     end
     else if (Edit1.Text = '') then
     begin
-      MessageDlg('s''il vous plaît entrer votre nom', TMsgDlgType.mtWarning,
-        [TMsgDlgBtn.mbRetry], 0);
       InnerGlowEffect1.Enabled := True;
       Edit1.SetFocus;
       if (Edit4.Text = '') then
         InnerGlowEffect4.Enabled := True;
       if (ComboBox1.ItemIndex = -1) then
         InnerGlowEffect6.Enabled := True;
+      MessageDlg('s''il vous plaît entrer votre nom', TMsgDlgType.mtWarning,
+        [TMsgDlgBtn.mbRetry], 0);
     end
     else if (Edit2.Text = '') then
     begin
-      MessageDlg('s''il vous plaît entrer votre pseudo', TMsgDlgType.mtWarning,
-        [TMsgDlgBtn.mbRetry], 0);
       InnerGlowEffect2.Enabled := True;
       Edit2.SetFocus;
       if (Edit4.Text = '') then
         InnerGlowEffect4.Enabled := True;
       if (ComboBox1.ItemIndex = -1) then
         InnerGlowEffect6.Enabled := True;
+      MessageDlg('s''il vous plaît entrer votre pseudo', TMsgDlgType.mtWarning,
+        [TMsgDlgBtn.mbRetry], 0);
     end
     else if (Edit3.Text = '') then
     begin
-      MessageDlg('s''il vous plaît entrer votre mot de pass',
-        TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
       InnerGlowEffect3.Enabled := True;
       Edit3.SetFocus;
       if (Edit4.Text = '') then
         InnerGlowEffect4.Enabled := True;
       if (ComboBox1.ItemIndex = -1) then
         InnerGlowEffect6.Enabled := True;
+      MessageDlg('s''il vous plaît entrer votre mot de pass',
+        TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
     end;
     if (ComboBox1.ItemIndex = -1) then
       InnerGlowEffect6.Enabled := True;
@@ -174,9 +174,6 @@ begin
   begin
     if (Edit3.Text <> Edit4.Text) then
     begin
-      MessageDlg
-        ('Votre mot de pass ne pas Identique veuillez réessayer de nouveau',
-        TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
       Edit3.Text := '';
       Edit4.Text := '';
       InnerGlowEffect3.Enabled := True;
@@ -184,6 +181,9 @@ begin
       if (ComboBox1.ItemIndex = -1) then
         InnerGlowEffect6.Enabled := True;
       Edit3.SetFocus;
+      MessageDlg
+        ('Votre mot de pass ne pas Identique veuillez réessayer de nouveau',
+        TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
     end
     else
     begin
@@ -196,17 +196,18 @@ begin
         if (FDQuery1.Locate('Pseudo', Edit2.Text, [])) then
         Begin
           InnerGlowEffect2.Enabled := True;
-          ShowMessage('ce nom d''utilisateur est déjà utilisé');
+          MessageDlg('ce nom d''utilisateur est déjà utilisé',
+            TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
         End
         else if (Edit3.Text.Length <= 3) then
         Begin
-          MessageDlg('Le mot de passe doit comporter au moins 4 caractères',
-            TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
           Edit3.Text := '';
           Edit4.Text := '';
           InnerGlowEffect3.Enabled := True;
           InnerGlowEffect4.Enabled := True;
           Edit3.SetFocus;
+          MessageDlg('Le mot de passe doit comporter au moins 4 caractères',
+            TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
         End
         else
         Begin

@@ -65,25 +65,25 @@ begin
   begin
     if ((Edit1.Text = '') and (Edit2.Text = '')) then
     begin
-      MessageDlg('les deux champs sont obligatoire', TMsgDlgType.mtWarning,
-        [TMsgDlgBtn.mbRetry], 0);
       InnerGlowEffect1.Enabled := True;
       InnerGlowEffect2.Enabled := True;
       Edit1.SetFocus;
+      MessageDlg('les deux champs sont obligatoire', TMsgDlgType.mtWarning,
+        [TMsgDlgBtn.mbRetry], 0);
     end
     else if (Edit1.Text = '') then
     begin
-      MessageDlg('š''il vous plaît saisir votre pseudo', TMsgDlgType.mtWarning,
-        [TMsgDlgBtn.mbRetry], 0);
       InnerGlowEffect1.Enabled := True;
       Edit1.SetFocus;
+      MessageDlg('š''il vous plaît saisir votre pseudo', TMsgDlgType.mtWarning,
+        [TMsgDlgBtn.mbRetry], 0);
     end
     else
     begin
-      MessageDlg('š''il vous plaît saisir votre mot de pass',
-        TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
       InnerGlowEffect2.Enabled := True;
       Edit2.SetFocus;
+      MessageDlg('š''il vous plaît saisir votre mot de pass',
+        TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
     end;
   end
   else
@@ -100,7 +100,7 @@ begin
       begin
         InnerGlowEffect1.Enabled := True;
         InnerGlowEffect2.Enabled := True;
-        Msg := MessageDlg('Pseudo ou Mot de pass est incorrect !',
+        Msg := MessageDlg('Pseudo ou Mot de passe est incorrect !',
           TMsgDlgType.mtError, [TMsgDlgBtn.mbRetry, TMsgDlgBtn.mbCancel], 0);
         if (Msg = mrRetry) then
         begin
@@ -115,8 +115,8 @@ begin
       end
       else
       begin
-        Main.Nom := Edit1.Text;
-        Main.ID_Medecin := FDQuery1.FieldByName('ID').AsString;
+        Main.Nom := FDQuery1.FieldByName('Nom').AsSTring;
+        Main.ID_Medecin := FDQuery1.FieldByName('ID').AsSTring;
         Main.Privilege := FDQuery1.FieldByName('Privilege').AsBoolean;
         ModalResult := mrOk;
       end;

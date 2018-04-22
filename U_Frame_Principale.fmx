@@ -312,11 +312,12 @@ object Frame1: TFrame1
           Anchors = [akLeft, akRight]
           Position.X = 90.000000000000000000
           Position.Y = 3.710144996643066000
+          ReadOnly = True
           Size.Width = 207.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = 'dateeditstyle'
-          StyledSettings = []
+          StyledSettings = [Style, FontColor]
           TabOrder = 0
           TextSettings.Font.Family = '(Default)'
           ParentShowHint = False

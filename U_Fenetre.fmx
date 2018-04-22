@@ -269,7 +269,7 @@ object Fenetre: TFenetre
       end
       object Label3: TLabel
         Align = Left
-        StyledSettings = [Family]
+        StyledSettings = [Family, FontColor]
         Position.X = 57.000000000000000000
         Size.Width = 120.000000000000000000
         Size.Height = 56.000000000000000000

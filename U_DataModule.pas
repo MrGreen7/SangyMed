@@ -196,7 +196,7 @@ begin
   Patient :=
     ('CREATE TABLE `Patient` (`Patient_ID`	varchar ( 7 ) NOT NULL UNIQUE,`Nom`	Varchar ( 15 ),`Prenom`	varchar ( 20 ),`Date_de_Nai`	varchar ( 10 ),`Date_de_Entre`	varchar ( 10 ),`Type`	varchar ( 7 ),`Sexe`	varchar ( 5 ),`Etat_Civil`	varchar ( 13 ),'
     + '`Wilaya`	varchar ( 20 ),`Commune`	varchar ( 20 ),`Adresse`	varchar ( 100 ),`Mobile`	INTEGER,`Email`	varchar ( 35 ),`Groupage`	varchar ( 5 ),`Telephone`	Integer ( 9 ),`Fax`	Integer (13),`Type_Index`	INTEGER,`Sexe_Index`	INTEGER,`Etat_Civil_Index`	INTEGER,'
-    + '`Groupage_Index`	INTEGER,`Wilaya_Index`	Integer,`Commune_Index`	Integer,`Image` BLOB,`ID`	varchar(7) NOT NULL, PRIMARY KEY(`Patient_ID`),FOREIGN KEY(`ID`) REFERENCES `Medecin`(`ID`) ON DELETE CASCADE);');
+    + '`Groupage_Index`	INTEGER,`Wilaya_Index`	Integer,`Commune_Index`	Integer,`Date_Donner_Sang` varchar(10),`ID`	varchar(7) NOT NULL, PRIMARY KEY(`Patient_ID`),FOREIGN KEY(`ID`) REFERENCES `Medecin`(`ID`) ON DELETE CASCADE);');
   Biochimie :=
     ('CREATE TABLE `Biochimie` (`Biochimi_ID`	varchar ( 7 ) NOT NULL UNIQUE,`Glycemie`	REAL,`Uree_Sang`	REAL,`Createnine`	REAL,`Cholesterole`	REAL,`Triglycerides`	REAL,`HDL`	REAL,'
     + '`LDL`	REAL,`Acide_Urique`	REAL,`CRP`	REAL,`TGO`	REAL,`TGP`	REAL,`PAL`	REAL,`TP`	REAL,`INR`	REAL,`BilirubineT`	REAL,`BilirubineD`	REAL,`ASLO`	REAL,'

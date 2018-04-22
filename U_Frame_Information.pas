@@ -39,6 +39,7 @@ type
     AC_ComboBox3: TComboBox;
     Label0: TLabel;
     Wilaya_Code: TEdit;
+    CheckBox1: TCheckBox;
     function Pret: Boolean;
     procedure WiliyaLoad(const Combo: TComboBox);
     procedure CommuneLoad(const Combo: TComboBox);
@@ -212,6 +213,10 @@ begin
       FieldByName('groupage_Index').AsString :=
         IntToStr(AC_ComboBox3.ItemIndex);
     End;
+    if (CheckBox1.IsChecked = True) then
+    Begin
+      FieldByName('Date_Donner_Sang').AsString := DateToStr(date);
+    End;
   End;
 end;
 
@@ -254,6 +259,10 @@ begin
     Begin
       FieldByName('Groupage').AsString := '';
       FieldByName('Groupage_Index').Value := -1;
+    End;
+    if (CheckBox1.IsChecked = True) then
+    Begin
+      FieldByName('Date_Donner_Sang').AsString := DateToStr(date);
     End;
   End;
 end;

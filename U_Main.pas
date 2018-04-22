@@ -322,6 +322,21 @@ type
     Layout13: TLayout;
     Rectangle1: TRectangle;
     Rectangle2: TRectangle;
+    Layout14: TLayout;
+    Label24: TLabel;
+    ShadowEffect25: TShadowEffect;
+    Label25: TLabel;
+    ColorAnimation18: TColorAnimation;
+    ShadowEffect26: TShadowEffect;
+    Line19: TLine;
+    Line24: TLine;
+    Layout21: TLayout;
+    Label33: TLabel;
+    ShadowEffect27: TShadowEffect;
+    Label34: TLabel;
+    ColorAnimation19: TColorAnimation;
+    ShadowEffect28: TShadowEffect;
+    Line25: TLine;
     procedure FormShow(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormCreate(Sender: TObject);
@@ -420,6 +435,8 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Label75Click(Sender: TObject);
     procedure SaveDialog1TypeChange(Sender: TObject);
+    procedure Label25Click(Sender: TObject);
+    procedure Label34Click(Sender: TObject);
   private
     { Private declarations }
     WidthX, HeightX: Integer;
@@ -1064,7 +1081,11 @@ begin
       Edit_Search_Commune.Text, Edit2.Text);
     DataModule1.FDQ_Recherche.Active := True;
     StringGrid6ColResize;
-  End
+  End;
+  if (Edit1.Text = '') then
+  Begin
+    Patient_ID := '';
+  End;
 end;
 
 procedure TMain.Edit2ChangeTracking(Sender: TObject);
@@ -1306,7 +1327,7 @@ begin
   if (LogDlg.ShowModal = mrOk) then
   Begin
     LogDlg.Free;
-    ShowMessage('Bienvenue MR ''' + Nom);
+    ShowMessage('Bienvenue Mr(s) "' + Nom + '"');
     Load();
     LoadParam;
   End
@@ -1524,6 +1545,54 @@ begin
   DataModule1.FDQ_Recherche.Active := False;
 end;
 
+procedure TMain.Label25Click(Sender: TObject);
+Var
+  Str, Date0: String;
+  Date1: TDateTime;
+  Days: double;
+begin
+  inherited;
+  if (Patient_ID <> '') then
+  Begin
+    With DataModule1.FDQuery1 do
+    Begin
+      Active := False;
+      SQl.Clear;
+      SQl.Text := ('Select Date_Donner_Sang from Patient Where Patient_ID="' +
+        Patient_ID + '";');
+      Active := True;
+      Open;
+      Date0 := FieldByName('Date_Donner_Sang').AsString;
+      Close;
+      Active := False;
+      SQl.Clear;
+      if (Date0 = '') then
+      Begin
+        ShowMessage('Ce patient n''a pas donné de sang');
+      End
+      else
+      begin
+        Date1 := VarToDateTime(Date0);
+        Days := Date - Date1;
+        if (Days = 30) then
+          Str := ('1 mois à été passé')
+        else if (Days = 60) then
+          Str := ('2 mois à été passé')
+        else if (Days = 90) then
+          Str := ('3 mois à été passé')
+        else
+          Str := (Days.ToString + ' jours à été passé');
+        MessageDlg(Str, TMsgDlgType.mtInformation, [TMsgDlgBtn.mbOK], 0);
+      end;
+    End;
+  End
+  else
+  Begin
+    ShowMessage
+      ('Sil vous plait choisir une patient ou double clicker sur un patient');
+  End;
+end;
+
 procedure TMain.Label27Click(Sender: TObject);
 Var
   P: TPointF;
@@ -1608,6 +1677,12 @@ begin
   P := Label32.LocalToAbsolute(P);
   P := ClientToScreen(P);
   PopupMenu1.Popup(P.X, P.Y);
+end;
+
+procedure TMain.Label34Click(Sender: TObject);
+begin
+  inherited;
+  Label25Click(Self);
 end;
 
 procedure TMain.Label46Click(Sender: TObject);

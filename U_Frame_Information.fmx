@@ -321,5 +321,17 @@ object Frame2: TFrame2
       Visible = False
       OnChange = Wilaya_CodeChange
     end
+    object CheckBox1: TCheckBox
+      StyledSettings = [Style, FontColor]
+      Position.X = 128.000000000000000000
+      Position.Y = 88.000000000000000000
+      Size.Width = 137.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 20
+      Text = 'Donneur'
+      TextSettings.Font.Family = 'Candara'
+      TextSettings.Font.Size = 18.000000000000000000
+    end
   end
 end

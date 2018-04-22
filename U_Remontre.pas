@@ -58,27 +58,36 @@ Uses
 {$R *.fmx}
 
 procedure TRemontre.Button1Click(Sender: TObject);
-
 var
   HexCode: String;
 begin
   With DataModule1.FDQuery1 do
   Begin
-    Active := False;
-    SQl.Clear;
-    SQl.Text := ('SELECT * FROM Medecin');
-    Active := True;
-    Open;
-    if not(Locate('Pseudo', Edit1.Text, [])) then
+    if (Edit1.Text = '') then
     Begin
-      InnerGlowEffect1.Enabled := True;
-      ShowMessage('Un compte avec ce nom d''utilisateur n''existe pas');
-      Active := False;
-      SQl.Clear;
+      MessageDlg('š''il vous plaît saisie votre pseudo et réessayer de nouveau',
+        TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
+      Edit1.SetFocus;
     End
     else
     Begin
-      TabItem2.IsSelected := True;
+      Active := False;
+      SQl.Clear;
+      SQl.Text := ('SELECT * FROM Medecin');
+      Active := True;
+      Open;
+      if not(Locate('Pseudo', Edit1.Text, [])) then
+      Begin
+        InnerGlowEffect1.Enabled := True;
+        MessageDlg('Un compte avec ce pseudo n''existe pas',
+          TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
+        Active := False;
+        SQl.Clear;
+      End
+      else
+      Begin
+        TabItem2.IsSelected := True;
+      End;
     End;
   End;
 end;
