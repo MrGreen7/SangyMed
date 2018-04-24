@@ -151,7 +151,7 @@ begin
         Active := False;
       end;
 
-      Showmessage('Les iformation a été Enregistrer');
+      Showmessage('Les information a été Enregistrer');
       ModalResult := mrClose;
     end
     else

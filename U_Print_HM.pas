@@ -17,7 +17,7 @@ type
     ToolBar: TToolBar;
     Cancel_Button: TButton;
     Print_Button: TButton;
-    Rectangle1: TRectangle;
+    RectangleM: TRectangle;
     Text9: TText;
     Text5: TText;
     Line2: TLine;
@@ -76,15 +76,16 @@ type
     Text47: TText;
     Text: TText;
     Text3: TText;
-    Rectangle2: TRectangle;
+    Rectangle9: TRectangle;
     Rectangle3: TRectangle;
     Rectangle4: TRectangle;
     Rectangle5: TRectangle;
     Rectangle6: TRectangle;
     Image1: TImage;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
-    Rectangle7: TRectangle;
-    Rectangle8: TRectangle;
+    Rectangle1: TRectangle;
+    Rectangle2: TRectangle;
+    PrinterSetupDialog1: TPrinterSetupDialog;
     procedure OnLoad;
     procedure Rez;
     procedure FormCreate(Sender: TObject);
@@ -111,9 +112,11 @@ Var
   DestRect: TRectF;
 begin
   inherited;
+
   if (PrintDialog.Execute) then
   Begin
     SetPrinter(Printer);
+    Printer.Printers[-1];
     Printer.Orientation := TPrinterOrientation.poPortrait;
     Printer.Title := 'Hémogramme';
     Printer.ActivePrinter.SelectDPI(1200, 1200);

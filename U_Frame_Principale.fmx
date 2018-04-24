@@ -57,7 +57,7 @@ object Frame1: TFrame1
           TabOrder = 6
           OnChange = IP_ComboBox2Change
           object InnerGlowEffect2Combo2: TInnerGlowEffect
-            Softness = 0.400000005960464500
+            Softness = 0.400000005960464400
             GlowColor = xFFD7263D
             Opacity = 0.899999976158142100
             Enabled = False
@@ -141,7 +141,7 @@ object Frame1: TFrame1
           TabOrder = 6
           OnChange = IP_ComboBox3Change
           object InnerGlowEffect3Combo3: TInnerGlowEffect
-            Softness = 0.400000005960464500
+            Softness = 0.400000005960464400
             GlowColor = xFFD7263D
             Opacity = 0.899999976158142100
             Enabled = False
@@ -220,14 +220,14 @@ object Frame1: TFrame1
           TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 14.000000000000000000
           Position.X = 90.000000000000000000
-          Position.Y = 4.425531387329102000
+          Position.Y = 4.425531387329101000
           Size.Width = 207.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
           StyledSettings = [Style, FontColor]
           OnChange = IP_Edit3Change
           object InnerGlowEffectEdit3: TInnerGlowEffect
-            Softness = 0.400000005960464500
+            Softness = 0.400000005960464400
             GlowColor = xFFD7263D
             Opacity = 0.899999976158142100
             Enabled = False
@@ -268,7 +268,7 @@ object Frame1: TFrame1
           OnChange = IP_Edit2Change
           OnChangeTracking = IP_Edit2ChangeTracking
           object InnerGlowEffectEdit2: TInnerGlowEffect
-            Softness = 0.400000005960464500
+            Softness = 0.400000005960464400
             GlowColor = xFFD7263D
             Opacity = 0.899999976158142100
             Enabled = False
@@ -306,6 +306,7 @@ object Frame1: TFrame1
         end
         object DateEdit1: TDateEdit
           Date = 43212.000000000000000000
+          Anchors = [akLeft, akRight]
           Position.X = 90.000000000000000000
           Position.Y = 4.000000000000000000
           ReadOnly = True

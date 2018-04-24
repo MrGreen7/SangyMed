@@ -44,10 +44,8 @@ type
     Text46: TText;
     Text47: TText;
     Text48: TText;
-    Rectangle2: TRectangle;
     Rectangle3: TRectangle;
     Rectangle4: TRectangle;
-    Text10: TText;
     Text11: TText;
     Text12: TText;
     Text17: TText;
@@ -98,6 +96,8 @@ type
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     Rectangle7: TRectangle;
     Rectangle8: TRectangle;
+    Rectangle2: TRectangle;
+    Text10: TText;
     procedure Rez();
     procedure Print_ButtonClick(Sender: TObject);
     procedure OnLoad;

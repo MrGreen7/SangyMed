@@ -16,7 +16,7 @@ type
     ToolBar: TToolBar;
     Cancel_Button: TButton;
     Print_Button: TButton;
-    Rectangle1: TRectangle;
+    RectangleM: TRectangle;
     Text9: TText;
     Text5: TText;
     Layout1: TLayout;
@@ -135,8 +135,8 @@ type
     Rectangle6: TRectangle;
     Image1: TImage;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
+    Rectangle1: TRectangle;
     Rectangle2: TRectangle;
-    Rectangle3: TRectangle;
     procedure Rez();
     procedure OnLoad;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -239,6 +239,7 @@ End;
 procedure TPrint_Bio.Rez();
 Begin
   Resiz(Text43, '');
+  Resiz(Text13, '');
   Resiz(Text94, '');
   Resiz(Text3, '');
   Resiz(Text91, '');
@@ -300,7 +301,7 @@ Begin
       Main.Patient_ID + '";');
     Active := True;
     Open;
-    Text13.Text := FieldByName('Nom').AsString + ' ' +
+    Text43.Text := FieldByName('Nom').AsString + ' ' +
       FieldByName('Prenom').AsString;
     Text15.Text := Main.Patient_ID;
     Close;
@@ -340,7 +341,7 @@ Begin
     SQL.Text := ('Select Nom From Medecin Where ID="' + Main.ID_Medecin + '"');
     Active := True;
     Open;
-    Text43.Text := FieldByName('Nom').AsString;
+    Text13.Text := FieldByName('Nom').AsString;
     Close;
     SQL.Clear;
     Active := False;

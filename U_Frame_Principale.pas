@@ -140,7 +140,7 @@ begin
     Rand := FieldByName('Patient_ID').AsString;
     FieldByName('Nom').AsString := IP_Edit2.Text;
     FieldByName('Prenom').AsString := IP_Edit3.Text;
-    // FieldByName('Date_de_Entre').AsString := DateEdit1.Text;
+    FieldByName('Date_de_Entre').AsString := DateEdit1.Text;
     if (IP_ComboBox1.ItemIndex <> -1) then
     Begin
       FieldByName('Etat_Civil').AsString := IP_ComboBox1.Selected.Text;

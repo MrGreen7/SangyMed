@@ -122,7 +122,8 @@ begin
   Begin
     Active := False;
     SQL.Clear;
-    SQL.Text := 'Select * From Hemogramme Where Patient_ID="'+Main.Patient_ID+'"';
+    SQL.Text := 'Select * From Hemogramme Where Patient_ID="' +
+      Main.Patient_ID + '"';
     Active := True;
     Insert;
     repeat
@@ -160,41 +161,58 @@ Var
   Rand: String;
   bol: Boolean;
 begin
-  With DataModule1.FDQuery1 do
+  if (Pret() = True) then
   Begin
-    Active := False;
-    SQL.Clear;
-    SQL.Text := 'Select * From Hemogramme Where Patient_ID="' +
-      Main.Patient_ID + '";';
-    Active := True;
-    Edit;
-    repeat
+    With DataModule1.FDQuery1 do
     Begin
-      try
-        Rand := DataModule1.GenerateID;
-        Rand := 'G' + Rand;
-        FieldByName('HemoG_ID').AsString := Rand;
-      except
-        on E: Exception do
-        Begin
-          bol := True;
-        End;
-      end;
+      Active := False;
+      SQL.Clear;
+      SQL.Text := 'Select * From Hemogramme Where Patient_ID="' +
+        Main.Patient_ID + '";';
+      Active := True;
+      Edit;
+      repeat
+      Begin
+        try
+          Rand := DataModule1.GenerateID;
+          Rand := 'G' + Rand;
+          FieldByName('HemoG_ID').AsString := Rand;
+        except
+          on E: Exception do
+          Begin
+            bol := True;
+          End;
+        end;
+      End;
+      bol := False;
+      until bol = False;
+      FieldByName('Patient_ID').AsString := RandD;
+      FieldByName('Hematies').AsString := Hemog_Edit1.Text;
+      FieldByName('Hemoglobine').AsString := Hemog_Edit2.Text;
+      FieldByName('Hematocrite').AsString := Hemog_Edit3.Text;
+      FieldByName('VGM').AsString := Hemog_Edit4.Text;
+      FieldByName('TCMH').AsString := Hemog_Edit5.Text;
+      FieldByName('CCMH').AsString := Hemog_Edit6.Text;
+      FieldByName('leucocytes').AsString := Hemog_Edit7.Text;
+      FieldByName('Reticulocytes').AsString := Hemog_Edit8.Text;
+      Post;
+      Active := False;
+      SQL.Clear;
     End;
-    bol := False;
-    until bol = False;
-    FieldByName('Patient_ID').AsString := RandD;
-    FieldByName('Hematies').AsString := Hemog_Edit1.Text;
-    FieldByName('Hemoglobine').AsString := Hemog_Edit2.Text;
-    FieldByName('Hematocrite').AsString := Hemog_Edit3.Text;
-    FieldByName('VGM').AsString := Hemog_Edit4.Text;
-    FieldByName('TCMH').AsString := Hemog_Edit5.Text;
-    FieldByName('CCMH').AsString := Hemog_Edit6.Text;
-    FieldByName('leucocytes').AsString := Hemog_Edit7.Text;
-    FieldByName('Reticulocytes').AsString := Hemog_Edit8.Text;
-    Post;
-    Active := False;
-    SQL.Clear;
+  End
+  else if (Pret() = False) then
+  Begin
+    With DataModule1.FDCmnd_Drop_Patient do
+    Begin
+      Active := False;
+      CommandText.Clear;
+      CommandText.Text := ('DELETE FROM Hemogramme WHERE Patient_ID="' +
+        Main.Patient_ID + '";');
+      Active := True;
+      Execute;
+      Active := False;
+      CommandText.Clear;
+    End;
   End;
 end;
 

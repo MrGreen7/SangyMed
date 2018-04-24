@@ -287,50 +287,67 @@ Var
   Rand: String;
   bol: Boolean;
 begin
-  With DataModule1.FDQuery1 do
+  if (Pret() = True) then
   Begin
-    Active := False;
-    SQL.Clear;
-    SQL.Text := 'Select * From Serologie Where Patient_ID="' +
-      Main.Patient_ID + '"';
-    Active := True;
-    Edit;
-    repeat
+    With DataModule1.FDQuery1 do
     Begin
-      try
-        Rand := DataModule1.GenerateID;
-        Rand := 'S' + Rand;
-        FieldByName('Serologie_ID').AsString := Rand;
-      except
-        on E: Exception do
-        Begin
-          bol := True;
-        End;
-      end;
+      Active := False;
+      SQL.Clear;
+      SQL.Text := 'Select * From Serologie Where Patient_ID="' +
+        Main.Patient_ID + '"';
+      Active := True;
+      Edit;
+      repeat
+      Begin
+        try
+          Rand := DataModule1.GenerateID;
+          Rand := 'S' + Rand;
+          FieldByName('Serologie_ID').AsString := Rand;
+        except
+          on E: Exception do
+          Begin
+            bol := True;
+          End;
+        end;
+      End;
+      bol := False;
+      until bol = False;
+      FieldByName('Patient_ID').AsString := RandD;
+      FieldByName('HA_Anti-VHA').AsBoolean := CB_HA_Anit_VHA.IsChecked;
+      FieldByName('HA_IgG').AsBoolean := RB_HA_IgG.IsChecked;
+      FieldByName('HA_IgM').AsBoolean := RB_HA_IgM.IsChecked;
+      FieldByName('HB_Anti-VHB').AsBoolean := CB_HB_Anti_VHB.IsChecked;
+      FieldByName('HB_Antigene_HBs').AsBoolean := CB_HB_Antigene_BHs.IsChecked;
+      FieldByName('HC_Anit-VHC').AsBoolean := CB_HC_Anti_VHC.IsChecked;
+      FieldByName('VIH_Anti-VIH').AsBoolean := CB_VIH_Anti_VIH.IsChecked;
+      FieldByName('RUB_Anti_M').AsBoolean := CB_RUB_IgM.IsChecked;
+      FieldByName('RUB_Anti_A').AsBoolean := CB_RUB_IgA.IsChecked;
+      FieldByName('RUB_Anti_G').AsBoolean := CB_RUB_IgG.IsChecked;
+      FieldByName('Salm_Anti_H').AsBoolean := CB_SFT_Anti_H.IsChecked;
+      FieldByName('Salm_Anti_O').AsBoolean := CB_SFT_Anti_O.IsChecked;
+      FieldByName('Mono_Anti_EBV').AsBoolean := CB_MI_Anti_EBV.IsChecked;
+      FieldByName('Mono_Anti_G_Anti_VCA').AsBoolean := CB_MI_VCA.IsChecked;
+      FieldByName('Mono_Anti_G_Anti_EBNA').AsBoolean := CB_MI_EBNA.IsChecked;
+      FieldByName('Mono_Anti_G_Anti_EA').AsBoolean := CB_MI_EA.IsChecked;
+      FieldByName('Toxo_Anti_M').AsBoolean := CB_Toxo_Anti_IgM.IsChecked;
+      Post;
+      Active := False;
+      SQL.Clear;
     End;
-    bol := False;
-    until bol = False;
-    FieldByName('Patient_ID').AsString := RandD;
-    FieldByName('HA_Anti-VHA').AsBoolean := CB_HA_Anit_VHA.IsChecked;
-    FieldByName('HA_IgG').AsBoolean := RB_HA_IgG.IsChecked;
-    FieldByName('HA_IgM').AsBoolean := RB_HA_IgM.IsChecked;
-    FieldByName('HB_Anti-VHB').AsBoolean := CB_HB_Anti_VHB.IsChecked;
-    FieldByName('HB_Antigene_HBs').AsBoolean := CB_HB_Antigene_BHs.IsChecked;
-    FieldByName('HC_Anit-VHC').AsBoolean := CB_HC_Anti_VHC.IsChecked;
-    FieldByName('VIH_Anti-VIH').AsBoolean := CB_VIH_Anti_VIH.IsChecked;
-    FieldByName('RUB_Anti_M').AsBoolean := CB_RUB_IgM.IsChecked;
-    FieldByName('RUB_Anti_A').AsBoolean := CB_RUB_IgA.IsChecked;
-    FieldByName('RUB_Anti_G').AsBoolean := CB_RUB_IgG.IsChecked;
-    FieldByName('Salm_Anti_H').AsBoolean := CB_SFT_Anti_H.IsChecked;
-    FieldByName('Salm_Anti_O').AsBoolean := CB_SFT_Anti_O.IsChecked;
-    FieldByName('Mono_Anti_EBV').AsBoolean := CB_MI_Anti_EBV.IsChecked;
-    FieldByName('Mono_Anti_G_Anti_VCA').AsBoolean := CB_MI_VCA.IsChecked;
-    FieldByName('Mono_Anti_G_Anti_EBNA').AsBoolean := CB_MI_EBNA.IsChecked;
-    FieldByName('Mono_Anti_G_Anti_EA').AsBoolean := CB_MI_EA.IsChecked;
-    FieldByName('Toxo_Anti_M').AsBoolean := CB_Toxo_Anti_IgM.IsChecked;
-    Post;
-    Active := False;
-    SQL.Clear;
+  end
+  else if (Pret() = False) then
+  Begin
+    With DataModule1.FDCmnd_Drop_Patient do
+    Begin
+      Active := False;
+      CommandText.Clear;
+      CommandText.Text := ('DELETE FROM Serologie WHERE Patient_ID="' +
+        Main.Patient_ID + '";');
+      Active := True;
+      Execute;
+      Active := False;
+      CommandText.Clear;
+    End;
   End;
 end;
 

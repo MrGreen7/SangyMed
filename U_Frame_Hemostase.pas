@@ -140,38 +140,55 @@ Var
   Rand: String;
   bol: Boolean;
 begin
-  With DataModule1.FDQuery1 do
+  if (Pret() = True) then
   Begin
-    Active := False;
-    SQL.Clear;
-    SQL.Text := 'Select * From Hemostase_VS Where Patient_ID="' +
-      Main.Patient_ID + '"';
-    Active := True;
-    Edit;
-    repeat
+    With DataModule1.FDQuery1 do
     Begin
-      try
-        Rand := DataModule1.GenerateID;
-        Rand := 'V' + Rand;
-        FieldByName('HemoS_VS_ID').AsString := Rand;
-      except
-        on E: Exception do
-        Begin
-          bol := True;
-        End;
-      end;
+      Active := False;
+      SQL.Clear;
+      SQL.Text := 'Select * From Hemostase_VS Where Patient_ID="' +
+        Main.Patient_ID + '"';
+      Active := True;
+      Edit;
+      repeat
+      Begin
+        try
+          Rand := DataModule1.GenerateID;
+          Rand := 'V' + Rand;
+          FieldByName('HemoS_VS_ID').AsString := Rand;
+        except
+          on E: Exception do
+          Begin
+            bol := True;
+          End;
+        end;
+      End;
+      bol := False;
+      until bol = False;
+      FieldByName('Patient_ID').AsString := RandD;
+      FieldByName('TS').AsString := Hemos_Edit1.Text;
+      FieldByName('TCK').AsString := Hemos_Edit2.Text;
+      FieldByName('TP').AsString := Hemos_Edit3.Text;
+      FieldByName('VS').AsString := Hemos_Edit4.Text;
+      FieldByName('Note').AsString := Memo1.Text;
+      Post;
+      Active := False;
+      SQL.Clear;
     End;
-    bol := False;
-    until bol = False;
-    FieldByName('Patient_ID').AsString := RandD;
-    FieldByName('TS').AsString := Hemos_Edit1.Text;
-    FieldByName('TCK').AsString := Hemos_Edit2.Text;
-    FieldByName('TP').AsString := Hemos_Edit3.Text;
-    FieldByName('VS').AsString := Hemos_Edit4.Text;
-    FieldByName('Note').AsString := Memo1.Text;
-    Post;
-    Active := False;
-    SQL.Clear;
+  End
+  else if (Pret() = False) then
+  Begin
+    With DataModule1.FDCmnd_Drop_Patient do
+    Begin
+      Active := False;
+      CommandText.Clear;
+      CommandText.Text := ('DELETE FROM Hemostase_VS WHERE Patient_ID="' +
+        Main.Patient_ID + '";');
+      Active := True;
+      Execute;
+      Active := False;
+      CommandText.Clear;
+    End;
   End;
 end;
 

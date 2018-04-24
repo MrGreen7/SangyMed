@@ -91,7 +91,7 @@ object Parametre: TParametre
         IsExpanded = False
         IsSelected = False
         TabOrder = 3
-        Text = #61981' Patient'
+        Text = #61982' Analyse'
         Visible = False
         OnClick = Tree_Sub_PatientClick
       end
@@ -118,6 +118,7 @@ object Parametre: TParametre
         IsSelected = False
         TabOrder = 5
         Text = #62005' Supprim'#233' le compte'
+        Visible = False
         OnClick = Tree_Sub_CompteDelClick
       end
     end
@@ -220,7 +221,7 @@ object Parametre: TParametre
         StyledSettings = [Style, FontColor]
         OnChange = Mod_Edit1Change
         object InnerGlowEffect1: TInnerGlowEffect
-          Softness = 0.400000005960464500
+          Softness = 0.400000005960464400
           GlowColor = claCrimson
           Opacity = 0.899999976158142100
           Enabled = False
@@ -241,7 +242,7 @@ object Parametre: TParametre
         StyledSettings = [Style, FontColor]
         OnChange = Mod_Edit2Change
         object InnerGlowEffect2: TInnerGlowEffect
-          Softness = 0.400000005960464500
+          Softness = 0.400000005960464400
           GlowColor = claCrimson
           Opacity = 0.899999976158142100
           Enabled = False
@@ -249,7 +250,7 @@ object Parametre: TParametre
       end
       object Mod_Button1: TButton
         StyledSettings = [Style, FontColor]
-        Position.X = 34.000000000000000000
+        Position.X = 22.000000000000000000
         Position.Y = 298.000000000000000000
         Size.Width = 137.000000000000000000
         Size.Height = 31.000000000000000000
@@ -288,7 +289,7 @@ object Parametre: TParametre
         StyledSettings = [Style, FontColor]
         OnChange = Mod_Edit2Change
         object InnerGlowEffect3: TInnerGlowEffect
-          Softness = 0.400000005960464500
+          Softness = 0.400000005960464400
           GlowColor = claCrimson
           Opacity = 0.899999976158142100
           Enabled = False
@@ -297,7 +298,7 @@ object Parametre: TParametre
       object Mod_Button3: TButton
         StyledSettings = [Style, FontColor]
         ModalResult = 2
-        Position.X = 394.000000000000000000
+        Position.X = 406.000000000000000000
         Position.Y = 298.000000000000000000
         Size.Width = 137.000000000000000000
         Size.Height = 31.000000000000000000
@@ -327,7 +328,7 @@ object Parametre: TParametre
       ExplicitSize.cy = 26.000000000000000000
       object Button5: TButton
         StyledSettings = [Style, FontColor]
-        Position.X = 34.000000000000000000
+        Position.X = 22.000000000000000000
         Position.Y = 298.000000000000000000
         Size.Width = 137.000000000000000000
         Size.Height = 31.000000000000000000
@@ -354,7 +355,7 @@ object Parametre: TParametre
       object Button7: TButton
         StyledSettings = [Style, FontColor]
         ModalResult = 2
-        Position.X = 394.000000000000000000
+        Position.X = 406.000000000000000000
         Position.Y = 298.000000000000000000
         Size.Width = 137.000000000000000000
         Size.Height = 31.000000000000000000
@@ -467,12 +468,12 @@ object Parametre: TParametre
       TextSettings.Font.Size = 14.000000000000000000
       StyledSettings = [Style, FontColor]
       IsSelected = False
-      Size.Width = 79.000000000000000000
+      Size.Width = 86.000000000000000000
       Size.Height = 29.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
-      Text = #61981' Patient'
+      Text = #61982' Analyse'
       Visible = False
       ExplicitSize.cx = 79.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
@@ -655,7 +656,7 @@ object Parametre: TParametre
         Text = 'Annuler'
       end
       object Button2: TButton
-        Position.X = 24.000000000000000000
+        Position.X = 22.000000000000000000
         Position.Y = 306.000000000000000000
         Size.Width = 129.000000000000000000
         Size.Height = 31.000000000000000000
@@ -803,7 +804,7 @@ object Parametre: TParametre
         Size.PlatformDefault = False
       end
       object Button3: TButton
-        Position.X = 24.000000000000000000
+        Position.X = 22.000000000000000000
         Position.Y = 306.000000000000000000
         Size.Width = 129.000000000000000000
         Size.Height = 31.000000000000000000
