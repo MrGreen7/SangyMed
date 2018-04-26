@@ -220,6 +220,7 @@ procedure TFrame3.FrameResize(Sender: TObject);
 begin
   L_Right.Width := Layout_Frame3.Width / 2;
   L_Left.Width := Layout_Frame3.Width / 2;
+  Label32.Position.X := (L_Top.Width - Label32.Width) / 2;
 end;
 
 end.
